@@ -7,6 +7,7 @@ Project Raccoon
 
 ### Development team
 - Hangfei Lin
+- Bofei Wang
 
 ### Business Team
 - Simon
