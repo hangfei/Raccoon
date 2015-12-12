@@ -9,6 +9,5 @@ Project Raccoon
 - Hangfei Lin
 - Bofei Wang
 - Di Wu
-
 ### Business Team
 - Simon
