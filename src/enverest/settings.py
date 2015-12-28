@@ -34,12 +34,16 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'homepage',
+    'account',
+    'pinax_theme_bootstrap',
+    'bootstrapform',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -51,6 +55,8 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "account.middleware.LocaleMiddleware",
+    "account.middleware.TimezoneMiddleware",
 ]
 
 ROOT_URLCONF = 'enverest.urls'
@@ -72,6 +78,10 @@ TEMPLATES = [
             ],
         },
     },
+]
+
+TEMPLATE_CONTEXT_PROCESSORS = [
+    "account.context_processors.account",
 ]
 
 WSGI_APPLICATION = 'enverest.wsgi.application'
