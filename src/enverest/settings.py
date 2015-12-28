@@ -58,7 +58,10 @@ ROOT_URLCONF = 'enverest.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            join(BASE_DIR, 'templates'),
+            # insert more TEMPLATE_DIRS here
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
