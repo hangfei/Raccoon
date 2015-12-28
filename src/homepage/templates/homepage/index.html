@@ -1,0 +1,235 @@
+{% load staticfiles %}
+
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
+<body>
+
+<header class="navbar navbar-dark bg-inverse navbar-static-top bd-navbar" role="banner">
+  <div class="container">
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-expanded="true">
+        ☰
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="/">
+        恩睿咨询
+      </a>
+    </div>
+    <div class="navbar-toggleable-xs collapse in" id="bd-main-nav" aria-expanded="true">
+      <nav class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">恩睿咨询</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">关于恩睿</a>
+        <a class="nav-item nav-link " href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">阅读案例</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">合作伙伴</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">加入我们</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">新闻博客</a>
+        <form class="form-inline pull-xs-right">
+          <input class="form-control" type="text" placeholder="搜索">
+          <button class="btn btn-success-outline" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<div class="container">
+
+
+  <div class="row">
+    <div class="col-lg-12">
+      <br>
+    </div>
+  </div>
+
+  <!-- spaces -->
+  <div class="row">
+    <div class="col-lg-12">
+      <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+    </div>
+  </div>
+
+  <hr>
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>Meet Professionals and Industry Leaders</strong>
+    </h4>
+    <p class="m-b-lg">
+      Get a sense of the 2,000+ Professionals in our network <a href="getbootstrap.com" target="_blank">Enverest</a>, <a href="http://getskeleton.com/" target="_blank">Skeleton</a>, and <a href="http://goratchet.com/" target="_blank">Ratchet</a>. We provide expertise to help clients achieve accelerated growth and sustained global success.
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/simon_cen.jpg' %}">
+        <h4 class="card-title">Simon Cen</h4>
+        <p class="card-text">Built strong expertise in Business Development, Operations and Supply Chain Management.</p>
+        <a href="#" class="btn btn-primary">Hire</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_2.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/jeff_weiner.jpg' %}">
+        <h4 class="card-title">Jeff Weiner</h4>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Hire</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/alex_zhang.jpg' %}">
+        <h4 class="card-title">Alex J. Zhang</h4>
+        <p class="card-text">Business development and marketing leader with extensive experience and network in life sciences</p>
+        <a href="#" class="btn btn-primary">Hire</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <hr>
+
+<div class="row row-padded text-center">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <h4><strong>Why choose Enverest?</strong></h4>
+    <p class="m-b-md">Enverest provides fast-growing companies affordable, high-quality, and widely accessible advisory services. Together, we offer customized solutions to meet our clients' needs, particularly in developing and executing fast-growth initiatives, and expanding market globally.
+ <a href="mailto:themes@getbootstrap.com">contact@eneverest.com</a>.</p>
+    <a class="btn btn-primary" href="/pages/faq">Read more in our FAQ</a>
+  </div>
+</div>
+
+<div class="row row-padded homepage-grid p-t text-center">
+  <div class="col-sm-4">
+    <img class="homepage-grid-icon" src="//cdn.shopify.com/s/files/1/0691/5403/t/108/assets/unlimited-icon.svg?6412267337190013828">
+    <h5><strong>Project Management</strong></h5>
+    <p class="text-muted">Leading fast-growing companies to apply world-class
+solutions and practices for global business success. Leading fast-growing companies to apply world-class
+solutions and practices for global business success.</p>
+  </div>
+
+  <div class="col-sm-4">
+    <img class="homepage-grid-icon" src="//cdn.shopify.com/s/files/1/0691/5403/t/108/assets/script-icon.svg?6412267337190013828">
+    <h5><strong>Close partnership</strong></h5>
+    <p class="text-muted">All our themes have a simple <a href="/pages/our-license">multiple use license</a>. Helping clients develop and execute management
+initiatives to​ achieve accelerated growth.</p>
+  </div>
+
+  <div class="col-sm-4">
+    <img class="homepage-grid-icon" src="//cdn.shopify.com/s/files/1/0691/5403/t/108/assets/cup-icon.svg?6412267337190013828">
+    <h5><strong>Technical support</strong></h5>
+    <p class="text-muted">The Enverest team and Expert Network are filled with experienced entrepreneurs and seasoned professionals from a variety of industries and functions. <a href="mailto:themes@eneverest.com">contact@eneverest.com</a> and we'll get back to you ASAP.</p>
+  </div>
+</div>
+
+<hr>
+
+<div class="row row-padded row-bordered row-centered">
+  <div class="col-sm-5 col-sm-offset-1">
+    <h4><strong>为企业快速成长提供管理咨询</strong></h4>
+    <p class="m-b-md">帮助快速成长的企业制定并实施
+​商业发展及企业管理策略</p>
+    <a class="btn btn-primary" target="_blank" href="http://bootstrap-themes.github.io/dashboard/docs/">了解更多</a>
+  </div>
+  <div class="col-sm-6">
+    <img src="{% static 'images/growth.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+  </div>
+</div>
+
+  <hr>
+
+<div class="row row-padded row-bordered row-centered">
+  <div class="col-sm-6">
+    <img src="{% static 'images/globalization.png' %}" alt="Generic placeholder image" style="width:100%;">
+  </div>
+  <div class="col-sm-5 col-sm-offset-1">
+    <h4><strong>为企业全球化发展献策献力</strong></h4>
+    <p class="m-b-md">帮助创新型企业扩展海外业务，
+​设计和实施全球化发展策略</p>
+    <a class="btn btn-primary" target="_blank" href="http://bootstrap-themes.github.io/dashboard/docs/">了解更多</a>
+  </div>
+</div>
+
+  <hr>
+
+  <div class="row row-padded row-bordered row-centered">
+    <div class="col-lg-8">
+      <img class="img-circle" src="{% static 'images/global_dotted_map.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+    </div><!-- /.col-lg-4 -->
+    <div class="col-lg-4">
+
+      <h2 style="text-align: center; vertical-align: middle;">立足创新，着眼全球</h2>
+      <p style="text-align: center; vertical-align: middle;">硅谷｜纽约｜新加坡｜北京</p>
+    </div><!-- /.col-lg-4 -->
+  </div>
+
+
+
+<footer class="footer clearfix">
+  <ul class="footer-social-buttons">
+    <li class="btn-follow hidden-xs">
+      <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1449911165343&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=getbootstrap&amp;show_count=true&amp;show_screen_name=true&amp;size=m" style="position: static; visibility: visible; width: 233px; height: 20px;" data-screen-name="getbootstrap"></iframe>
+    </li>
+    <li class="btn-tweet">
+      <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1449911165344&amp;dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;related=getbootstrap%2Cmdo%2Cfat%2Cdhg&amp;size=m&amp;text=Bootstrap%20Themes&amp;type=share&amp;url=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;via=getbootstrap" style="position: static; visibility: visible; width: 62px; height: 20px;" data-url="http://themes.getbootstrap.com/"></iframe>
+    </li>
+  </ul>
+
+  <p class="hidden-xs">
+    Designed and built with all the love in the world by
+    <a href="https://twitter.com/mdo" target="_blank">@mdo</a>,
+    <a href="https://twitter.com/fat" target="_blank">@fat</a>, and
+    <a href="https://twitter.com/dhg" target="_blank">@dhg</a>.
+  </p>
+
+  <ul class="footer-list">
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/about-us">About</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/terms-of-service">Terms</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/privacy-policy">Privacy</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/our-license">Licenses</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/faq">FAQ</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="http://getbootstrap.com">Bootstrap</a>
+      </li>
+  </ul>
+</footer>
+
+</div> <!-- for Container -->
+
+
+</body>
