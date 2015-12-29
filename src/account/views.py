@@ -24,9 +24,9 @@ from common.models import SignupCode, EmailAddress, EmailConfirmation, Account, 
 from account.utils import default_redirect, get_form_data
 
 
-class SignupView(FormView):
+class ClientSignupView(FormView):
 
-    template_name = "account/signup.html"
+    template_name = "account/signup_client.html"
     template_name_ajax = "account/ajax/signup.html"
     template_name_email_confirmation_sent = "account/email_confirmation_sent.html"
     template_name_email_confirmation_sent_ajax = "account/ajax/email_confirmation_sent.html"
@@ -50,14 +50,14 @@ class SignupView(FormView):
     def __init__(self, *args, **kwargs):
         self.created_user = None
         kwargs["signup_code"] = None
-        super(SignupView, self).__init__(*args, **kwargs)
+        super(ClientSignupView, self).__init__(*args, **kwargs)
 
     def dispatch(self, request, *args, **kwargs):
         self.request = request
         self.args = args
         self.kwargs = kwargs
         self.setup_signup_code()
-        return super(SignupView, self).dispatch(request, *args, **kwargs)
+        return super(ClientSignupView, self).dispatch(request, *args, **kwargs)
 
     def setup_signup_code(self):
         code = self.get_code()
@@ -76,17 +76,17 @@ class SignupView(FormView):
             return redirect(default_redirect(self.request, settings.ACCOUNT_LOGIN_REDIRECT_URL))
         if not self.is_open():
             return self.closed()
-        return super(SignupView, self).get(*args, **kwargs)
+        return super(ClientSignupView, self).get(*args, **kwargs)
 
     def post(self, *args, **kwargs):
         if self.request.user.is_authenticated():
             raise Http404()
         if not self.is_open():
             return self.closed()
-        return super(SignupView, self).post(*args, **kwargs)
+        return super(ClientSignupView, self).post(*args, **kwargs)
 
     def get_initial(self):
-        initial = super(SignupView, self).get_initial()
+        initial = super(ClientSignupView, self).get_initial()
         if self.signup_code:
             initial["code"] = self.signup_code.code
             if self.signup_code.email:
@@ -100,7 +100,7 @@ class SignupView(FormView):
             return [self.template_name]
 
     def get_context_data(self, **kwargs):
-        ctx = super(SignupView, self).get_context_data(**kwargs)
+        ctx = super(ClientSignupView, self).get_context_data(**kwargs)
         redirect_field_name = self.get_redirect_field_name()
         ctx.update({
             "redirect_field_name": redirect_field_name,
@@ -109,7 +109,7 @@ class SignupView(FormView):
         return ctx
 
     def get_form_kwargs(self):
-        kwargs = super(SignupView, self).get_form_kwargs()
+        kwargs = super(ClientSignupView, self).get_form_kwargs()
         kwargs.update(self.form_kwargs)
         return kwargs
 
@@ -120,7 +120,7 @@ class SignupView(FormView):
             email=get_form_data(form, "email"),
             result=form.is_valid()
         )
-        return super(SignupView, self).form_invalid(form)
+        return super(ClientSignupView, self).form_invalid(form)
 
     def form_valid(self, form):
         self.created_user = self.create_user(form, commit=False)
@@ -275,6 +275,287 @@ class SignupView(FormView):
         }
         return self.response_class(**response_kwargs)
 
+class ConsultantSignupView(FormView):
+
+    template_name = "account/signup_consultant.html"
+    template_name_ajax = "account/ajax/signup.html"
+    template_name_email_confirmation_sent = "account/email_confirmation_sent.html"
+    template_name_email_confirmation_sent_ajax = "account/ajax/email_confirmation_sent.html"
+    template_name_signup_closed = "account/signup_closed.html"
+    template_name_signup_closed_ajax = "account/ajax/signup_closed.html"
+    form_class = SignupForm
+    form_kwargs = {}
+    redirect_field_name = "next"
+    identifier_field = "username"
+    messages = {
+        "email_confirmation_sent": {
+            "level": messages.INFO,
+            "text": _("Confirmation email sent to {email}.")
+        },
+        "invalid_signup_code": {
+            "level": messages.WARNING,
+            "text": _("The code {code} is invalid.")
+        }
+    }
+
+    def __init__(self, *args, **kwargs):
+        self.created_user = None
+        kwargs["signup_code"] = None
+        super(ConsultantSignupView, self).__init__(*args, **kwargs)
+
+    def dispatch(self, request, *args, **kwargs):
+        self.request = request
+        self.args = args
+        self.kwargs = kwargs
+        self.setup_signup_code()
+        return super(ConsultantSignupView, self).dispatch(request, *args, **kwargs)
+
+    def setup_signup_code(self):
+        code = self.get_code()
+        if code:
+            try:
+                self.signup_code = SignupCode.check_code(code)
+            except SignupCode.InvalidCode:
+                self.signup_code = None
+            self.signup_code_present = True
+        else:
+            self.signup_code = None
+            self.signup_code_present = False
+
+    def get(self, *args, **kwargs):
+
+        if self.request.user.is_authenticated():
+            return redirect(default_redirect(self.request, settings.ACCOUNT_LOGIN_REDIRECT_URL))
+        if not self.is_open():
+            return self.closed()
+        request = args[0]
+        if request.GET.get('code'):
+            post_data = {'grant_type':'authorization_code',
+                         'code':request.GET.get('code'),
+                         'redirect_uri': 'http://127.0.0.1:8000/account/signup/consultant/',
+                         'client_id': '75y73411x5u1zu',
+                         'client_secret': '57dIUusbTq2I5G2E',
+                        }    # a sequence of two element tuples
+            headers = {'Host': 'www.linkedin.com', 'Content-Type': 'application/x-www-form-urlencoded'}
+            import requests
+            result = requests.post("https://www.linkedin.com/uas/oauth2/accessToken", post_data, headers=headers)
+
+            get_headers = {'Host': 'api.linkedin.com', 'Connection':'Keep-Alive', 'Authorization': 'Bearer ' + result.json()['access_token']}
+            get_result = requests.get("https://api.linkedin.com/v1/people/~?format=json", headers=get_headers)
+
+            data_dict = {'first_name': get_result.json()['firstName'], 'last_name': get_result.json()['lastName']}
+
+            data_dict = {'username':'hangfei'}
+            self.form_kwargs['initial'] = data_dict
+            # user_form = UserRegistrationForm(initial=data_dict)
+        else:
+            from django.http import HttpResponse
+            linkedin_api_link = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri=http://127.0.0.1:8000/account/signup/consultant/&state=987654321&scope=r_basicprofile'
+            html = "<html><body><a href='" + linkedin_api_link + "'>linkedin_api_link</a></body></html>"
+            from django.template import RequestContext
+            from django.shortcuts import render
+            context = RequestContext(request, {
+                'linkedin_api_link': linkedin_api_link,
+            })
+            return render(request, 'account/signup_consultant_linkedin.html', context)
+        return super(ConsultantSignupView, self).get(*args, **kwargs)
+
+    def post(self, *args, **kwargs):
+        if self.request.user.is_authenticated():
+            raise Http404()
+        if not self.is_open():
+            return self.closed()
+        return super(ConsultantSignupView, self).post(*args, **kwargs)
+
+    def get_initial(self):
+        initial = super(ConsultantSignupView, self).get_initial()
+        if self.signup_code:
+            initial["code"] = self.signup_code.code
+            if self.signup_code.email:
+                initial["email"] = self.signup_code.email
+        return initial
+
+    def get_template_names(self):
+        if self.request.is_ajax():
+            return [self.template_name_ajax]
+        else:
+            return [self.template_name]
+
+    def get_context_data(self, **kwargs):
+        ctx = super(ConsultantSignupView, self).get_context_data(**kwargs)
+        redirect_field_name = self.get_redirect_field_name()
+        ctx.update({
+            "redirect_field_name": redirect_field_name,
+            "redirect_field_value": self.request.POST.get(redirect_field_name, self.request.GET.get(redirect_field_name, "")),
+        })
+        return ctx
+
+    def get_form_kwargs(self):
+        kwargs = super(ConsultantSignupView, self).get_form_kwargs()
+        kwargs.update(self.form_kwargs)
+        return kwargs
+
+    def form_invalid(self, form):
+        signals.user_sign_up_attempt.send(
+            sender=SignupForm,
+            username=get_form_data(form, self.identifier_field),
+            email=get_form_data(form, "email"),
+            result=form.is_valid()
+        )
+        return super(ConsultantSignupView, self).form_invalid(form)
+
+    def form_valid(self, form):
+        self.created_user = self.create_user(form, commit=False)
+        # prevent User post_save signal from creating an Account instance
+        # we want to handle that ourself.
+        self.created_user._disable_account_creation = True
+        self.created_user.save()
+        self.use_signup_code(self.created_user)
+        email_address = self.create_email_address(form)
+        if settings.ACCOUNT_EMAIL_CONFIRMATION_REQUIRED and not email_address.verified:
+            self.created_user.is_active = False
+            self.created_user.save()
+        self.create_account(form)
+        self.after_signup(form)
+        if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
+            self.send_email_confirmation(email_address)
+        if settings.ACCOUNT_EMAIL_CONFIRMATION_REQUIRED and not email_address.verified:
+            return self.email_confirmation_required_response()
+        else:
+            show_message = [
+                settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL,
+                self.messages.get("email_confirmation_sent"),
+                not email_address.verified
+            ]
+            if all(show_message):
+                messages.add_message(
+                    self.request,
+                    self.messages["email_confirmation_sent"]["level"],
+                    self.messages["email_confirmation_sent"]["text"].format(**{
+                        "email": form.cleaned_data["email"]
+                    })
+                )
+            # attach form to self to maintain compatibility with login_user
+            # API. this should only be relied on by d-u-a and it is not a stable
+            # API for site developers.
+            self.form = form
+            self.login_user()
+        return redirect(self.get_success_url())
+
+    def get_success_url(self, fallback_url=None, **kwargs):
+        if fallback_url is None:
+            fallback_url = settings.ACCOUNT_SIGNUP_REDIRECT_URL
+        kwargs.setdefault("redirect_field_name", self.get_redirect_field_name())
+        return default_redirect(self.request, fallback_url, **kwargs)
+
+    def get_redirect_field_name(self):
+        return self.redirect_field_name
+
+    def create_user(self, form, commit=True, model=None, **kwargs):
+        User = model
+        if User is None:
+            User = get_user_model()
+        user = User(**kwargs)
+        username = form.cleaned_data.get("username")
+        if username is None:
+            username = self.generate_username(form)
+        user.username = username
+        user.email = form.cleaned_data["email"].strip()
+        password = form.cleaned_data.get("password")
+        if password:
+            user.set_password(password)
+        else:
+            user.set_unusable_password()
+        if commit:
+            user.save()
+        return user
+
+    def create_account(self, form):
+        return Account.create(request=self.request, user=self.created_user, create_email=False)
+
+    def generate_username(self, form):
+        raise NotImplementedError(
+            "Unable to generate username by default. "
+            "Override SignupView.generate_username in a subclass."
+        )
+
+    def create_email_address(self, form, **kwargs):
+        kwargs.setdefault("primary", True)
+        kwargs.setdefault("verified", False)
+        if self.signup_code:
+            kwargs["verified"] = self.signup_code.email and self.created_user.email == self.signup_code.email
+        return EmailAddress.objects.add_email(self.created_user, self.created_user.email, **kwargs)
+
+    def use_signup_code(self, user):
+        if self.signup_code:
+            self.signup_code.use(user)
+
+    def send_email_confirmation(self, email_address):
+        email_address.send_confirmation(site=get_current_site(self.request))
+
+    def after_signup(self, form):
+        signals.user_signed_up.send(sender=SignupForm, user=self.created_user, form=form)
+
+    def login_user(self):
+        user = self.created_user
+        if settings.ACCOUNT_USE_AUTH_AUTHENTICATE:
+            # call auth.authenticate to ensure we set the correct backend for
+            # future look ups using auth.get_user().
+            user = auth.authenticate(**self.user_credentials())
+        else:
+            # set auth backend to ModelBackend, but this may not be used by
+            # everyone. this code path is deprecated and will be removed in
+            # favor of using auth.authenticate above.
+            user.backend = "django.contrib.auth.backends.ModelBackend"
+        auth.login(self.request, user)
+        self.request.session.set_expiry(0)
+
+    def user_credentials(self):
+        return hookset.get_user_credentials(self.form, self.identifier_field)
+
+    def get_code(self):
+        return self.request.POST.get("code", self.request.GET.get("code"))
+
+    def is_open(self):
+        if self.signup_code:
+            return True
+        else:
+            if self.signup_code_present:
+                if self.messages.get("invalid_signup_code"):
+                    messages.add_message(
+                        self.request,
+                        self.messages["invalid_signup_code"]["level"],
+                        self.messages["invalid_signup_code"]["text"].format(**{
+                            "code": self.get_code(),
+                        })
+                    )
+        return settings.ACCOUNT_OPEN_SIGNUP
+
+    def email_confirmation_required_response(self):
+        if self.request.is_ajax():
+            template_name = self.template_name_email_confirmation_sent_ajax
+        else:
+            template_name = self.template_name_email_confirmation_sent
+        response_kwargs = {
+            "request": self.request,
+            "template": template_name,
+            "context": {
+                "email": self.created_user.email,
+                "success_url": self.get_success_url(),
+            }
+        }
+        return self.response_class(**response_kwargs)
+
+    def closed(self):
+        if self.request.is_ajax():
+            template_name = self.template_name_signup_closed_ajax
+        else:
+            template_name = self.template_name_signup_closed
+        response_kwargs = {
+            "request": self.request,
+            "template": template_name,
+        }
+        return self.response_class(**response_kwargs)
 
 class LoginView(FormView):
 
@@ -285,10 +566,8 @@ class LoginView(FormView):
     redirect_field_name = "next"
 
     def get(self, *args, **kwargs):
-        print('get....')
         if self.request.user.is_authenticated():
             return redirect(self.get_success_url())
-        print('not authenticate', *args, **kwargs)
         return super(LoginView, self).get(*args, **kwargs)
 
     def get_template_names(self):
@@ -312,7 +591,6 @@ class LoginView(FormView):
         return kwargs
 
     def form_invalid(self, form):
-        print('form_invalid')
         signals.user_login_attempt.send(
             sender=LoginView,
             username=get_form_data(form, form.identifier_field),
@@ -321,7 +599,6 @@ class LoginView(FormView):
         return super(LoginView, self).form_invalid(form)
 
     def form_valid(self, form):
-        print('form_valid')
         self.login_user(form)
         self.after_login(form)
         return redirect(self.get_success_url())

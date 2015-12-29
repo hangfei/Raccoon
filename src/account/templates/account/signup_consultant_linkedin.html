@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% load account_tags %}
+{% load i18n %}
+{% load bootstrap %}
+{% load staticfiles %}
+
+{% block head_title %}{% trans "Sign up" %}{% endblock %}
+
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <h3 style="text-align: center;">Signup with LinkedIn to become a consultant</h3>
+            <p style="text-align: center;">We now only provide signing up for consultant from LinkedIn.</p>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <a href="{{ linkedin_api_link }}"><img src="{% static 'images/signin_with_linkedin-buttons/Non-Retina/Sign-in-Large---Default.png' %}" alt="LinkedIn Signin"></a>
+        </div>
+        <div class="col-md-4">
+            {% include "account/_signup_sidebar.html" %}
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+{% endblock %}
