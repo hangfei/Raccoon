@@ -180,6 +180,8 @@ class ClientSignupView(FormView):
         user.username = username
         user.email = form.cleaned_data["email"].strip()
         password = form.cleaned_data.get("password")
+        user.first_name = form.cleaned_data.get("first_name")
+        user.last_name = form.cleaned_data.get("last_name")
         if password:
             user.set_password(password)
         else:
@@ -344,8 +346,6 @@ class ConsultantSignupView(FormView):
             get_result = requests.get("https://api.linkedin.com/v1/people/~?format=json", headers=get_headers)
 
             data_dict = {'first_name': get_result.json()['firstName'], 'last_name': get_result.json()['lastName']}
-
-            data_dict = {'username':'hangfei'}
             self.form_kwargs['initial'] = data_dict
             # user_form = UserRegistrationForm(initial=data_dict)
         else:
@@ -462,6 +462,8 @@ class ConsultantSignupView(FormView):
         user.username = username
         user.email = form.cleaned_data["email"].strip()
         password = form.cleaned_data.get("password")
+        user.first_name = form.cleaned_data.get("first_name")
+        user.last_name = form.cleaned_data.get("last_name")
         if password:
             user.set_password(password)
         else:
