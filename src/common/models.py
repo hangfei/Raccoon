@@ -34,9 +34,6 @@ from account.signals import signup_code_sent, signup_code_used
 class Client(models.Model):
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    first_name_text = models.CharField("First Name", max_length=30)
-    last_name_text = models.CharField("Last Name", max_length=30)
-    password = models.CharField("Password", max_length=30, default = '12345')
     def __str__(self):
         return self.first_name_text + " " + self.last_name_text
 
@@ -52,6 +49,8 @@ class Account(models.Model):
         default=settings.LANGUAGE_CODE
     )
     account_type = models.CharField("Account Type", max_length=30)
+    first_name = models.CharField("First Name", max_length=30)
+    last_name = models.CharField("Last Name", max_length=30)
 
     @classmethod
     def for_request(cls, request):
