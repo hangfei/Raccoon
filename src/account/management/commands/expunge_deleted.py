@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.core.management.base import BaseCommand
 
-from account.models import AccountDeletion
+from common.models import AccountDeletion
 
 
 class Command(BaseCommand):

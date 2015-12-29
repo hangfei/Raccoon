@@ -20,7 +20,7 @@ from account.forms import ChangePasswordForm, PasswordResetForm, PasswordResetTo
 from account.forms import SettingsForm
 from account.hooks import hookset
 from account.mixins import LoginRequiredMixin
-from account.models import SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
+from common.models import SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
 from account.utils import default_redirect, get_form_data
 
 

@@ -2,7 +2,7 @@ from __future__ import unicode_literals
 
 from django.contrib import admin
 
-from account.models import Account, SignupCode, AccountDeletion, EmailAddress
+from common.models import Account, SignupCode, AccountDeletion, EmailAddress
 
 
 class SignupCodeAdmin(admin.ModelAdmin):

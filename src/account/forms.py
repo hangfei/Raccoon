@@ -15,7 +15,7 @@ from django.contrib.auth import get_user_model
 
 from account.conf import settings
 from account.hooks import hookset
-from account.models import EmailAddress
+from common.models import EmailAddress
 from account.utils import get_user_lookup_kwargs
 
 

@@ -5,7 +5,7 @@ from django.test import TestCase, override_settings
 
 from django.contrib.auth.models import User
 
-from account.models import SignupCode, EmailConfirmation
+from common.models import SignupCode, EmailConfirmation
 
 
 class SignupViewTestCase(TestCase):

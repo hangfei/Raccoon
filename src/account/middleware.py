@@ -4,7 +4,7 @@ from django.utils import translation, timezone
 from django.utils.cache import patch_vary_headers
 
 from account.conf import settings
-from account.models import Account
+from common.models import Account
 
 
 class LocaleMiddleware(object):

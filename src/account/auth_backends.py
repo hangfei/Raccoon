@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.contrib.auth import get_user_model
 from django.contrib.auth.backends import ModelBackend
 
-from account.models import EmailAddress
+from common.models import EmailAddress
 from account.utils import get_user_lookup_kwargs
 
 
