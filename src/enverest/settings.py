@@ -42,6 +42,7 @@ EMAIL_PORT = 587
 
 INSTALLED_APPS = [
     'common',
+    'consultant',
     'homepage',
     'account',
     'pinax_theme_bootstrap',
