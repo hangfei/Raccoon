@@ -34,7 +34,7 @@ from account.signals import signup_code_sent, signup_code_used
 class Client(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     def __str__(self):
-        return self.first_name_text + " " + self.last_name_text
+        return self.user.first_name + " " + self..user.last_name
 
 class Expert(models.Model):
     APPLYING = 'A'
@@ -53,7 +53,7 @@ class Expert(models.Model):
                               choices=EXPERT_STATUS_CHOICES,
                               default=APPLYING)
     def __str__(self):
-        return self.first_name_text + " " + self.last_name_text
+        return self.user.first_name + " " + self.user.last_name
 
 class Project(models.Model):
     PROJECT_CREATED = 'PC'

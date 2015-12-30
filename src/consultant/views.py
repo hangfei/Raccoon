@@ -12,7 +12,7 @@ def index(request):
     return render(request, 'consultants/index.html', context)
 
 def dashboard(request):
-	test = 'Shiming'
-	project_list = Project.objects.filter(client__first_name_text=test)
+	test = "Shiming"
+	project_list = Project.objects.filter(client__user__first_name=test)
 	context = { 'project_list': project_list }
-	return render(request, 'consultants/dashboard.html', context)
+	return render(request, 'consultant/dashboard.html', context)
