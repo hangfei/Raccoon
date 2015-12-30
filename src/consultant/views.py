@@ -5,12 +5,6 @@ from common.models import Project
 from common.models import Client
 from common.models import Expert
 
-def index(request):
-    context = RequestContext(request, {
-        'latest_question_list': 'sss',
-    })
-    return render(request, 'consultants/index.html', context)
-
 def dashboard(request):
 	test = "Shiming"
 	project_list = Project.objects.filter(client__user__first_name=test)

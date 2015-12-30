@@ -34,7 +34,7 @@ from account.signals import signup_code_sent, signup_code_used
 class Client(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     def __str__(self):
-        return self.user.first_name + " " + self..user.last_name
+        return self.user.first_name + " " + self.user.last_name
 
 class Expert(models.Model):
     APPLYING = 'A'
