@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-12-30 12:12-0800\n"
+"POT-Creation-Date: 2015-12-30 13:08-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,3 +21,85 @@ msgstr ""
 #: templates/homepage/index.html:28
 msgid "Meet Professionals and Industry Leaders"
 msgstr "寻找专家和业界领袖"
+
+#: templates/homepage/index.html:31
+msgid ""
+"Get a sense of the 2,000+ Professionals in our network. We provide expertise "
+"to help clients achieve accelerated growth and sustained global success."
+msgstr ""
+"了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和全"
+"球化的成功。"
+
+#: templates/homepage/index.html:42
+msgid "Simon Cen"
+msgstr "陈水明"
+
+#: templates/homepage/index.html:43
+msgid ""
+"Built strong expertise in Business Development, Operations and Supply Chain "
+"Management."
+msgstr "建立强大的技能和供应。"
+
+#: templates/homepage/index.html:54
+msgid "Jeff Weiner"
+msgstr ""
+
+#: templates/homepage/index.html:55
+msgid ""
+"Some quick example text to build on the card title and make up the bulk of "
+"the card's content."
+msgstr "一些例子"
+
+#: templates/homepage/index.html:66
+msgid "Alex J. Zhang"
+msgstr ""
+
+#: templates/homepage/index.html:67
+msgid ""
+"Business development and marketing leader with extensive experience and "
+"network in life sciences"
+msgstr "商业和市场领导经验。"
+
+#: templates/homepage/index.html:78
+msgid "Why choose Enverest?"
+msgstr "为什么选择恩睿"
+
+#: templates/homepage/index.html:79
+msgid ""
+"Enverest provides fast-growing companies affordable, high-quality, and "
+"widely accessible advisory services. Together, we offer customized solutions "
+"to meet our clients' needs, particularly in developing and executing fast-"
+"growth initiatives, and expanding market globally."
+msgstr ""
+
+#: templates/homepage/index.html:87
+msgid "Project Management"
+msgstr "项目管理"
+
+#: templates/homepage/index.html:88
+msgid ""
+"Leading fast-growing companies to apply world-class solutions and practices "
+"for global business success. Leading fast-growing companies to apply world-"
+"class solutions and practices for global business success."
+msgstr ""
+
+#: templates/homepage/index.html:93
+msgid "Close partnership"
+msgstr "紧密的合作关系"
+
+#: templates/homepage/index.html:94
+msgid ""
+"All our themes have a simple multiple use license. Helping clients develop "
+"and execute management initiatives to\\u200b achieve accelerated growth."
+msgstr ""
+
+#: templates/homepage/index.html:99
+msgid "Technical support"
+msgstr "技术支持"
+
+#: templates/homepage/index.html:100
+msgid ""
+"The Enverest team and Expert Network are filled with experienced "
+"entrepreneurs and seasoned professionals from a variety of industries and "
+"functions. and we'll get back to you ASAP."
+msgstr ""
