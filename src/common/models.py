@@ -32,10 +32,71 @@ from account.signals import signup_code_sent, signup_code_used
 
 
 class Client(models.Model):
-
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     def __str__(self):
         return self.first_name_text + " " + self.last_name_text
+
+class Expert(models.Model):
+    APPLYING = 'A'
+    JUNIOR = 'J'
+    SENIOR = 'S'
+
+    EXPERT_STATUS_CHOICES = (
+       (APPLYING, 'Expert is applying'),
+       (JUNIOR, 'Expert'),
+       (SENIOR, 'Senior Expert'),
+    )
+
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    description_text = models.CharField("Description", max_length=500)
+    status = models.CharField(max_length=1,
+                              choices=EXPERT_STATUS_CHOICES,
+                              default=APPLYING)
+    def __str__(self):
+        return self.first_name_text + " " + self.last_name_text
+
+class Project(models.Model):
+    PROJECT_CREATED = 'PC'
+    PROJECT_SUBMITTED = 'PS'
+    EXPERT_ASSIGNED = 'EA'
+    IN_PROGRESS = 'IP'
+    PROJECT_FINISHED = 'PF'
+    PAYMENT_RECEIVED = 'PR'
+
+    PROJECT_STATUS_CHOICES = (
+       (PROJECT_CREATED, 'Project is created'),
+       (PROJECT_SUBMITTED, 'Project is submitted'),
+       (EXPERT_ASSIGNED, 'An expert is assigned'),
+       (IN_PROGRESS,'An expert is working on it'),
+       (PROJECT_FINISHED,'Project is finished'),
+       (PAYMENT_RECEIVED,'Payment is received and the project is closed'),
+    )
+
+    CLIENT = 'CLT'
+    EXPERT = 'EPT'
+    ADMINISTRATOR = 'ADM'
+
+    ASSIGN_TO_CHOICES = (
+       (CLIENT, 'Waiting for client'),
+       (EXPERT, 'Waiting for expert'),
+       (ADMINISTRATOR, 'Waiting for system administrator'),
+    )
+
+    client = models.ForeignKey(Client)
+    expert = models.ForeignKey(Expert)
+    title_text = models.CharField(max_length=200)
+    info_text = models.CharField(max_length=500)
+    pub_date = models.DateTimeField('date published')
+    end_date = models.DateTimeField('date end')
+    state = models.CharField(max_length=2,
+                             choices=PROJECT_STATUS_CHOICES,
+                             default=PROJECT_CREATED)
+    assgin_to = models.CharField(max_length=3,
+                                 choices=ASSIGN_TO_CHOICES,
+                                 default=CLIENT)
+
+    def __str__(self):
+        return self.title_text
 
 @python_2_unicode_compatible
 class Account(models.Model):
