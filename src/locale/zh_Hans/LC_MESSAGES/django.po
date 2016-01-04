@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-04 00:25-0800\n"
+"POT-Creation-Date: 2016-01-04 00:39-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -114,7 +114,7 @@ msgstr ""
 msgid "Chinese"
 msgstr ""
 
-#: templates/base.html:33
+#: templates/base.html:28 templates/base.html.py:33
 msgid "Enverest"
 msgstr "恩睿咨询"
 
@@ -123,13 +123,17 @@ msgid "About Enverest"
 msgstr "关于恩睿"
 
 #: templates/base.html:35
+msgid "Service"
+msgstr "服务"
+
+#: templates/base.html:36
 msgid "Partners"
 msgstr "合作伙伴"
 
-#: templates/base.html:36
+#: templates/base.html:37
 msgid "Join Us"
 msgstr "加入我们"
 
-#: templates/base.html:37
+#: templates/base.html:38
 msgid "News Blog"
 msgstr "新闻博客"

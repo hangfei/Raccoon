@@ -13,3 +13,9 @@ def about_enverest(request):
         'latest_question_list': 'sss',
     })
     return render(request, 'homepage/about_enverest.html', context)
+
+def service(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/service.html', context)
