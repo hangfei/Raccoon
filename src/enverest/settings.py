@@ -108,7 +108,7 @@ DATABASES = {
         'NAME': 'raccoon',
         'USER': 'admin',
         'PASSWORD': 'raccoonadmin',
-        'HOST': 'raccoon.czeip1lepbze.ap-southeast-1.rds.amazonaws.com',
+        'HOST': 'raccoon.cswqi4vryc9n.us-west-2.rds.amazonaws.com',
         'PORT': '3306',
     }
 }
