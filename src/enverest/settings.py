@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'homepage',
     'consultant',
     'account',
+    'search',
     'pinax_theme_bootstrap',
     'bootstrapform',
     'django.contrib.admin',

@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^i18n/', include('django.conf.urls.i18n')),
     url(r"^account/", include("account.urls")),
     url(r"^consultant/", include("consultant.urls")),
+    url(r"^search/", include("search.urls")),
     url(r'^admin/', admin.site.urls),
 ]

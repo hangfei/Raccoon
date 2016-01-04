@@ -47,11 +47,24 @@ class Expert(models.Model):
        (SENIOR, 'Senior Expert'),
     )
 
+    BEIJING = 'BJ'
+    SANFRANCISCO = 'SF'
+    SINGAPORE = 'SN'
+    
+    AREA_CHOICES = (
+       (BEIJING, 'Beijing'),
+       (SANFRANCISCO, 'San Francisco'),
+       (SINGAPORE, 'Singapore'),
+    )
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     description_text = models.CharField("Description", max_length=500)
     status = models.CharField(max_length=1,
                               choices=EXPERT_STATUS_CHOICES,
                               default=APPLYING)
+    area = models.CharField(max_length=2,
+                            choices=AREA_CHOICES,
+                            default=BEIJING)
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 

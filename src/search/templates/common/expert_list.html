@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("button").click(function(){
+        $("p").hide();
+    });
+});
+</script>
+</head>
+<body>
+<h1>Experts</h1>
+
+<form action="{% url 'expert-list' %}" method="GET">{% csrf_token %}
+<table>
+<tr>
+    <td>
+        <select name="level">
+          <option id="levelALL" value="ALL">All</option>
+          <option id="levelA" value="A">Applying</option>
+          <option id="levelJ" value="J">Expert</option>
+          <option id="levelS" value="S">Senior Expert</option>
+          <option id="levelP" value="P">Partener</option>
+        </select>
+         <select name="area">
+          <option id="areaALL" value="ALL">All</option>
+          <option id="areaBJ" value="BJ">Beijing</option>
+          <option id="areaSF" value="SF">San Francisco</option>
+          <option id="areaSN" value="SN">Singapore</option>
+        </select>
+    </td>
+    <td><input type="submit" value="Filter" /></td>
+</tr>
+<table>
+
+<script>
+function getQueryVariable(variable)
+{
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+}
+
+function setSelectedIndex(s)
+{
+  s.selected = true;
+  return;
+}
+var strLevelName = "level";
+var strLevelVal = getQueryVariable("level");
+var strLevelConcat = strLevelName.concat(strLevelVal);
+
+var strAreaName = "area";
+var strAreaVal = getQueryVariable("area");
+var strAreaConcat = strAreaName.concat(strAreaVal);
+setSelectedIndex(document.getElementById(strLevelConcat));
+setSelectedIndex(document.getElementById(strAreaConcat));
+</script>
+
+{% if expert_list %}
+    <table id="experts">
+        {% for expert in expert_list %}
+            <tr>
+                <td>{{ expert.first_name_text }}</td>
+                <td>{{ expert.last_name_text }}</td>
+                <td><a href="{{ expert.id }}/detail" class="see_detail">detail</a></td>
+            </tr>
+        {% endfor %}
+    </table>
+    {% if is_paginated %}
+        <div class="pagination">
+            <span class="page-links">
+                {% if page_obj.has_previous %}
+                    <a id="prePage" href="search?page={{ page_obj.previous_page_number }}">previous</a>
+                    <script>
+                     var prePage = document.getElementById("prePage");
+                     var originalString = prePage.getAttribute("href");
+                     if(getQueryVariable("level") != false)
+                     {
+                       var concatStr = originalString.concat("&level=",getQueryVariable("level"),"&area=",getQueryVariable("area"));
+                       prePage.setAttribute("href", concatStr);
+                     }
+                    </script>
+                {% endif %}
+                <span class="page-current">
+                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                </span>
+                {% if page_obj.has_next %}
+                    <a id="nextPage" href="search?page={{ page_obj.next_page_number }}">next</a>
+                    <script>
+                     var prePage = document.getElementById("nextPage");
+                     var originalString = prePage.getAttribute("href");
+                     if(getQueryVariable("level") != false)
+                     {
+                       var concatStr = originalString.concat("&level=",getQueryVariable("level"),"&area=",getQueryVariable("area"));
+                       prePage.setAttribute("href", concatStr);
+                     }
+                    </script>
+                {% endif %}
+            </span>
+        </div>
+    {% endif %}
+{% else %}
+    <h3>My experts</h3>
+    <p>No experts found!!! :(</p>
+{% endif %}
+
+
+</body>
+</html>
+<!--
+<ul>
+{% for expert in object_list %}
+    <li>{{ expert.first_name_text }} {{ expert.last_name_text }}</li>
+{% empty %}
+    <li>No experts yet.</li>
+{% endfor %}
+</ul>
+-->
