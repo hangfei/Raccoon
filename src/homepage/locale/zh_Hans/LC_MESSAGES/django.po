@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-03 22:18-0800\n"
+"POT-Creation-Date: 2016-01-04 00:25-0800\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: templates/homepage/about_enverest.html:17
+#: homepage/templates/homepage/about_enverest.html:17
 msgid "What's Enverest"
 msgstr "恩睿概况"
 
-#: templates/homepage/about_enverest.html:20
+#: homepage/templates/homepage/about_enverest.html:20
 msgid ""
 "Enverest is consisted of dedicated consultants (Partners) and a diversified "
 "expert network (Experts) that share the passion and mission to  promote "
@@ -33,27 +33,27 @@ msgstr ""
 "共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和全球"
 "资源，为创新企业制定快速增长策略，规划全球发展布局。"
 
-#: templates/homepage/about_enverest.html:30
+#: homepage/templates/homepage/about_enverest.html:30
 msgid "Who We Are"
 msgstr "使命"
 
-#: templates/homepage/about_enverest.html:31
+#: homepage/templates/homepage/about_enverest.html:31
 msgid ""
 "Everest team is committed to help fast-growing companies to achieve "
 "accelerated growth and sustained global success."
 msgstr "我们专注于为创新企业制定快速增长策略，规划全球发展布局。"
 
-#: templates/homepage/about_enverest.html:32
-#: templates/homepage/about_enverest.html:43
-#: templates/homepage/about_enverest.html:54
+#: homepage/templates/homepage/about_enverest.html:32
+#: homepage/templates/homepage/about_enverest.html:43
+#: homepage/templates/homepage/about_enverest.html:54
 msgid "Learn More"
 msgstr "了解更多"
 
-#: templates/homepage/about_enverest.html:41
+#: homepage/templates/homepage/about_enverest.html:41
 msgid "What We Do"
 msgstr "特色"
 
-#: templates/homepage/about_enverest.html:42
+#: homepage/templates/homepage/about_enverest.html:42
 msgid ""
 "Our partners and experts share knowledge, expertise and network to provide "
 "on-demand advisory services for our clients to thrive."
@@ -61,11 +61,11 @@ msgstr ""
 "恩睿咨询合伙人和专家团一起与客户共享专业知识和商业网络资源，为创新企业的发展"
 "成长提供量身定制的咨询服务。"
 
-#: templates/homepage/about_enverest.html:52
+#: homepage/templates/homepage/about_enverest.html:52
 msgid "Services"
 msgstr "服务"
 
-#: templates/homepage/about_enverest.html:53
+#: homepage/templates/homepage/about_enverest.html:53
 msgid ""
 "We provide fast-growing companies affordable, high-quality, and widely "
 "accessible advisory services. Together, we offer customized solutions to "
@@ -76,11 +76,11 @@ msgstr ""
 "的咨询服务。我们为满足您的需求，提供包括商业模式的设计，增长和并购战略，市场"
 "营销，公司运营，业务扩展和融资策略等一系列咨询服务。"
 
-#: templates/homepage/index.html:28
+#: homepage/templates/homepage/index.html:28
 msgid "Meet Professionals and Industry Leaders"
 msgstr "寻找专家和业界领袖"
 
-#: templates/homepage/index.html:31
+#: homepage/templates/homepage/index.html:31
 msgid ""
 "Get a sense of the 2,000+ Professionals in our network. We provide expertise "
 "to help clients achieve accelerated growth and sustained global success."
@@ -88,41 +88,41 @@ msgstr ""
 "了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和全"
 "球化的成功。"
 
-#: templates/homepage/index.html:42
+#: homepage/templates/homepage/index.html:42
 msgid "Simon Cen"
 msgstr "陈水明"
 
-#: templates/homepage/index.html:43
+#: homepage/templates/homepage/index.html:43
 msgid ""
 "Built strong expertise in Business Development, Operations and Supply Chain "
 "Management."
 msgstr "建立强大的技能和供应。"
 
-#: templates/homepage/index.html:54
+#: homepage/templates/homepage/index.html:54
 msgid "Jeff Weiner"
 msgstr ""
 
-#: templates/homepage/index.html:55
+#: homepage/templates/homepage/index.html:55
 msgid ""
 "Some quick example text to build on the card title and make up the bulk of "
 "the card's content."
 msgstr "一些例子"
 
-#: templates/homepage/index.html:66
+#: homepage/templates/homepage/index.html:66
 msgid "Alex J. Zhang"
 msgstr ""
 
-#: templates/homepage/index.html:67
+#: homepage/templates/homepage/index.html:67
 msgid ""
 "Business development and marketing leader with extensive experience and "
 "network in life sciences"
 msgstr "商业和市场领导经验。"
 
-#: templates/homepage/index.html:78
+#: homepage/templates/homepage/index.html:78
 msgid "Why choose Enverest?"
 msgstr "为什么选择恩睿"
 
-#: templates/homepage/index.html:79
+#: homepage/templates/homepage/index.html:79
 msgid ""
 "Enverest provides fast-growing companies affordable, high-quality, and "
 "widely accessible advisory services. Together, we offer customized solutions "
@@ -130,32 +130,32 @@ msgid ""
 "growth initiatives, and expanding market globally."
 msgstr ""
 
-#: templates/homepage/index.html:87
+#: homepage/templates/homepage/index.html:87
 msgid "Project Management"
 msgstr "项目管理"
 
-#: templates/homepage/index.html:88
+#: homepage/templates/homepage/index.html:88
 msgid ""
 "Leading fast-growing companies to apply world-class solutions and practices "
 "for global business success. Leading fast-growing companies to apply world-"
 "class solutions and practices for global business success."
 msgstr ""
 
-#: templates/homepage/index.html:93
+#: homepage/templates/homepage/index.html:93
 msgid "Close partnership"
 msgstr "紧密的合作关系"
 
-#: templates/homepage/index.html:94
+#: homepage/templates/homepage/index.html:94
 msgid ""
 "All our themes have a simple multiple use license. Helping clients develop "
 "and execute management initiatives to\\u200b achieve accelerated growth."
 msgstr ""
 
-#: templates/homepage/index.html:99
+#: homepage/templates/homepage/index.html:99
 msgid "Technical support"
 msgstr "技术支持"
 
-#: templates/homepage/index.html:100
+#: homepage/templates/homepage/index.html:100
 msgid ""
 "The Enverest team and Expert Network are filled with experienced "
 "entrepreneurs and seasoned professionals from a variety of industries and "

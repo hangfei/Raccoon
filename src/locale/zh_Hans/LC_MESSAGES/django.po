@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-01-04 00:25-0800\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: common/models.py:117
+msgid "user"
+msgstr ""
+
+#: common/models.py:118
+msgid "timezone"
+msgstr ""
+
+#: common/models.py:120
+msgid "language"
+msgstr ""
+
+#: common/models.py:219
+msgid "code"
+msgstr ""
+
+#: common/models.py:220
+msgid "max uses"
+msgstr ""
+
+#: common/models.py:221
+msgid "expiry"
+msgstr ""
+
+#: common/models.py:224
+msgid "notes"
+msgstr ""
+
+#: common/models.py:225
+msgid "sent"
+msgstr ""
+
+#: common/models.py:226
+msgid "created"
+msgstr ""
+
+#: common/models.py:227
+msgid "use count"
+msgstr ""
+
+#: common/models.py:230
+msgid "signup code"
+msgstr ""
+
+#: common/models.py:231
+msgid "signup codes"
+msgstr ""
+
+#: common/models.py:338
+msgid "verified"
+msgstr ""
+
+#: common/models.py:339
+msgid "primary"
+msgstr ""
+
+#: common/models.py:344
+msgid "email address"
+msgstr ""
+
+#: common/models.py:345
+msgid "email addresses"
+msgstr ""
+
+#: common/models.py:395
+msgid "email confirmation"
+msgstr ""
+
+#: common/models.py:396
+msgid "email confirmations"
+msgstr ""
+
+#: common/models.py:445
+msgid "date requested"
+msgstr ""
+
+#: common/models.py:446
+msgid "date expunged"
+msgstr ""
+
+#: common/models.py:449
+msgid "account deletion"
+msgstr ""
+
+#: common/models.py:450
+msgid "account deletions"
+msgstr ""
+
+#: enverest/settings.py:138
+msgid "English"
+msgstr ""
+
+#: enverest/settings.py:139
+msgid "Chinese"
+msgstr ""
+
+#: templates/base.html:33
+msgid "Enverest"
+msgstr "恩睿咨询"
+
+#: templates/base.html:34
+msgid "About Enverest"
+msgstr "关于恩睿"
+
+#: templates/base.html:35
+msgid "Partners"
+msgstr "合作伙伴"
+
+#: templates/base.html:36
+msgid "Join Us"
+msgstr "加入我们"
+
+#: templates/base.html:37
+msgid "News Blog"
+msgstr "新闻博客"

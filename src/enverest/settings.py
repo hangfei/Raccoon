@@ -139,6 +139,9 @@ LANGUAGES = (
     ('zh-hans', _('Chinese')),
 )
 
+# A list of directories where Django looks for translation files.
+LOCALE_PATHS = ['locale']
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
