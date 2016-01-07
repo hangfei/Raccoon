@@ -1,9 +1,19 @@
-<!DOCTYPE html>
+{% load staticfiles %}
+
+<!-- Required meta tags always come first -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
+<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script>
-
 $(document).ready(function(){
     $("button").click(function(){
         $("p").hide();
@@ -11,21 +21,75 @@ $(document).ready(function(){
 });
 </script>
 </head>
+
 <body>
-<h1>Experts</h1>
+<header class="navbar navbar-dark bg-inverse navbar-static-top bd-navbar" role="banner">
+  <div class="container">
+    <div class="clearfix">
+      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-expanded="true">
+        ☰
+      </button>
+      <a class="navbar-brand hidden-sm-up" href="/">
+        恩睿咨询
+      </a>
+    </div>
+    <div class="navbar-toggleable-xs collapse in" id="bd-main-nav" aria-expanded="true">
+      <nav class="nav navbar-nav">
+        <a class="nav-item nav-link active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">恩睿咨询</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">关于恩睿</a>
+        <a class="nav-item nav-link " href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">阅读案例</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">合作伙伴</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">加入我们</a>
+        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">新闻博客</a>
+        <form class="form-inline pull-xs-right">
+          <input class="form-control" type="text" placeholder="搜索">
+          <button class="btn btn-success-outline" type="submit">Search</button>
+        </form>
+      </nav>
+    </div>
+  </div>
+</header>
+
+
+<h2>Invite Experts to a Project</h2>
 
 <form action="{% url 'expert-list' %}" method="GET">{% csrf_token %}
 <table>
 <tr>
     <td>
-        <select name="level">
-          <option id="levelALL" value="ALL">All</option>
-          <option id="levelA" value="A">Applying</option>
-          <option id="levelJ" value="J">Expert</option>
-          <option id="levelS" value="S">Senior Expert</option>
-          <option id="levelP" value="P">Partener</option>
+        <select name="industry">
+          <option id="industryALL" value="ALL">All</option>
+          <option id="industryIT" value="IT">Information Technology</option>
+          <option id="industryMB" value="MB">Mobile Internet</option>
+          <option id="industrySW" value="SW">Software and Database System</option>
+          <option id="industryHW" value="HW">Hardware and Storage</option>
+          <option id="industryBI" value="BI">Biotech</option>
+          <option id="industryLS" value="LS">Life Science</option>
+          <option id="industryCS" value="CS">Consulting Services</option>
+          <option id="industryPE" value="PE">Power and Energy</option>
+          <option id="industryOT" value="OT">Others</option>
         </select>
-         <select name="area">
+        <select name="expertise">
+          <option id="expertiseALL" value="ALL">All</option>
+          <option id="expertiseMC" value="MC">Management Consulting</option>
+          <option id="expertiseEN" value="EN">Entrepreneurship</option>
+          <option id="expertiseCS" value="CS">Corporate Strategy</option>
+          <option id="expertiseBD" value="BD">Business Development</option>
+          <option id="expertisePM" value="PM">Product Management</option>
+          <option id="expertiseMA" value="MA">Merger and Acquisition</option>
+          <option id="expertiseSM" value="SM">Sales and Marketing</option>
+          <option id="expertiseLS" value="LS">Legal Services</option>
+          <option id="expertiseFA" value="FA">Finance and Accounting</option>
+          <option id="expertiseOT" value="OT">Others</option>
+        </select>
+        <select name="experience">
+          <option id="experienceALL" value="ALL">All</option>
+          <option id="experienceA" value="A">1-5 years</option>
+          <option id="experienceB" value="B">5-10 years</option>
+          <option id="experienceC" value="C">10-15 years</option>
+          <option id="experienceC" value="D"> >15 years</option>
+        </select>
+        <select name="area">
           <option id="areaALL" value="ALL">All</option>
           <option id="areaBJ" value="BJ">Beijing</option>
           <option id="areaSF" value="SF">San Francisco</option>
@@ -53,14 +117,25 @@ function setSelectedIndex(s)
   s.selected = true;
   return;
 }
-var strLevelName = "level";
-var strLevelVal = getQueryVariable("level");
-var strLevelConcat = strLevelName.concat(strLevelVal);
+var strIndustryName = "industry";
+var strIndustryVal = getQueryVariable("industry");
+var strIndustryConcat = strIndustryName.concat(strIndustryVal);
+
+var strExpertiseName = "expertise";
+var strExpertiseVal = getQueryVariable("expertise");
+var strExpertiseConcat = strExpertiseName.concat(strExpertiseVal);
+
+var strExperienceName = "experience";
+var strExperienceVal = getQueryVariable("experience");
+var strExperienceConcat = strExperienceName.concat(strExperienceVal);
 
 var strAreaName = "area";
 var strAreaVal = getQueryVariable("area");
 var strAreaConcat = strAreaName.concat(strAreaVal);
-setSelectedIndex(document.getElementById(strLevelConcat));
+
+setSelectedIndex(document.getElementById(strIndustryConcat));
+setSelectedIndex(document.getElementById(strExpertiseConcat));
+setSelectedIndex(document.getElementById(strExperienceConcat));
 setSelectedIndex(document.getElementById(strAreaConcat));
 </script>
 
@@ -82,9 +157,13 @@ setSelectedIndex(document.getElementById(strAreaConcat));
                     <script>
                      var prePage = document.getElementById("prePage");
                      var originalString = prePage.getAttribute("href");
-                     if(getQueryVariable("level") != false)
+                     if(getQueryVariable("industry") != false)
                      {
-                       var concatStr = originalString.concat("&level=",getQueryVariable("level"),"&area=",getQueryVariable("area"));
+                       var concatStr = originalString.concat(
+                         "&industry=",getQueryVariable("industry"),
+                         "&expertise=",getQueryVariable("expertise"),
+                         "&experience=",getQueryVariable("experience"),
+                         "&area=",getQueryVariable("area"));
                        prePage.setAttribute("href", concatStr);
                      }
                     </script>
@@ -97,9 +176,13 @@ setSelectedIndex(document.getElementById(strAreaConcat));
                     <script>
                      var prePage = document.getElementById("nextPage");
                      var originalString = prePage.getAttribute("href");
-                     if(getQueryVariable("level") != false)
+                     if(getQueryVariable("industry") != false)
                      {
-                       var concatStr = originalString.concat("&level=",getQueryVariable("level"),"&area=",getQueryVariable("area"));
+                       var concatStr = originalString.concat(
+                         "&industry=",getQueryVariable("industry"),
+                         "&expertise=",getQueryVariable("expertise"),
+                         "&experience=",getQueryVariable("experience"),
+                         "&area=",getQueryVariable("area"));
                        prePage.setAttribute("href", concatStr);
                      }
                     </script>
@@ -108,11 +191,53 @@ setSelectedIndex(document.getElementById(strAreaConcat));
         </div>
     {% endif %}
 {% else %}
-    <h3>My experts</h3>
+    <h3>Experts</h3>
     <p>No experts found!!! :(</p>
 {% endif %}
 
+<footer class="footer clearfix">
+  <ul class="footer-social-buttons">
+    <li class="btn-follow hidden-xs">
+      <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1449911165343&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=getbootstrap&amp;show_count=true&amp;show_screen_name=true&amp;size=m" style="position: static; visibility: visible; width: 233px; height: 20px;" data-screen-name="getbootstrap"></iframe>
+    </li>
+    <li class="btn-tweet">
+      <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1449911165344&amp;dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;related=getbootstrap%2Cmdo%2Cfat%2Cdhg&amp;size=m&amp;text=Bootstrap%20Themes&amp;type=share&amp;url=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;via=getbootstrap" style="position: static; visibility: visible; width: 62px; height: 20px;" data-url="http://themes.getbootstrap.com/"></iframe>
+    </li>
+  </ul>
 
+  <p class="hidden-xs">
+    Designed and built with all the love in the world by
+    <a href="https://twitter.com/mdo" target="_blank">@mdo</a>,
+    <a href="https://twitter.com/fat" target="_blank">@fat</a>, and
+    <a href="https://twitter.com/dhg" target="_blank">@dhg</a>.
+  </p>
+
+  <ul class="footer-list">
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/about-us">About</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/terms-of-service">Terms</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/privacy-policy">Privacy</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/our-license">Licenses</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="/pages/faq">FAQ</a>
+      </li>
+    
+      <li class="footer-list-item">
+        <a class="footer-list-link" href="http://getbootstrap.com">Bootstrap</a>
+      </li>
+  </ul>
+</footer>
 </body>
 </html>
 <!--

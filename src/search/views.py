@@ -25,14 +25,22 @@ class ExpertListView(ListView):
 
     def get_queryset(self):
         return_set = Expert.objects.all()
-        if self.request.method == 'GET' and 'level' in self.request.GET:
-            level = self.request.GET['level']
-            if level != 'ALL':
-              return_set = return_set.filter(status=level)
+        if self.request.method == 'GET' and 'industry' in self.request.GET:
+            industry_val = self.request.GET['industry']
+            if industry_val != 'ALL':
+              return_set = return_set.filter(industry=industry_val)
+        if self.request.method == 'GET' and 'expertise' in self.request.GET:
+            expertise_val = self.request.GET['expertise']
+            if expertise_val != 'ALL':
+              return_set = return_set.filter(expertise=expertise_val)
+        if self.request.method == 'GET' and 'experience' in self.request.GET:
+            experience_val = self.request.GET['experience']
+            if experience_val != 'ALL':
+              return_set = return_set.filter(experience=experience_val)
         if self.request.method == 'GET' and 'area' in self.request.GET:
-            city = self.request.GET['area']
-            if city != 'ALL':
-              return_set = return_set.filter(area=city)
+            area_val = self.request.GET['area']
+            if area_val != 'ALL':
+              return_set = return_set.filter(area=area_val)
         return return_set
 
     def get_context_data(self, **kwargs):

@@ -56,6 +56,64 @@ class Expert(models.Model):
        (SANFRANCISCO, 'San Francisco'),
        (SINGAPORE, 'Singapore'),
     )
+    
+    INFORMATION_TECHNOLOGY = 'IT'
+    MOBILE_INTERNET = 'MB'
+    SOFTWARE_AND_DATABASE_SYSTEMS = 'SW'
+    HARDWARE_AND_STORAGE = 'HW'
+    BIOTECH = 'BI'
+    LIFE_SCIENCES = 'LS'
+    CONSULTING_SERVICES = 'CS'
+    POWER_AND_ENERGY = 'PE'
+    OTHERS = 'OT'
+
+    INDUSTRY_CHOICES = (
+       (INFORMATION_TECHNOLOGY, 'Information Technology'),
+       (MOBILE_INTERNET, 'Mobile Internet'),
+       (SOFTWARE_AND_DATABASE_SYSTEMS, 'Software and Database System'),
+       (HARDWARE_AND_STORAGE, 'Hardware and Storage'),
+       (BIOTECH, 'Biotech'),
+       (LIFE_SCIENCES, 'Life Science'),
+       (CONSULTING_SERVICES, 'Consulting Services'),
+       (POWER_AND_ENERGY, 'Power and Energy'),
+       (OTHERS, 'Others'),
+    )
+    
+    MANAGEMENT_CONSULTING = 'MC'
+    ENTREPRENEURSHIP = 'EN'
+    CORPORATE_STRATEGY = 'CS'
+    BUSINESS_DEVELOPMENT = 'BD'
+    PRODUCT_MANAGEMENT = 'PM'
+    MERGER_ACQUISITION = 'MA'
+    SALES_MARKETING = 'SM'
+    LEGAL_SERVICES = 'LS'
+    FINANCE_ACCOUNTING = 'FA'
+    OTHERS = 'OT'
+
+    EXPERTISE_CHOICES = (
+       (MANAGEMENT_CONSULTING, 'Management Consulting'),
+       (ENTREPRENEURSHIP, 'Entrepreneurship'),
+       (CORPORATE_STRATEGY, 'Corporate Strategy'),
+       (BUSINESS_DEVELOPMENT, 'Business Development'),
+       (PRODUCT_MANAGEMENT, 'Product Management'),
+       (MERGER_ACQUISITION, 'Merger and Acquisition'),
+       (SALES_MARKETING, 'Sales and Marketing'),
+       (LEGAL_SERVICES, 'Legal Services'),
+       (FINANCE_ACCOUNTING, 'Finance and Accounting'),
+       (OTHERS, 'Others'),
+    )
+
+    ONE_FIVE = 'A'
+    FIVE_TEN = 'B'
+    TEN_FIFTEEN = 'C'
+    LARGER_FIFTEEN = 'D'
+    
+    EXPERIENCE_CHOICES = (
+       (ONE_FIVE, '1-5 years'),
+       (FIVE_TEN, '5-10 years'),
+       (TEN_FIFTEEN, '10-15 years'),
+       (LARGER_FIFTEEN, '>15 years'),
+    )
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     description_text = models.CharField("Description", max_length=500)
@@ -65,6 +123,15 @@ class Expert(models.Model):
     area = models.CharField(max_length=2,
                             choices=AREA_CHOICES,
                             default=BEIJING)
+    industry = models.CharField(max_length=2,
+                                choices=INDUSTRY_CHOICES,
+                                default=OTHERS)
+    expertise = models.CharField(max_length=2,
+                                choices=EXPERTISE_CHOICES,
+                                default=OTHERS)
+    experience = models.CharField(max_length=1,
+                                choices=EXPERIENCE_CHOICES,
+                                default=ONE_FIVE)
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 
