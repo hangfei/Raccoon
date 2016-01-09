@@ -165,9 +165,11 @@ class Project(models.Model):
     client = models.ForeignKey(Client)
     expert = models.ForeignKey(Expert)
     title_text = models.CharField(max_length=200)
-    info_text = models.CharField(max_length=500)
+    info_text = models.TextField()
     pub_date = models.DateTimeField('date published')
     end_date = models.DateTimeField('date end')
+    rate = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    assign_history = models.CharField(max_length=200, default='')
     state = models.CharField(max_length=2,
                              choices=PROJECT_STATUS_CHOICES,
                              default=PROJECT_CREATED)
