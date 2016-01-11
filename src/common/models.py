@@ -133,6 +133,13 @@ class Expert(models.Model):
                                 choices=EXPERIENCE_CHOICES,
                                 default=ONE_FIVE)
 
+    @classmethod
+    def create(cls, form, request=None, **kwargs):
+        expert = form.save(commit=False)
+        expert.user = kwargs.pop("user", None)
+        expert.save()
+        return expert
+
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 

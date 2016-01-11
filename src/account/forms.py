@@ -8,6 +8,7 @@ except ImportError:
     OrderedDict = None
 
 from django import forms
+from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
 
 from django.contrib import auth
@@ -16,13 +17,17 @@ from django.contrib.auth import get_user_model
 from account.conf import settings
 from account.hooks import hookset
 from common.models import EmailAddress
+from common.models import Expert
 from account.utils import get_user_lookup_kwargs
 
 
 alnum_re = re.compile(r"^\w+$")
 
 
-class ConsultantSignupForm(forms.Form):
+class ConsultantSignupForm(ModelForm):
+    class Meta:
+        model = Expert
+        fields = ['description_text', 'status', 'area', 'industry', 'expertise', 'experience']
 
     username = forms.CharField(
         label=_("Username"),
@@ -58,11 +63,6 @@ class ConsultantSignupForm(forms.Form):
         max_length=64,
         required=False,
         widget=forms.HiddenInput()
-    )
-
-    description_text = forms.CharField(
-        label=_("Description"),
-        max_length=500
     )
 
     def clean_username(self):
