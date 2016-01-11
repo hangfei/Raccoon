@@ -22,7 +22,76 @@ from account.utils import get_user_lookup_kwargs
 alnum_re = re.compile(r"^\w+$")
 
 
-class SignupForm(forms.Form):
+class ConsultantSignupForm(forms.Form):
+
+    username = forms.CharField(
+        label=_("Username"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+    first_name = forms.CharField(
+        label=_("Firstname"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+    last_name = forms.CharField(
+        label=_("Lastname"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+    password = forms.CharField(
+        label=_("Password"),
+        widget=forms.PasswordInput(render_value=False)
+    )
+    password_confirm = forms.CharField(
+        label=_("Password (again)"),
+        widget=forms.PasswordInput(render_value=False)
+    )
+    email = forms.EmailField(
+        label=_("Email"),
+        widget=forms.TextInput(), required=True)
+
+    code = forms.CharField(
+        max_length=64,
+        required=False,
+        widget=forms.HiddenInput()
+    )
+
+    description_text = forms.CharField(
+        label=_("Description"),
+        max_length=500
+    )
+
+    def clean_username(self):
+        if not alnum_re.search(self.cleaned_data["username"]):
+            raise forms.ValidationError(_("Usernames can only contain letters, numbers and underscores."))
+        User = get_user_model()
+        lookup_kwargs = get_user_lookup_kwargs({
+            "{username}__iexact": self.cleaned_data["username"]
+        })
+        qs = User.objects.filter(**lookup_kwargs)
+        if not qs.exists():
+            return self.cleaned_data["username"]
+        raise forms.ValidationError(_("This username is already taken. Please choose another."))
+
+    def clean_email(self):
+        value = self.cleaned_data["email"]
+        qs = EmailAddress.objects.filter(email__iexact=value)
+        if not qs.exists() or not settings.ACCOUNT_EMAIL_UNIQUE:
+            return value
+        raise forms.ValidationError(_("A user is registered with this email address."))
+
+    def clean(self):
+        if "password" in self.cleaned_data and "password_confirm" in self.cleaned_data:
+            if self.cleaned_data["password"] != self.cleaned_data["password_confirm"]:
+                raise forms.ValidationError(_("You must type the same password each time."))
+        return self.cleaned_data
+
+
+class ClientSignupForm(forms.Form):
 
     username = forms.CharField(
         label=_("Username"),

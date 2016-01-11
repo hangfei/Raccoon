@@ -132,6 +132,7 @@ class Expert(models.Model):
     experience = models.CharField(max_length=1,
                                 choices=EXPERIENCE_CHOICES,
                                 default=ONE_FIVE)
+
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 

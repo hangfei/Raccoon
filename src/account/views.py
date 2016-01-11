@@ -15,12 +15,12 @@ from django.contrib.auth.tokens import default_token_generator
 
 from account import signals
 from account.conf import settings
-from account.forms import SignupForm, LoginUsernameForm
+from account.forms import ConsultantSignupForm, ClientSignupForm, LoginUsernameForm
 from account.forms import ChangePasswordForm, PasswordResetForm, PasswordResetTokenForm
 from account.forms import SettingsForm
 from account.hooks import hookset
 from account.mixins import LoginRequiredMixin
-from common.models import SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
+from common.models import Expert, SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
 from account.utils import default_redirect, get_form_data
 
 
@@ -32,7 +32,7 @@ class ClientSignupView(FormView):
     template_name_email_confirmation_sent_ajax = "account/ajax/email_confirmation_sent.html"
     template_name_signup_closed = "account/signup_closed.html"
     template_name_signup_closed_ajax = "account/ajax/signup_closed.html"
-    form_class = SignupForm
+    form_class = ClientSignupForm
     form_kwargs = {}
     redirect_field_name = "next"
     identifier_field = "username"
@@ -115,7 +115,7 @@ class ClientSignupView(FormView):
 
     def form_invalid(self, form):
         signals.user_sign_up_attempt.send(
-            sender=SignupForm,
+            sender=ClientSignupForm,
             username=get_form_data(form, self.identifier_field),
             email=get_form_data(form, "email"),
             result=form.is_valid()
@@ -214,7 +214,7 @@ class ClientSignupView(FormView):
         email_address.send_confirmation(site=get_current_site(self.request))
 
     def after_signup(self, form):
-        signals.user_signed_up.send(sender=SignupForm, user=self.created_user, form=form)
+        signals.user_signed_up.send(sender=ClientSignupForm, user=self.created_user, form=form)
 
     def login_user(self):
         user = self.created_user
@@ -285,7 +285,7 @@ class ConsultantSignupView(FormView):
     template_name_email_confirmation_sent_ajax = "account/ajax/email_confirmation_sent.html"
     template_name_signup_closed = "account/signup_closed.html"
     template_name_signup_closed_ajax = "account/ajax/signup_closed.html"
-    form_class = SignupForm
+    form_class = ConsultantSignupForm
     form_kwargs = {}
     redirect_field_name = "next"
     identifier_field = "username"
@@ -397,7 +397,7 @@ class ConsultantSignupView(FormView):
 
     def form_invalid(self, form):
         signals.user_sign_up_attempt.send(
-            sender=SignupForm,
+            sender=ConsultantSignupForm,
             username=get_form_data(form, self.identifier_field),
             email=get_form_data(form, "email"),
             result=form.is_valid()
@@ -496,7 +496,7 @@ class ConsultantSignupView(FormView):
         email_address.send_confirmation(site=get_current_site(self.request))
 
     def after_signup(self, form):
-        signals.user_signed_up.send(sender=SignupForm, user=self.created_user, form=form)
+        signals.user_signed_up.send(sender=ConsultantSignupForm, user=self.created_user, form=form)
 
     def login_user(self):
         user = self.created_user
