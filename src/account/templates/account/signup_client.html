@@ -9,7 +9,9 @@
 {% block content %}
     <div class="row">
         <div class="col-md-4">
-            <form id="signup_form" method="post" action="{% url "account_signup" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+        </div>
+        <div class="col-md-4">
+            <form id="signup_form" method="post" action="{% url "client_account_signup" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
                 <legend>Client</legend>
                 <legend>{% trans "Sign up" %}</legend>
                 {% csrf_token %}
