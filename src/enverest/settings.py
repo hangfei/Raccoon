@@ -101,7 +101,7 @@ WSGI_APPLICATION = 'enverest.wsgi.application'
 
 # static files for deployment
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = "/home/ec2-user/myproject/Raccoon/src/static"
+STATIC_ROOT = "/home/ec2-user/myproject/Raccoon/static_files"
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
