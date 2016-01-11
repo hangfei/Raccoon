@@ -23,6 +23,10 @@ from account.mixins import LoginRequiredMixin
 from common.models import Expert, SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
 from account.utils import default_redirect, get_form_data
 
+from django.http import HttpResponse
+from django.template import RequestContext
+from django.shortcuts import render
+import requests
 
 class ClientSignupView(FormView):
 
@@ -340,21 +344,24 @@ class ConsultantSignupView(FormView):
                          'client_secret': '57dIUusbTq2I5G2E',
                         }    # a sequence of two element tuples
             headers = {'Host': 'www.linkedin.com', 'Content-Type': 'application/x-www-form-urlencoded'}
-            import requests
+
             result = requests.post("https://www.linkedin.com/uas/oauth2/accessToken", post_data, headers=headers)
 
             get_headers = {'Host': 'api.linkedin.com', 'Connection':'Keep-Alive', 'Authorization': 'Bearer ' + result.json()['access_token']}
-            get_result = requests.get("https://api.linkedin.com/v1/people/~?format=json", headers=get_headers)
+            profile_fields = '(id,firstName,lastName,positions,specialties,summary,num-connections,picture-url)'
+            get_result = requests.get("https://api.linkedin.com/v1/people/~:" + profile_fields + "?format=json", headers=get_headers)
 
-            data_dict = {'first_name': get_result.json()['firstName'], 'last_name': get_result.json()['lastName']}
+            data_dict = {'first_name': get_result.json()['firstName'],
+                         'last_name': get_result.json()['lastName'],
+                         'description_text': get_result.json()['summary']
+                        }
             self.form_kwargs['initial'] = data_dict
-            # user_form = UserRegistrationForm(initial=data_dict)
         else:
-            from django.http import HttpResponse
-            linkedin_api_link = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri=' + redirect_domain + '/account/signup/consultant/&state=987654321&scope=r_basicprofile'
-            html = "<html><body><a href='" + linkedin_api_link + "'>linkedin_api_link</a></body></html>"
-            from django.template import RequestContext
-            from django.shortcuts import render
+            base_authorization_url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri='
+            redirect_url  = redirect_domain + '/account/signup/consultant/'
+            state = '&state=987654321'
+            permissions = '&scope=r_basicprofile'
+            linkedin_api_link = base_authorization_url + redirect_url + state + permissions
             context = RequestContext(request, {
                 'linkedin_api_link': linkedin_api_link,
             })
