@@ -50,13 +50,13 @@ class Expert(models.Model):
     BEIJING = 'BJ'
     SANFRANCISCO = 'SF'
     SINGAPORE = 'SN'
-    
+
     AREA_CHOICES = (
        (BEIJING, 'Beijing'),
        (SANFRANCISCO, 'San Francisco'),
        (SINGAPORE, 'Singapore'),
     )
-    
+
     INFORMATION_TECHNOLOGY = 'IT'
     MOBILE_INTERNET = 'MB'
     SOFTWARE_AND_DATABASE_SYSTEMS = 'SW'
@@ -78,7 +78,7 @@ class Expert(models.Model):
        (POWER_AND_ENERGY, 'Power and Energy'),
        (OTHERS, 'Others'),
     )
-    
+
     MANAGEMENT_CONSULTING = 'MC'
     ENTREPRENEURSHIP = 'EN'
     CORPORATE_STRATEGY = 'CS'
@@ -107,7 +107,7 @@ class Expert(models.Model):
     FIVE_TEN = 'B'
     TEN_FIFTEEN = 'C'
     LARGER_FIFTEEN = 'D'
-    
+
     EXPERIENCE_CHOICES = (
        (ONE_FIVE, '1-5 years'),
        (FIVE_TEN, '5-10 years'),
@@ -192,8 +192,6 @@ class Account(models.Model):
         default=settings.LANGUAGE_CODE
     )
     account_type = models.CharField("Account Type", max_length=30)
-    first_name = models.CharField("First Name", max_length=30)
-    last_name = models.CharField("Last Name", max_length=30)
 
     @classmethod
     def for_request(cls, request):
