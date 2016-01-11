@@ -334,7 +334,7 @@ class ConsultantSignupView(FormView):
         if request.GET.get('code'):
             post_data = {'grant_type':'authorization_code',
                          'code':request.GET.get('code'),
-                         'redirect_uri': 'http://127.0.0.1:8000/account/signup/consultant/',
+                         'redirect_uri': 'http://' + request.META['HTTP_HOST'] + '/account/signup/consultant/',
                          'client_id': '75y73411x5u1zu',
                          'client_secret': '57dIUusbTq2I5G2E',
                         }    # a sequence of two element tuples
