@@ -331,10 +331,11 @@ class ConsultantSignupView(FormView):
         if not self.is_open():
             return self.closed()
         request = args[0]
+        redirect_domain = 'http://' + request.META['HTTP_HOST']
         if request.GET.get('code'):
             post_data = {'grant_type':'authorization_code',
                          'code':request.GET.get('code'),
-                         'redirect_uri': 'http://' + request.META['HTTP_HOST'] + '/account/signup/consultant/',
+                         'redirect_uri': redirect_domain + '/account/signup/consultant/',
                          'client_id': '75y73411x5u1zu',
                          'client_secret': '57dIUusbTq2I5G2E',
                         }    # a sequence of two element tuples
@@ -350,7 +351,7 @@ class ConsultantSignupView(FormView):
             # user_form = UserRegistrationForm(initial=data_dict)
         else:
             from django.http import HttpResponse
-            linkedin_api_link = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri=http://127.0.0.1:8000/account/signup/consultant/&state=987654321&scope=r_basicprofile'
+            linkedin_api_link = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri=' + redirect_domain + '/account/signup/consultant/&state=987654321&scope=r_basicprofile'
             html = "<html><body><a href='" + linkedin_api_link + "'>linkedin_api_link</a></body></html>"
             from django.template import RequestContext
             from django.shortcuts import render
