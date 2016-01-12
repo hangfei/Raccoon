@@ -33,6 +33,14 @@ from account.signals import signup_code_sent, signup_code_used
 
 class Client(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
+
+    @classmethod
+    def create(cls, form, request=None, **kwargs):
+        client = cls(**kwargs)
+        client.user = kwargs.pop("user", None)
+        client.save()
+        return client
+
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
 
