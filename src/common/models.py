@@ -30,6 +30,24 @@ from account.managers import EmailAddressManager, EmailConfirmationManager
 from account.signals import signup_code_sent, signup_code_used
 
 
+class UserProfile(models.Model):
+    user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    summary = models.CharField("Summary", max_length=500, default="Summary default.")
+    CLIENT = 'CLIENT'
+    EXPERT = 'EXPERT'
+    USER_TYPES = (
+       (CLIENT, 'CLIENT'),
+       (EXPERT, 'EXPERT')
+    )
+    user_type = models.CharField(max_length=20,
+                                choices=USER_TYPES,
+                                default=CLIENT)
+    @classmethod
+    def create(cls, form, request=None, **kwargs):
+        client = cls(**kwargs)
+        client.user = kwargs.pop("user", None)
+        client.save()
+        return client
 
 class Client(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)

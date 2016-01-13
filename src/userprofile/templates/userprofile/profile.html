@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    {% if is_expert %}
+    <h4>
+      <strong>{% trans "Expert Profile" %}</strong>
+    </h4>
+    {% else %}
+    <h4>
+      <strong>{% trans "Client Profile" %}</strong>
+    </h4>
+    {% endif %}
+    {% if person %}
+      <p>Username: {{ profile_user.username }}</p>
+      <p>First Name: {{ profile_user.first_name }}</p>
+      <p>Last Name: {{ profile_user.last_name }}</p>
+      <p>Email: {{ profile_user.email }}</p>
+      {% if is_expert %}
+      <p>{{ person.description_text }}</p>
+      <p>{{ person.status }}</p>
+      <p>{{ person.area }}</p>
+      <p>{{ person.experience }}</p>
+      <p>{{ person.expertise }}</p>
+      <p>{{ person.industry }}</p>
+      {% else %}
+      <p>Client doesn't have any fields now.</p>
+      {% endif %}
+    {% endif %}
+  </div>
+</div>
+
+</div> <!-- for Container -->
+{% endblock %}

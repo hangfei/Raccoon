@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'account',
     'search',
     'project',
+    'userprofile',
     'pinax_theme_bootstrap',
     'bootstrapform',
     'django.contrib.admin',

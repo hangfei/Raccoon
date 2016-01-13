@@ -20,7 +20,7 @@ from account.forms import ChangePasswordForm, PasswordResetForm, PasswordResetTo
 from account.forms import SettingsForm
 from account.hooks import hookset
 from account.mixins import LoginRequiredMixin
-from common.models import Client, Expert, SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
+from common.models import UserProfile, Client, Expert, SignupCode, EmailAddress, EmailConfirmation, Account, AccountDeletion
 from account.utils import default_redirect, get_form_data
 
 from django.http import HttpResponse
@@ -139,6 +139,7 @@ class ClientSignupView(FormView):
             self.created_user.save()
         self.create_account(form)
         self.create_client(form)
+        self.create_profile(form)
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
             self.send_email_confirmation(email_address)
@@ -200,6 +201,9 @@ class ClientSignupView(FormView):
 
     def create_client(self, form):
         return Client.create(form, request=self.request, user=self.created_user)
+
+    def create_profile(self, form):
+        return UserProfile.create(form, request=self.request, user=self.created_user, user_type="CLIENT")
 
     def generate_username(self, form):
         raise NotImplementedError(
