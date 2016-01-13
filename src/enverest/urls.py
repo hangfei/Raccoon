@@ -27,4 +27,5 @@ urlpatterns = [
     url(r"^project/", include("project.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^profile/', include("userprofile.urls")),
+    url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
 ]

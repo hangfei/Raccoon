@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'userprofile',
     'pinax_theme_bootstrap',
     'bootstrapform',
+    'postman',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
