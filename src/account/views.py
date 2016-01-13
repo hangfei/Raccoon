@@ -433,6 +433,7 @@ class ConsultantSignupView(FormView):
             self.created_user.save()
         self.create_account(form)
         self.create_consultant(form)
+        self.create_profile(form)
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
             self.send_email_confirmation(email_address)
@@ -494,6 +495,9 @@ class ConsultantSignupView(FormView):
 
     def create_consultant(self, form):
         return Expert.create(form, request=self.request, user=self.created_user)
+
+    def create_profile(self, form):
+        return UserProfile.create(form, request=self.request, user=self.created_user, user_type="EXPERT")
 
     def generate_username(self, form):
         raise NotImplementedError(
