@@ -9,6 +9,7 @@ from django.views.generic.base import TemplateResponseMixin, View
 from django.views.generic.edit import FormView
 
 from django.contrib import auth, messages
+from django.contrib.auth.models import Group
 from django.contrib.auth import get_user_model
 from django.contrib.sites.shortcuts import get_current_site
 from django.contrib.auth.tokens import default_token_generator
@@ -132,6 +133,8 @@ class ClientSignupView(FormView):
         # we want to handle that ourself.
         self.created_user._disable_account_creation = True
         self.created_user.save()
+        group = Group.objects.get(name='client')
+        self.created_user.groups.add(group)
         self.use_signup_code(self.created_user)
         email_address = self.create_email_address(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_REQUIRED and not email_address.verified:
@@ -426,6 +429,8 @@ class ConsultantSignupView(FormView):
         # we want to handle that ourself.
         self.created_user._disable_account_creation = True
         self.created_user.save()
+        group = Group.objects.get(name='expert')
+        self.created_user.groups.add(group)
         self.use_signup_code(self.created_user)
         email_address = self.create_email_address(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_REQUIRED and not email_address.verified:

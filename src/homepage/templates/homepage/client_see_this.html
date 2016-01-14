@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Client will be able to see this page." %}</strong>
+    </h4>
+    <p class="m-b-lg">
+      {% trans "Enverest is consisted of dedicated consultants (Partners) and a diversified expert network (Experts) that share the passion and mission to promote innovation & entrepreneurship. We provide expertise to help clients achieve accelerated growth and sustained global success." %}
+    </p>
+  </div>
+</div>
+
+</div> <!-- for Container -->
+{% endblock %}
