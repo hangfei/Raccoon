@@ -170,9 +170,58 @@ class Expert(models.Model):
         return self.user.first_name + " " + self.user.last_name
 
 class Project(models.Model):
+
+    INFORMATION_TECHNOLOGY = 'IT'
+    MOBILE_INTERNET = 'MB'
+    SOFTWARE_AND_DATABASE_SYSTEMS = 'SW'
+    HARDWARE_AND_STORAGE = 'HW'
+    BIOTECH = 'BI'
+    LIFE_SCIENCES = 'LS'
+    CONSULTING_SERVICES = 'CS'
+    POWER_AND_ENERGY = 'PE'
+    OTHERS = 'OT'
+
+    INDUSTRY_CHOICES = (
+       (INFORMATION_TECHNOLOGY, 'Information Technology'),
+       (MOBILE_INTERNET, 'Mobile Internet'),
+       (SOFTWARE_AND_DATABASE_SYSTEMS, 'Software and Database System'),
+       (HARDWARE_AND_STORAGE, 'Hardware and Storage'),
+       (BIOTECH, 'Biotech'),
+       (LIFE_SCIENCES, 'Life Science'),
+       (CONSULTING_SERVICES, 'Consulting Services'),
+       (POWER_AND_ENERGY, 'Power and Energy'),
+       (OTHERS, 'Others'),
+    )
+
+    MANAGEMENT_CONSULTING = 'MC'
+    ENTREPRENEURSHIP = 'EN'
+    CORPORATE_STRATEGY = 'CS'
+    BUSINESS_DEVELOPMENT = 'BD'
+    PRODUCT_MANAGEMENT = 'PM'
+    MERGER_ACQUISITION = 'MA'
+    SALES_MARKETING = 'SM'
+    LEGAL_SERVICES = 'LS'
+    FINANCE_ACCOUNTING = 'FA'
+    OTHERS = 'OT'
+
+    EXPERTISE_CHOICES = (
+       (MANAGEMENT_CONSULTING, 'Management Consulting'),
+       (ENTREPRENEURSHIP, 'Entrepreneurship'),
+       (CORPORATE_STRATEGY, 'Corporate Strategy'),
+       (BUSINESS_DEVELOPMENT, 'Business Development'),
+       (PRODUCT_MANAGEMENT, 'Product Management'),
+       (MERGER_ACQUISITION, 'Merger and Acquisition'),
+       (SALES_MARKETING, 'Sales and Marketing'),
+       (LEGAL_SERVICES, 'Legal Services'),
+       (FINANCE_ACCOUNTING, 'Finance and Accounting'),
+       (OTHERS, 'Others'),
+    )
+
     PROJECT_CREATED = 'PC'
     PROJECT_SUBMITTED = 'PS'
     EXPERT_ASSIGNED = 'EA'
+    EXPERT_TOOK = 'ET'
+    CLIENT_AGREE = 'CA'
     IN_PROGRESS = 'IP'
     PROJECT_FINISHED = 'PF'
     PAYMENT_RECEIVED = 'PR'
@@ -181,9 +230,27 @@ class Project(models.Model):
        (PROJECT_CREATED, 'Project is created'),
        (PROJECT_SUBMITTED, 'Project is submitted'),
        (EXPERT_ASSIGNED, 'An expert is assigned'),
+       (EXPERT_TOOK, 'An expert took this project'),
+       (CLIENT_AGREE, 'The client accepted this expert'),
        (IN_PROGRESS,'An expert is working on it'),
        (PROJECT_FINISHED,'Project is finished'),
        (PAYMENT_RECEIVED,'Payment is received and the project is closed'),
+    )
+    
+    FIXED = 'F'
+    HOURLY = 'H'
+
+    RATING_CHOICES = (
+       (FIXED, 'Fixed amount'),
+       (HOURLY, 'Hourly rate'),
+    )
+
+    DEEP_DIVE = 'D'
+    GENERAL_ADVISORY = 'G'
+
+    SERVICE_CHOICES = (
+       (DEEP_DIVE, 'Deep dive'),
+       (GENERAL_ADVISORY, 'General advisory'),
     )
 
     CLIENT = 'CLT'
@@ -200,6 +267,7 @@ class Project(models.Model):
     expert = models.ForeignKey(Expert)
     title_text = models.CharField(max_length=200)
     info_text = models.TextField()
+    expert_pref_text = models.CharField(max_length=1000, default='')
     pub_date = models.DateTimeField('date published')
     end_date = models.DateTimeField('date end')
     rate = models.DecimalField(max_digits=6, decimal_places=2, default=0)
@@ -210,7 +278,18 @@ class Project(models.Model):
     assgin_to = models.CharField(max_length=3,
                                  choices=ASSIGN_TO_CHOICES,
                                  default=CLIENT)
-
+    industry = models.CharField(max_length=2,
+                                 choices=INDUSTRY_CHOICES,
+                                 default=OTHERS)
+    expertise = models.CharField(max_length=2,
+                                 choices=EXPERTISE_CHOICES,
+                                 default=OTHERS)
+    rate_type = models.CharField(max_length=1,
+                                 choices=RATING_CHOICES,
+                                 default=FIXED)
+    service_type = models.CharField(max_length=1,
+                                    choices=SERVICE_CHOICES,
+                                    default=GENERAL_ADVISORY)
     def __str__(self):
         return self.title_text
 

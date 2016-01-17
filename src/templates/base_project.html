@@ -1,0 +1,166 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% block content %}
+
+
+<style>
+#project_table {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    table-layout:fixed;
+}
+
+#project_table td, #project_table th {
+    border: 1px solid #ddd;
+    text-align: left;
+    padding: 8px;
+    word-wrap:break-word;
+}
+
+#project_table tr:nth-child(even){background-color: #f2f2f2}
+
+#project_table tr:hover {background-color: #ddd;}
+
+#project_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: yellowgreen;
+    color: white;
+}
+
+.dropdown p {
+	display: inline-block;
+	font-weight: bold;
+}
+
+.dropdown select {
+
+ -webkit-appearance: none;  /*REMOVES DEFAULT CHROME & SAFARI STYLE*/
+ -moz-appearance: none;  /*REMOVES DEFAULT FIREFOX STYLE*/
+ border: 0 !important;  /*REMOVES BORDER*/
+
+ color: #fff;
+ -webkit-border-radius: 5px;
+ border-radius: 5px;
+ font-size: 14px;
+ padding: 10px;
+ width: 35%;
+ cursor: pointer;
+
+ background: #C0C0C0 ;
+ background-size: 40px 37px; /*TO ACCOUNT FOR @2X IMAGE FOR RETINA */
+}
+
+progress-container.container {
+  width: 1000px;
+  margin: 0 auto;
+}
+
+progress-container.progress-meter {
+  padding: 0;
+}
+
+ol.progress-meter {
+  padding-bottom: 9.5px;
+  list-style-type: none;
+}
+ol.progress-meter li {
+  display: inline-block;
+  text-align: center;
+  text-indent: -19px;
+  height: 36px;
+  width: 16.65%;
+  font-size: 12px;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+}
+ol.progress-meter li:before {
+  position: relative;
+  float: left;
+  text-indent: 0;
+  left: -webkit-calc(50% - 9.5px);
+  left: -moz-calc(50% - 9.5px);
+  left: -ms-calc(50% - 9.5px);
+  left: -o-calc(50% - 9.5px);
+  left: calc(50% - 9.5px);
+}
+ol.progress-meter li.done {
+  font-size: 12px;
+}
+ol.progress-meter li.done:before {
+  content: "\2713";
+  height: 19px;
+  width: 19px;
+  line-height: 21.85px;
+  bottom: -28.175px;
+  border: none;
+  border-radius: 19px;
+}
+ol.progress-meter li.todo {
+  font-size: 12px;
+}
+ol.progress-meter li.todo:before {
+  content: "\2B24";
+  font-size: 17.1px;
+  bottom: -26.95px;
+  line-height: 18.05px;
+}
+ol.progress-meter li.done {
+  color: black;
+  border-bottom-color: yellowgreen;
+}
+ol.progress-meter li.done:before {
+  color: white;
+  background-color: yellowgreen;
+}
+ol.progress-meter li.todo {
+  color: silver;
+  border-bottom-color: silver;
+}
+ol.progress-meter li.todo:before {
+  color: silver;
+}
+
+</style>
+
+{% block progress_tracker %}
+<div class="progress-container">
+  <ol class="progress-meter">
+    <li class="progress-point todo">Accept</li><li class="progress-point todo">Client Confirm</li><li class="progress-point todo">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+  </ol>
+</div>
+{% endblock %}
+
+<table id="project_table" class="pure-table pure-table-horizontal">
+  <tr>
+    <th width="25%">Project</th>
+    <th width="75%">{{project.title_text}}</th>
+  </tr>
+  <tr>
+    <td>Description</td>
+    <td>{{project.info_text}}</td>
+  </tr>
+  <tr>
+    <td>Expert preference</td>
+    <td>{{project.expert_pref_text}}</td>
+  </tr>
+   <tr>
+    <td>Start Date</td>
+    <td>{{project.pub_date}}</td>
+  </tr>
+   <tr>
+    <td>End Date</td>
+    <td>{{project.end_date}}</td>
+  </tr>
+   <tr>
+    <td>Project Rate</td>
+    <td>{{project.rate}}</td>
+  </tr>
+</table>
+
+{% block choice_content %}
+{% endblock %}
+
+{% endblock %}
