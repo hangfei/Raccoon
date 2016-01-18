@@ -7,10 +7,14 @@ class ProjectForm(forms.Form):
                                    	           'size':'42'}))
     project_description = forms.CharField(label='Description', max_length=10000,
                                            widget=forms.Textarea(
-                                   	         attrs={'placeholder':'Describe what needs to be done for the project'}))
+                                   	         attrs={'placeholder':'Describe what needs to be done for the project',
+                                                    'rows':10,
+                                                    'cols':40}))
     project_expert_preference = forms.CharField(label='Expert Preference', max_length=1000,
                                            widget=forms.Textarea(
-                                   	         attrs={'placeholder':'Tell us what kind of expert do you want to work with'}))
+                                   	         attrs={'placeholder':'Tell us what kind of expert do you want to work with',
+                                                    'rows':4,
+                                                    'cols':40}))
     project_pub_date = forms.DateTimeField(label='Start Date', input_formats=['%Y-%m-%d'],
                                            widget=forms.TextInput(
                                               attrs={'placeholder':'YYYY-mm-dd',

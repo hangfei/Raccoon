@@ -10,7 +10,8 @@ from .forms import ProjectForm
 
 state_message_option = {
     'ept_a':'The client will review it and get back to you',
-    'clt_c':'We will review your project and an expert will be assigned to you soon',
+    'clt_s':'We will review your project and an expert will be assigned to you soon',
+    'clt_c':'You will receive the contract and payment information soon',
 }
 
 def create(request):
@@ -18,12 +19,13 @@ def create(request):
     if request.method == 'POST':
         # create a form instance and populate it with data from the request:
         form = ProjectForm(request.POST)
+
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
             # ...
             # redirect to a new URL:
-            return HttpResponseRedirect('thanks?last_action=clt_c')
+            return HttpResponseRedirect('thanks?last_action=clt_s')
 
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -35,6 +37,8 @@ def expertchoice(request):
     if request.method == 'GET':
       #TODO: sanity check
       if 'project_id' in request.GET:
+        print("user::")
+        print(request.user)
         project_id_val = request.GET['project_id']
         project = Project.objects.get(pk=project_id_val)
         context = RequestContext(request, {
@@ -55,7 +59,26 @@ def expertchoice(request):
 
 
 def clientchoice(request):
-    return render(request, 'clientchoice.html', context)
+    if request.method == 'GET':
+      #TODO: sanity check
+      if 'project_id' in request.GET:
+        project_id_val = request.GET['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        context = RequestContext(request, {
+           'project': project,
+        })
+      return render(request, 'clientchoice.html', context)
+    else:
+      if 'project_id' in request.POST and 'accept_expert' in request.POST:
+        project_id_val = request.POST['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        accept_val = request.POST['accept_expert']
+        if accept_val == 'A':
+          project.state = 'CA'
+        elif accept_val == 'D':
+          project.state = 'PS'
+        project.save()
+      return HttpResponseRedirect('thanks?last_action=clt_c')
 
 def thanks(request):
     if 'last_action' in request.GET:
