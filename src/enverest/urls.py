@@ -28,4 +28,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^profile/', include("userprofile.urls")),
     url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
+    url(r'^payment/', include('payment.urls', namespace='payment', app_name='payment')),
 ]

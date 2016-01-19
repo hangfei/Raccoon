@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<style>
+img.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto }
+</style>
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h1>
+      <strong>{% trans "Alipay" %}</strong>
+    </h1>
+    <p class="m-b-lg">
+      {% trans "Alipay.com is a third-party online payment platform with no transaction fees. It was launched in China in 2004 by Alibaba Group and its founder Jack Ma." %}
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3 m-b-lg">
+  </div>
+
+  <div class="col-md-6 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/ali_pay.jpg' %}" alt="Card image cap" style="height: 250px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <h4 class="card-title">{% trans "Alipay" %}</h4>
+        <p class="card-text">{% trans "Alipay Account Name: enveret_inc" %}</p>
+        <img class="displayed" src="{% static 'images/alipay_link.jpg' %}" alt="Card image cap" style="height: 50px; width: 100; display: block;" align="middle">
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 m-b-lg">
+  </div>
+</div>
+
+</div> <!-- for Container -->
+{% endblock %}

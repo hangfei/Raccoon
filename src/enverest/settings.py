@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'pinax_theme_bootstrap',
     'bootstrapform',
     'postman',
+    'payment',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -166,3 +167,6 @@ STATIC_URL = '/static/'
 
 # Postman configuration
 POSTMAN_AUTO_MODERATE_AS = True # no moderator
+
+# The URL where requests are redirected for login, especially when using the login_required() decorator.
+LOGIN_URL = '/account/login/'

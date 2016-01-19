@@ -1,0 +1,60 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h1>
+      <strong>{% trans "Payment" %}</strong>
+    </h1>
+    <p class="m-b-lg">
+      {% trans "We provide the following payment methods." %}
+    </p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/bank_transfer.png' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <h4 class="card-title">{% trans "Wire Transfer" %}</h4>
+        <p class="card-text">{% trans "Wire transfer, bank transfer or credit transfer is a method of electronic funds transfer from one person or entity to another. A wire transfer can be made from one bank account to another bank account or through a transfer of cash at a cash office." %}</p>
+        <a href="bank_transfer" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/ali_pay.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <h4 class="card-title">{% trans "Ali Pay" %}</h4>
+        <p class="card-text">{% trans "Alipay.com is a third-party online payment platform with no transaction fees. It was launched in China in 2004 by Alibaba Group and its founder Jack Ma." %}</p>
+        <a href="alipay" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/paypal.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <h4 class="card-title">{% trans "PayPal" %}</h4>
+        <p class="card-text">{% trans "PayPal Holdings, Inc. is an American company operating a worldwide online payments system. Online money transfers serve as electronic alternatives to traditional paper methods like checks and money orders." %}</p>
+        <a href="#" class="btn btn-primary">Details</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div> <!-- for Container -->
+{% endblock %}
