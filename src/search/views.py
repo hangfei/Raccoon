@@ -20,7 +20,7 @@ class ExpertDetailView(DetailView):
 class ExpertListView(ListView):
 
     model = Expert
-    paginate_by = 5
+    paginate_by = 10
     context_object_name = "expert_list"
 
     def get_queryset(self):

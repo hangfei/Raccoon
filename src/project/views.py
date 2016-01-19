@@ -2,6 +2,7 @@ from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
+from django.contrib.auth import get_user_model
 from common.models import Project
 from common.models import Client
 from common.models import Expert
@@ -34,11 +35,41 @@ def create(request):
     return render(request, 'create.html', {'form': form})
 
 def expertchoice(request):
+    print("!!!!!!!!!!!!!!!!!!!!```````````````")
     if request.method == 'GET':
       #TODO: sanity check
+      print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
       if 'project_id' in request.GET:
         print("user::")
         print(request.user)
+        User = get_user_model()
+        user_id = request.user.id
+        profile_user = User.objects.get(pk=user_id)
+        user_profiles = profile_user.userprofile_set.all()
+        #
+        user_profile = None
+        if user_profiles:
+            user_profile = user_profiles[0]
+        else:
+            raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
+        person = None
+        is_expert = None
+
+        if user_profile.user_type == 'CLIENT':
+            is_expert = False
+            clients = profile_user.client_set.all()
+            person = clients[0]
+        elif user_profile.user_type == 'EXPERT':
+            is_expert = True
+            experts = profile_user.expert_set.all()
+            person = experts[0]
+        else:
+            raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
+        print(is_expert)
+        print(person)
+
+        #
+        print(profile_user)
         project_id_val = request.GET['project_id']
         project = Project.objects.get(pk=project_id_val)
         context = RequestContext(request, {
