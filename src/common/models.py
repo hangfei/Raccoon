@@ -29,7 +29,6 @@ from account.hooks import hookset
 from account.managers import EmailAddressManager, EmailConfirmationManager
 from account.signals import signup_code_sent, signup_code_used
 
-
 class UserProfile(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     summary = models.CharField("Summary", max_length=500, default="Summary default.")

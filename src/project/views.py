@@ -15,6 +15,36 @@ state_message_option = {
     'clt_c':'You will receive the contract and payment information soon',
 }
 
+def getCurrentRole(request):
+    print("user::")
+    print(request.user)
+    User = get_user_model()
+    user_id = request.user.id
+    profile_user = User.objects.get(pk=user_id)
+    user_profiles = profile_user.userprofile_set.all()
+    #
+    user_profile = None
+    if user_profiles:
+        user_profile = user_profiles[0]
+    else:
+        raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
+    person = None
+    is_expert = None
+
+    if user_profile.user_type == 'CLIENT':
+        is_expert = False
+        clients = profile_user.client_set.all()
+        person = clients[0]
+    elif user_profile.user_type == 'EXPERT':
+        is_expert = True
+        experts = profile_user.expert_set.all()
+        person = experts[0]
+    else:
+        raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
+    print(is_expert)
+    print(person)
+    return person
+
 def create(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -24,7 +54,25 @@ def create(request):
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
-            # ...
+            print(form.cleaned_data['project_name'])
+            print(form.cleaned_data['project_expert_expertise'])
+            new_project = Project(client=(Client.objects.all())[0],#getCurrentRole(request),
+                                  expert=(Expert.objects.all())[0],
+                                  title_text=form.cleaned_data['project_name'],
+                                  info_text=form.cleaned_data['project_description'],
+                                  expert_pref_text=form.cleaned_data['project_expert_preference'],
+                                  pub_date=form.cleaned_data['project_pub_date'],
+                                  end_date=form.cleaned_data['project_end_date'],
+                                  rate=form.cleaned_data['project_rate'],
+                                  assign_history='',
+                                  state='PS',
+                                  assgin_to='ADM',
+                                  industry=form.cleaned_data['project_expert_industry'],
+                                  expertise=form.cleaned_data['project_expert_expertise'],
+                                  rate_type=form.cleaned_data['project_rate_type'],
+                                  service_type=form.cleaned_data['project_service_type'],
+                )
+            new_project.save()
             # redirect to a new URL:
             return HttpResponseRedirect('thanks?last_action=clt_s')
 
@@ -35,41 +83,10 @@ def create(request):
     return render(request, 'create.html', {'form': form})
 
 def expertchoice(request):
-    print("!!!!!!!!!!!!!!!!!!!!```````````````")
     if request.method == 'GET':
       #TODO: sanity check
-      print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
       if 'project_id' in request.GET:
-        print("user::")
-        print(request.user)
-        User = get_user_model()
-        user_id = request.user.id
-        profile_user = User.objects.get(pk=user_id)
-        user_profiles = profile_user.userprofile_set.all()
-        #
-        user_profile = None
-        if user_profiles:
-            user_profile = user_profiles[0]
-        else:
-            raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
-        person = None
-        is_expert = None
 
-        if user_profile.user_type == 'CLIENT':
-            is_expert = False
-            clients = profile_user.client_set.all()
-            person = clients[0]
-        elif user_profile.user_type == 'EXPERT':
-            is_expert = True
-            experts = profile_user.expert_set.all()
-            person = experts[0]
-        else:
-            raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
-        print(is_expert)
-        print(person)
-
-        #
-        print(profile_user)
         project_id_val = request.GET['project_id']
         project = Project.objects.get(pk=project_id_val)
         context = RequestContext(request, {
