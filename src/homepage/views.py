@@ -20,6 +20,24 @@ def service(request):
     })
     return render(request, 'homepage/service.html', context)
 
+def how_it_works(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/how_it_works.html', context)
+
+def member_benefits(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/member_benefits.html', context)
+
+def team(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/team.html', context)
+
 from django.contrib.auth.decorators import user_passes_test
 
 # https://djangosnippets.org/snippets/1703/
