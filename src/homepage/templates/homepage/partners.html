@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Partners" %}</strong>
+    </h4>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/zhongguancun.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/hanhai_investment.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/hainabaichuan.png' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/qinghua.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/magstone_law.png' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/ivy_china_forum.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+</div>
+
+
+</div> <!-- for Container -->
+{% endblock %}

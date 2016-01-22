@@ -9,6 +9,7 @@ urlpatterns = [
     url(r'^how_it_works/$', views.how_it_works, name='how_it_works'),
     url(r'^member_benefits/$', views.member_benefits, name='member_benefits'),
     url(r'^team/$', views.team, name='team'),
+    url(r'^partners/$', views.partners, name='partners'),
     url(r'^client_see_this/$', views.client_see_this, name='client_see_this'),
     url(r'^expert_see_this/$', views.expert_see_this, name='expert_see_this'),
 ]

@@ -38,6 +38,12 @@ def team(request):
     })
     return render(request, 'homepage/team.html', context)
 
+def partners(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/partners.html', context)
+
 from django.contrib.auth.decorators import user_passes_test
 
 # https://djangosnippets.org/snippets/1703/
