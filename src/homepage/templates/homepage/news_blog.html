@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<script>
+  $(document).ready(function(){
+    $(".nav-item.nav-link").removeClass("active");
+    $('#news_blog').addClass('active')
+  });
+</script>
+
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "News Blog" %}</strong>
+    </h4>
+    <img src="{% static 'images/website_image/page_under_construction.jpg' %}" alt="Card image cap">
+  </div>
+</div>
+
+</div> <!-- for Container -->
+{% endblock %}

@@ -6,7 +6,7 @@
 <script>
   $(document).ready(function(){
     $(".nav-item.nav-link").removeClass("active");
-    $('#member_benefits').addClass('active')
+    $('#signup').addClass('active')
   });
 </script>
 
@@ -21,14 +21,10 @@
     <br>
     <br>
     <h4>
-      <strong>{% trans "Member and Expert Benefits" %}</strong>
+      <strong>{% trans "Sign Up" %}</strong>
     </h4>
-    <p class="m-b-lg">
-      {% trans "For member and expert, you will have these benefits." %}
-    </p>
   </div>
 </div>
-
 
 <div class="row">
   <div class="col-md-2 m-b-lg">
@@ -43,7 +39,7 @@
         <p class="card-text">{% trans "Explore wide range of perspectives" %}</p>
         <p class="card-text">{% trans "Connect to the right people instantly" %}</p>
         <p class="card-text">{% trans "Save time and cost" %}</p>
-        <a href="#" class="btn btn-primary">{% trans "Learn More" %}</a>
+        <a href="client" class="btn btn-primary">{% trans "Sign Up" %}</a>
       </div>
     </div>
   </div>
@@ -57,14 +53,15 @@
         <p class="card-text">{% trans "Interact with corporate officers, investors, and entrepreneurs" %}</p>
         <p class="card-text">{% trans "Work on strategic, thought-provoking projects" %}</p>
         <p class="card-text">{% trans "Competitive compensation from consulting fees and referral fees" %}</p>
-        <a href="#" class="btn btn-primary">{% trans "Learn More" %}</a>
+        <a href="consultant" class="btn btn-primary">{% trans "Sign Up" %}</a>
       </div>
     </div>
   </div>
 
-
   <div class="col-md-2 m-b-lg">
   </div>
 </div>
+
+
 </div> <!-- for Container -->
 {% endblock %}

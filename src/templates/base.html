@@ -32,31 +32,26 @@
         <div class="navbar-toggleable-xs collapse" id="bd-main-nav">
           <nav class="nav navbar-nav">
             <a class="nav-item nav-link active" href="/">{% trans "Enverest" %}</a>
-            <a class="nav-item nav-link" href="/about_enverest">{% trans "About Enverest" %}</a>
-            <a class="nav-item nav-link" href="/service">{% trans "Service" %}</a>
-            <a class="nav-item nav-link" href="/how_it_works">{% trans "Howitworks" %}</a>
-            <a class="nav-item nav-link" href="/partners">{% trans "Partners" %}</a>
-            <a class="nav-item nav-link" href="/member_benefits">{% trans "Benefits" %}</a>
-            <a class="nav-item nav-link" href="/team">{% trans "Team" %}</a>
-            <a class="nav-item nav-link" href="">{% trans "News Blog" %}</a>
-            <a class="nav-item nav-link" href="/payment">{% trans "Payment" %}</a>
+            <a class="nav-item nav-link" id="about_enverest" href="/about_enverest">{% trans "About Enverest" %}</a>
+            <a class="nav-item nav-link" id="service" href="/service">{% trans "Service" %}</a>
+            <a class="nav-item nav-link" id="how_it_works" href="/how_it_works">{% trans "Howitworks" %}</a>
+            <a class="nav-item nav-link" id="partners" href="/partners">{% trans "Partners" %}</a>
+            <a class="nav-item nav-link" id="member_benefits" href="/member_benefits">{% trans "Benefits" %}</a>
+            <a class="nav-item nav-link" id="team" href="/team">{% trans "Team" %}</a>
+            <a class="nav-item nav-link" id="news_blog" href="/news_blog">{% trans "News Blog" %}</a>
+            <a class="nav-item nav-link" id="success_story" href="/success_story">{% trans "Success Story" %}</a>
+            <a class="nav-item nav-link" id="payment" href="/payment">{% trans "Payment" %}</a>
           </nav>
-          <ul class="nav navbar-nav pull-xs-right">
-            <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
-                <input name="next" type="hidden" value="{{ redirect_to }}" />
-                <select name="language" style="color:#34383A">
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
-                    {% for language in languages %}
-                        <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected="selected"{% endif %}>
-                            {{ language.name_local }} ({{ language.code }})
-                        </option>
-                    {% endfor %}
-                </select>
-                <input style="color:#34383A" type="submit" value="Language/语言"/>
-            </form>
-          </ul>
+          <nav class="nav navbar-nav pull-xs-right">
+            <a class="nav-item nav-link" href="javascript:set_language('{% url 'set_language' %}', 'zh-hans')">
+              <img src="{% static 'images/internalization/china_chinese_flag_circle-512.png' %}" alt="Card image cap" style="height: 18px; width: 18px;">
+            </a>
+            <a class="nav-item nav-link" href="javascript:set_language('{% url 'set_language' %}', 'en')">
+              <img src="{% static 'images/internalization/round_english.png' %}" alt="Card image cap" style="height: 16px; width: 16px;">
+            </a>
+            <a class="nav-item nav-link" id="login" href="/account/login">{% trans "Sign In" %}</a>
+            <a class="nav-item nav-link" id="signup" href="/account/signup">{% trans "Sign Up" %}</a>
+          </nav>
         </div>
       </div>
     </header>
@@ -93,5 +88,21 @@
     </div> <!-- for Container -->
 
   </body>
+  <script>
+    function set_language(language_url, language_code){
+      data = {"language": language_code,
+              "csrfmiddlewaretoken": '{{ csrf_token }}',
+              "next": "/"
+             };
+      $.post(
+        language_url,
+        data,
+        function(data, status){
+          window.location.reload();
+        }
+      );
+
+    }
+  </script>
 </html>
 

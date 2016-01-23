@@ -29,6 +29,12 @@ from django.template import RequestContext
 from django.shortcuts import render
 import requests
 
+def sign_up(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'account/sign_up.html', context)
+
 class ClientSignupView(FormView):
 
     template_name = "account/signup_client.html"

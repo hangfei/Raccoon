@@ -7,8 +7,10 @@ from account.views import ConfirmEmailView
 from account.views import ChangePasswordView, PasswordResetView, PasswordResetTokenView
 from account.views import SettingsView
 
+from . import views
 
 urlpatterns = [
+    url(r'^signup/$', views.sign_up, name='sign_up'),
     url(r"^signup/client/$", ClientSignupView.as_view(), name="client_account_signup"),
     url(r"^signup/consultant/$", ConsultantSignupView.as_view(), name="consultant_account_signup"),
     url(r"^login/$", LoginView.as_view(), name="account_login"),
