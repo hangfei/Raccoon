@@ -36,6 +36,7 @@ from .fields import autocompleter_app
 from .forms import WriteForm, AnonymousWriteForm, QuickReplyForm, FullReplyForm
 from .models import Message, get_order_by
 from .utils import format_subject, format_body
+from django.shortcuts import render
 
 login_required_m = method_decorator(login_required)
 csrf_protect_m = method_decorator(csrf_protect)
@@ -54,6 +55,9 @@ def _get_referer(request):
 ########
 # Views
 ########
+def messages_page(request):
+    return render(request, 'postman/messages.html', {})
+
 class NamespaceMixin(object):
     """Common code to manage the namespace."""
 

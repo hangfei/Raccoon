@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Messages" %}</strong>
+    </h4>
+    <p class="m-b-lg">
+      {% trans "Communicate with clients and experts" %}
+    </p>
+    <a href="inbox" class="btn btn-primary">{% trans "Inbox" %}</a>
+    <a href="sent" class="btn btn-primary">{% trans "Sent" %}</a>
+    <a href="archives" class="btn btn-primary">{% trans "Archives" %}</a>
+    <a href="trash" class="btn btn-primary">{% trans "Trash" %}</a>
+    <a href="write" class="btn btn-primary">{% trans "Write" %}</a>
+  </div>
+</div>
+
+
+</div> <!-- for Container -->
+{% endblock %}

@@ -97,10 +97,11 @@ from django.views.generic.base import RedirectView
 from . import OPTIONS
 from .views import (InboxView, SentView, ArchivesView, TrashView,
         WriteView, ReplyView, MessageView, ConversationView,
-        ArchiveView, DeleteView, UndeleteView)
+        ArchiveView, DeleteView, UndeleteView, messages_page)
 
 
 urlpatterns = patterns('',
+    url(r'^$', messages_page, name='messages_page'),
     url(r'^inbox/(?:(?P<option>'+OPTIONS+')/)?$', InboxView.as_view(), name='inbox'),
     url(r'^sent/(?:(?P<option>'+OPTIONS+')/)?$', SentView.as_view(), name='sent'),
     url(r'^archives/(?:(?P<option>'+OPTIONS+')/)?$', ArchivesView.as_view(), name='archives'),
