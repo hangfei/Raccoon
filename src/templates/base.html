@@ -51,6 +51,7 @@
             {% if user.is_authenticated %}
             <a class="nav-item nav-link" id="login" href="/account/logout">{% trans "Sign Out" %}</a>
             <a class="nav-item nav-link" id="signup" href="/messages">{% trans "Messages" %}</a>
+            <a class="nav-item nav-link" id="signup" href="/profile/{{user.get_username}}">{% trans "My Profile" %}</a>
             {% else %}
             <a class="nav-item nav-link" id="login" href="/account/login">{% trans "Sign In" %}</a>
             <a class="nav-item nav-link" id="signup" href="/account/signup">{% trans "Sign Up" %}</a>

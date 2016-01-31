@@ -5,9 +5,9 @@ from django.contrib.auth import get_user_model
 from django.template import RequestContext, loader
 from django.core.exceptions import ObjectDoesNotExist
 
-def user_profile(request, user_id):
+def user_profile(request, username):
     User = get_user_model()
-    profile_user = User.objects.get(pk=user_id)
+    profile_user = User.objects.get(username=username)
     user_profiles = profile_user.userprofile_set.all()
     user_profile = None
     if user_profiles:

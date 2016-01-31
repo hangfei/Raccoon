@@ -5,30 +5,30 @@
 
 <style>
 
- 
+
  ul {
   list-style-type: none;
   width: 700px;
 }
- 
+
  h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
 }
- 
+
  li img {
   float: left;
   margin: 0 15px 0 0;
 }
- 
+
  li p {
   font: 1000 12px/1.5 Georgia, Times New Roman, serif;
 }
- 
+
  li {
   padding: 10px;
   overflow: auto;
 }
- 
+
  li:hover {
   background: #eee;
   cursor: pointer;
@@ -142,14 +142,14 @@
         {% for expert in expert_list %}
           <li>
             <img src="/static/images/empty_headshot.bmp" />
-            <h3> <a href="/profile/{{ expert.user_id }}">{{ expert.user }}</a>
+            <h3> <a href="/profile/{{ expert.user.username }}">{{ expert.user }}</a>
             </h3>
             <p>{{ expert.description_text}}</p>
             <p>{{ expert.email}}</p>
           </li>
         {% endfor %}
       </ul>
-    </div>  
+    </div>
       {% if is_paginated %}
           <div class="pagination" >
               <span class="page-links">
