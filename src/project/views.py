@@ -11,8 +11,12 @@ from .forms import ProjectForm
 
 state_message_option = {
     'ept_a':'The client will review it and get back to you',
+    'ept_f':'The client will review your work and get back to you',
     'clt_s':'We will review your project and an expert will be assigned to you soon',
     'clt_c':'You will receive the contract and payment information soon',
+    'clt_n':'The expert will keep working on the project',
+    'clt_y':'The project is now finished',
+    'clt_a':'An administrator will contact you soon',
 }
 
 def getCurrentRole(request):
@@ -127,6 +131,52 @@ def clientchoice(request):
           project.state = 'PS'
         project.save()
       return HttpResponseRedirect('thanks?last_action=clt_c')
+
+def expertworking(request):
+    if request.method == 'GET':
+      #TODO: sanity check
+      if 'project_id' in request.GET:
+        project_id_val = request.GET['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        context = RequestContext(request, {
+           'project': project,
+        })
+      return render(request, 'expertworking.html', context)
+    else:
+      if 'project_id' in request.POST:
+        project_id_val = request.POST['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        project.state = 'PF'
+        project.save()
+      return HttpResponseRedirect('thanks?last_action=ept_f')
+
+def clientconfirm(request):
+    if request.method == 'GET':
+      #TODO: sanity check
+      if 'project_id' in request.GET:
+        project_id_val = request.GET['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        context = RequestContext(request, {
+           'project': project,
+        })
+      return render(request, 'clientconfirm.html', context)
+    else:
+      redirectStr = ''
+      if 'project_id' in request.POST and 'accept_finish' in request.POST:
+        project_id_val = request.POST['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        confirm_val = request.POST['accept_finish']
+        if confirm_val == 'Y': #Accept finish
+          project.state = 'CC'
+          redirectStr = 'clt_y'
+        elif confirm_val == 'N': #Need more work
+          project.state = 'IP'
+          redirectStr = 'clt_n'
+        elif confirm_val == 'A': #Cannot make agreement, Appeal
+          project.state = 'AD'
+          redirectStr = 'clt_a'
+        project.save()
+      return HttpResponseRedirect('thanks?last_action='+redirectStr)
 
 def thanks(request):
     if 'last_action' in request.GET:

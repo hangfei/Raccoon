@@ -223,6 +223,8 @@ class Project(models.Model):
     CLIENT_AGREE = 'CA'
     IN_PROGRESS = 'IP'
     PROJECT_FINISHED = 'PF'
+    CLIENT_CONFIRMED = 'CC'
+    APPEAL_DISPUTE = 'AD'
     PAYMENT_RECEIVED = 'PR'
 
     PROJECT_STATUS_CHOICES = (
@@ -233,6 +235,8 @@ class Project(models.Model):
        (CLIENT_AGREE, 'The client accepted this expert'),
        (IN_PROGRESS,'An expert is working on it'),
        (PROJECT_FINISHED,'Project is finished'),
+       (CLIENT_CONFIRMED,'The client has confirmed the project finish'),
+       (APPEAL_DISPUTE,'The client has appealed the dispute to the administrator'),
        (PAYMENT_RECEIVED,'Payment is received and the project is closed'),
     )
     

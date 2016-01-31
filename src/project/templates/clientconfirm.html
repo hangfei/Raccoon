@@ -1,0 +1,46 @@
+{% extends "base_project.html" %}
+
+{% block progress_tracker %}
+<div class="progress-container">
+  <ol class="progress-meter">
+    <li class="progress-point done">Expert Accept</li><li class="progress-point done">Confirm</li><li class="progress-point done">Sign Contract</li><li class="progress-point done">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+  </ol>
+</div>
+{% endblock %}
+
+
+{% block choice_content %}
+<p></p>
+<p>The expert has finished this project. Do you confirm the work?</p>
+<form id="choiceForm" action="{% url 'clientconfirm' %}" method="POST">{% csrf_token %}
+<div class="dropdown">
+<select name="accept_finish">
+    <option id="Yes" value="Y">Confirm</option>
+    <option id="No" value="N">The expert needs do more work</option>
+    <option id="Appeal" value="A">I want to appeal the dispute</option>
+</select>
+<button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>
+</form>
+
+<script>
+  function getQueryVariable(variable)
+  {
+       var query = window.location.search.substring(1);
+       var vars = query.split("&");
+       for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               if(pair[0] == variable){return pair[1];}
+       }
+       return(false);
+  }
+
+  $("#choiceForm").submit( function() {
+      $('<input />').attr('type', 'hidden')
+          .attr('name', "project_id")
+          .attr('value', getQueryVariable("project_id"))
+          .appendTo('#choiceForm');
+      return true;
+  });
+</script>
+
+{% endblock %}
