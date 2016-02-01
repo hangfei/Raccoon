@@ -27,6 +27,7 @@ from account.utils import default_redirect, get_form_data
 from django.http import HttpResponse
 from django.template import RequestContext
 from django.shortcuts import render
+from django.contrib import messages
 import requests
 
 def sign_up(request):
@@ -654,6 +655,7 @@ class LoginView(FormView):
 
     def login_user(self, form):
         auth.login(self.request, form.user)
+        messages.success(self.request, 'You have successfully logged in.')
         expiry = settings.ACCOUNT_REMEMBER_ME_EXPIRY if form.cleaned_data.get("remember") else 0
         self.request.session.set_expiry(expiry)
 
@@ -671,6 +673,7 @@ class LogoutView(TemplateResponseMixin, View):
 
     def post(self, *args, **kwargs):
         if self.request.user.is_authenticated():
+            messages.success(self.request, 'You have successfully logged in.')
             auth.logout(self.request)
         return redirect(self.get_redirect_url())
 
