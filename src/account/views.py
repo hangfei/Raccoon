@@ -673,7 +673,7 @@ class LogoutView(TemplateResponseMixin, View):
 
     def post(self, *args, **kwargs):
         if self.request.user.is_authenticated():
-            messages.success(self.request, 'You have successfully logged in.')
+            messages.success(self.request, 'You have successfully logged out.')
             auth.logout(self.request)
         return redirect(self.get_redirect_url())
 
