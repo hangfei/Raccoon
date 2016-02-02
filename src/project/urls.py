@@ -9,4 +9,5 @@ urlpatterns = [
     url(r'^clientchoice$', views.clientchoice, name='clientchoice'),
     url(r'^clientconfirm$', views.clientconfirm, name='clientconfirm'),
     url(r'^thanks$', views.thanks, name='thanks'),
+    url(r'^unavailable$', views.unavailable, name='unavailable'),
 ]

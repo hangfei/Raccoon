@@ -1,8 +1,9 @@
 from django.http import HttpResponse
 from django.template import RequestContext, loader
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.contrib.auth import get_user_model
+from django.core.exceptions import ObjectDoesNotExist
 from common.models import Project
 from common.models import Client
 from common.models import Expert
@@ -19,10 +20,12 @@ state_message_option = {
     'clt_a':'An administrator will contact you soon',
 }
 
-def getCurrentRole(request):
+def hasPermission(request, project):
     print("user::")
     print(request.user)
     User = get_user_model()
+    if request.user.id == None or project == None:
+      return False
     user_id = request.user.id
     profile_user = User.objects.get(pk=user_id)
     user_profiles = profile_user.userprofile_set.all()
@@ -31,7 +34,8 @@ def getCurrentRole(request):
     if user_profiles:
         user_profile = user_profiles[0]
     else:
-        raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
+    #   raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
+         return False
     person = None
     is_expert = None
 
@@ -39,15 +43,22 @@ def getCurrentRole(request):
         is_expert = False
         clients = profile_user.client_set.all()
         person = clients[0]
+        print(person)
+        print(project.client)
+        if person != project.client:
+            return False
     elif user_profile.user_type == 'EXPERT':
         is_expert = True
         experts = profile_user.expert_set.all()
         person = experts[0]
+        print(person)
+        print(project.client)
+        if person != project.expert:
+            return False
     else:
-        raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
-    print(is_expert)
-    print(person)
-    return person
+        return False
+    #    raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
+    return True
 
 def create(request):
     # if this is a POST request we need to process the form data
@@ -87,16 +98,22 @@ def create(request):
     return render(request, 'create.html', {'form': form})
 
 def expertchoice(request):
-    if request.method == 'GET':
-      #TODO: sanity check
-      if 'project_id' in request.GET:
 
-        project_id_val = request.GET['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        context = RequestContext(request, {
+    if request.method == 'GET':
+       if 'project_id' in request.GET:
+         project_id_val = request.GET['project_id']
+         project = None
+         try:
+            project = Project.objects.get(pk=project_id_val)
+         except ObjectDoesNotExist:
+            return HttpResponseRedirect('unavailable')
+         if hasPermission(request, project) == False:
+            return HttpResponseRedirect('unavailable')
+         context = RequestContext(request, {
            'project': project,
-        })
-      return render(request, 'expertchoice.html', context)
+          })
+         return render(request, 'expertchoice.html', context)
+       return HttpResponseRedirect('unavailable') 
     else:
       if 'project_id' in request.POST and 'accept_project' in request.POST:
         project_id_val = request.POST['project_id']
@@ -185,3 +202,6 @@ def thanks(request):
            'message_display': state_message_option[message_val],
       })
     return render(request, 'thanks.html', context)
+
+def unavailable(request):
+    return render(request, 'unavailable.html')
