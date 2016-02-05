@@ -36,6 +36,14 @@ def sign_up(request):
     })
     return render(request, 'account/sign_up.html', context)
 
+def handle_uploaded_file(file, username):
+    file_type_suffix = 'jpg'
+    image_name = str(username)
+    file_name = image_name + "." + file_type_suffix
+    with open('media/' + file_name, 'wb+') as destination:
+        for chunk in file.chunks():
+            destination.write(chunk)
+
 class ClientSignupView(FormView):
 
     template_name = "account/signup_client.html"
@@ -150,6 +158,10 @@ class ClientSignupView(FormView):
         self.create_account(form)
         self.create_client(form)
         self.create_profile(form)
+
+        if self.request.method == 'POST':
+            handle_uploaded_file(self.request.FILES['profile_image'], self.created_user.username)
+
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
             self.send_email_confirmation(email_address)
@@ -446,6 +458,10 @@ class ConsultantSignupView(FormView):
         self.create_account(form)
         self.create_consultant(form)
         self.create_profile(form)
+
+        if self.request.method == 'POST':
+            handle_uploaded_file(self.request.FILES['profile_image'], self.created_user.username)
+
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
             self.send_email_confirmation(email_address)

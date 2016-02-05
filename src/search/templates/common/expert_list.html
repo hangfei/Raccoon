@@ -141,7 +141,7 @@
       <ul>
         {% for expert in expert_list %}
           <li>
-            <img src="/static/images/empty_headshot.bmp" />
+            <img src="/media/{{ expert.user.username }}.jpg" style="width:135px; height:144px" onerror="this.src='/static/images/empty_headshot.bmp';" />
             <h3> <a href="/profile/{{ expert.user.username }}">{{ expert.user }}</a>
             </h3>
             <p>{{ expert.description_text}}</p>

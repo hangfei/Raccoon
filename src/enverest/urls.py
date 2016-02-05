@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
-
+from django.conf.urls.static import static
+from django.conf import settings
 
 urlpatterns = [
     url(r'^', include('homepage.urls')),
@@ -29,4 +30,4 @@ urlpatterns = [
     url(r'^profile/', include("userprofile.urls")),
     url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
     url(r'^payment/', include('payment.urls', namespace='payment', app_name='payment')),
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

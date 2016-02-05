@@ -59,6 +59,8 @@ class ConsultantSignupForm(ModelForm):
         label=_("Email"),
         widget=forms.TextInput(), required=True)
 
+    profile_image = forms.FileField(label='Select a image for your profile.')
+
     code = forms.CharField(
         max_length=64,
         required=False,
@@ -122,6 +124,8 @@ class ClientSignupForm(forms.Form):
     email = forms.EmailField(
         label=_("Email"),
         widget=forms.TextInput(), required=True)
+
+    profile_image = forms.FileField(label='Select a image for your profile.')
 
     code = forms.CharField(
         max_length=64,

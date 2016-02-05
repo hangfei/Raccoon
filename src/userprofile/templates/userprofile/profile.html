@@ -24,7 +24,15 @@
     {% endif %}
     {% if person %}
       <p>Username: {{ profile_user.username }}</p>
-      <img src="/static/images/empty_headshot.bmp" />
+      <div class="row">
+        <div class="col-sm-4">
+        </div>
+        <div class="col-sm-4">
+          <img src="/media/{{ profile_user.username }}.jpg" style="width:100%"/>
+        </div>
+        <div class="col-sm-4">
+        </div>
+      </div>
       <p>First Name: {{ profile_user.first_name }}</p>
       <p>Last Name: {{ profile_user.last_name }}</p>
       <p>Email: {{ profile_user.email }}</p>
