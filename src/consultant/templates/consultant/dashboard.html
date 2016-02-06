@@ -1,43 +1,7 @@
+{% extends "base.html" %}
 {% load staticfiles %}
-
-<!-- Required meta tags always come first -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-
-<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
-<script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
-
-<body>
-
-<header class="navbar navbar-dark bg-inverse navbar-static-top bd-navbar" role="banner">
-  <div class="container">
-    <div class="clearfix">
-      <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav" aria-expanded="true">
-        ☰
-      </button>
-      <a class="navbar-brand hidden-sm-up" href="/">
-        恩睿咨询
-      </a>
-    </div>
-    <div class="navbar-toggleable-xs collapse in" id="bd-main-nav" aria-expanded="true">
-      <nav class="nav navbar-nav">
-        <a class="nav-item nav-link active" href="/" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Bootstrap');">恩睿咨询</a>
-        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Docs');">关于恩睿</a>
-        <a class="nav-item nav-link " href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Examples');">阅读案例</a>
-        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Themes');">合作伙伴</a>
-        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Expo');">加入我们</a>
-        <a class="nav-item nav-link" href="" onclick="ga('send', 'event', 'Navbar', 'Community links', 'Blog');">新闻博客</a>
-        <form class="form-inline pull-xs-right">
-          <input class="form-control" type="text" placeholder="搜索">
-          <button class="btn btn-success-outline" type="submit">Search</button>
-        </form>
-      </nav>
-    </div>
-  </div>
-</header>
+{% load i18n %}
+{% block content %}
 
 <div class="container">
 
@@ -59,14 +23,14 @@
   {% if project_list %}
     {% for project in project_list %}
       {% if project.state == 'PC' %}
-        <div class="col-md-4 m-b-lg">
+        <div class="col-md-6 m-b-lg">
           <div class="card">
-            <div class="card-block text-center">
+            <div class="card-block text-center" style="word-wrap:break-word">
               <ul>
-                <h4 class="card-title"><strong>{{ project.title_text }}</strong></h4>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
               </ul>
               <hr>
-              <p class="card-text">{{ project.info_text }}</p>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
               <a href="#" class="btn btn-primary">View</a>
             </div>
           </div>
@@ -81,21 +45,21 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>POSTED PROJECTS</strong></h4>
+  <h4><strong>SUBMITTED PROJECTS</strong></h4>
 </div>
 
 <div class="row">
   {% if project_list %}
     {% for project in project_list %}
-      {% if project.state == 'PS' %}
-        <div class="col-md-4 m-b-lg">
+      {% if project.state == 'PS' or project.state == 'EA'%}
+        <div class="col-md-6 m-b-lg">
           <div class="card">
-            <div class="card-block text-center">
+            <div class="card-block text-center" style="word-wrap:break-word">
               <ul>
-                <h4 class="card-title"><strong>{{ project.title_text }}</strong></h4>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
               </ul>
               <hr>
-              <p class="card-text">{{ project.info_text }}</p>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
               <a href="#" class="btn btn-primary">View</a>
             </div>
           </div>
@@ -110,21 +74,50 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>MATCHED PROJECTS</strong></h4>
+  <h4><strong>EXPERT ASSIGNED PROJECTS</strong></h4>
 </div>
 
 <div class="row">
   {% if project_list %}
     {% for project in project_list %}
-      {% if project.state == 'EA' %}
-        <div class="col-md-4 m-b-lg">
+      {% if project.state == 'ET'%}
+        <div class="col-md-6 m-b-lg">
           <div class="card">
-            <div class="card-block text-center">
+            <div class="card-block text-center" style="word-wrap:break-word">
               <ul>
-                <h4 class="card-title"><strong>{{ project.title_text }}</strong></h4>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
               </ul>
               <hr>
-              <p class="card-text">{{ project.info_text }}</p>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+              <a href="#" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>  
+      {% endif %}
+    {% endfor %}
+  {% else %}
+      <h1>No projects are available.</h1>
+  {% endif %}
+</div>
+
+<hr>
+
+<div class="col-sm-8 col-sm-offset-2 text-center">
+  <h4><strong>IN PROGRESS PROJECTS</strong></h4>
+</div>
+
+<div class="row">
+  {% if project_list %}
+    {% for project in project_list %}
+      {% if project.state == 'IP' %}
+        <div class="col-md-6 m-b-lg">
+          <div class="card">
+            <div class="card-block text-center" style="word-wrap:break-word">
+              <ul>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+              </ul>
+              <hr>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
               <a href="#" class="btn btn-primary">View</a>
             </div>
           </div>
@@ -142,75 +135,9 @@
   <h4><strong>COMPLETED PROJECTS</strong></h4>
 </div>
 
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'PF' %}
-        <div class="col-md-4 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center">
-              <ul>
-                <h4 class="card-title"><strong>{{ project.title_text }}</strong></h4>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text }}</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-      <h1>No projects are available.</h1>
-  {% endif %}
-</div>
-
-<footer class="footer clearfix">
-  <ul class="footer-social-buttons">
-    <li class="btn-follow hidden-xs">
-      <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-follow-button twitter-follow-button-rendered" title="Twitter Follow Button" src="http://platform.twitter.com/widgets/follow_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1449911165343&amp;dnt=false&amp;id=twitter-widget-0&amp;lang=en&amp;screen_name=getbootstrap&amp;show_count=true&amp;show_screen_name=true&amp;size=m" style="position: static; visibility: visible; width: 233px; height: 20px;" data-screen-name="getbootstrap"></iframe>
-    </li>
-    <li class="btn-tweet">
-      <iframe id="twitter-widget-1" scrolling="no" frameborder="0" allowtransparency="true" class="twitter-share-button twitter-share-button-rendered twitter-tweet-button" title="Twitter Tweet Button" src="http://platform.twitter.com/widgets/tweet_button.ab4ec33f73214445796a87ce54aee452.en.html#_=1449911165344&amp;dnt=false&amp;id=twitter-widget-1&amp;lang=en&amp;original_referer=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;related=getbootstrap%2Cmdo%2Cfat%2Cdhg&amp;size=m&amp;text=Bootstrap%20Themes&amp;type=share&amp;url=http%3A%2F%2Fthemes.getbootstrap.com%2F&amp;via=getbootstrap" style="position: static; visibility: visible; width: 62px; height: 20px;" data-url="http://themes.getbootstrap.com/"></iframe>
-    </li>
-  </ul>
-
-  <p class="hidden-xs">
-    Designed and built with all the love in the world by
-    <a href="https://twitter.com/mdo" target="_blank">@mdo</a>,
-    <a href="https://twitter.com/fat" target="_blank">@fat</a>, and
-    <a href="https://twitter.com/dhg" target="_blank">@dhg</a>.
-  </p>
-
-  <ul class="footer-list">
-      <li class="footer-list-item">
-        <a class="footer-list-link" href="/pages/about-us">About</a>
-      </li>
-    
-      <li class="footer-list-item">
-        <a class="footer-list-link" href="/pages/terms-of-service">Terms</a>
-      </li>
-    
-      <li class="footer-list-item">
-        <a class="footer-list-link" href="/pages/privacy-policy">Privacy</a>
-      </li>
-    
-      <li class="footer-list-item">
-        <a class="footer-list-link" href="/pages/our-license">Licenses</a>
-      </li>
-    
-      <li class="footer-list-item">
-        <a class="footer-list-link" href="/pages/faq">FAQ</a>
-      </li>
-    
-      <li class="footer-list-item">
-        <a class="footer-list-link" href="http://getbootstrap.com">Bootstrap</a>
-      </li>
-  </ul>
-</footer>
 
 </div> <!-- for Container -->
 
 
-</body>
+{% endblock %}
 
