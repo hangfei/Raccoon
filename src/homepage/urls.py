@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^team/$', views.team, name='team'),
     url(r'^partners/$', views.partners, name='partners'),
     url(r'^news_blog/$', views.news_blog, name='news_blog'),
+    url(r'^about_us/$', views.about_us, name='about_us'),
     url(r'^success_story/$', views.success_story, name='success_story'),
     url(r'^client_see_this/$', views.client_see_this, name='client_see_this'),
     url(r'^expert_see_this/$', views.expert_see_this, name='expert_see_this'),

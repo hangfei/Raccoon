@@ -56,6 +56,12 @@ def success_story(request):
     })
     return render(request, 'homepage/success_story.html', context)
 
+def about_us(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/about_us.html', context)
+
 from django.contrib.auth.decorators import user_passes_test
 
 # https://djangosnippets.org/snippets/1703/
