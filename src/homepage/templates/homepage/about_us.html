@@ -9,113 +9,291 @@
     $('#about_us').addClass('active')
   });
 </script>
-
 <div class="container">
+<br>
+<br>
 <br>
 
 
 <div class="row m-b-lg">
-<!--   <div class="col-sm-8 col-sm-offset-2 text-center">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
     <br>
     <br>
     <h4>
-      <strong>{% trans "Office Locations" %}</strong>
+      <strong>{% trans "What's Enverest" %}</strong>
     </h4>
     <p class="m-b-lg">
-      {% trans "Enverest, Inc." %}
-      {% trans "4500 Great America Parkway" %}
-      {% trans "Suite 100" %}
-      {% trans "Santa Clara, CA 95054" %}
-      {% trans "USA" %}
-      {% trans "Phone: +1 650 455-6732" %}
-      {% trans "Email: contact@enverest.com" %}
+      {% trans "Enverest is consisted of dedicated consultants (Partners) and a diversified expert network (Experts) that share the passion and mission to  promote innovation & entrepreneurship. We provide expertise to help clients achieve accelerated growth and sustained global success." %}
     </p>
-  </div> -->
+  </div>
+</div>
 
-  <div class="col-sm-4 col-sm-offset-4 text-center">
-    <h4>
-      <strong>{% trans "Headquarter and Silicon Valley Office" %}</strong>
-    </h4>
+<div class="row">
+  <div class="col-md-4 m-b-lg">
     <div class="card">
-      <img class="card-img-top" src="{% static 'images/bank_transfer_us.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
       <div class="card-block text-center">
-        <h4 class="card-title">{% trans "Enverest, Inc." %}</h4>
-        <p class="card-text">
-          <p>{% trans "4500 Great America Parkway" %}</p>
-          <p>{% trans "Suite 100" %}</p>
-          <p>{% trans "Santa Clara, CA 95054" %}</p>
-          <p>{% trans "USA" %}</p>
-          <p>{% trans "Phone: +1 650 455-6732" %}</p>
-          <p>{% trans "Email: contact@enverest.com" %}</p>
-        </p>
-        <a href="#" class="btn btn-primary">Details</a>
+        <h4 class="card-title">{% trans "Who We Are" %}</h4>
+        <p class="card-text">{% trans "Everest team is committed to help fast-growing companies to achieve accelerated growth and sustained global success." %}</p>
+        <a href="#" class="btn btn-primary">{% trans "Learn More" %}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_2.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <h4 class="card-title">{% trans "What We Do" %}</h4>
+        <p class="card-text">{% trans "Our partners and experts share knowledge, expertise and network to provide on-demand advisory services for our clients to thrive." %}</p>
+        <a href="#" class="btn btn-primary">{% trans "Learn More" %}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <h4 class="card-title">{% trans "Services" %}</h4>
+        <p class="card-text">{% trans "We provide fast-growing companies affordable, high-quality, and widely accessible advisory services. Together, we offer customized solutions to meet our clients' needs, particularly in developing and executing strategic initiatives for fast growth and global market expansion." %}</p>
+        <a href="#" class="btn btn-primary">{% trans "Learn More" %}</a>
       </div>
     </div>
   </div>
 </div>
+
+
+<hr>
 
 <div class="row m-b-lg">
   <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
     <h4>
-      <strong>{% trans "Other locations" %}</strong>
+      <strong>{% trans "A On-Demand Business Expertise Sharing Platform for Fast-growing Companies" %}</strong>
     </h4>
   </div>
+</div>
 
-  <div class="row">
-    <div class="col-md-4 m-b-lg">
-      <div class="card">
-        <img class="card-img-top" src="{% static 'images/bank_transfer_china.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-        <div class="card-block text-center">
-          <h4 class="card-title">{% trans "Beijing, China" %}</h4>
-          <p class="card-text">{% trans "Address..." %}</p>
-          <a href="#" class="btn btn-primary">Details</a>
-        </div>
-      </div>
-    </div>
+<div class="row">
+  <div class="col-md-6 m-b-lg">
+    <img style="width:100%" src="{% static 'images/platform_1.png' %}">
+  </div>
 
-    <div class="col-md-4 m-b-lg">
-      <div class="card">
-        <img class="card-img-top" src="{% static 'images/bank_transfer_singapore.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-        <div class="card-block text-center">
-          <h4 class="card-title">{% trans "Singapore" %}</h4>
-          <p class="card-text">{% trans "Address..." %}</p>
-          <a href="#" class="btn btn-primary">Details</a>
-        </div>
-      </div>
-    </div>
+  <div class="col-md-6 m-b-lg">
+    <img style="width:100%" src="{% static 'images/platform_2.png' %}">
+  </div>
+</div>
 
-    <div class="col-md-4 m-b-lg">
-      <div class="card">
-        <img class="card-img-top" src="{% static 'images/new_york.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-        <div class="card-block text-center">
-          <h4 class="card-title">{% trans "New York, USA" %}</h4>
-          <p class="card-text">{% trans "Address..." %}</p>
-          <a href="#" class="btn btn-primary">Details</a>
-        </div>
+
+<hr>
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Meet the experts" %}</strong>
+    </h4>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col-md-2 m-b-lg">
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/simon_cen.jpg' %}">
+        <h4 class="card-title">{% trans "Simon Cen" %}</h4>
+        <p class="card-text">{% trans "Managing Partner, Enverest" %}</p>
+        <p class="card-text">{% trans "Expertise: Strategy, Business Development, Operations, Supply Chain, M&A, Entrepreneurship" %}</p>
+        <p class="card-text">{% trans "Industry: Hi-tech, Management Consulting, Transportation / Logistics" %}</p>
+        <p class="card-text">{% trans "Previous: Mckinsey, Apple, UPS; Cornell, Georgia Tech, ZJU" %}</p>
+        <a href="https://www.linkedin.com/in/simon-cen-岑水明-7038341a"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
       </div>
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-4 m-b-lg">
-    </div>
-
-    <div class="col-md-4 m-b-lg">
-      <div class="card">
-        <img class="card-img-top" src="{% static 'images/hangzhou.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-        <div class="card-block text-center">
-          <h4 class="card-title">{% trans "Hangzhou" %}</h4>
-          <p class="card-text">{% trans "Address..." %}</p>
-          <a href="#" class="btn btn-primary">Details</a>
-        </div>
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/alex_zhang.jpg' %}">
+        <h4 class="card-title">{% trans "Alex Zhang" %}</h4>
+        <p class="card-text">{% trans "Managing Partner, Enverest" %}</p>
+        <p class="card-text">{% trans "Expertise: Marketing, Business Development, M&A, Entrepreneurship" %}</p>
+        <p class="card-text">{% trans "Industry: Life Sciences, Bio-tech, Management Consulting" %}</p>
+        <p class="card-text">{% trans "Previous: Amgen, Thermo Fisher Scientific; Texas A&M, Cornell, SDU" %}</p>
+        <a href="https://www.linkedin.com/in/alexjzhang"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
       </div>
     </div>
+  </div>
 
-    <div class="col-md-4 m-b-lg">
+
+  <div class="col-md-2 m-b-lg">
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/person/Ya-Ru_Chen.jpg' %}">
+        <h4 class="card-title">{% trans "Ya-Ru Chen" %}</h4>
+        <p class="card-text">{% trans "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of Management, ​Professor of Global Business, Johnson Graduate School of Management, Cornell University (Enverest Advisor)" %}</p>
+        <p class="card-text">{% trans "Expertise: Strategy and Management, Management Consulting, Data Analysis" %}</p>
+        <p class="card-text">{% trans "Industry: Business School Education and Research" %}</p>
+        <p class="card-text">{% trans "Previous: Cornell-Tsinghua FMBA Program, Stern School of Business, NYU; Columbia University" %}</p>
+        <a href="https://www.linkedin.com/in/ya-ru-chen-17871712"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/person/Huazhang_Shen.jpg' %}">
+        <h4 class="card-title">{% trans "Huazhang Shen" %}</h4>
+        <p class="card-text">{% trans "Co-founder and CTO, Kalading (Enverest Advisor)" %}</p>
+        <p class="card-text">{% trans "Expertise: Entrepreneurship, Product Design and Management, Social Marketing, Project Management" %}</p>
+        <p class="card-text">{% trans "Industry: Mobile Internet, Bio-tech" %}</p>
+        <p class="card-text">{% trans "Previous: Kalading, Golfii, GeoWok, Innovation Game International; Cal-tech, USTC" %}</p>
+        <a href="https://www.linkedin.com/in/hzshen"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/person/Shawn_Lee.png' %}">
+        <h4 class="card-title">{% trans "Shawn Lee" %}</h4>
+        <p class="card-text">{% trans "Managing Partner, Enverest" %}</p>
+        <p class="card-text">{% trans "Expertise: Entrepreneurship, FDA Regulatory, M&A, Strategic Partnership" %}</p>
+        <p class="card-text">{% trans "Industry: Life Sciences, Bio-tech" %}</p>
+        <p class="card-text">{% trans "Previous: American Peptide Company; UC-Berkeley, Wuhan University" %}</p>
+        <a href="https://www.linkedin.com/in/peptide"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<div class="row">
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/person/Brandon_Wang.jpg' %}">
+        <h4 class="card-title">{% trans "Brandon Wang" %}</h4>
+        <p class="card-text">{% trans "Group Director and Chief Strategy Officer, Cadence (Enverest Advisor)" %}</p>
+        <p class="card-text">{% trans "Expertise: Entrepreneurship, Strategy, Management Consulting, Engineering Management, Strategic Partnership" %}</p>
+        <p class="card-text">{% trans "Industry: Semiconductor, Hi-tech" %}</p>
+        <p class="card-text">{% trans "Previous: Cadence, ARM, CASPA; Wharton, Stanford, Zhejiang University" %}</p>
+        <a href="https://www.linkedin.com/in/wangbrandon"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/person/Jeff_Wu.jpg' %}">
+        <h4 class="card-title">{% trans "Jeff Wu" %}</h4>
+        <p class="card-text">{% trans "COO, ScaleFlux" %}</p>
+        <p class="card-text">{% trans "Expertise: Entrepreneurship, Cloud Computing, Project Management, Product Development, Strategic Partnership" %}</p>
+        <p class="card-text">{% trans "Industry: Storage, Software" %}</p>
+        <p class="card-text">{% trans "Previous: ScaleFlux, Pactera, Wenditel; USC, Tongji University" %}</p>
+        <a href="https://www.linkedin.com/in/jeff-wu-9ba5a71"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block text-center">
+        <img class="panel-profile-img" src="{% static 'images/person/Cheni_Kwok.jpg' %}">
+        <h4 class="card-title">{% trans "Cheni Kwok" %}</h4>
+        <p class="card-text">{% trans "Managing Partner, Linear Dreams" %}</p>
+        <p class="card-text">{% trans "Expertise: Business Development, Corporate Development" %}</p>
+        <p class="card-text">{% trans "Industry: Life Sciences, Bio-tech, Pharmaceuticals, Management Consulting" %}</p>
+        <p class="card-text">{% trans "Previous: Poniard Pharmaceuticals, Celera, Exelixis, GSK; Cambridge, Imperial College" %}</p>
+        <a href="https://www.linkedin.com/in/cheni-kwok-ph-d-clp-%E9%83%AD%E7%8F%8D%E4%BB%AA-499b67"><img class="" src="{% static 'images/In-2C-28px-R.png' %}"></a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<hr>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Partners" %}</strong>
+    </h4>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/zhongguancun.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/hanhai_investment.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/hainabaichuan.png' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
     </div>
   </div>
 </div>
 
+
+<div class="row">
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/qinghua.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/magstone_law.png' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+
+  <div class="col-md-4 m-b-lg">
+    <div class="card">
+      <img class="card-img-top" src="{% static 'images/partner/ivy_china_forum.jpg' %}" alt="Card image cap" style="height: 150px; width: 100%; display: block;">
+    </div>
+  </div>
+</div>
 
 
 </div> <!-- for Container -->

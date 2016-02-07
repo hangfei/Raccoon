@@ -8,11 +8,11 @@ def index(request):
     })
     return render(request, 'homepage/index.html', context)
 
-def about_enverest(request):
+def about_us(request):
     context = RequestContext(request, {
         'latest_question_list': 'sss',
     })
-    return render(request, 'homepage/about_enverest.html', context)
+    return render(request, 'homepage/about_us.html', context)
 
 def service(request):
     context = RequestContext(request, {
@@ -38,29 +38,17 @@ def team(request):
     })
     return render(request, 'homepage/team.html', context)
 
-def partners(request):
-    context = RequestContext(request, {
-        'latest_question_list': 'sss',
-    })
-    return render(request, 'homepage/partners.html', context)
-
 def news_blog(request):
     context = RequestContext(request, {
         'latest_question_list': 'sss',
     })
     return render(request, 'homepage/news_blog.html', context)
 
-def success_story(request):
+def contact_us(request):
     context = RequestContext(request, {
         'latest_question_list': 'sss',
     })
-    return render(request, 'homepage/success_story.html', context)
-
-def about_us(request):
-    context = RequestContext(request, {
-        'latest_question_list': 'sss',
-    })
-    return render(request, 'homepage/about_us.html', context)
+    return render(request, 'homepage/contact_us.html', context)
 
 from django.contrib.auth.decorators import user_passes_test
 
