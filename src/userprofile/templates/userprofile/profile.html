@@ -37,12 +37,12 @@
       <p>Last Name: {{ profile_user.last_name }}</p>
       <p>Email: {{ profile_user.email }}</p>
       {% if is_expert %}
-      <p>{{ person.description_text }}</p>
-      <p>{{ person.status }}</p>
-      <p>{{ person.area }}</p>
-      <p>{{ person.experience }}</p>
-      <p>{{ person.expertise }}</p>
-      <p>{{ person.industry }}</p>
+      <p>Summary: {{ person.description_text }}</p>
+      <p>Status: <b>{{ person.get_status }}</b></p>
+      <p>Area: <b>{{ person.get_area }}</b></p>
+      <p>Experience: <b>{{ person.get_experience }}</b></p>
+      <p>Expertise: <b>{{ person.get_expertise }}</b></p>
+      <p>Industry: <b>{{ person.get_industry }}</b></p>
       {% else %}
       <p>Client doesn't have any fields now.</p>
       {% endif %}

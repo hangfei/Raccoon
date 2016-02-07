@@ -30,6 +30,6 @@ def user_profile(request, username):
     context = RequestContext(request, {
         'person': person,
         'profile_user': profile_user,
-        'is_expert': is_expert,
+        'is_expert': is_expert
     })
     return render(request, 'userprofile/profile.html', context)

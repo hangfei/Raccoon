@@ -140,6 +140,12 @@ class Expert(models.Model):
        (LARGER_FIFTEEN, '>15 years'),
     )
 
+    AREA_MAPPING = dict((x, y) for x, y in AREA_CHOICES)
+    INDUSTRY_MAPPING = dict((x, y) for x, y in INDUSTRY_CHOICES)
+    EXPERTISE_MAPPING = dict((x, y) for x, y in EXPERTISE_CHOICES)
+    EXPERIENCE_MAPPING = dict((x, y) for x, y in EXPERIENCE_CHOICES)
+    EXPERT_STATUS_MAPPING = dict((x, y) for x, y in EXPERT_STATUS_CHOICES)
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     description_text = models.CharField("Description", max_length=500)
     status = models.CharField(max_length=1,
@@ -164,6 +170,26 @@ class Expert(models.Model):
         expert.user = kwargs.pop("user", None)
         expert.save()
         return expert
+
+    @property
+    def get_industry(self):
+        return self.INDUSTRY_MAPPING.get(self.industry)
+
+    @property
+    def get_expertise(self):
+        return self.EXPERTISE_MAPPING.get(self.expertise)
+
+    @property
+    def get_area(self):
+        return self.AREA_MAPPING.get(self.area)
+
+    @property
+    def get_experience(self):
+        return self.EXPERIENCE_MAPPING.get(self.experience)
+
+    @property
+    def get_status(self):
+        return self.EXPERT_STATUS_MAPPING.get(self.status)
 
     def __str__(self):
         return self.user.first_name + " " + self.user.last_name
@@ -239,7 +265,7 @@ class Project(models.Model):
        (APPEAL_DISPUTE,'The client has appealed the dispute to the administrator'),
        (PAYMENT_RECEIVED,'Payment is received and the project is closed'),
     )
-    
+
     FIXED = 'F'
     HOURLY = 'H'
 
