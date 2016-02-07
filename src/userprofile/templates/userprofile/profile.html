@@ -5,8 +5,6 @@
 {% block content %}
 <div class="container">
 <br>
-<br>
-<br>
 
 
 <div class="row m-b-lg">
@@ -23,7 +21,6 @@
     </h4>
     {% endif %}
     {% if person %}
-      <p>Username: {{ profile_user.username }}</p>
       <div class="row">
         <div class="col-sm-4">
         </div>
@@ -33,20 +30,53 @@
         <div class="col-sm-4">
         </div>
       </div>
-      <p>First Name: {{ profile_user.first_name }}</p>
-      <p>Last Name: {{ profile_user.last_name }}</p>
-      <p>Email: {{ profile_user.email }}</p>
-      {% if is_expert %}
-      <p>Summary: {{ person.description_text }}</p>
-      <p>Status: <b>{{ person.get_status }}</b></p>
-      <p>Area: <b>{{ person.get_area }}</b></p>
-      <p>Experience: <b>{{ person.get_experience }}</b></p>
-      <p>Expertise: <b>{{ person.get_expertise }}</b></p>
-      <p>Industry: <b>{{ person.get_industry }}</b></p>
-      {% else %}
-      <p>Client doesn't have any fields now.</p>
-      {% endif %}
+      <p>Username: {{ profile_user.username }}</p>
     {% endif %}
+  </div>
+
+  <div class="col-sm-8 col-sm-offset-2">
+    {% if is_expert %}
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Summary</h4>
+        <p>{{ person.description_text }}</p>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="col-sm-4 col-sm-offset-2 text-center">
+    <div class="card">
+      <div class="card-block text-center">
+        <h4 class="card-title">Basic Information</h4>
+        <p>First name: {{ profile_user.first_name }}</p>
+        <p>Last name: {{ profile_user.last_name }}</p>
+        <p>Email: {{ profile_user.email }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-4 text-center">
+    <div class="card">
+      <div class="card-block text-center">
+
+        {% if is_expert %}
+        <h4 class="card-title">Expert Profile</h4>
+        {% else %}
+        <h4 class="card-title">Client Profile</h4>
+        {% endif %}
+        {% if person %}
+          {% if is_expert %}
+          <p>Status: <b>{{ person.get_status }}</b></p>
+          <p>Area: <b>{{ person.get_area }}</b></p>
+          <p>Experience: <b>{{ person.get_experience }}</b></p>
+          <p>Expertise: <b>{{ person.get_expertise }}</b></p>
+          <p>Industry: <b>{{ person.get_industry }}</b></p>
+          {% else %}
+          <p>Client doesn't have any fields now.</p>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
   </div>
 </div>
 
