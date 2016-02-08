@@ -17,6 +17,25 @@ class ConsultantSignupForm(ModelForm):
         model = Expert
         fields = ['description_text', 'status', 'area', 'industry', 'expertise', 'experience']
 
+    first_name = forms.CharField(
+        label=_("Firstname"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+    last_name = forms.CharField(
+        label=_("Lastname"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+    email = forms.EmailField(
+        label=_("Email(You can not change email.)"),
+        widget=forms.TextInput(attrs={'readonly':'readonly'}),
+        # widget=forms.TextInput(),
+        required=True
+    )
+
 
 class ClientSignupForm(ModelForm):
     class Meta:
@@ -33,6 +52,12 @@ class ClientSignupForm(ModelForm):
         label=_("Lastname"),
         max_length=30,
         widget=forms.TextInput(),
+        required=True
+    )
+    email = forms.EmailField(
+        label=_("Email(You can not change email.)"),
+        widget=forms.TextInput(attrs={'readonly':'readonly'}),
+        # widget=forms.TextInput(),
         required=True
     )
 
@@ -69,13 +94,24 @@ def userprofile_edit(request):
             pform = ClientSignupForm(request.POST, instance=person)
         if pform.is_valid():
             pform.save()
+            profile_user.first_name = pform.cleaned_data['first_name']
+            profile_user.last_name = pform.cleaned_data['last_name']
+            profile_user.save()
             return HttpResponseRedirect('/profile/' + str(profile_user.username))
     else:
         pform = None
         if is_expert:
-            pform = ConsultantSignupForm(instance=person)
+            initial_data = {"first_name": profile_user.first_name,
+                            "last_name": profile_user.last_name,
+                            "email": profile_user.email,
+                            }
+            pform = ConsultantSignupForm(instance=person, initial=initial_data)
         else:
-            pform = ClientSignupForm(instance=person)
+            initial_data = {"first_name": profile_user.first_name,
+                            "last_name": profile_user.last_name,
+                            "email": profile_user.email,
+                            }
+            pform = ClientSignupForm(instance=person, initial=initial_data)
     return render(request, 'userprofile/update_userprofile.html', {'form': pform})
 
 
