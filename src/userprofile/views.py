@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from common.models import Client, Expert, UserProfile
+from account.views import handle_uploaded_file
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model
 from django.template import RequestContext, loader
@@ -36,6 +37,11 @@ class ConsultantSignupForm(ModelForm):
         required=True
     )
 
+    profile_image = forms.FileField(
+        label='Select a image for your profile.',
+        required=False
+    )
+
 
 class ClientSignupForm(ModelForm):
     class Meta:
@@ -60,6 +66,12 @@ class ClientSignupForm(ModelForm):
         # widget=forms.TextInput(),
         required=True
     )
+
+    profile_image = forms.FileField(
+        label='Select a image for your profile.',
+        required=False
+    )
+
 
 # https://collingrady.wordpress.com/2008/02/18/editing-multiple-objects-in-django-with-newforms/
 def userprofile_edit(request):
@@ -87,6 +99,9 @@ def userprofile_edit(request):
 
 
     if request.method == "POST":
+        if request.FILES:
+            handle_uploaded_file(request.FILES['profile_image'], profile_user.username)
+
         pform = None
         if is_expert:
             pform = ConsultantSignupForm(request.POST, instance=person)
