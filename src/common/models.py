@@ -51,6 +51,10 @@ class UserProfile(models.Model):
 class Client(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
 
+    def has_worked_before(self, expert):
+      experts = [project.expert for project in Project.objects.filter(client=self)]
+      return expert in experts
+
     @classmethod
     def create(cls, form, request=None, **kwargs):
         client = cls(**kwargs)

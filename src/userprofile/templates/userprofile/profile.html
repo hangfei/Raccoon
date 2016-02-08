@@ -49,9 +49,17 @@
     <div class="card">
       <div class="card-block text-center">
         <h4 class="card-title">Basic Information</h4>
+        {% if can_view_personal_info %}
         <p>First name: {{ profile_user.first_name }}</p>
         <p>Last name: {{ profile_user.last_name }}</p>
         <p>Email: {{ profile_user.email }}</p>
+        {% else %}
+          {% if is_expert %}
+          <p>You havn't worked with this expert before. Personal information of this expert is hidden.</p>
+          {% else %}
+          <p>Personal information is hidden.</p>
+          {% endif %}
+        {% endif %}
       </div>
     </div>
   </div>

@@ -27,9 +27,41 @@ def user_profile(request, username):
         person = experts[0]
     else:
         raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
+
+
+    current_user = request.user
+    current_user_profiles = current_user.userprofile_set.all()
+    current_user_profile = None
+    if current_user_profiles:
+        current_user_profile = current_user_profiles[0]
+    else:
+        raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
+
+    current_person = None
+    current_is_expert = None
+
+    if current_user_profile.user_type == 'CLIENT':
+        current_is_expert = False
+        clients = current_user.client_set.all()
+        current_person = clients[0]
+    elif current_user_profile.user_type == 'EXPERT':
+        current_is_expert = True
+        experts = current_user.expert_set.all()
+        current_person = experts[0]
+    else:
+        raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
+
+    can_view_personal_info = False
+    if current_user == profile_user:
+        can_view_personal_info = True
+    elif not current_is_expert:
+        can_view_personal_info = current_person.has_worked_before(person)
+
+
     context = RequestContext(request, {
         'person': person,
         'profile_user': profile_user,
-        'is_expert': is_expert
+        'is_expert': is_expert,
+        'can_view_personal_info': can_view_personal_info
     })
     return render(request, 'userprofile/profile.html', context)
