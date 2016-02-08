@@ -55,6 +55,7 @@
         <p>Email: {{ profile_user.email }}</p>
         {% else %}
           {% if is_expert %}
+          <i class="fa fa-lock fa-lg"></i>
           <p>You havn't worked with this expert before. Personal information of this expert is hidden.</p>
           {% else %}
           <p>Personal information is hidden.</p>
