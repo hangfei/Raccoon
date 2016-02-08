@@ -1,9 +1,84 @@
 from django.shortcuts import render
-from common.models import Client, Expert
+from common.models import Client, Expert, UserProfile
 from django.http import HttpResponse
 from django.contrib.auth import get_user_model
 from django.template import RequestContext, loader
 from django.core.exceptions import ObjectDoesNotExist
+
+
+from django.views.generic.edit import UpdateView
+from django.forms import ModelForm
+from django import forms
+from django.http import HttpResponseRedirect
+from django.utils.translation import ugettext_lazy as _
+
+class ConsultantSignupForm(ModelForm):
+    class Meta:
+        model = Expert
+        fields = ['description_text', 'status', 'area', 'industry', 'expertise', 'experience']
+
+
+class ClientSignupForm(ModelForm):
+    class Meta:
+        model = Client
+        fields = []
+
+    first_name = forms.CharField(
+        label=_("Firstname"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+    last_name = forms.CharField(
+        label=_("Lastname"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=True
+    )
+
+# https://collingrady.wordpress.com/2008/02/18/editing-multiple-objects-in-django-with-newforms/
+def userprofile_edit(request):
+    User = get_user_model()
+    profile_user = User.objects.get(username=request.user)
+    user_profiles = profile_user.userprofile_set.all()
+    user_profile = None
+    if user_profiles:
+        user_profile = user_profiles[0]
+    else:
+        raise ObjectDoesNotExist("user doesn't assoicate with any user_profile.")
+    person = None
+    is_expert = None
+
+    if user_profile.user_type == 'CLIENT':
+        is_expert = False
+        clients = profile_user.client_set.all()
+        person = clients[0]
+    elif user_profile.user_type == 'EXPERT':
+        is_expert = True
+        experts = profile_user.expert_set.all()
+        person = experts[0]
+    else:
+        raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
+
+
+    if request.method == "POST":
+        pform = None
+        if is_expert:
+            pform = ConsultantSignupForm(request.POST, instance=person)
+        else:
+            pform = ClientSignupForm(request.POST, instance=person)
+        if pform.is_valid():
+            pform.save()
+            return HttpResponseRedirect('/profile/' + str(profile_user.username))
+    else:
+        pform = None
+        if is_expert:
+            pform = ConsultantSignupForm(instance=person)
+        else:
+            pform = ClientSignupForm(instance=person)
+    return render(request, 'userprofile/update_userprofile.html', {'form': pform})
+
+
 
 def user_profile(request, username):
     User = get_user_model()
