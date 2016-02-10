@@ -16,13 +16,13 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ON HOLD PROJECTS</strong></h4>
+  <h4><strong>ASSIGNED TO YOU PROJECTS</strong></h4>
 </div>
 
 <div class="row">
   {% if project_list %}
     {% for project in project_list %}
-      {% if project.state == 'PC' %}
+      {% if project.state == 'EA' %}
         <div class="col-md-6 m-b-lg">
           <div class="card">
             <div class="card-block text-center" style="word-wrap:break-word">
@@ -45,36 +45,7 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>SUBMITTED PROJECTS</strong></h4>
-</div>
-
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'PS' or project.state == 'EA'%}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-      <h1>No projects are available.</h1>
-  {% endif %}
-</div>
-
-<hr>
-
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>EXPERT ASSIGNED PROJECTS</strong></h4>
+  <h4><strong>PROJECTS TAKEN</strong></h4>
 </div>
 
 <div class="row">
@@ -89,7 +60,36 @@
               </ul>
               <hr>
               <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="#" class="btn btn-primary">View</a>
+              <a href="/project/waitclientconfirm?project_id={{ project.pk }}" class="btn btn-primary" >View</a>
+            </div>
+          </div>
+        </div>  
+      {% endif %}
+    {% endfor %}
+  {% else %}
+      <h1>No projects are available.</h1>
+  {% endif %}
+</div>
+
+<hr>
+
+<div class="col-sm-8 col-sm-offset-2 text-center">
+  <h4><strong>CLIENT CONFIRMED PROJECTS</strong></h4>
+</div>
+
+<div class="row">
+  {% if project_list %}
+    {% for project in project_list %}
+      {% if project.state == 'CA'%}
+        <div class="col-md-6 m-b-lg">
+          <div class="card">
+            <div class="card-block text-center" style="word-wrap:break-word">
+              <ul>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+              </ul>
+              <hr>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+              <a href="/project/expertstart?project_id={{ project.pk }}" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>  
@@ -118,7 +118,7 @@
               </ul>
               <hr>
               <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="#" class="btn btn-primary">View</a>
+              <a href="/project/expertworking?project_id={{ project.pk }}" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>  
@@ -132,10 +132,61 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>COMPLETED PROJECTS</strong></h4>
+  <h4><strong>WAITING FOR PAYMENT PROJECTS</strong></h4>
+</div>
+
+<div class="row">
+  {% if project_list %}
+    {% for project in project_list %}
+      {% if project.state == 'PF' or project.state == 'CC' or project.state == 'AD'%}
+        <div class="col-md-6 m-b-lg">
+          <div class="card">
+            <div class="card-block text-center" style="word-wrap:break-word">
+              <ul>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+              </ul>
+              <hr>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+              <a href="/project/waitpayment?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>  
+      {% endif %}
+    {% endfor %}
+  {% else %}
+      <h1>No projects are available.</h1>
+  {% endif %}
 </div>
 
 
+<hr>
+
+<div class="col-sm-8 col-sm-offset-2 text-center">
+  <h4><strong>COMPLETED PROJECTS</strong></h4>
+</div>
+
+<div class="row">
+  {% if project_list %}
+    {% for project in project_list %}
+      {% if project.state == 'PR' %}
+        <div class="col-md-6 m-b-lg">
+          <div class="card">
+            <div class="card-block text-center" style="word-wrap:break-word">
+              <ul>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+              </ul>
+              <hr>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+              <a href="/project/close?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>  
+      {% endif %}
+    {% endfor %}
+  {% else %}
+      <h1>No projects are available.</h1>
+  {% endif %}
+</div>
 </div> <!-- for Container -->
 
 

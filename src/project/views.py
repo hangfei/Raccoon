@@ -13,6 +13,7 @@ from .forms import ProjectForm
 state_message_option = {
     'ept_a':'The client will review it and get back to you',
     'ept_f':'The client will review your work and get back to you',
+    'ept_s':'Thank you for working on this project and the client will be notified soon',
     'clt_s':'We will review your project and an expert will be assigned to you soon',
     'clt_c':'You will receive the contract and payment information soon',
     'clt_n':'The expert will keep working on the project',
@@ -98,7 +99,6 @@ def create(request):
     return render(request, 'create.html', {'form': form})
 
 def expertchoice(request):
-
     if request.method == 'GET':
        if 'project_id' in request.GET:
          project_id_val = request.GET['project_id']
@@ -167,6 +167,17 @@ def expertworking(request):
         project.save()
       return HttpResponseRedirect('thanks?last_action=ept_f')
 
+def expertstart(request):
+    if request.method == 'GET':
+      return generalGetPage(request, 'expertstart')
+    else:
+      if 'project_id' in request.POST:
+        project_id_val = request.POST['project_id']
+        project = Project.objects.get(pk=project_id_val)
+        project.state = 'IP'
+        project.save()
+      return HttpResponseRedirect('thanks?last_action=ept_s')
+
 def clientconfirm(request):
     if request.method == 'GET':
       #TODO: sanity check
@@ -194,6 +205,41 @@ def clientconfirm(request):
           redirectStr = 'clt_a'
         project.save()
       return HttpResponseRedirect('thanks?last_action='+redirectStr)
+
+def waitassignexpert(request):
+    return generalGetPage(request, 'waitassignexpert')
+
+def waitclientconfirm(request):
+    return generalGetPage(request, 'waitclientconfirm')
+
+def waitexpertstart(request):
+    return generalGetPage(request, 'waitexpertstart')
+
+def waitexpertworking(request):
+    return generalGetPage(request, 'waitexpertworking')
+
+def waitpayment(request):
+    return generalGetPage(request, 'waitpayment')
+
+def close(request):
+    return generalGetPage(request, 'close')
+
+def generalGetPage(request, pageStatus):
+    if request.method == 'GET':
+        if 'project_id' in request.GET:
+            project_id_val = request.GET['project_id']
+            project = None
+            try:
+                project = Project.objects.get(pk=project_id_val)
+            except ObjectDoesNotExist:
+                return HttpResponseRedirect('unavailable')
+            #if hasPermission(request, project) == False:
+            #    return HttpResponseRedirect('unavailable')
+            context = RequestContext(request, {
+               'project': project,
+              })
+            return render(request, pageStatus+'.html', context)
+        return HttpResponseRedirect('unavailable')
 
 def thanks(request):
     if 'last_action' in request.GET:

@@ -43,7 +43,8 @@ def dashboard(request):
 	if type(person) == Expert:
 	  project_list = Project.objects.filter(expert=person)
 	  context = { 'project_list': project_list }
+	  return render(request, 'consultant/expert_dashboard.html', context)
 	elif type(person) == Client:
 	  project_list = Project.objects.filter(client=person)
 	  context = { 'project_list': project_list }	
-	return render(request, 'consultant/dashboard.html', context)
+	  return render(request, 'consultant/client_dashboard.html', context)

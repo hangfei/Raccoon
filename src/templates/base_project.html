@@ -143,20 +143,44 @@ ol.progress-meter li.todo:before {
     <td>{{project.info_text}}</td>
   </tr>
   <tr>
+    <td>Client</td>
+    <td>{{project.client.user}}</td>
+  </tr>
+    <tr>
+    <td>Expert</td>
+    <td>{{project.expert.user}}</td>
+  </tr>
+  <tr>
     <td>Expert preference</td>
     <td>{{project.expert_pref_text}}</td>
   </tr>
-   <tr>
+  <tr>
     <td>Start Date</td>
     <td>{{project.pub_date}}</td>
   </tr>
-   <tr>
+  <tr>
     <td>End Date</td>
     <td>{{project.end_date}}</td>
   </tr>
-   <tr>
-    <td>Project Rate</td>
-    <td>{{project.rate}}</td>
+  <tr>
+    <td>Rate</td>
+    {% if project.rate_type == 'F'%}
+      <td>${{project.rate}}</td>
+    {% else %}
+      <td>{{project.rate}} hours</td>
+    {% endif %}
+  </tr>
+  <tr>
+    <td>Service Type</td>
+    {% if project.service_type == 'D'%}
+      <td>Deep Dive</td>
+    {% else %}
+      <td>General Advisory</td>
+    {% endif %}
+  </tr>
+  <tr>
+    <td>Chat Room</td>
+    <td><a href="https://appear.in/enverest_project_{{ project.pk }}" >Start a video or audio conference</a></td>
   </tr>
 </table>
 
