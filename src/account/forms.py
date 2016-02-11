@@ -125,7 +125,10 @@ class ClientSignupForm(forms.Form):
         label=_("Email"),
         widget=forms.TextInput(), required=True)
 
-    profile_image = forms.FileField(label='Select a image for your profile.')
+    profile_image = forms.FileField(
+        label='Select a image for your profile.',
+        required=False
+    )
 
     code = forms.CharField(
         max_length=64,
