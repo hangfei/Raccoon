@@ -151,7 +151,7 @@ ol.progress-meter li.todo:before {
     {% if project.state == 'PS' or project.state == 'PC'%}
     <td>To be assigned</td>
     {% else %}
-    <td>{{project.expert.user}}</td>
+    <td><a href="/profile/{{project.expert.user}}">{{project.expert.user}}</a></td>
     {% endif %}
   </tr>
   <tr>
@@ -185,6 +185,10 @@ ol.progress-meter li.todo:before {
   <tr>
     <td>Chat Room</td>
     <td><a href="https://appear.in/enverest_project_{{ project.pk }}" >Start a video or audio conference</a></td>
+  </tr>
+  <tr>
+    <td>Message</td>
+    <td><a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a></td>
   </tr>
 </table>
 
