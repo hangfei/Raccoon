@@ -4,21 +4,72 @@
 {% block content %}
 <div class="container">
 
+<style>
 
-  <div class="row">
-    <div class="col-lg-12">
-      <br>
-    </div>
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+blockquote p {
+  display: inline;
+}
+
+/* must close the quotes before open another one */
+blockquote:after {
+  visibility: hidden;
+  color: #ccc;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+</style>
+
+
+<div class="row">
+  <div class="col-lg-12">
+    <br>
+  </div>
+</div>
+
+<!-- spaces -->
+<div class="row">
+  <div class="col-lg-12">
+    <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+  </div>
+</div>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h5>
+      {% trans "On-demand insights from dedicated experts and business leaders." %}
+    </h5>
+    <br>
   </div>
 
-  <!-- spaces -->
   <div class="row">
-    <div class="col-lg-12">
-      <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+    <div class="col-sm-4 col-sm-offset-2 text-center">
+      <a href="search" class="btn btn-primary">Search for Experts</a>
+    </div>
+    <br>
+    <div class="col-sm-4 text-center">
+      <a href="project/create" class="btn btn-primary">Get Started</a>
     </div>
   </div>
+</div>
 
-  <hr>
+
+<hr>
+
 
 <div class="row m-b-lg">
   <div class="col-sm-8 col-sm-offset-2 text-center">
@@ -28,56 +79,48 @@
       <strong>{% trans "Meet Professionals and Industry Leaders" %}</strong>
     </h4>
     <p class="m-b-lg">
-      {% trans "On-demand insights from dedicated experts and business leaders." %}
+      {% trans "Get a sense of the 100+ advisors in our network. We provide expertise to help clients achieve accelerated growth and sustained global success." %}
     </p>
   </div>
 
   <div class="row">
-    <div class="col-sm-4 col-sm-offset-2 text-center">
-      <a href="search" class="btn btn-primary">Search for Experts</a>
+    <div class="col-md-4 m-b-lg">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+        <div class="card-block text-center">
+          <img class="panel-profile-img" src="{% static 'images/simon_cen.jpg' %}">
+          <h4 class="card-title">{% trans "Simon Cen" %}</h4>
+          <p class="card-text">{% trans "Built strong expertise in Business Development, Operations and Supply Chain Management." %}</p>
+          <a href="#" class="btn btn-primary">Hire</a>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-4 text-center">
-      <a href="project/create" class="btn btn-primary">Post Your Project</a>
-    </div>
-  </div>
-</div>
 
-<div class="row">
-  <div class="col-md-4 m-b-lg">
-    <div class="card">
-      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-      <div class="card-block text-center">
-        <img class="panel-profile-img" src="{% static 'images/simon_cen.jpg' %}">
-        <h4 class="card-title">{% trans "Simon Cen" %}</h4>
-        <p class="card-text">{% trans "Built strong expertise in Business Development, Operations and Supply Chain Management." %}</p>
-        <a href="#" class="btn btn-primary">Hire</a>
+    <div class="col-md-4 m-b-lg">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'images/card_2.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+        <div class="card-block text-center">
+          <img class="panel-profile-img" src="{% static 'images/person/Cheni_Kwok.jpg' %}">
+          <h4 class="card-title">{% trans "Cheni Kwok" %}</h4>
+          <p class="card-text">{% trans "Some quick example text to build on the card title and make up the bulk of the card's content." %}</p>
+          <a href="#" class="btn btn-primary">Hire</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 m-b-lg">
+      <div class="card">
+        <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+        <div class="card-block text-center">
+          <img class="panel-profile-img" src="{% static 'images/alex_zhang.jpg' %}">
+          <h4 class="card-title">{% trans "Alex J. Zhang" %}</h4>
+          <p class="card-text">{% trans "Business development and marketing leader with extensive experience and network in life sciences" %}</p>
+          <a href="#" class="btn btn-primary">Hire</a>
+        </div>
       </div>
     </div>
   </div>
 
-  <div class="col-md-4 m-b-lg">
-    <div class="card">
-      <img class="card-img-top" src="{% static 'images/card_2.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-      <div class="card-block text-center">
-        <img class="panel-profile-img" src="{% static 'images/person/Cheni_Kwok.jpg' %}">
-        <h4 class="card-title">{% trans "Cheni Kwok" %}</h4>
-        <p class="card-text">{% trans "Some quick example text to build on the card title and make up the bulk of the card's content." %}</p>
-        <a href="#" class="btn btn-primary">Hire</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="col-md-4 m-b-lg">
-    <div class="card">
-      <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-      <div class="card-block text-center">
-        <img class="panel-profile-img" src="{% static 'images/alex_zhang.jpg' %}">
-        <h4 class="card-title">{% trans "Alex J. Zhang" %}</h4>
-        <p class="card-text">{% trans "Business development and marketing leader with extensive experience and network in life sciences" %}</p>
-        <a href="#" class="btn btn-primary">Hire</a>
-      </div>
-    </div>
-  </div>
 </div>
 
 <hr>
@@ -112,12 +155,56 @@
 <hr>
 
 <div class="row row-padded text-center">
-  <div class="col-sm-8 col-sm-offset-2 text-center">
+  <div class="col-sm-12 text-center">
     <h4><strong>{% trans "Recent projects and success stories" %}</strong></h4>
   </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Company ABC</h4>
+        <h6 class="card-subtitle text-muted">A technology company and asset management firm run by a well known executive from the investment management industry.</h6>
+      </div>
+      <img class="card-img-top" src="{% static 'images/company_elements/sample_company1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block">
+        <blockquote><p class="card-text">Enverest connected us with a fantastic professional who leveraged his PE and VC experience to revamp our fundraising presentation. We ended up hiring him for a full-time strategy position.</p></blockquote>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-sm-4">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Company ConnectedForce</h4>
+        <h6 class="card-subtitle text-muted">A technology company and asset management firm run by a well known executive from the investment management industry.</h6>
+      </div>
+      <img class="card-img-top" src="{% static 'images/company_elements/sample_company1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block">
+        <blockquote><p class="card-text">Enverest connected us with a fantastic professional who leveraged his PE and VC experience to revamp our fundraising presentation. We ended up hiring him for a full-time strategy position.</p></blockquote>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-sm-4 text-center">
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title">Company CBS</h4>
+        <h6 class="card-subtitle text-muted">Support card subtitle</h6>
+      </div>
+      <img class="card-img-top" src="{% static 'images/company_elements/sample_company3.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
+      <div class="card-block">
+        <blockquote><p class="card-text">Enverest connected us with a fantastic professional who leveraged his PE and VC experience to revamp our fundraising presentation. We ended up hiring him for a full-time strategy position.</p></blockquote>
+      </div>
+    </div>
+  </div>
+
   <div class="col-sm-12 text-center">
-    <br>
-    <img src="{% static 'images/enverest_benefits.png' %}">
     <br>
     <br>
     <a class="btn btn-primary" href="/project/create">Submit Your Project Request</a>
@@ -126,14 +213,18 @@
 
 <hr>
 
-<div class="row row-padded row-bordered row-centered">
-  <div class="col-xs-12 col-lg-8">
+<div class="row row-padded row-bordered">
+  <div class="col-xs-12 col-md-8">
     <img src="{% static 'images/global_dotted_map.jpg' %}" alt="Generic placeholder image" style="width:100%;">
-  </div><!-- /.col-lg-4 -->
-  <div class="col-xs-12 col-lg-4">
-    <h4 style="text-align: center; vertical-align: middle;">Global Insights, Sustained Impact</h2>
-    <p style="text-align: center; vertical-align: middle;">Silicon Valley | New York | Singapore | Beijing</p>
-  </div><!-- /.col-lg-4 -->
+  </div>
+  <div class="col-xs-12 col-md-4">
+    <div class="row row-padded row-bordered row-centered">
+      <div class="col-xs-12 col-md-12">
+        <h4 style="text-align: center; vertical-align: middle;">Global Insights, Sustained Impact</h4>
+        <p style="text-align: center; vertical-align: middle;">Silicon Valley | New York | Singapore | Beijing</p>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div> <!-- for Container -->
