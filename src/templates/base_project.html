@@ -146,9 +146,13 @@ ol.progress-meter li.todo:before {
     <td>Client</td>
     <td>{{project.client.user}}</td>
   </tr>
-    <tr>
+  <tr>
     <td>Expert</td>
+    {% if project.state == 'PS' or project.state == 'PC'%}
+    <td>To be assigned</td>
+    {% else %}
     <td>{{project.expert.user}}</td>
+    {% endif %}
   </tr>
   <tr>
     <td>Expert preference</td>

@@ -22,7 +22,7 @@
 <div class="row">
   {% if project_list %}
     {% for project in project_list %}
-      {% if project.state == 'PS' or project.state == 'EA'%}
+      {% if project.state == 'PC' or project.state == 'PS' or project.state == 'EA'%}
         <div class="col-md-6 m-b-lg">
           <div class="card">
             <div class="card-block text-center" style="word-wrap:break-word">
@@ -31,7 +31,7 @@
               </ul>
               <hr>
               <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/waitassignexpert?projectid={{ project.pk }}" class="btn btn-primary">View</a>
+              <a href="/project/waitassignexpert?project_id={{ project.pk }}" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>  
@@ -60,7 +60,36 @@
               </ul>
               <hr>
               <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="#" class="btn btn-primary">View</a>
+              <a href="/project/clientchoice?project_id={{ project.pk}}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>  
+      {% endif %}
+    {% endfor %}
+  {% else %}
+      <h1>No projects are available.</h1>
+  {% endif %}
+</div>
+
+<hr>
+
+<div class="col-sm-8 col-sm-offset-2 text-center">
+  <h4><strong>PROJECTS WAITING FOR EXPERT TO START</strong></h4>
+</div>
+
+<div class="row">
+  {% if project_list %}
+    {% for project in project_list %}
+      {% if project.state == 'CA'%}
+        <div class="col-md-6 m-b-lg">
+          <div class="card">
+            <div class="card-block text-center" style="word-wrap:break-word">
+              <ul>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+              </ul>
+              <hr>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+              <a href="/project/waitexpertstart?project_id={{ project.pk}}" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>  
@@ -89,7 +118,36 @@
               </ul>
               <hr>
               <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="#" class="btn btn-primary">View</a>
+              <a href="/project/waitexpertworking?project_id={{ project.pk}}" class="btn btn-primary">View</a>
+            </div>
+          </div>
+        </div>  
+      {% endif %}
+    {% endfor %}
+  {% else %}
+      <h1>No projects are available.</h1>
+  {% endif %}
+</div>
+
+<hr>
+
+<div class="col-sm-8 col-sm-offset-2 text-center">
+  <h4><strong>WAITING FOR YOU TO CONFIRM</strong></h4>
+</div>
+
+<div class="row">
+  {% if project_list %}
+    {% for project in project_list %}
+      {% if project.state == 'PF' %}
+        <div class="col-md-6 m-b-lg">
+          <div class="card">
+            <div class="card-block text-center" style="word-wrap:break-word">
+              <ul>
+                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+              </ul>
+              <hr>
+              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+              <a href="/project/clientconfirm?project_id={{ project.pk}}" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>  
@@ -109,7 +167,7 @@
 <div class="row">
   {% if project_list %}
     {% for project in project_list %}
-      {% if project.state == 'PR' %}
+      {% if project.state == 'CC' or project.state == 'AD' or project.state == 'PR' %}
         <div class="col-md-6 m-b-lg">
           <div class="card">
             <div class="card-block text-center" style="word-wrap:break-word">
@@ -118,7 +176,7 @@
               </ul>
               <hr>
               <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="#" class="btn btn-primary">View</a>
+              <a href="/project/close?project_id={{ project.pk}}" class="btn btn-primary">View</a>
             </div>
           </div>
         </div>  

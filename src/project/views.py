@@ -21,6 +21,34 @@ state_message_option = {
     'clt_a':'An administrator will contact you soon',
 }
 
+def getCurrentRole(request):
+    print("user::")
+    print(request.user)
+    User = get_user_model()
+    if request.user.id == None:
+      return False
+    user_id = request.user.id
+    profile_user = User.objects.get(pk=user_id)
+    user_profiles = profile_user.userprofile_set.all()
+    user_profile = None
+    if user_profiles:
+        user_profile = user_profiles[0]
+    else:
+        return None
+    person = None
+    is_expert = None
+    if user_profile.user_type == 'CLIENT':
+        is_expert = False
+        clients = profile_user.client_set.all()
+        person = clients[0]
+        print(person)
+    elif user_profile.user_type == 'EXPERT':
+        is_expert = True
+        experts = profile_user.expert_set.all()
+        person = experts[0]
+        print(person)
+    return person
+
 def hasPermission(request, project):
     print("user::")
     print(request.user)
@@ -72,7 +100,7 @@ def create(request):
             # process the data in form.cleaned_data as required
             print(form.cleaned_data['project_name'])
             print(form.cleaned_data['project_expert_expertise'])
-            new_project = Project(client=(Client.objects.all())[0],#getCurrentRole(request),
+            new_project = Project(client=getCurrentRole(request),
                                   expert=(Expert.objects.all())[0],
                                   title_text=form.cleaned_data['project_name'],
                                   info_text=form.cleaned_data['project_description'],
