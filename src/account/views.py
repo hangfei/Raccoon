@@ -29,6 +29,7 @@ from django.template import RequestContext
 from django.shortcuts import render
 from django.contrib import messages
 import requests
+import urllib.request
 
 def sign_up(request):
     context = RequestContext(request, {
@@ -36,13 +37,18 @@ def sign_up(request):
     })
     return render(request, 'account/sign_up.html', context)
 
-def handle_uploaded_file(file, username):
+def handle_uploaded_file(request, username):
     file_type_suffix = 'jpg'
     image_name = str(username)
     file_name = image_name + "." + file_type_suffix
-    with open('media/' + file_name, 'wb+') as destination:
-        for chunk in file.chunks():
-            destination.write(chunk)
+    file_path = 'media/' + file_name
+    if request.session['linkedin_profile_image']:
+        urllib.request.urlretrieve(request.session['linkedin_profile_image'], file_path)
+    if request.FILES:
+        file = request.FILES['profile_image']
+        with open(file_path, 'wb+') as destination:
+            for chunk in file.chunks():
+                destination.write(chunk)
 
 class ClientSignupView(FormView):
 
@@ -160,7 +166,8 @@ class ClientSignupView(FormView):
         self.create_profile(form)
 
         if self.request.method == 'POST':
-            handle_uploaded_file(self.request.FILES['profile_image'], self.created_user.username)
+            handle_uploaded_file(self.request, self.created_user.username)
+
 
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
@@ -381,7 +388,7 @@ class ConsultantSignupView(FormView):
             result = requests.post("https://www.linkedin.com/uas/oauth2/accessToken", post_data, headers=headers)
 
             get_headers = {'Host': 'api.linkedin.com', 'Connection':'Keep-Alive', 'Authorization': 'Bearer ' + result.json()['access_token']}
-            profile_fields = '(id,firstName,lastName,positions,specialties,summary,num-connections,picture-url)'
+            profile_fields = '(id,firstName,lastName,positions,headline,specialties,summary,num-connections,picture-url),picture-urls::(original)'
             get_result = requests.get("https://api.linkedin.com/v1/people/~:" + profile_fields + "?format=json", headers=get_headers)
 
             data_dict = {'first_name': get_result.json()['firstName'],
@@ -389,6 +396,10 @@ class ConsultantSignupView(FormView):
                          'description_text': get_result.json()['summary']
                         }
             self.form_kwargs['initial'] = data_dict
+            if 'pictureUrls' in get_result.json():
+                if 'values' in get_result.json()['pictureUrls']:
+                    if get_result.json()['pictureUrls']['values']:
+                        self.request.session['linkedin_profile_image'] = get_result.json()['pictureUrls']['values'][0]
             return super(ConsultantSignupView, self).get(*args, **kwargs)
         else:
             base_authorization_url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri='
@@ -464,7 +475,7 @@ class ConsultantSignupView(FormView):
         self.create_profile(form)
 
         if self.request.method == 'POST':
-            handle_uploaded_file(self.request.FILES['profile_image'], self.created_user.username)
+            handle_uploaded_file(self.request, self.created_user.username)
 
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:

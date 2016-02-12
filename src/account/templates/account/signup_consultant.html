@@ -22,6 +22,11 @@
                 {% if redirect_field_value %}
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
+                {% if request.session.linkedin_profile_image %}
+                <p>You have LinkedIn profile image. If you don't want to use another one, this will be your profile image on our website.</p>
+                <img src="{{ request.session.linkedin_profile_image }}">
+                {% endif %}
+                <br>
                 <button type="submit" class="btn btn-primary">{% trans "Sign up" %}</button>
             </form>
             <p class="login-signup">
