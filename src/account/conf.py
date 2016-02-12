@@ -31,6 +31,7 @@ def load_path_attr(path):
 class AccountAppConf(AppConf):
 
     OPEN_SIGNUP = True
+    USE_SINGUP_CODE = False
     LOGIN_URL = "account_login"
     SIGNUP_REDIRECT_URL = "/"
     LOGIN_REDIRECT_URL = "/"

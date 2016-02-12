@@ -271,19 +271,22 @@ class ClientSignupView(FormView):
         return self.request.POST.get("code", self.request.GET.get("code"))
 
     def is_open(self):
-        if self.signup_code:
-            return True
+        # TODO Turn off singup code to remove code invalid warning
+        if settings.ACCOUNT_USE_SINGUP_CODE:
+            if self.signup_code:
+                return True
+            else:
+                if self.signup_code_present:
+                    if self.messages.get("invalid_signup_code"):
+                        messages.add_message(
+                            self.request,
+                            self.messages["invalid_signup_code"]["level"],
+                            self.messages["invalid_signup_code"]["text"].format(**{
+                                "code": self.get_code(),
+                            })
+                        )
         else:
-            if self.signup_code_present:
-                if self.messages.get("invalid_signup_code"):
-                    messages.add_message(
-                        self.request,
-                        self.messages["invalid_signup_code"]["level"],
-                        self.messages["invalid_signup_code"]["text"].format(**{
-                            "code": self.get_code(),
-                        })
-                    )
-        return settings.ACCOUNT_OPEN_SIGNUP
+            return settings.ACCOUNT_OPEN_SIGNUP
 
     def email_confirmation_required_response(self):
         if self.request.is_ajax():
@@ -386,6 +389,7 @@ class ConsultantSignupView(FormView):
                          'description_text': get_result.json()['summary']
                         }
             self.form_kwargs['initial'] = data_dict
+            return super(ConsultantSignupView, self).get(*args, **kwargs)
         else:
             base_authorization_url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri='
             redirect_url  = redirect_domain + '/account/signup/consultant/'
@@ -396,7 +400,7 @@ class ConsultantSignupView(FormView):
                 'linkedin_api_link': linkedin_api_link,
             })
             return render(request, 'account/signup_consultant_linkedin.html', context)
-        return super(ConsultantSignupView, self).get(*args, **kwargs)
+
 
     def post(self, *args, **kwargs):
         if self.request.user.is_authenticated():
@@ -571,19 +575,22 @@ class ConsultantSignupView(FormView):
         return self.request.POST.get("code", self.request.GET.get("code"))
 
     def is_open(self):
-        if self.signup_code:
-            return True
+        # TODO Turn off singup code to remove code invalid warning
+        if settings.ACCOUNT_USE_SINGUP_CODE:
+            if self.signup_code:
+                return True
+            else:
+                if self.signup_code_present:
+                    if self.messages.get("invalid_signup_code"):
+                        messages.add_message(
+                            self.request,
+                            self.messages["invalid_signup_code"]["level"],
+                            self.messages["invalid_signup_code"]["text"].format(**{
+                                "code": self.get_code(),
+                            })
+                        )
         else:
-            if self.signup_code_present:
-                if self.messages.get("invalid_signup_code"):
-                    messages.add_message(
-                        self.request,
-                        self.messages["invalid_signup_code"]["level"],
-                        self.messages["invalid_signup_code"]["text"].format(**{
-                            "code": self.get_code(),
-                        })
-                    )
-        return settings.ACCOUNT_OPEN_SIGNUP
+            return settings.ACCOUNT_OPEN_SIGNUP
 
     def email_confirmation_required_response(self):
         if self.request.is_ajax():
