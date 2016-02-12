@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-4">
             <form id="signup_form" method="post" action="{% url "consultant_account_signup" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-                <h3 style="text-align: center;">Signup with LinkedIn to become a consultant</h3>
+                <h3 style="text-align: center;">Signup with LinkedIn to become a expert</h3>
                 <legend>{% trans "Sign up" %}</legend>
                 {% csrf_token %}
                 {{ form|bootstrap }}
