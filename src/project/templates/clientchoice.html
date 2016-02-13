@@ -10,6 +10,8 @@
 
 
 {% block choice_content %}
+<br>
+<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a>
 <p></p>
 <p>An expert want to work with you on this project. Do you accept this expert?</p>
 <form id="choiceForm" action="{% url 'clientchoice' %}" method="POST">{% csrf_token %}

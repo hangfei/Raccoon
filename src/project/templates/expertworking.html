@@ -11,6 +11,7 @@
 
 {% block choice_content %}
 <p></p>
+<a href="/messages/write?id_recipients={{ project.client.user }}&id_subject={{ project.title_text }}" >Write messages to the client</a>
 <p>Finish this project?</p>
 <form id="choiceForm" action="{% url 'expertworking' %}" method="POST">{% csrf_token %}
 <button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>

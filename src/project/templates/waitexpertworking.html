@@ -12,5 +12,7 @@
 {% block choice_content %}
 <p></p>
 <p><b>Expert is working on this project<b>.</p>
+<br>
+<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a>
 
 {% endblock %}
