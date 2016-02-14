@@ -26,7 +26,11 @@
         <div class="col-sm-4">
         </div>
         <div class="col-sm-4">
+          {% if can_view_personal_info %}
           <img src="/media/{{ profile_user.username }}.jpg" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';"/>
+          {% else %}
+          <img src="/static/images/empty_headshot.bmp" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';"/>
+          {% endif %}
         </div>
         <div class="col-sm-4">
         </div>
@@ -53,6 +57,23 @@
         {% if can_view_personal_info %}
         <p>First name: {{ profile_user.first_name }}</p>
         <p>Last name: {{ profile_user.last_name }}</p>
+          {% if user_profile.work_phone_number %}
+          <p>Work Phone number: {{user_profile.work_phone_number}}
+          {% endif %}
+          {% if user_profile.cell_phone_number %}
+          <p>Cell Phone number: {{user_profile.cell_phone_number}}
+          {% endif %}
+          {% if user_profile.title %}
+          <p>Title: {{user_profile.title}}
+          {% endif %}
+          {% if user_profile.company %}
+          <p>Company: {{user_profile.company}}
+          {% endif %}
+          {% if is_expert %}
+            {% if person.education %}
+            <p>Education: {{person.education}}
+            {% endif %}
+          {% endif %}
         <p>Email: {{ profile_user.email }}</p>
         {% else %}
           {% if is_expert %}

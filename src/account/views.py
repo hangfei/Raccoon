@@ -42,7 +42,7 @@ def handle_uploaded_file(request, username):
     image_name = str(username)
     file_name = image_name + "." + file_type_suffix
     file_path = 'media/' + file_name
-    if request.session['linkedin_profile_image']:
+    if 'linkedin_profile_image' in request.session:
         urllib.request.urlretrieve(request.session['linkedin_profile_image'], file_path)
     if request.FILES:
         file = request.FILES['profile_image']
@@ -388,14 +388,18 @@ class ConsultantSignupView(FormView):
             result = requests.post("https://www.linkedin.com/uas/oauth2/accessToken", post_data, headers=headers)
 
             get_headers = {'Host': 'api.linkedin.com', 'Connection':'Keep-Alive', 'Authorization': 'Bearer ' + result.json()['access_token']}
-            profile_fields = '(id,firstName,lastName,positions,headline,specialties,summary,num-connections,picture-url),picture-urls::(original)'
+            profile_fields = '(id,firstName,lastName,positions,headline,specialties,summary,num-connections,picture-url,picture-urls::(original))'
             get_result = requests.get("https://api.linkedin.com/v1/people/~:" + profile_fields + "?format=json", headers=get_headers)
 
-            data_dict = {'first_name': get_result.json()['firstName'],
-                         'last_name': get_result.json()['lastName'],
-                         'description_text': get_result.json()['summary']
-                        }
-            self.form_kwargs['initial'] = data_dict
+            initial_data = {}
+            if 'firstName' in get_result.json():
+                initial_data['first_name'] = get_result.json()['firstName']
+            if 'lastName' in get_result.json():
+                initial_data['last_name'] = get_result.json()['lastName']
+            if 'summary' in get_result.json():
+                initial_data['description_text'] = get_result.json()['summary']
+
+            self.form_kwargs['initial'] = initial_data
             if 'pictureUrls' in get_result.json():
                 if 'values' in get_result.json()['pictureUrls']:
                     if get_result.json()['pictureUrls']['values']:

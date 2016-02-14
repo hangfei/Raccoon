@@ -187,6 +187,7 @@ def user_profile(request, username):
     context = RequestContext(request, {
         'person': person,
         'profile_user': profile_user,
+        'user_profile': user_profile,
         'is_expert': is_expert,
         'can_view_personal_info': can_view_personal_info
     })

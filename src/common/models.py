@@ -19,6 +19,7 @@ from django.utils.translation import ugettext_lazy as _
 
 from django.contrib.auth.models import AnonymousUser
 from django.contrib.sites.models import Site
+from django.core.validators import RegexValidator
 
 import pytz
 
@@ -41,12 +42,47 @@ class UserProfile(models.Model):
     user_type = models.CharField(max_length=20,
                                 choices=USER_TYPES,
                                 default=CLIENT)
+
+    phone_regex = RegexValidator(
+        regex=r'^\+?1?\d{9,15}$',
+        message="Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."
+    )
+
+    work_phone_number = models.CharField(
+        max_length=15,
+        validators=[phone_regex],
+        blank=True
+    )
+
+    cell_phone_number = models.CharField(
+        max_length=15,
+        validators=[phone_regex],
+        blank=True
+    )
+
+    title = models.CharField(
+        max_length=30,
+        blank=True
+    )
+    company = models.CharField(
+        max_length=30,
+        blank=True
+    )
+
     @classmethod
     def create(cls, form, request=None, **kwargs):
-        client = cls(**kwargs)
-        client.user = kwargs.pop("user", None)
-        client.save()
-        return client
+        profile = cls(**kwargs)
+        profile.user = kwargs.pop("user", None)
+        if form.cleaned_data['work_phone_number']:
+            profile.work_phone_number = form.cleaned_data['work_phone_number']
+        if form.cleaned_data['cell_phone_number']:
+            profile.cell_phone_number = form.cleaned_data['cell_phone_number']
+        if form.cleaned_data['title']:
+            profile.title = form.cleaned_data['title']
+        if form.cleaned_data['company']:
+            profile.company = form.cleaned_data['company']
+        profile.save()
+        return profile
 
 class Client(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
@@ -167,6 +203,11 @@ class Expert(models.Model):
     experience = models.CharField(max_length=1,
                                 choices=EXPERIENCE_CHOICES,
                                 default=ONE_FIVE)
+
+    education = models.CharField(
+        max_length=30,
+        blank=True
+    )
 
     @classmethod
     def create(cls, form, request=None, **kwargs):

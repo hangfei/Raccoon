@@ -23,11 +23,13 @@ from account.utils import get_user_lookup_kwargs
 
 alnum_re = re.compile(r"^\w+$")
 
+from django.core.validators import RegexValidator
+
 
 class ConsultantSignupForm(ModelForm):
     class Meta:
         model = Expert
-        fields = ['description_text', 'status', 'area', 'industry', 'expertise', 'experience']
+        fields = ['description_text', 'status', 'area', 'industry', 'expertise', 'experience', 'education']
 
     username = forms.CharField(
         label=_("Username"),
@@ -61,6 +63,35 @@ class ConsultantSignupForm(ModelForm):
 
     profile_image = forms.FileField(
         label='Select a image for your profile.',
+        required=False
+    )
+
+    work_phone_number = forms.RegexField(
+        regex=r'^\+?1?\d{9,15}$',
+        error_messages = {
+            'invalid': ("Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."),
+        },
+        required=False
+    )
+
+    cell_phone_number = forms.RegexField(
+        regex=r'^\+?1?\d{9,15}$',
+        error_messages = {
+            'invalid': ("Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."),
+        },
+        required=False
+    )
+
+    title = forms.CharField(
+        label=_("Title"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+    company = forms.CharField(
+        label=_("Company"),
+        max_length=30,
+        widget=forms.TextInput(),
         required=False
     )
 
@@ -132,6 +163,35 @@ class ClientSignupForm(forms.Form):
         label='Select a image for your profile.',
         required=False
     )
+
+    work_phone_number = forms.RegexField(
+        regex=r'^\+?1?\d{9,15}$',
+        error_messages = {
+            'invalid': ("Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."),
+        },
+        required=False
+    )
+    cell_phone_number = forms.RegexField(
+        regex=r'^\+?1?\d{9,15}$',
+        error_messages = {
+            'invalid': ("Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."),
+        },
+        required=False
+    )
+
+    title = forms.CharField(
+        label=_("Title"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+    company = forms.CharField(
+        label=_("Company"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+
 
     code = forms.CharField(
         max_length=64,
