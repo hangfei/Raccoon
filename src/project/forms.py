@@ -83,11 +83,15 @@ class ProjectForm(forms.Form):
     project_pub_date = forms.DateTimeField(label='Start Date', input_formats=['%Y-%m-%d'],
                                            widget=forms.TextInput(
                                               attrs={'placeholder':'YYYY-mm-dd',
-                                                      'size':'60'}))
+                                                      'size':'60',
+                                                      'class': 'datepicker'
+                                                      }))
     project_end_date = forms.DateTimeField(label='Due Date', input_formats=['%Y-%m-%d'],
                                             widget=forms.TextInput(
                                               attrs={'placeholder':'YYYY-mm-dd',
-                                                      'size':'60'}))
+                                                      'size':'60',
+                                                      'class': 'datepicker'
+                                                      }))
     project_service_type = forms.ChoiceField(label='Service Type', choices=SERVICE_CHOICES, required=True)
     project_rate_type = forms.ChoiceField(label='Rate Type', choices=RATING_CHOICES, required=True)
     project_rate = forms.DecimalField(label='Budget', max_digits=6, decimal_places=2,

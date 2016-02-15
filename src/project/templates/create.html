@@ -2,6 +2,11 @@
 {% load staticfiles %}
 {% load i18n %}
 {% block content %}
+<script>
+    $(document).ready(function() {
+        $('.datepicker').datepicker({minDate: new Date});
+    });
+</script>
 
 <div class="container">
 <form class="pure-form pure-form-stacked" action="create" method="post">{% csrf_token %}

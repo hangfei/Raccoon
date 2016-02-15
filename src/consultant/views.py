@@ -43,14 +43,14 @@ def dashboard(request):
     elif type(person) == Client:
         project_list = Project.objects.filter(client=person)
         user = request.user
-        experts = []
+        experts = set()
         if user.is_authenticated():
             user_profiles = UserProfile.objects.filter(user=user)
             if user_profiles:
                 user_profile = user_profiles[0]
                 if user_profile.user_type == 'CLIENT':
                     client = Client.objects.filter(user=user)[0]
-                    experts = [project.expert for project in Project.objects.filter(client=client)]
+                    experts = set([project.expert for project in Project.objects.filter(client=client)])
 
         context = { 'project_list': project_list,
                     'experts': experts
