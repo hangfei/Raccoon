@@ -6,12 +6,12 @@ from django.views.generic.list import ListView
 from django.views.generic.edit import FormMixin
 from django.utils import timezone
 
-from common.models import Expert
+from common.models import Expert, UserProfile, Client, Project
 
 class ExpertDetailView(DetailView):
 
     model = Expert
-    
+
     def get_context_data(self, **kwargs):
         context = super(ExpertDetailView, self).get_context_data(**kwargs)
         context['now'] = timezone.now()
@@ -45,7 +45,18 @@ class ExpertListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(ExpertListView, self).get_context_data(**kwargs)
+        # TODO this is not efficient. Need to optimize.
+        can_views = []
+        user = self.request.user
+        if self.request.user.is_authenticated():
+            user_profiles = UserProfile.objects.filter(user=user)
+            if user_profiles:
+                user_profile = user_profiles[0]
+                if user_profile.user_type == 'CLIENT':
+                    client = Client.objects.filter(user=user)[0]
+                    can_views = [project.expert.id for project in Project.objects.filter(client=client)]
         context['now'] = timezone.now()
+        context['can_views'] = can_views
         return context
 
 #def filter(request):

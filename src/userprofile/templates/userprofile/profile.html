@@ -8,7 +8,9 @@
 
 
 <div class="row m-b-lg">
+  {% if profile_user == user %}
   <a class="btn btn-primary" href="/profile/edit">Edit User Profile</a>
+  {% endif %}
   <div class="col-sm-8 col-sm-offset-2 text-center">
     <br>
     <br>
@@ -69,11 +71,6 @@
           {% if user_profile.company %}
           <p>Company: {{user_profile.company}}
           {% endif %}
-          {% if is_expert %}
-            {% if person.education %}
-            <p>Education: {{person.education}}
-            {% endif %}
-          {% endif %}
         <p>Email: {{ profile_user.email }}</p>
         {% else %}
           {% if is_expert %}
@@ -102,6 +99,12 @@
           <p>Experience: <b>{{ person.get_experience }}</b></p>
           <p>Expertise: <b>{{ person.get_expertise }}</b></p>
           <p>Industry: <b>{{ person.get_industry }}</b></p>
+          {% if person.education %}
+          <p>Education: {{person.education}}
+          {% endif %}
+          {% if person.company %}
+          <p>Company: {{person.company}}
+          {% endif %}
           {% else %}
           <p>Client doesn't have any fields now.</p>
           {% endif %}

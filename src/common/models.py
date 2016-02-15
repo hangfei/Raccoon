@@ -252,6 +252,18 @@ class Expert(models.Model):
         expert.save()
         return expert
 
+    def has_worked_before(self, user):
+      # TODO this method is not efficient
+      experts = []
+      if user.is_authenticated():
+          user_profiles = UserProfile.objects.filter(user=user)
+          if user_profiles:
+              user_profile = user_profiles[0]
+              if user_profile.user_type == 'CLIENT':
+                  client = Client.objects.filter(user=user)[0]
+                  experts = [project.expert for project in Project.objects.filter(client=client)]
+      return self in experts
+
     @property
     def get_industry(self):
         return self.INDUSTRY_MAPPING.get(self.industry)
