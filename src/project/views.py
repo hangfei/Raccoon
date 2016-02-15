@@ -22,8 +22,6 @@ state_message_option = {
 }
 
 def getCurrentRole(request):
-    print("user::")
-    print(request.user)
     User = get_user_model()
     if request.user.id == None:
       return False
@@ -50,8 +48,6 @@ def getCurrentRole(request):
     return person
 
 def hasPermission(request, project):
-    print("user::")
-    print(request.user)
     User = get_user_model()
     if request.user.id == None or project == None:
       return False
@@ -141,7 +137,7 @@ def expertchoice(request):
            'project': project,
           })
          return render(request, 'expertchoice.html', context)
-       return HttpResponseRedirect('unavailable') 
+       return HttpResponseRedirect('unavailable')
     else:
       if 'project_id' in request.POST and 'accept_project' in request.POST:
         project_id_val = request.POST['project_id']

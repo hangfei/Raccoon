@@ -87,10 +87,10 @@
 <div role="tabpanel">
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
-      <a class="nav-link active" id="client-tab" data-toggle="tab" href="#client" role="tab" aria-controls="client" aria-expanded="true">ENGAGEMENTS</a>
+      <a class="nav-link active" id="client-tab" data-toggle="tab" href="#client" role="tab" aria-controls="client" aria-expanded="true"><i class="fa fa-industry"></i> &nbsp ENGAGEMENTS</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" id="expert-tab" data-toggle="tab" href="#expert" role="tab" aria-controls="expert" aria-expanded="true">EXPERTS</a>
+      <a class="nav-link" id="expert-tab" data-toggle="tab" href="#expert" role="tab" aria-controls="expert" aria-expanded="true"><i class="fa fa-users"></i> &nbsp EXPERTS</a>
     </li>
   </ul>
   <div class="tab-content" id="myTabContent">
@@ -252,6 +252,25 @@
       <div class="row m-b-lg">
         <div class="col-sm-12">
           <h6 class="page-header"><strong>{% trans "EXPERTS YOU HAVE WORKED BEFORE" %}</strong></h6>
+
+          <div>
+            <ul>
+              {% for expert in experts %}
+                <li>
+                  {% if expert.id in can_views %}
+                  <img src="/media/{{ expert.user.username }}.jpg" style="width:135px; height:144px" onerror="this.src='/static/images/empty_headshot.bmp';" />
+                  {% else %}
+                  <img src="/static/images/empty_headshot.bmp" style="width:135px; height:144px" onerror="this.src='/static/images/empty_headshot.bmp';" />
+                  {% endif %}
+
+                  <h3> <a href="/profile/{{ expert.user.username }}">{{ expert.user }}</a>
+                  </h3>
+                  <p>{{ expert.description_text}}</p>
+                  <p>{{ expert.email}}</p>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
