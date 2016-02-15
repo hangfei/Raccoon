@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+
+{% block content %}
+<script>
+  $(document).ready(function(){
+    $(".nav-item.nav-link").removeClass("active");
+    $('#about_us').addClass('active')
+  });
+</script>
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Terms of Service(This is an example)" %}</strong>
+    </h4>
+    <p class="m-b-lg">
+      {% trans "If you used Enverest service, that means you agreed to the terms of use." %}
+    </p>
+  </div>
+</div>
+
+<div class="row m-b-lg">
+  <div class="col-sm-12">
+    <h4>
+      {% trans "1. Ownership and Property Rights" %}
+    </h4>
+    <p>
+      {% trans "Using this website does not grant you any ownership or interest in any content, visual interfaces, graphics, design, compilation, information, computer code, products, software, services and all other elements you may access from the website. You are authorized to download a single copy of purchased content contained on the website for your personal, non-commercial uses, provided that you maintain the copyright and other notices contained in that content. This excludes products available with premium licenses. Please consult our licenses page for more information." %}
+    </p>
+  </div>
+
+  <div class="col-sm-12">
+    <h4>
+      {% trans "1. Ownership and Property Rights" %}
+    </h4>
+    <p>
+      {% trans "Using this website does not grant you any ownership or interest in any content, visual interfaces, graphics, design, compilation, information, computer code, products, software, services and all other elements you may access from the website. You are authorized to download a single copy of purchased content contained on the website for your personal, non-commercial uses, provided that you maintain the copyright and other notices contained in that content. This excludes products available with premium licenses. Please consult our licenses page for more information." %}
+    </p>
+  </div>
+
+
+  <div class="col-sm-12">
+    <h4>
+      {% trans "2. User Information" %}
+    </h4>
+    <p>
+      {% trans "In the course of your use of the website, you may be asked for personally identifiable information. We uphold rigorous standards to uphold the integrity of this information as outlined in our Privacy Policy. You are solely responsible for the accuracy and content of this user information." %}
+    </p>
+  </div>
+
+
+  <div class="col-sm-12">
+    <h4>
+      {% trans "3. Third Party websites" %}
+    </h4>
+    <p>
+      {% trans "In the course of your use of the website, you may be re-directed to third party websites. We have no responsibility for the content or information provided by or through third party websites even if they are affiliates of ours.Linking to third party websites does not imply our endorsement of that web website. We disclaim any liability for links to another website." %}
+    </p>
+  </div>
+</div>
+
+</div> <!-- for Container -->
+{% endblock %}

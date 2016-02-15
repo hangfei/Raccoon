@@ -10,10 +10,11 @@ except ImportError:
 from django import forms
 from django.forms import ModelForm
 from django.utils.translation import ugettext_lazy as _
+from django.utils.safestring import mark_safe
 
 from django.contrib import auth
 from django.contrib.auth import get_user_model
-
+from django.utils.safestring import mark_safe
 from account.conf import settings
 from account.hooks import hookset
 from common.models import EmailAddress
@@ -128,6 +129,12 @@ class ConsultantSignupForm(ModelForm):
         max_length=10,
         widget=forms.TextInput(),
         required=False
+    )
+
+    terms = forms.BooleanField(
+        error_messages={'required': 'You must accept the terms and conditions'},
+        label=mark_safe('Agree to the Terms&Conditions (<a href="/terms_of_service" target="_blank">Read terms of service</a>)'),
+        required=True
     )
 
     code = forms.CharField(
@@ -260,6 +267,12 @@ class ClientSignupForm(forms.Form):
         max_length=10,
         widget=forms.TextInput(),
         required=False
+    )
+
+    terms = forms.BooleanField(
+        error_messages={'required': 'You must accept the terms and conditions'},
+        label=mark_safe('Agree to the Terms&Conditions (<a href="/terms_of_service" target="_blank">Read terms of service</a>)'),
+        required=True
     )
 
     code = forms.CharField(

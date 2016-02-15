@@ -50,6 +50,12 @@ def contact_us(request):
     })
     return render(request, 'homepage/contact_us.html', context)
 
+def terms_of_service(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'homepage/terms_of_service.html', context)
+
 from django.contrib.auth.decorators import user_passes_test
 
 # https://djangosnippets.org/snippets/1703/
