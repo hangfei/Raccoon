@@ -1,6 +1,15 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+
+{% block banner %}
+<div class="row">
+  <div class="col-lg-12">
+    <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+  </div>
+</div>
+{% endblock %}
+
 {% block content %}
 <div class="container">
 
@@ -29,6 +38,9 @@ blockquote:after {
   vertical-align: -0.4em;
 }
 
+.start-step a {
+    color: inherit;
+}
 </style>
 
 
@@ -39,28 +51,59 @@ blockquote:after {
 </div>
 
 <!-- spaces -->
-<div class="row">
-  <div class="col-lg-12">
-    <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
-  </div>
-</div>
+
 
 
 <div class="row m-b-lg">
-  <div class="col-sm-8 col-sm-offset-2 text-center">
+  <div class="col-sm-12 text-center">
     <br>
-    <br>
-    <h5>
+    <h4>
       {% trans "On-demand insights from dedicated experts and business leaders." %}
-    </h5>
+    </h4>
     <br>
   </div>
+
+  <div class="row text-center">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-3 start-step">
+      <a href="project/create">
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-inverse fa-stack-1x">1</i>
+      </span>
+      <h5><strong>Post Your Engagement</strong></h5>
+      </a>
+    </div>
+    <div class="col-sm-4 start-step">
+      <a href="project/create">
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-inverse fa-stack-1x">2</i>
+      </span>
+      <h5><strong>Match Applicants For Free</strong></h5>
+      </a>
+    </div>
+
+    <div class="col-sm-3 start-step">
+      <a href="project/create">
+      <span class="fa-stack fa-3x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-inverse fa-stack-1x">3</i>
+      </span>
+      <h5><strong>Get Work Done</strong></h5>
+      </a>
+    </div>
+    <div class="col-sm-1">
+    </div>
+  </div>
+
+  <br>
 
   <div class="row">
     <div class="col-sm-4 col-sm-offset-2 text-center">
       <a href="search" class="btn btn-primary">Search for Experts</a>
     </div>
-    <br>
     <div class="col-sm-4 text-center">
       <a href="project/create" class="btn btn-primary">Get Started</a>
     </div>
