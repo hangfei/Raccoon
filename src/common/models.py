@@ -69,6 +69,32 @@ class UserProfile(models.Model):
         blank=True
     )
 
+
+    country = models.CharField(
+        max_length=30,
+        blank=True
+    )
+
+    state = models.CharField(
+        max_length=30,
+        blank=True
+    )
+
+    city = models.CharField(
+        max_length=48,
+        blank=True
+    )
+
+    street = models.CharField(
+        max_length=128,
+        blank=True
+    )
+
+    zip_code = models.CharField(
+        max_length=10,
+        blank=True
+    )
+
     @classmethod
     def create(cls, form, request=None, **kwargs):
         profile = cls(**kwargs)
@@ -81,6 +107,16 @@ class UserProfile(models.Model):
             profile.title = form.cleaned_data['title']
         if form.cleaned_data['company']:
             profile.company = form.cleaned_data['company']
+        if form.cleaned_data['country']:
+            profile.country = form.cleaned_data['country']
+        if form.cleaned_data['state']:
+            profile.state = form.cleaned_data['state']
+        if form.cleaned_data['city']:
+            profile.city = form.cleaned_data['city']
+        if form.cleaned_data['street']:
+            profile.street = form.cleaned_data['street']
+        if form.cleaned_data['zip_code']:
+            profile.zip_code = form.cleaned_data['zip_code']
         profile.save()
         return profile
 

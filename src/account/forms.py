@@ -95,6 +95,41 @@ class ConsultantSignupForm(ModelForm):
         required=False
     )
 
+    country = forms.CharField(
+        label=_("Country"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    state = forms.CharField(
+        label=_("State"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    city = forms.CharField(
+        label=_("City"),
+        max_length=64,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    street = forms.CharField(
+        label=_("Street Address"),
+        max_length=128,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    zip_code = forms.CharField(
+        label=_("Zip code"),
+        max_length=10,
+        widget=forms.TextInput(),
+        required=False
+    )
+
     code = forms.CharField(
         max_length=64,
         required=False,
@@ -192,6 +227,40 @@ class ClientSignupForm(forms.Form):
         required=False
     )
 
+    country = forms.CharField(
+        label=_("Country"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    state = forms.CharField(
+        label=_("State"),
+        max_length=30,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    city = forms.CharField(
+        label=_("City"),
+        max_length=64,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    street = forms.CharField(
+        label=_("Street Address"),
+        max_length=128,
+        widget=forms.TextInput(),
+        required=False
+    )
+
+    zip_code = forms.CharField(
+        label=_("Zip code"),
+        max_length=10,
+        widget=forms.TextInput(),
+        required=False
+    )
 
     code = forms.CharField(
         max_length=64,
