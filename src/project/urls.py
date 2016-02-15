@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^waitexpertstart$', views.waitexpertstart, name='waitexpertstart'),
     url(r'^waitexpertworking$', views.waitexpertworking, name='waitexpertworking'),
     url(r'^waitpayment$', views.waitpayment, name='waitpayment'),
+    url(r'^rateexpert$', views.rateexpert, name='rateexpert'),
     url(r'^close$', views.close, name='close'),
     url(r'^thanks$', views.thanks, name='thanks'),
     url(r'^unavailable$', views.unavailable, name='unavailable'),

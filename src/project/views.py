@@ -249,6 +249,9 @@ def waitexpertworking(request):
 def waitpayment(request):
     return generalGetPage(request, 'waitpayment')
 
+def rateexpert(request):
+    return generalGetPage(request, 'rateexpert')
+
 def close(request):
     return generalGetPage(request, 'close')
 
