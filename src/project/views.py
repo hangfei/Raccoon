@@ -4,9 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
-from common.models import Project
-from common.models import Client
-from common.models import Expert
+from common.models import Project,Client,Expert,CommentForExpert
 
 from .forms import ProjectForm
 
@@ -19,6 +17,7 @@ state_message_option = {
     'clt_n':'The expert will keep working on the project',
     'clt_y':'The project is now finished',
     'clt_a':'An administrator will contact you soon',
+    'clt_r':'Your rating will help us improve',
 }
 
 def getCurrentRole(request):
@@ -246,7 +245,23 @@ def waitpayment(request):
     return generalGetPage(request, 'waitpayment')
 
 def rateexpert(request):
+  if request.method == 'GET':
     return generalGetPage(request, 'rateexpert')
+  else:
+      if 'project_id' in request.POST:
+        project_id_val = request.POST['project_id']
+        cur_project = Project.objects.get(pk=project_id_val)
+        comment_text = request.POST['comment']
+        rating = request.POST['rating']
+        print(comment_text)
+        print(rating)
+        aa
+        new_comment = CommentForExpert(project=cur_project,
+                                       expert=cur_project.expert,
+                                       text=comment_text,
+                                       rating=0.0,
+                                       )
+        return HttpResponseRedirect('thanks?last_action=clt_r')
 
 def close(request):
     return generalGetPage(request, 'close')
