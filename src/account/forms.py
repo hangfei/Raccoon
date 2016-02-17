@@ -310,7 +310,7 @@ class ClientSignupForm(forms.Form):
 class LoginForm(forms.Form):
 
     password = forms.CharField(
-        label=_("Password33"),
+        label=_("Password"),
         widget=forms.PasswordInput(render_value=False)
     )
     remember = forms.BooleanField(
