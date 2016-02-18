@@ -902,6 +902,7 @@ class PasswordResetView(FormView):
 
     def get_context_data(self, **kwargs):
         context = super(PasswordResetView, self).get_context_data(**kwargs)
+        context['THEME_CONTACT_EMAIL'] = settings.THEME_CONTACT_EMAIL
         if self.request.method == "POST" and "resend" in self.request.POST:
             context["resend"] = True
         return context
