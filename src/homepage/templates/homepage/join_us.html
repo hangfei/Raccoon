@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+{% load i18n %}
+{% load account_tags %}
+{% load bootstrap %}
+
+{% block content %}
+<script>
+  $(document).ready(function(){
+    $(".nav-item.nav-link").removeClass("active");
+    $('#about_us').addClass('active')
+  });
+</script>
+<div class="container">
+<br>
+<br>
+<br>
+
+
+<div class="row m-b-lg">
+  <div class="col-sm-8 col-sm-offset-2 text-center">
+    <br>
+    <br>
+    <h4>
+      <strong>{% trans "Join Us" %}</strong>
+    </h4>
+    <p class="m-b-lg">
+      {% trans "Our team is consisted of talents with diversified backgrounds, cultures, education, interests, and skills. We welcome you to be part of our family. Please fill out the form below to apply or send your resume to hr@enverest.com." %}
+    </p>
+  </div>
+</div>
+
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <form id="signup_form" method="post" action="{% url "join_us" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
+                <legend>Client</legend>
+                <legend>{% trans "Sign up" %}</legend>
+                {% csrf_token %}
+                {{ form|bootstrap }}
+                <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        <div class="col-md-4">
+            {% include "account/_signup_sidebar.html" %}
+        </div>
+    </div>
+
+</div> <!-- for Container -->
+{% endblock %}

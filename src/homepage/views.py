@@ -1,6 +1,7 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.template import RequestContext, loader
 from django.shortcuts import render
+from homepage.forms import JoinUsForm
 
 def index(request):
     context = RequestContext(request, {
@@ -55,6 +56,17 @@ def terms_of_service(request):
         'latest_question_list': 'sss',
     })
     return render(request, 'homepage/terms_of_service.html', context)
+
+def join_us(request):
+    if request.method == 'POST':
+        form = JoinUsForm(request.POST)
+        if form.is_valid():
+            print(form.cleaned_data['first_name'])
+            return HttpResponseRedirect('/')
+    else:
+        form = JoinUsForm()
+
+    return render(request, 'homepage/join_us.html', {'form': form})
 
 from django.contrib.auth.decorators import user_passes_test
 
