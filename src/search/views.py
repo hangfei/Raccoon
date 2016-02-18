@@ -28,11 +28,11 @@ class ExpertListView(ListView):
         if self.request.method == 'GET' and 'industry' in self.request.GET:
             industry_val = self.request.GET['industry']
             if industry_val != 'ALL':
-              return_set = return_set.filter(industry=industry_val)
+              return_set = return_set.filter(industry__icontains=industry_val)
         if self.request.method == 'GET' and 'expertise' in self.request.GET:
             expertise_val = self.request.GET['expertise']
             if expertise_val != 'ALL':
-              return_set = return_set.filter(expertise=expertise_val)
+              return_set = return_set.filter(expertise__icontains=expertise_val)
         if self.request.method == 'GET' and 'experience' in self.request.GET:
             experience_val = self.request.GET['experience']
             if experience_val != 'ALL':
