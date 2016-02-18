@@ -93,8 +93,6 @@ def create(request):
         # check whether it's valid:
         if form.is_valid():
             # process the data in form.cleaned_data as required
-            print(form.cleaned_data['project_name'])
-            print(form.cleaned_data['project_expert_expertise'])
             new_project = Project(client=getCurrentRole(request),
                                   expert=(Expert.objects.all())[0],
                                   title_text=form.cleaned_data['project_name'],

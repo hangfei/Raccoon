@@ -33,13 +33,17 @@
   <div class="col-md-4 m-b-lg">
     <div class="card">
       <img class="card-img-top" src="{% static 'images/card_2.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-      <div class="card-block text-center">
-        <h4 class="card-title">{% trans "As a member" %}</h4>
-        <p class="card-text">{% trans "On-demand access to global expertise" %}</p>
-        <p class="card-text">{% trans "Explore wide range of perspectives" %}</p>
-        <p class="card-text">{% trans "Connect to the right people instantly" %}</p>
-        <p class="card-text">{% trans "Save time and cost" %}</p>
-        <a href="client" class="btn btn-primary">{% trans "Sign Up" %}</a>
+      <div class="card-block">
+        <h4 class="card-title text-center">{% trans "As a client" %}</h4>
+        <ul>
+        <li><p class="card-text">{% trans "On-demand access to global expertise" %}</p></li>
+        <li><p class="card-text">{% trans "Explore wide range of perspectives" %}</p></li>
+        <li><p class="card-text">{% trans "Connect to the right people instantly" %}</p></li>
+        <li><p class="card-text">{% trans "Save time and cost" %}</p></li>
+        </ul>
+        <div class="text-center">
+          <a href="client" class="btn btn-primary">{% trans "Sign Up" %}</a>
+        </div>
       </div>
     </div>
   </div>
@@ -47,13 +51,17 @@
   <div class="col-md-4 m-b-lg">
     <div class="card">
       <img class="card-img-top" src="{% static 'images/card_1.jpg' %}" alt="Card image cap" style="height: 180px; width: 100%; display: block;">
-      <div class="card-block text-center">
-        <h4 class="card-title">{% trans "As an expert" %}</h4>
-        <p class="card-text">{% trans "Have the pulse of the latest industry trends" %}</p>
-        <p class="card-text">{% trans "Interact with corporate officers, investors, and entrepreneurs" %}</p>
-        <p class="card-text">{% trans "Work on strategic, thought-provoking projects" %}</p>
-        <p class="card-text">{% trans "Competitive compensation from consulting fees and referral fees" %}</p>
-        <a href="consultant" class="btn btn-primary">{% trans "Sign Up" %}</a>
+      <div class="card-block">
+        <h4 class="card-title text-center">{% trans "As an expert" %}</h4>
+        <ul>
+        <li><p class="card-text">{% trans "Have the pulse of the latest industry trends" %}</p></li>
+        <li><p class="card-text">{% trans "Interact with corporate officers, investors, and entrepreneurs" %}</p></li>
+        <li><p class="card-text">{% trans "Work on strategic, thought-provoking projects" %}</p></li>
+        <li><p class="card-text">{% trans "Competitive compensation from consulting fees and referral fees" %}</p></li>
+        </ul>
+        <div class="text-center">
+          <a href="client" class="btn btn-primary">{% trans "Sign Up" %}</a>
+        </div>
       </div>
     </div>
   </div>

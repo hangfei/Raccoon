@@ -1,4 +1,6 @@
 from django import forms
+from django.utils.safestring import mark_safe
+
 from datetime import date
 from common.models import Client, Expert
 
@@ -92,8 +94,15 @@ class ProjectForm(forms.Form):
                                                       'size':'60',
                                                       'class': 'datepicker'
                                                       }))
-    project_service_type = forms.ChoiceField(label='Service Type', choices=SERVICE_CHOICES, required=True)
-    project_rate_type = forms.ChoiceField(label='Rate Type', choices=RATING_CHOICES, required=True)
+    project_service_type = forms.ChoiceField(
+        label=mark_safe('Service Type (<a href="/how_it_works/#faq" target="_blank">FAQ</a>)'),
+        choices=SERVICE_CHOICES,
+        required=True
+    )
+    project_rate_type = forms.ChoiceField(
+      label=mark_safe('Rate Type (<a href="/how_it_works/#faq" target="_blank">FAQ</a>)'),
+      choices=RATING_CHOICES,
+      required=True)
     project_rate = forms.DecimalField(label='Budget', max_digits=6, decimal_places=2,
     	                                    widget=forms.TextInput(
                                               attrs={'placeholder':'In dollars or hours',
