@@ -253,12 +253,18 @@ def rateexpert(request):
         rating = request.POST['rating']
         print(comment_text)
         print(rating)
-        aa
         new_comment = CommentForExpert(project=cur_project,
                                        expert=cur_project.expert,
                                        text=comment_text,
-                                       rating=0.0,
+                                       rating=float(rating)
                                        )
+        new_comment.save()
+
+        #Update the expert rating
+        cur_expert = cur_project.expert
+        cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
+        cur_expert.comments_num += 1
+        cur_expert.save()
         return HttpResponseRedirect('thanks?last_action=clt_r')
 
 def close(request):

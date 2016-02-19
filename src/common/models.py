@@ -246,7 +246,8 @@ class Expert(models.Model):
     )
 
     rating = models.DecimalField(max_digits=3, decimal_places=1, default=0)
-
+    comments_num = models.PositiveIntegerField(default=0)
+    
     @classmethod
     def create(cls, form, request=None, **kwargs):
         expert = form.save(commit=False)
@@ -423,6 +424,9 @@ class CommentForExpert(models.Model):
     text = models.TextField()
     rating = models.DecimalField(max_digits=3, decimal_places=1, default=0)
     time = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return self.expert.__str__() + "_" + self.project.__str__()
 
 @python_2_unicode_compatible
 class Account(models.Model):
