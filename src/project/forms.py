@@ -4,50 +4,47 @@ from django.utils.safestring import mark_safe
 from datetime import date
 from common.models import Client, Expert
 
-INFORMATION_TECHNOLOGY = 'IT'
-MOBILE_INTERNET = 'MB'
-SOFTWARE_AND_DATABASE_SYSTEMS = 'SW'
-HARDWARE_AND_STORAGE = 'HW'
-BIOTECH = 'BI'
-LIFE_SCIENCES = 'LS'
-CONSULTING_SERVICES = 'CS'
-POWER_AND_ENERGY = 'PE'
-OTHERS = 'OT'
-
 INDUSTRY_CHOICES = (
-   (INFORMATION_TECHNOLOGY, 'Information Technology'),
-   (MOBILE_INTERNET, 'Mobile Internet'),
-   (SOFTWARE_AND_DATABASE_SYSTEMS, 'Software and Database System'),
-   (HARDWARE_AND_STORAGE, 'Hardware and Storage'),
-   (BIOTECH, 'Biotech'),
-   (LIFE_SCIENCES, 'Life Science'),
-   (CONSULTING_SERVICES, 'Consulting Services'),
-   (POWER_AND_ENERGY, 'Power and Energy'),
-   (OTHERS, 'Others'),
+    ("MC","Management Consulting"),
+    ("EN","Energy"),
+    ("HI","Health care and Life Sciences"),
+    ("BI","BioPharma"),
+    ("ED","Education"),
+    ("SE","Semiconductor"),
+    ("SW","Software"),
+    ("MB","Mobile Internet and Computing"),
+    ("DS","Data and Storage"),
+    ("VR","VR/AI/Robotics"),
+    ("IT","Internet of Things"),
+    ("GB","Gaming and Media"),
+    ("ET","Entertainment"),
+    ("TL","Transport and Logistics"),
+    ("AU","Automotive"),
+    ("CG","Consumer Goods"),
+    ("OT","Others"),
 )
 
-MANAGEMENT_CONSULTING = 'MC'
-ENTREPRENEURSHIP = 'EN'
-CORPORATE_STRATEGY = 'CS'
-BUSINESS_DEVELOPMENT = 'BD'
-PRODUCT_MANAGEMENT = 'PM'
-MERGER_ACQUISITION = 'MA'
-SALES_MARKETING = 'SM'
-LEGAL_SERVICES = 'LS'
-FINANCE_ACCOUNTING = 'FA'
-OTHERS = 'OT'
-
 EXPERTISE_CHOICES = (
-   (MANAGEMENT_CONSULTING, 'Management Consulting'),
-   (ENTREPRENEURSHIP, 'Entrepreneurship'),
-   (CORPORATE_STRATEGY, 'Corporate Strategy'),
-   (BUSINESS_DEVELOPMENT, 'Business Development'),
-   (PRODUCT_MANAGEMENT, 'Product Management'),
-   (MERGER_ACQUISITION, 'Merger and Acquisition'),
-   (SALES_MARKETING, 'Sales and Marketing'),
-   (LEGAL_SERVICES, 'Legal Services'),
-   (FINANCE_ACCOUNTING, 'Finance and Accounting'),
-   (OTHERS, 'Others'),
+    ("ST","Strategy"),
+    ("BD","Business Development and Sales"),
+    ("SP","Strategic Partnership"),
+    ("MK","Marketing"),
+    ("MT","Market Research"),
+    ("OS","Operations and Supply Chain"),
+    ("MA","Merger and Acquisition"),
+    ("DA","Data Analytics"),
+    ("SE","Software Engineering"),
+    ("PJ","Project Management"),
+    ("PD","Product Design and Development"),
+    ("PM","Product Management"),
+    ("EN","Entrepreneurship"),
+    ("CS","Corporate Strategy"),
+    ("CC","Cloud Computing"),
+    ("AD","Advertisement"),
+    ("CL","Corporate Law"),
+    ("CF","Corporate Finance"),
+    ("AT","Accounting and Taxation"),
+    ("OT","Others"),
 )
 
 DEEP_DIVE = 'D'
@@ -103,7 +100,7 @@ class ProjectForm(forms.Form):
       label=mark_safe('Rate Type (<a href="/how_it_works/#faq" target="_blank">FAQ</a>)'),
       choices=RATING_CHOICES,
       required=True)
-    project_rate = forms.DecimalField(label='Budget', max_digits=6, decimal_places=2,
+    project_rate = forms.DecimalField(label='Budget', max_digits=8, decimal_places=2,
     	                                    widget=forms.TextInput(
                                               attrs={'placeholder':'In dollars or hours',
                                                      'size':'60'}))
