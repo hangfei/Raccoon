@@ -158,50 +158,47 @@ class Expert(models.Model):
        (SINGAPORE, 'Singapore'),
     )
 
-    INFORMATION_TECHNOLOGY = 'IT'
-    MOBILE_INTERNET = 'MB'
-    SOFTWARE_AND_DATABASE_SYSTEMS = 'SW'
-    HARDWARE_AND_STORAGE = 'HW'
-    BIOTECH = 'BI'
-    LIFE_SCIENCES = 'LS'
-    CONSULTING_SERVICES = 'CS'
-    POWER_AND_ENERGY = 'PE'
-    OTHERS = 'OT'
-
     INDUSTRY_CHOICES = (
-       (INFORMATION_TECHNOLOGY, 'Information Technology'),
-       (MOBILE_INTERNET, 'Mobile Internet'),
-       (SOFTWARE_AND_DATABASE_SYSTEMS, 'Software and Database System'),
-       (HARDWARE_AND_STORAGE, 'Hardware and Storage'),
-       (BIOTECH, 'Biotech'),
-       (LIFE_SCIENCES, 'Life Science'),
-       (CONSULTING_SERVICES, 'Consulting Services'),
-       (POWER_AND_ENERGY, 'Power and Energy'),
-       (OTHERS, 'Others'),
+      ("MC","Management Consulting"),
+      ("EN","Energy"),
+      ("HI","Health care and Life Sciences"),
+      ("BI","BioPharma"),
+      ("ED","Education"),
+      ("SE","Semiconductor"),
+      ("SW","Software"),
+      ("MB","Mobile Internet and Computing"),
+      ("DS","Data and Storage"),
+      ("VR","VR/AI/Robotics"),
+      ("IT","Internet of Things"),
+      ("GB","Gaming and Media"),
+      ("ET","Entertainment"),
+      ("TL","Transport and Logistics"),
+      ("AU","Automotive"),
+      ("CG","Consumer Goods"),
+      ("OT","Others"),
     )
 
-    MANAGEMENT_CONSULTING = 'MC'
-    ENTREPRENEURSHIP = 'EN'
-    CORPORATE_STRATEGY = 'CS'
-    BUSINESS_DEVELOPMENT = 'BD'
-    PRODUCT_MANAGEMENT = 'PM'
-    MERGER_ACQUISITION = 'MA'
-    SALES_MARKETING = 'SM'
-    LEGAL_SERVICES = 'LS'
-    FINANCE_ACCOUNTING = 'FA'
-    OTHERS = 'OT'
-
     EXPERTISE_CHOICES = (
-       (MANAGEMENT_CONSULTING, 'Management Consulting'),
-       (ENTREPRENEURSHIP, 'Entrepreneurship'),
-       (CORPORATE_STRATEGY, 'Corporate Strategy'),
-       (BUSINESS_DEVELOPMENT, 'Business Development'),
-       (PRODUCT_MANAGEMENT, 'Product Management'),
-       (MERGER_ACQUISITION, 'Merger and Acquisition'),
-       (SALES_MARKETING, 'Sales and Marketing'),
-       (LEGAL_SERVICES, 'Legal Services'),
-       (FINANCE_ACCOUNTING, 'Finance and Accounting'),
-       (OTHERS, 'Others'),
+      ("ST","Strategy"),
+      ("BD","Business Development and Sales"),
+      ("SP","Strategic Partnership"),
+      ("MK","Marketing"),
+      ("MT","Market Research"),
+      ("OS","Operations and Supply Chain"),
+      ("MA","Merger and Acquisition"),
+      ("DA","Data Analytics"),
+      ("SE","Software Engineering"),
+      ("PJ","Project Management"),
+      ("PD","Product Design and Development"),
+      ("PM","Product Management"),
+      ("EN","Entrepreneurship"),
+      ("CS","Corporate Strategy"),
+      ("CC","Cloud Computing"),
+      ("AD","Advertisement"),
+      ("CL","Corporate Law"),
+      ("CF","Corporate Finance"),
+      ("AT","Accounting and Taxation"),
+      ("OT","Others"),
     )
 
     ONE_FIVE = 'A'
@@ -232,10 +229,10 @@ class Expert(models.Model):
                             default=BEIJING)
     industry = models.CharField(max_length=2,
                                 choices=INDUSTRY_CHOICES,
-                                default=OTHERS)
+                                default="OT")
     expertise = models.CharField(max_length=2,
                                 choices=EXPERTISE_CHOICES,
-                                default=OTHERS)
+                                default="OT")
     experience = models.CharField(max_length=1,
                                 choices=EXPERIENCE_CHOICES,
                                 default=ONE_FIVE)
@@ -292,50 +289,47 @@ class Expert(models.Model):
 
 class Project(models.Model):
 
-    INFORMATION_TECHNOLOGY = 'IT'
-    MOBILE_INTERNET = 'MB'
-    SOFTWARE_AND_DATABASE_SYSTEMS = 'SW'
-    HARDWARE_AND_STORAGE = 'HW'
-    BIOTECH = 'BI'
-    LIFE_SCIENCES = 'LS'
-    CONSULTING_SERVICES = 'CS'
-    POWER_AND_ENERGY = 'PE'
-    OTHERS = 'OT'
-
     INDUSTRY_CHOICES = (
-       (INFORMATION_TECHNOLOGY, 'Information Technology'),
-       (MOBILE_INTERNET, 'Mobile Internet'),
-       (SOFTWARE_AND_DATABASE_SYSTEMS, 'Software and Database System'),
-       (HARDWARE_AND_STORAGE, 'Hardware and Storage'),
-       (BIOTECH, 'Biotech'),
-       (LIFE_SCIENCES, 'Life Science'),
-       (CONSULTING_SERVICES, 'Consulting Services'),
-       (POWER_AND_ENERGY, 'Power and Energy'),
-       (OTHERS, 'Others'),
+        ("MC","Management Consulting"),
+        ("EN","Energy"),
+        ("HI","Health care and Life Sciences"),
+        ("BI","BioPharma"),
+        ("ED","Education"),
+        ("SE","Semiconductor"),
+        ("SW","Software"),
+        ("MB","Mobile Internet and Computing"),
+        ("DS","Data and Storage"),
+        ("VR","VR/AI/Robotics"),
+        ("IT","Internet of Things"),
+        ("GB","Gaming and Media"),
+        ("ET","Entertainment"),
+        ("TL","Transport and Logistics"),
+        ("AU","Automotive"),
+        ("CG","Consumer Goods"),
+        ("OT","Others"),
     )
 
-    MANAGEMENT_CONSULTING = 'MC'
-    ENTREPRENEURSHIP = 'EN'
-    CORPORATE_STRATEGY = 'CS'
-    BUSINESS_DEVELOPMENT = 'BD'
-    PRODUCT_MANAGEMENT = 'PM'
-    MERGER_ACQUISITION = 'MA'
-    SALES_MARKETING = 'SM'
-    LEGAL_SERVICES = 'LS'
-    FINANCE_ACCOUNTING = 'FA'
-    OTHERS = 'OT'
-
     EXPERTISE_CHOICES = (
-       (MANAGEMENT_CONSULTING, 'Management Consulting'),
-       (ENTREPRENEURSHIP, 'Entrepreneurship'),
-       (CORPORATE_STRATEGY, 'Corporate Strategy'),
-       (BUSINESS_DEVELOPMENT, 'Business Development'),
-       (PRODUCT_MANAGEMENT, 'Product Management'),
-       (MERGER_ACQUISITION, 'Merger and Acquisition'),
-       (SALES_MARKETING, 'Sales and Marketing'),
-       (LEGAL_SERVICES, 'Legal Services'),
-       (FINANCE_ACCOUNTING, 'Finance and Accounting'),
-       (OTHERS, 'Others'),
+        ("ST","Strategy"),
+        ("BD","Business Development and Sales"),
+        ("SP","Strategic Partnership"),
+        ("MK","Marketing"),
+        ("MT","Market Research"),
+        ("OS","Operations and Supply Chain"),
+        ("MA","Merger and Acquisition"),
+        ("DA","Data Analytics"),
+        ("SE","Software Engineering"),
+        ("PJ","Project Management"),
+        ("PD","Product Design and Development"),
+        ("PM","Product Management"),
+        ("EN","Entrepreneurship"),
+        ("CS","Corporate Strategy"),
+        ("CC","Cloud Computing"),
+        ("AD","Advertisement"),
+        ("CL","Corporate Law"),
+        ("CF","Corporate Finance"),
+        ("AT","Accounting and Taxation"),
+        ("OT","Others"),
     )
 
     PROJECT_CREATED = 'PC'
@@ -395,7 +389,7 @@ class Project(models.Model):
     expert_pref_text = models.CharField(max_length=1000, default='')
     pub_date = models.DateTimeField('date published')
     end_date = models.DateTimeField('date end')
-    rate = models.DecimalField(max_digits=6, decimal_places=2, default=0)
+    rate = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     assign_history = models.CharField(max_length=200, default='')
     state = models.CharField(max_length=2,
                              choices=PROJECT_STATUS_CHOICES,
@@ -405,10 +399,10 @@ class Project(models.Model):
                                  default=CLIENT)
     industry = models.CharField(max_length=2,
                                  choices=INDUSTRY_CHOICES,
-                                 default=OTHERS)
+                                 default="OT")
     expertise = models.CharField(max_length=2,
                                  choices=EXPERTISE_CHOICES,
-                                 default=OTHERS)
+                                 default="OT")
     rate_type = models.CharField(max_length=1,
                                  choices=RATING_CHOICES,
                                  default=FIXED)
