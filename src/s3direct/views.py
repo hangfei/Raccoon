@@ -12,10 +12,15 @@ DESTINATIONS = getattr(settings, 'S3DIRECT_DESTINATIONS', None)
 
 @require_POST
 def get_upload_params(request):
+    print("get_upload_params")
     content_type = request.POST['type']
     filename = request.POST['name']
+    
+    print(content_type)
+    print(filename)
 
     dest = DESTINATIONS.get(request.POST['dest'])
+    print(dest)
 
     if not dest:
         data = json.dumps({'error': 'File destination does not exist.'})
@@ -28,6 +33,20 @@ def get_upload_params(request):
     bucket = get_at(4, dest)
     cache_control = get_at(5, dest)
     content_disposition = get_at(6, dest)
+    
+    print("key:"+key)
+    print("auth:")
+    print(auth)
+    print("allowed:")
+    print(allowed)
+    print("acl")
+    print(acl)
+    print("bucket:")
+    print(bucket)
+    print("cache_control:")
+    print(cache_control)
+    print("content_disposition:")
+    print(content_disposition)
 
     if not acl:
         acl = 'public-read'
@@ -52,5 +71,6 @@ def get_upload_params(request):
         key = '%s/${filename}' % key
 
     data = create_upload_data(content_type, key, acl, bucket, cache_control, content_disposition)
+    print(data)
 
     return HttpResponse(json.dumps(data), content_type="application/json")

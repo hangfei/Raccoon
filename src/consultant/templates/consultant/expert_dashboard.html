@@ -8,7 +8,7 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ASSIGNED TO YOU ENGAGEMENTS</strong></h4>
+  <h4><strong>ENGAGEMENTS ASSIGNED</strong></h4>
 </div>
 
 <div class="row">
@@ -36,7 +36,7 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ENGAGEMENTS YOU TOOK</strong></h4>
+  <h4><strong>ENGAGEMENTS CONFIRMED</strong></h4>
 </div>
 
 <div class="row">
@@ -56,20 +56,6 @@
           </div>
         </div>  
       {% endif %}
-    {% endfor %}
-  {% else %}
-  {% endif %}
-</div>
-
-<hr>
-
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>CLIENT CONFIRMED ENGAGEMENTS</strong></h4>
-</div>
-
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
       {% if project.state == 'CA'%}
         <div class="col-md-6 m-b-lg">
           <div class="card">
@@ -92,7 +78,7 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>IN PROGRESS ENGAGEMENTS</strong></h4>
+  <h4><strong>ENGAGEMENTS IN PROGRESS</strong></h4>
 </div>
 
 <div class="row">
@@ -120,7 +106,7 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>WAITING FOR PAYMENT ENGAGEMENTS</strong></h4>
+  <h4><strong>ENGAGEMENTS COMPLETED</strong></h4>
 </div>
 
 <div class="row">
@@ -149,7 +135,7 @@
 <hr>
 
 <div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>COMPLETED ENGAGEMENTS</strong></h4>
+  <h4><strong>PAST ENGAGEMENTS</strong></h4>
 </div>
 
 <div class="row">

@@ -29,11 +29,18 @@ def get_at(index, t):
 
 
 def create_upload_data(content_type, key, acl, bucket=None, cache_control=None, content_disposition=None):
+    print("create_upload_data")
     access_key = settings.AWS_ACCESS_KEY_ID
     secret_access_key = settings.AWS_SECRET_ACCESS_KEY
     bucket = bucket or settings.AWS_STORAGE_BUCKET_NAME
     region = getattr(settings, 'S3DIRECT_REGION', None)
     endpoint = REGIONS.get(region, 's3.amazonaws.com')
+
+    print(access_key)
+    print(secret_access_key)
+    print(bucket)
+    print(region)
+    print(endpoint)
 
     expires_in = datetime.utcnow() + timedelta(seconds=60*5)
     expires = expires_in.strftime('%Y-%m-%dT%H:%M:%S.000Z')
