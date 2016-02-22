@@ -244,7 +244,7 @@ class Expert(models.Model):
 
     rating = models.DecimalField(max_digits=3, decimal_places=1, default=0)
     comments_num = models.PositiveIntegerField(default=0)
-    
+
     @classmethod
     def create(cls, form, request=None, **kwargs):
         expert = form.save(commit=False)
