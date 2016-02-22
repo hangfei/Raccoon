@@ -3,9 +3,71 @@
 {% load i18n %}
 
 {% block banner %}
-<div class="row">
+<style>
+#bannerright {
+    width: 420px;
+    text-align: left;
+    position: absolute;
+    z-index: 4;
+    bottom: 50px;
+    right: 30px;
+    padding: 23px 20px 20px;
+    background: #003b77;
+}
+
+.landing-banner-outer {
+    display: table;
+    overflow: hidden;
+}
+
+#bannerright h2 {
+    color: #fff;
+    font: bold italic 24px Georgia, serif;
+    padding: 0px;
+    line-height: 24px;
+    margin: 0px;
+}
+
+</style>
+<div class="row" id="banner-container">
   <div class="col-lg-12">
     <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+
+          <div id="bannerright" class="landing-banner-outer" style="width: 390px; padding-left: 35px;background: rgba(0,49,108,0.8);">
+            <div class="landing-banner-mid">
+              <div class="landing-banner-inner">
+                <h2>
+                  <span class="wsite-text wsite-headline">
+                    <font size="5">Helping enterprises achieve accelerated growth and sustained global success.</font>
+                  </span>
+                </h2>
+                <!-- <p>
+                  <span class="wsite-text wsite-headline-paragraph">
+                    <font size="3">Click below to get a free information session.</font>
+                    </span>
+                </p>
+                <div style="text-align:left;"><div style="height: 0px; overflow: hidden;"></div>
+                <a class="wsite-button wsite-button-small wsite-button-highlight" href="/get-started.html">
+                <span class="wsite-button-inner">Get Started</span>
+                </a> -->
+                <div style="height: 0px; overflow: hidden;"></div></div>
+              </div><!-- end banner inner -->
+            </div><!-- end banner mid -->
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+
   </div>
 </div>
 {% endblock %}
