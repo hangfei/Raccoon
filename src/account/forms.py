@@ -30,7 +30,7 @@ from django.core.validators import RegexValidator
 class ConsultantSignupForm(ModelForm):
     class Meta:
         model = Expert
-        fields = ['description_text', 'status', 'area', 'industry', 'expertise', 'experience', 'education']
+        fields = ['description_text', 'area', 'industry', 'expertise', 'experience', 'education']
 
     username = forms.CharField(
         label=_("Username"),
