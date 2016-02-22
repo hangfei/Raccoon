@@ -220,7 +220,7 @@ class Expert(models.Model):
     EXPERT_STATUS_MAPPING = dict((x, y) for x, y in EXPERT_STATUS_CHOICES)
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    description_text = models.CharField("Description", max_length=500)
+    description_text = models.CharField("Summary", max_length=500)
     status = models.CharField(max_length=1,
                               choices=EXPERT_STATUS_CHOICES,
                               default=APPLYING)
