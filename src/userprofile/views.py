@@ -100,7 +100,7 @@ def userprofile_edit(request):
 
     if request.method == "POST":
         if request.FILES:
-            handle_uploaded_file(request.FILES['profile_image'], profile_user.username)
+            handle_uploaded_file(request, profile_user.username)
 
         pform = None
         if is_expert:
