@@ -120,8 +120,15 @@
               "csrfmiddlewaretoken": '{{ csrf_token }}',
               "next": "/"
              };
+
       $.post(
         language_url,
+        data,
+        function(data, status){}
+      );
+
+      $.post(
+        "/account/set_language/",
         data,
         function(data, status){
           window.location.reload();

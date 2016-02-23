@@ -37,6 +37,23 @@ def sign_up(request):
     })
     return render(request, 'account/sign_up.html', context)
 
+# Account app will override the language code in django itself.
+# https://github.com/pinax/django-user-accounts/blob/master/account/middleware.py
+def set_account_language(request):
+    if request.method == 'POST':
+        language = request.POST.get('language', '')
+        supported_languages = [language_pair[0] for language_pair in settings.LANGUAGES]
+        if request.user.is_authenticated() and language and language in supported_languages:
+            try:
+                account = Account.objects.get(user=request.user)
+                account.language = language
+                account.save()
+            except Account.DoesNotExist:
+                return HttpResponse(status=404)
+
+        return HttpResponse(status=204)
+    return HttpResponse(status=400)
+
 def handle_uploaded_file(request, username):
     file_type_suffix = 'jpg'
     image_name = str(username)
