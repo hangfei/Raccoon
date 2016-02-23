@@ -7,6 +7,9 @@ from django.core.exceptions import ObjectDoesNotExist
 from common.models import Project,Client,Expert,CommentForExpert
 
 from .forms import ProjectForm
+import logging
+
+logger = logging.getLogger(__name__)
 
 state_message_option = {
     'ept_a':'The client will review it and get back to you',
@@ -83,7 +86,7 @@ def hasPermission(request, project):
         return False
     #    raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
     return True
-
+    
 def create(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
@@ -121,20 +124,8 @@ def create(request):
 
 def expertchoice(request):
     if request.method == 'GET':
-       if 'project_id' in request.GET:
-         project_id_val = request.GET['project_id']
-         project = None
-         try:
-            project = Project.objects.get(pk=project_id_val)
-         except ObjectDoesNotExist:
-            return HttpResponseRedirect('unavailable')
-         if hasPermission(request, project) == False:
-            return HttpResponseRedirect('unavailable')
-         context = RequestContext(request, {
-           'project': project,
-          })
-         return render(request, 'expertchoice.html', context)
-       return HttpResponseRedirect('unavailable')
+        logger.info("expertchoice GET")
+        return generalGetPage(request, 'expertchoice', set(['EA']))
     else:
       if 'project_id' in request.POST and 'accept_project' in request.POST:
         project_id_val = request.POST['project_id']
@@ -150,14 +141,7 @@ def expertchoice(request):
 
 def clientchoice(request):
     if request.method == 'GET':
-      #TODO: sanity check
-      if 'project_id' in request.GET:
-        project_id_val = request.GET['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        context = RequestContext(request, {
-           'project': project,
-        })
-      return render(request, 'clientchoice.html', context)
+        return generalGetPage(request, 'clientchoice', set(['ET']))
     else:
       if 'project_id' in request.POST and 'accept_expert' in request.POST:
         project_id_val = request.POST['project_id']
@@ -172,14 +156,7 @@ def clientchoice(request):
 
 def expertworking(request):
     if request.method == 'GET':
-      #TODO: sanity check
-      if 'project_id' in request.GET:
-        project_id_val = request.GET['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        context = RequestContext(request, {
-           'project': project,
-        })
-      return render(request, 'expertworking.html', context)
+      return generalGetPage(request, 'expertworking', set(['IP']))
     else:
       if 'project_id' in request.POST:
         project_id_val = request.POST['project_id']
@@ -190,7 +167,7 @@ def expertworking(request):
 
 def expertstart(request):
     if request.method == 'GET':
-      return generalGetPage(request, 'expertstart')
+      return generalGetPage(request, 'expertstart', set(['CA']))
     else:
       if 'project_id' in request.POST:
         project_id_val = request.POST['project_id']
@@ -201,14 +178,7 @@ def expertstart(request):
 
 def clientconfirm(request):
     if request.method == 'GET':
-      #TODO: sanity check
-      if 'project_id' in request.GET:
-        project_id_val = request.GET['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        context = RequestContext(request, {
-           'project': project,
-        })
-      return render(request, 'clientconfirm.html', context)
+      return generalGetPage(request, 'clientconfirm', set(['PF']))
     else:
       redirectStr = ''
       if 'project_id' in request.POST and 'accept_finish' in request.POST:
@@ -228,23 +198,23 @@ def clientconfirm(request):
       return HttpResponseRedirect('thanks?last_action='+redirectStr)
 
 def waitassignexpert(request):
-    return generalGetPage(request, 'waitassignexpert')
+    return generalGetPage(request, 'waitassignexpert', set(['PS','EA']))
 
 def waitclientconfirm(request):
-    return generalGetPage(request, 'waitclientconfirm')
+    return generalGetPage(request, 'waitclientconfirm', set(['PF']))
 
 def waitexpertstart(request):
-    return generalGetPage(request, 'waitexpertstart')
+    return generalGetPage(request, 'waitexpertstart', set(['CA']))
 
 def waitexpertworking(request):
-    return generalGetPage(request, 'waitexpertworking')
+    return generalGetPage(request, 'waitexpertworking',set(['IP']))
 
 def waitpayment(request):
-    return generalGetPage(request, 'waitpayment')
+    return generalGetPage(request, 'waitpayment',set(['CC']))
 
 def rateexpert(request):
   if request.method == 'GET':
-    return generalGetPage(request, 'rateexpert')
+    return generalGetPage(request, 'rateexpert',set(['CC']))
   else:
       if 'project_id' in request.POST:
         project_id_val = request.POST['project_id']
@@ -260,7 +230,7 @@ def rateexpert(request):
                                        )
         new_comment.save()
 
-        #Update the expert rating
+        #Update the expert rating by calculating the weighted rating
         cur_expert = cur_project.expert
         cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
         cur_expert.comments_num += 1
@@ -268,9 +238,9 @@ def rateexpert(request):
         return HttpResponseRedirect('thanks?last_action=clt_r')
 
 def close(request):
-    return generalGetPage(request, 'close')
+    return generalGetPage(request, 'close',set(['PR']))
 
-def generalGetPage(request, pageStatus):
+def generalGetPage(request, pageStatus, expectStatus):
     if request.method == 'GET':
         if 'project_id' in request.GET:
             project_id_val = request.GET['project_id']
@@ -279,8 +249,10 @@ def generalGetPage(request, pageStatus):
                 project = Project.objects.get(pk=project_id_val)
             except ObjectDoesNotExist:
                 return HttpResponseRedirect('unavailable')
-            #if hasPermission(request, project) == False:
-            #    return HttpResponseRedirect('unavailable')
+            if(project.state not in expectStatus):
+                return HttpResponseRedirect('unavailable')
+            if hasPermission(request, project) == False:
+                return HttpResponseRedirect('unavailable')
             context = RequestContext(request, {
                'project': project,
               })

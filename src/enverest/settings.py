@@ -144,6 +144,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+##################################################################
+#                        AWS SECTION
+##################################################################
 # AWS keys
 AWS_SECRET_ACCESS_KEY = 'h3N9rAv93GIoECKkgwicyuH/Vz/o7U37kVhRUGcj'
 AWS_ACCESS_KEY_ID = 'AKIAIGOIFGPRLXK35R4Q'
@@ -193,6 +196,8 @@ S3DIRECT_DESTINATIONS = {
     #     'max-age=2592000',
     #     'attachment')
 }
+#                        AWS SECTION END
+##################################################################
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
@@ -227,3 +232,42 @@ POSTMAN_AUTO_MODERATE_AS = True # no moderator
 
 # The URL where requests are redirected for login, especially when using the login_required() decorator.
 LOGIN_URL = '/account/login/'
+
+##################################################################
+#                        LOGGING SECTION
+##################################################################
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format' : "[%(asctime)s] %(levelname)s [%(name)s:%(lineno)s] %(message)s",
+            'datefmt' : "%d/%b/%Y %H:%M:%S"
+        },
+        'simple': {
+            'format': '%(levelname)s %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': '../logs/enverest.log',
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers':['file'],
+            'propagate': True,
+            'level':'DEBUG',
+        },
+        'project': {
+            'handlers': ['file'],
+            'level': 'DEBUG',
+        },
+    }
+}
+#                     LOGGING SECTION END
+##################################################################

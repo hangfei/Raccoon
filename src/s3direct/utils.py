@@ -39,8 +39,6 @@ def create_upload_data(content_type, key, acl, bucket=None, cache_control=None, 
     print(access_key)
     print(secret_access_key)
     print(bucket)
-    print(region)
-    print(endpoint)
 
     expires_in = datetime.utcnow() + timedelta(seconds=60*5)
     expires = expires_in.strftime('%Y-%m-%dT%H:%M:%S.000Z')
