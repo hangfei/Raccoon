@@ -56,8 +56,6 @@ INSTALLED_APPS = [
     'bootstrapform',
     'postman',
     'payment',
-    's3direct',
-    'cat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
