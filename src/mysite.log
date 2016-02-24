@@ -1,0 +1,8 @@
+[21/Feb/2016 23:58:55] DEBUG [django.db.backends:89] (0.031) SET SQL_AUTO_IS_NULL = 0; args=None
+[21/Feb/2016 23:58:56] DEBUG [django.db.backends:89] (0.030) SET SQL_AUTO_IS_NULL = 0; args=None
+[21/Feb/2016 23:58:56] DEBUG [django.db.backends:89] (0.100) SHOW FULL TABLES; args=None
+[21/Feb/2016 23:58:56] DEBUG [django.db.backends:89] (0.031) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()
+[21/Feb/2016 23:59:51] DEBUG [django.db.backends:89] (0.030) SET SQL_AUTO_IS_NULL = 0; args=None
+[21/Feb/2016 23:59:52] DEBUG [django.db.backends:89] (0.333) SET SQL_AUTO_IS_NULL = 0; args=None
+[21/Feb/2016 23:59:52] DEBUG [django.db.backends:89] (0.032) SHOW FULL TABLES; args=None
+[21/Feb/2016 23:59:52] DEBUG [django.db.backends:89] (0.038) SELECT `django_migrations`.`app`, `django_migrations`.`name` FROM `django_migrations`; args=()

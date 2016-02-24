@@ -41,6 +41,12 @@
   <div class="row">
   <table>
       <tr>
+        <td>Industry</td>
+        <td>Expertise</td>
+        <td>Experience</td>
+        <td>Area</td>
+      </tr>
+      <tr>
         <td>
           <select name="industry">
             <option id="industryALL" value="ALL">All</option>
@@ -177,7 +183,9 @@
           <div class="pagination" >
               <span class="page-links">
                   {% if page_obj.has_previous %}
+                      <ul class="pager">
                       <a id="prePage" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                      </ul>
                       <script>
                        var prePage = document.getElementById("prePage");
                        var originalString = prePage.getAttribute("href");
@@ -196,7 +204,9 @@
                       Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
                   </span>
                   {% if page_obj.has_next %}
+                      <ul class="pager">
                       <a id="nextPage" href="?page={{ page_obj.next_page_number }}">next</a>
+                      </ul>
                       <script>
                        var prePage = document.getElementById("nextPage");
                        var originalString = prePage.getAttribute("href");
