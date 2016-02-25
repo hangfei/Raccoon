@@ -49,7 +49,7 @@ def getCurrentRole(request):
         print(person)
     return person
 
-def hasPermission(request, project):
+def hasPermission(request, project, require_expert):
     User = get_user_model()
     if request.user.id == None or project == None:
       return False
@@ -67,7 +67,8 @@ def hasPermission(request, project):
     is_expert = None
 
     if user_profile.user_type == 'CLIENT':
-        is_expert = False
+        if require_expert == True:
+          return False
         clients = profile_user.client_set.all()
         person = clients[0]
         print(person)
@@ -75,7 +76,8 @@ def hasPermission(request, project):
         if person != project.client:
             return False
     elif user_profile.user_type == 'EXPERT':
-        is_expert = True
+        if require_expert == False:
+          return False
         experts = profile_user.expert_set.all()
         person = experts[0]
         print(person)
@@ -86,10 +88,30 @@ def hasPermission(request, project):
         return False
     #    raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
     return True
-    
+
+def isClient(request):
+    User = get_user_model()
+    if request.user.id == None:
+      return False
+    user_id = request.user.id
+    profile_user = User.objects.get(pk=user_id)
+    user_profiles = profile_user.userprofile_set.all()
+    #
+    user_profile = None
+    if user_profiles:
+        user_profile = user_profiles[0]
+    else:
+        return False
+    if user_profile.user_type == 'CLIENT':
+      return True
+    return False
+
+
 def create(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
+        if isClient(request) == False:
+          return HttpResponseRedirect('clientonly')
         # create a form instance and populate it with data from the request:
         form = ProjectForm(request.POST)
 
@@ -118,6 +140,8 @@ def create(request):
 
     # if a GET (or any other method) we'll create a blank form
     else:
+        if isClient(request) == False:
+          return HttpResponseRedirect('clientonly')
         form = ProjectForm(label_suffix=' ')
 
     return render(request, 'create.html', {'form': form})
@@ -125,7 +149,7 @@ def create(request):
 def expertchoice(request):
     if request.method == 'GET':
         logger.info("expertchoice GET")
-        return generalGetPage(request, 'expertchoice', set(['EA']))
+        return generalGetPage(request, 'expertchoice', set(['EA']), True)
     else:
       if 'project_id' in request.POST and 'accept_project' in request.POST:
         project_id_val = request.POST['project_id']
@@ -141,7 +165,7 @@ def expertchoice(request):
 
 def clientchoice(request):
     if request.method == 'GET':
-        return generalGetPage(request, 'clientchoice', set(['ET']))
+        return generalGetPage(request, 'clientchoice', set(['ET']), False)
     else:
       if 'project_id' in request.POST and 'accept_expert' in request.POST:
         project_id_val = request.POST['project_id']
@@ -156,7 +180,7 @@ def clientchoice(request):
 
 def expertworking(request):
     if request.method == 'GET':
-      return generalGetPage(request, 'expertworking', set(['IP']))
+      return generalGetPage(request, 'expertworking', set(['IP']), True)
     else:
       if 'project_id' in request.POST:
         project_id_val = request.POST['project_id']
@@ -167,7 +191,7 @@ def expertworking(request):
 
 def expertstart(request):
     if request.method == 'GET':
-      return generalGetPage(request, 'expertstart', set(['CA']))
+      return generalGetPage(request, 'expertstart', set(['CA']), True)
     else:
       if 'project_id' in request.POST:
         project_id_val = request.POST['project_id']
@@ -178,7 +202,7 @@ def expertstart(request):
 
 def clientconfirm(request):
     if request.method == 'GET':
-      return generalGetPage(request, 'clientconfirm', set(['PF']))
+      return generalGetPage(request, 'clientconfirm', set(['PF']), False)
     else:
       redirectStr = ''
       if 'project_id' in request.POST and 'accept_finish' in request.POST:
@@ -198,23 +222,23 @@ def clientconfirm(request):
       return HttpResponseRedirect('thanks?last_action='+redirectStr)
 
 def waitassignexpert(request):
-    return generalGetPage(request, 'waitassignexpert', set(['PS','EA']))
+    return generalGetPage(request, 'waitassignexpert', set(['PS','EA']), False)
 
 def waitclientconfirm(request):
-    return generalGetPage(request, 'waitclientconfirm', set(['PF']))
+    return generalGetPage(request, 'waitclientconfirm', set(['PF']), True)
 
 def waitexpertstart(request):
-    return generalGetPage(request, 'waitexpertstart', set(['CA']))
+    return generalGetPage(request, 'waitexpertstart', set(['CA']), False)
 
 def waitexpertworking(request):
-    return generalGetPage(request, 'waitexpertworking',set(['IP']))
+    return generalGetPage(request, 'waitexpertworking',set(['IP']), False)
 
 def waitpayment(request):
-    return generalGetPage(request, 'waitpayment',set(['CC']))
+    return generalGetPage(request, 'waitpayment',set(['CC']), True)
 
 def rateexpert(request):
   if request.method == 'GET':
-    return generalGetPage(request, 'rateexpert',set(['CC']))
+    return generalGetPage(request, 'rateexpert',set(['CC']), False)
   else:
       if 'project_id' in request.POST:
         project_id_val = request.POST['project_id']
@@ -238,9 +262,9 @@ def rateexpert(request):
         return HttpResponseRedirect('thanks?last_action=clt_r')
 
 def close(request):
-    return generalGetPage(request, 'close',set(['PR']))
+    return generalGetPage(request, 'close',set(['PR']), None)
 
-def generalGetPage(request, pageStatus, expectStatus):
+def generalGetPage(request, pageStatus, expectStatus, require_expert):
     if request.method == 'GET':
         if 'project_id' in request.GET:
             project_id_val = request.GET['project_id']
@@ -251,7 +275,7 @@ def generalGetPage(request, pageStatus, expectStatus):
                 return HttpResponseRedirect('unavailable')
             if(project.state not in expectStatus):
                 return HttpResponseRedirect('unavailable')
-            if hasPermission(request, project) == False:
+            if hasPermission(request, project, require_expert) == False:
                 return HttpResponseRedirect('unavailable')
             context = RequestContext(request, {
                'project': project,
@@ -269,3 +293,6 @@ def thanks(request):
 
 def unavailable(request):
     return render(request, 'unavailable.html')
+
+def clientonly(request):
+    return render(request, 'clientonly.html')

@@ -18,4 +18,5 @@ urlpatterns = [
     url(r'^close$', views.close, name='close'),
     url(r'^thanks$', views.thanks, name='thanks'),
     url(r'^unavailable$', views.unavailable, name='unavailable'),
+    url(r'^clientonly$', views.clientonly, name='clientonly'),
 ]
