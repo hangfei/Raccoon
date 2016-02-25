@@ -106,6 +106,25 @@ def isClient(request):
       return True
     return False
 
+#This is the utility function for post method, it checks the permission and
+#if it has the permission it will get the project from the db and return,
+#Otherwise it will return None
+def getProjectFromPost(request, expectStatus, require_expert):
+    if request.method != 'POST':
+      return None
+    if 'project_id' not in request.POST:
+      return None
+    project_id_val = request.POST['project_id']
+    project = None
+    try:
+      project = Project.objects.get(pk=project_id_val)
+    except ObjectDoesNotExist:
+      return None
+    if(project.state not in expectStatus):
+      return None
+    if hasPermission(request, project, require_expert) == False:
+      return None
+    return Project
 
 def create(request):
     # if this is a POST request we need to process the form data
@@ -151,15 +170,17 @@ def expertchoice(request):
         logger.info("expertchoice GET")
         return generalGetPage(request, 'expertchoice', set(['EA']), True)
     else:
-      if 'project_id' in request.POST and 'accept_project' in request.POST:
-        project_id_val = request.POST['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        accept_val = request.POST['accept_project']
-        if accept_val == 'A':
-          project.state = 'ET'
-        elif accept_val == 'D':
-          project.state = 'PS'
-        project.save()
+      project = getProjectFromPost(request, set(['EA']), True)
+      if project == None:
+        return HttpResponseRedirect('unavailable')
+      if 'accept_project' not in request.POST:
+        return HttpResponseRedirect('unavailable')
+      accept_val = request.POST['accept_project']
+      if accept_val == 'A':
+        project.state = 'ET'
+      elif accept_val == 'D':
+        project.state = 'PS'
+      project.save()
       return HttpResponseRedirect('thanks?last_action=ept_a')
 
 
@@ -167,58 +188,62 @@ def clientchoice(request):
     if request.method == 'GET':
         return generalGetPage(request, 'clientchoice', set(['ET']), False)
     else:
-      if 'project_id' in request.POST and 'accept_expert' in request.POST:
-        project_id_val = request.POST['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        accept_val = request.POST['accept_expert']
-        if accept_val == 'A':
-          project.state = 'CA'
-        elif accept_val == 'D':
-          project.state = 'PS'
-        project.save()
+      project = getProjectFromPost(request, set(['ET']), False)
+      if project == None:
+        return HttpResponseRedirect('unavailable')
+      if 'accept_expert' not in request.POST:
+        return HttpResponseRedirect('unavailable')
+      accept_val = request.POST['accept_expert']
+      if accept_val == 'A':
+        project.state = 'CA'
+      elif accept_val == 'D':
+        project.state = 'PS'
+      project.save()
       return HttpResponseRedirect('thanks?last_action=clt_c')
 
 def expertworking(request):
     if request.method == 'GET':
       return generalGetPage(request, 'expertworking', set(['IP']), True)
     else:
-      if 'project_id' in request.POST:
-        project_id_val = request.POST['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        project.state = 'PF'
-        project.save()
+      project = getProjectFromPost(request, set(['IP']), True)
+      if project == None:
+        return HttpResponseRedirect('unavailable')
+      project.state = 'PF'
+      project.save()
       return HttpResponseRedirect('thanks?last_action=ept_f')
 
 def expertstart(request):
     if request.method == 'GET':
       return generalGetPage(request, 'expertstart', set(['CA']), True)
     else:
-      if 'project_id' in request.POST:
-        project_id_val = request.POST['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        project.state = 'IP'
-        project.save()
+      project = getProjectFromPost(request, set(['CA']), True)
+      if project == None:
+        return HttpResponseRedirect('unavailable')
+      project.state = 'IP'
+      project.save()
       return HttpResponseRedirect('thanks?last_action=ept_s')
 
 def clientconfirm(request):
     if request.method == 'GET':
       return generalGetPage(request, 'clientconfirm', set(['PF']), False)
     else:
+      project = getProjectFromPost(request, set(['PF']), False)
+      if project == None:
+        return HttpResponseRedirect('unavailable')
+      if 'accept_finish' not in request.POST:
+        return HttpResponseRedirect('unavailable')
       redirectStr = ''
-      if 'project_id' in request.POST and 'accept_finish' in request.POST:
-        project_id_val = request.POST['project_id']
-        project = Project.objects.get(pk=project_id_val)
-        confirm_val = request.POST['accept_finish']
-        if confirm_val == 'Y': #Accept finish
-          project.state = 'CC'
-          redirectStr = 'clt_y'
-        elif confirm_val == 'N': #Need more work
-          project.state = 'IP'
-          redirectStr = 'clt_n'
-        elif confirm_val == 'A': #Cannot make agreement, Appeal
-          project.state = 'AD'
-          redirectStr = 'clt_a'
-        project.save()
+      confirm_val = request.POST['accept_finish']
+      if confirm_val == 'Y': #Accept finish
+        project.state = 'CC'
+        redirectStr = 'clt_y'
+      elif confirm_val == 'N': #Need more work
+        project.state = 'IP'
+        redirectStr = 'clt_n'
+      elif confirm_val == 'A': #Cannot make agreement, Appeal
+        project.state = 'AD'
+        redirectStr = 'clt_a'
+      project.save()
       return HttpResponseRedirect('thanks?last_action='+redirectStr)
 
 def waitassignexpert(request):
@@ -240,26 +265,26 @@ def rateexpert(request):
   if request.method == 'GET':
     return generalGetPage(request, 'rateexpert',set(['CC']), False)
   else:
-      if 'project_id' in request.POST:
-        project_id_val = request.POST['project_id']
-        cur_project = Project.objects.get(pk=project_id_val)
-        comment_text = request.POST['comment']
-        rating = request.POST['rating']
-        print(comment_text)
-        print(rating)
-        new_comment = CommentForExpert(project=cur_project,
-                                       expert=cur_project.expert,
-                                       text=comment_text,
-                                       rating=float(rating)
-                                       )
-        new_comment.save()
+    cur_project = getProjectFromPost(request, set(['CC']), False)
+    if cur_project == None:
+        return HttpResponseRedirect('unavailable')
+    if 'comment' not in request.POST or 'rating' not in request.POST:
+        return HttpResponseRedirect('unavailable')
+    comment_text = request.POST['comment']
+    rating = request.POST['rating']
+    new_comment = CommentForExpert(project=cur_project,
+                                   expert=cur_project.expert,
+                                   text=comment_text,
+                                   rating=float(rating)
+                                   )
+    new_comment.save()
 
-        #Update the expert rating by calculating the weighted rating
-        cur_expert = cur_project.expert
-        cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
-        cur_expert.comments_num += 1
-        cur_expert.save()
-        return HttpResponseRedirect('thanks?last_action=clt_r')
+    #Update the expert rating by calculating the weighted rating
+    cur_expert = cur_project.expert
+    cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
+    cur_expert.comments_num += 1
+    cur_expert.save()
+    return HttpResponseRedirect('thanks?last_action=clt_r')
 
 def close(request):
     return generalGetPage(request, 'close',set(['PR']), None)
