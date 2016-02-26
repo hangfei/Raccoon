@@ -18,6 +18,13 @@ def bank_transfer(request):
     return render(request, 'payment/bank_transfer.html', context)
 
 @login_required
+def bank_transfer_detail(request):
+    context = RequestContext(request, {
+        'latest_question_list': 'sss',
+    })
+    return render(request, 'payment/bank_transfer_detail.html', context)
+
+@login_required
 def bank_transfer_beijing(request):
     context = RequestContext(request, {
         'latest_question_list': 'sss',
