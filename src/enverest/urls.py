@@ -28,6 +28,7 @@ urlpatterns = [
     url(r"^project/", include("project.urls")),
     url(r'^admin/', admin.site.urls),
     url(r'^profile/', include("userprofile.urls")),
+    url(r'^upload/', include("upload.urls")),
     url(r'^messages/', include('postman.urls', namespace='postman', app_name='postman')),
     url(r'^payment/', include('payment.urls', namespace='payment', app_name='payment')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

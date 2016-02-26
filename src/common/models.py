@@ -220,7 +220,7 @@ class Expert(models.Model):
     EXPERT_STATUS_MAPPING = dict((x, y) for x, y in EXPERT_STATUS_CHOICES)
 
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
-    description_text = models.CharField("Summary", max_length=500)
+    description_text = models.CharField("Description", max_length=500)
     status = models.CharField(max_length=1,
                               choices=EXPERT_STATUS_CHOICES,
                               default=APPLYING)
@@ -244,7 +244,7 @@ class Expert(models.Model):
 
     rating = models.DecimalField(max_digits=3, decimal_places=1, default=0)
     comments_num = models.PositiveIntegerField(default=0)
-
+    
     @classmethod
     def create(cls, form, request=None, **kwargs):
         expert = form.save(commit=False)
@@ -778,3 +778,8 @@ class AccountDeletion(models.Model):
         account_deletion.save()
         settings.ACCOUNT_DELETION_MARK_CALLBACK(account_deletion)
         return account_deletion
+
+class Image(models.Model):
+  image = models.ImageField(upload_to='img')
+  title = models.CharField(max_length=200, blank=True)
+  description = models.TextField(blank=True)
