@@ -124,7 +124,7 @@ def getProjectFromPost(request, expectStatus, require_expert):
       return None
     if hasPermission(request, project, require_expert) == False:
       return None
-    return Project
+    return project
 
 def create(request):
     # if this is a POST request we need to process the form data
@@ -287,7 +287,7 @@ def rateexpert(request):
     return HttpResponseRedirect('thanks?last_action=clt_r')
 
 def close(request):
-    return generalGetPage(request, 'close',set(['PR']), None)
+    return generalGetPage(request, 'close',set(['PR','CC']), None)
 
 def generalGetPage(request, pageStatus, expectStatus, require_expert):
     if request.method == 'GET':
