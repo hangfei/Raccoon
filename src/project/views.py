@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
-from common.models import Project,Client,Expert,CommentForExpert
+from common.models import Project,Client,Expert,CommentForExpert,CommentForClient
 
 from .forms import ProjectForm
 import logging
@@ -238,7 +238,7 @@ def clientconfirm(request):
       confirm_val = request.POST['accept_finish']
       if confirm_val == 'Y': #Accept finish
         project.state = 'CC'
-        redirectStr = 'clt_y'
+        return HttpResponseRedirect('rate?project_id={{ project.pk }}')
       elif confirm_val == 'N': #Need more work
         project.state = 'IP'
         redirectStr = 'clt_n'
@@ -265,9 +265,9 @@ def waitpayment(request):
 
 def rate(request):
   if request.method == 'GET':
-    return generalGetPage(request, 'rate',set(['CC']), False)
+    return generalGetPage(request, 'rate',set(['CC']), None)
   else:
-    cur_project = getProjectFromPost(request, set(['CC']), False)
+    cur_project = getProjectFromPost(request, set(['CC']), None)
     if cur_project == None:
         return HttpResponseRedirect('unavailable')
     if 'comment' not in request.POST or 'rating' not in request.POST:
@@ -289,7 +289,7 @@ def rate(request):
         cur_expert.save()
     else:
         new_comment = CommentForClient(project=cur_project,
-                                       expert=cur_project.client,
+                                       client=cur_project.client,
                                        text=comment_text,
                                        rating=float(rating)
                                        )
