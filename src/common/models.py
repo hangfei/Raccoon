@@ -270,12 +270,14 @@ class Expert(models.Model):
       return self in experts
 
     @property
-    def get_industry(self):
-        return self.INDUSTRY_MAPPING.get(self.industry)
+    def get_industries(self):
+        shortList = (self.industries).split(',')
+        return ','.join(str(self.INDUSTRY_MAPPING.get(temp)) for temp in shortList)
 
     @property
     def get_expertise(self):
-        return self.EXPERTISE_MAPPING.get(self.expertise)
+        shortList = (self.expertise).split(',')
+        return ','.join(str(self.EXPERTISE_MAPPING.get(temp)) for temp in shortList)
 
     @property
     def get_area(self):
