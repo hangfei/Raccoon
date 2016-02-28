@@ -45,12 +45,14 @@
 
 
           <nav class="nav navbar-nav pull-xs-right">
-            <a class="nav-item nav-link" href="javascript:set_language('{% url 'set_language' %}', 'zh-hans')">
+<!--             <a class="nav-item nav-link" href="javascript:set_language('{% url 'set_language' %}', 'zh-hans')">
               <img src="{% static 'images/internalization/china_chinese_flag_circle-512.png' %}" alt="Card image cap" style="height: 18px; width: 18px;">
             </a>
             <a class="nav-item nav-link" href="javascript:set_language('{% url 'set_language' %}', 'en')">
               <img src="{% static 'images/internalization/round_english.png' %}" alt="Card image cap" style="height: 16px; width: 16px;">
-            </a>
+            </a> -->
+            <a class="nav-item nav-link" href="https://www.linkedin.com/company/enverest-inc-"><i class="fa fa-linkedin-square fa-2x"></i></a>
+            <a class="nav-item nav-link" href="mailto:contact@enverest.com" target="_top"><i class="fa fa-envelope fa-2x"></i></a>
             {% if user.is_authenticated %}
             <a class="nav-item nav-link" id="login" href="/account/logout">{% trans "Sign Out" %}</a>
             <a class="nav-item nav-link" id="signup" href="/messages">{% trans "Message" %}</a>
@@ -91,19 +93,14 @@
       <footer class="footer clearfix">
         <ul class="footer-list">
             <li class="footer-list-item">
+              <a class="footer-list-link" href="/about_us">© 2015 Enverest, Inc.</a>
+            </li>
+            <li class="footer-list-item">
               <a class="footer-list-link" href="/about_us">About</a>
             </li>
 
             <li class="footer-list-item">
               <a class="footer-list-link" href="/terms_of_service">Terms</a>
-            </li>
-
-            <li class="footer-list-item">
-              <a class="footer-list-link" href="/privacy_policy">Privacy</a>
-            </li>
-
-            <li class="footer-list-item">
-              <a class="footer-list-link" href="/our_license">Licenses</a>
             </li>
 
             <li class="footer-list-item">
