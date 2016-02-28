@@ -16,7 +16,7 @@ from django.utils.translation import ugettext_lazy as _
 class ConsultantSignupForm(ModelForm):
     class Meta:
         model = Expert
-        fields = ['description_text', 'area', 'industry', 'expertise', 'experience']
+        fields = ['description_text', 'area', 'industries', 'expertise', 'experience']
 
     first_name = forms.CharField(
         label=_("Firstname"),

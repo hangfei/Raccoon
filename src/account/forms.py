@@ -19,6 +19,7 @@ from account.conf import settings
 from account.hooks import hookset
 from common.models import EmailAddress
 from common.models import Expert
+from common.multichoice import MultiSelectFormField
 from account.utils import get_user_lookup_kwargs
 
 
@@ -28,9 +29,32 @@ from django.core.validators import RegexValidator
 
 
 class ConsultantSignupForm(ModelForm):
+
     class Meta:
+        INDUSTRY_CHOICES = (
+          ("MC","Management Consulting"),
+          ("EN","Energy"),
+          ("HI","Health care and Life Sciences"),
+          ("BI","BioPharma"),
+          ("ED","Education"),
+          ("SE","Semiconductor"),
+          ("SW","Software"),
+          ("MB","Mobile Internet and Computing"),
+          ("DS","Data and Storage"),
+          ("VR","VR/AI/Robotics"),
+          ("IT","Internet of Things"),
+          ("GB","Gaming and Media"),
+          ("ET","Entertainment"),
+          ("TL","Transport and Logistics"),
+          ("AU","Automotive"),
+          ("CG","Consumer Goods"),
+          ("OT","Others"),
+        )
         model = Expert
-        fields = ['description_text', 'area', 'industry', 'expertise', 'experience', 'education']
+        fields = ['description_text', 'area', 'industries', 'expertise', 'experience', 'education']
+        widgets = {
+           'industries':forms.CheckboxSelectMultiple
+        }
 
     username = forms.CharField(
         label=_("Username"),

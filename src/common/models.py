@@ -22,6 +22,7 @@ from django.contrib.sites.models import Site
 from django.core.validators import RegexValidator
 
 import pytz
+from common.multichoice import MultiSelectField
 
 from account import signals
 from account.conf import settings
@@ -230,16 +231,16 @@ class Expert(models.Model):
     area = models.CharField(max_length=2,
                             choices=AREA_CHOICES,
                             default=BEIJING)
-    industry = models.CharField(max_length=2,
-                                choices=INDUSTRY_CHOICES,
-                                default="OT")
-    expertise = models.CharField(max_length=2,
-                                choices=EXPERTISE_CHOICES,
-                                default="OT")
     experience = models.CharField(max_length=1,
                                 choices=EXPERIENCE_CHOICES,
                                 default=ONE_FIVE)
-
+    
+    industries = MultiSelectField(max_length=250, 
+                                      blank=True, 
+                                      choices=INDUSTRY_CHOICES)
+    expertise = MultiSelectField(max_length=250, 
+                                      blank=True, 
+                                      choices=EXPERTISE_CHOICES)
     education = models.CharField(
         max_length=30,
         blank=True
