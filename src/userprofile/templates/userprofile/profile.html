@@ -29,7 +29,7 @@
         </div>
         <div class="col-sm-4">
           {% if can_view_personal_info %}
-          <img src="/media/{{ profile_user.username }}.jpg" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';"/>
+          <img src="{% static user_profile.avatar.name %}" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';"/>
           {% else %}
           <img src="/static/images/empty_headshot.bmp" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';"/>
           {% endif %}

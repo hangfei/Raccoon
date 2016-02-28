@@ -144,14 +144,19 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+
 ##################################################################
 #                        AWS SECTION
 ##################################################################
 DEFAULT_FILE_STORAGES = 'storages.backends.s3boto.S3BotoStorage'
 # AWS keys
-AWS_SECRET_ACCESS_KEY = 'h3N9rAv93GIoECKkgwicyuH/Vz/o7U37kVhRUGcj'
-AWS_ACCESS_KEY_ID = 'AKIAIGOIFGPRLXK35R4Q'
-AWS_STORAGE_BUCKET_NAME = 'enverest'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = 'AKIAJOJ4LB2LY4U7KR4Q'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'hnlin-godjango-episode-46'
+
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
 #                        AWS SECTION END
 ##################################################################

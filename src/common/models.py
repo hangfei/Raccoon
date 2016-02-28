@@ -32,6 +32,7 @@ from account.signals import signup_code_sent, signup_code_used
 
 class UserProfile(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
+    avatar = models.ImageField(_("Avatar"), upload_to='avatar/', blank=True)
     summary = models.CharField("Summary", max_length=500, default="Summary default.")
     CLIENT = 'CLIENT'
     EXPERT = 'EXPERT'
@@ -99,6 +100,8 @@ class UserProfile(models.Model):
     def create(cls, form, request=None, **kwargs):
         profile = cls(**kwargs)
         profile.user = kwargs.pop("user", None)
+        if form.cleaned_data['profile_image']:
+            profile.avatar = form.cleaned_data['profile_image']
         if form.cleaned_data['work_phone_number']:
             profile.work_phone_number = form.cleaned_data['work_phone_number']
         if form.cleaned_data['cell_phone_number']:
