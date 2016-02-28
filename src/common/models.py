@@ -155,14 +155,12 @@ class Expert(models.Model):
        (SENIOR, 'Senior Expert'),
     )
 
-    BEIJING = 'BJ'
-    SANFRANCISCO = 'SF'
-    SINGAPORE = 'SN'
-
     AREA_CHOICES = (
-       (BEIJING, 'Beijing'),
-       (SANFRANCISCO, 'San Francisco'),
-       (SINGAPORE, 'Singapore'),
+       ('US','United States'),
+       ('CN','China'),
+       ('SG','Singapore'),
+       ('JP','Japan'),
+       ('OT','Other'),
     )
 
     INDUSTRY_CHOICES = (
@@ -182,7 +180,7 @@ class Expert(models.Model):
       ("TL","Transport and Logistics"),
       ("AU","Automotive"),
       ("CG","Consumer Goods"),
-      ("OT","Others"),
+      ("OT","Other"),
     )
 
     EXPERTISE_CHOICES = (
@@ -205,7 +203,7 @@ class Expert(models.Model):
       ("CL","Corporate Law"),
       ("CF","Corporate Finance"),
       ("AT","Accounting and Taxation"),
-      ("OT","Others"),
+      ("OT","Other"),
     )
 
     ONE_FIVE = 'A'
@@ -233,7 +231,7 @@ class Expert(models.Model):
                               default=APPLYING)
     area = models.CharField(max_length=2,
                             choices=AREA_CHOICES,
-                            default=BEIJING)
+                            default='OT')
     experience = models.CharField(max_length=1,
                                 choices=EXPERIENCE_CHOICES,
                                 default=ONE_FIVE)
