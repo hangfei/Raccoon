@@ -20,7 +20,7 @@ state_message_option = {
     'clt_n':'The expert will keep working on the project',
     'clt_y':'The project is now finished',
     'clt_a':'An administrator will contact you soon',
-    'clt_r':'Your rating will help us improve',
+    'rating':'Your rating will help us improve',
 }
 
 def getCurrentRole(request):
@@ -89,10 +89,12 @@ def hasPermission(request, project, require_expert):
     #    raise ObjectDoesNotExist("user doesn't assoicate with any client/expert.")
     return True
 
+#Check if the current role in the request: 
+#client return True, expert return False; no such user return None
 def isClient(request):
     User = get_user_model()
     if request.user.id == None:
-      return False
+      return None
     user_id = request.user.id
     profile_user = User.objects.get(pk=user_id)
     user_profiles = profile_user.userprofile_set.all()
@@ -101,7 +103,7 @@ def isClient(request):
     if user_profiles:
         user_profile = user_profiles[0]
     else:
-        return False
+        return None
     if user_profile.user_type == 'CLIENT':
       return True
     return False
@@ -261,9 +263,9 @@ def waitexpertworking(request):
 def waitpayment(request):
     return generalGetPage(request, 'waitpayment',set(['CC']), True)
 
-def rateexpert(request):
+def rate(request):
   if request.method == 'GET':
-    return generalGetPage(request, 'rateexpert',set(['CC']), False)
+    return generalGetPage(request, 'rate',set(['CC']), False)
   else:
     cur_project = getProjectFromPost(request, set(['CC']), False)
     if cur_project == None:
@@ -272,19 +274,33 @@ def rateexpert(request):
         return HttpResponseRedirect('unavailable')
     comment_text = request.POST['comment']
     rating = request.POST['rating']
-    new_comment = CommentForExpert(project=cur_project,
-                                   expert=cur_project.expert,
-                                   text=comment_text,
-                                   rating=float(rating)
-                                   )
-    new_comment.save()
+    if isClient(request):
+        new_comment = CommentForExpert(project=cur_project,
+                                       expert=cur_project.expert,
+                                       text=comment_text,
+                                       rating=float(rating)
+                                       )
+        new_comment.save()
 
-    #Update the expert rating by calculating the weighted rating
-    cur_expert = cur_project.expert
-    cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
-    cur_expert.comments_num += 1
-    cur_expert.save()
-    return HttpResponseRedirect('thanks?last_action=clt_r')
+        #Update the expert rating by calculating the weighted rating
+        cur_expert = cur_project.expert
+        cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
+        cur_expert.comments_num += 1
+        cur_expert.save()
+    else:
+        new_comment = CommentForClient(project=cur_project,
+                                       expert=cur_project.client,
+                                       text=comment_text,
+                                       rating=float(rating)
+                                       )
+        new_comment.save()
+
+        #Update the client rating by calculating the weighted rating
+        cur_client = cur_project.client
+        cur_client.rating = (float((cur_client.rating)*(cur_client.comments_num))+float(rating))/(cur_client.comments_num+1)
+        cur_client.comments_num += 1
+        cur_client.save()
+    return HttpResponseRedirect('thanks?last_action=rating')
 
 def close(request):
     return generalGetPage(request, 'close',set(['PR','CC']), None)

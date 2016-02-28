@@ -13,7 +13,7 @@
 <p></p>
 
 <p></p>
-<form class="rating" id="choiceForm" action="{% url 'rateexpert' %}" method="POST">{% csrf_token %}
+<form class="rating" id="choiceForm" action="{% url 'rate' %}" method="POST">{% csrf_token %}
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
     <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>
     <input type="radio" id="star4" name="rating" value="4" /><label class = "full" for="star4" title="Pretty good - 4 stars"></label>
