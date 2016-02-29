@@ -22,7 +22,7 @@
         {{ form|bootstrap }}
         <button type="submit" class="btn btn-primary">{% trans "Update" %}</button>
     </form>
-<!--  The following hidden fields are for the js below. Cause the {{ industries string }} cannot be accessed in the script -->
+<!--  The following hidden fields are for the js below. Cause the industries string cannot be accessed in the script -->
     <input type = "hidden" name="industriesString" value={{ industries }}>
     <input type = "hidden" name="expertiseString" value={{ expertise }}>
 <script>
