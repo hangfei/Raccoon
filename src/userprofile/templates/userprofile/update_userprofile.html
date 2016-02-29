@@ -7,6 +7,11 @@
 
 <br>
 <br>
+<style>
+  ul {
+    list-style-type: none;
+  }
+</style>
 
 <div class="row">
   <div class="col-md-4">
@@ -17,8 +22,35 @@
         {{ form|bootstrap }}
         <button type="submit" class="btn btn-primary">{% trans "Update" %}</button>
     </form>
+<!--  The following hidden fields are for the js below. Cause the {{ industries string }} cannot be accessed in the script -->
+    <input type = "hidden" name="industriesString" value={{ industries }}>
+    <input type = "hidden" name="expertiseString" value={{ expertise }}>
+<script>
+  preSelected("industries");
+  preSelected("expertise");
+  function preSelected(s){
+  var tempString = s.concat("String");
+  var tokens = (document.getElementsByName(tempString)[0].value).split(",");
+  var i;
+  for(i = 0; i < tokens.length; ++i)
+  {
+    var inputs = document.getElementsByName(s);
+    var j;
+    for(j = 0; j < inputs.length; ++j)
+    {
+      if(inputs[j].value == tokens[i])
+      {
+        inputs[j].checked = true;
+      }
+    }
+  }
+}
+  preSelected(industries);
+  preSelected(expertise);
+</script>
 </div>
   <div class="col-md-4">
   </div>
 </div>
+
 {% endblock %}

@@ -12,7 +12,7 @@ from django.forms import ModelForm
 from django import forms
 from django.http import HttpResponseRedirect
 from django.utils.translation import ugettext_lazy as _
-
+import json
 class ConsultantSignupForm(ModelForm):
     class Meta:
         model = Expert
@@ -120,14 +120,20 @@ def userprofile_edit(request):
                             "last_name": profile_user.last_name,
                             "email": profile_user.email,
                             }
+            print(person.industries)
+            print(initial_data)
             pform = ConsultantSignupForm(instance=person, initial=initial_data)
+            context = {'form': pform,
+                       'industries':json.dumps(person.industries),
+                       'expertise':json.dumps(person.expertise)}
+            return render(request, 'userprofile/update_userprofile.html', context)
         else:
             initial_data = {"first_name": profile_user.first_name,
                             "last_name": profile_user.last_name,
                             "email": profile_user.email,
                             }
             pform = ClientSignupForm(instance=person, initial=initial_data)
-    return render(request, 'userprofile/update_userprofile.html', {'form': pform})
+            return render(request, 'userprofile/update_userprofile.html', {'form': pform})
 
 
 
