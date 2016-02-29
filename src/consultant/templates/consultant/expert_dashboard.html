@@ -1,165 +1,247 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+
+
+<style>
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.bs-docs-header, .bs-docs-masthead {
+    position: relative;
+    padding: 30px 0;
+    color: #cdbfe3;
+    text-align: center;
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #6f5499;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
+    background-image: -webkit-linear-gradient(top,#563d7c 0,#6f5499 100%);
+    background-image: -o-linear-gradient(top,#563d7c 0,#6f5499 100%);
+    background-image: linear-gradient(to bottom,#563d7c 0,#6f5499 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+    background-repeat: repeat-x;
+}
+</style>
+
+
+{% block banner %}
+<style>
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.bs-docs-header, .bs-docs-masthead {
+    position: relative;
+    padding: 30px 0;
+    color: #cdbfe3;
+    /*text-align: center;*/
+    text-shadow: 0 1px 0 rgba(0,0,0,.1);
+    background-color: #6f5499;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#563d7c),to(#6f5499));
+    background-image: -webkit-linear-gradient(top,#D0E0EB 0,#D0E0EB 100%);
+    background-image: -o-linear-gradient(top,#D0E0EB 0,#D0E0EB 100%);
+    background-image: linear-gradient(to bottom,#D0E0EB 0,#D0E0EB 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#563d7c', endColorstr='#6F5499', GradientType=0);
+    background-repeat: repeat-x;
+}
+.bs-docs-header {
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+@media (min-width: 768px)
+.bs-docs-header {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    font-size: 24px;
+    text-align: left;
+}
+.bs-docs-header h1 {
+    margin-top: 0;
+    color: #fff;
+}
+
+
+</style>
+
+<div class="bs-docs-header">
+  <div class="container">
+    <br>
+    <div class="col-md-8">
+      <h1>Your Dashboard</h1>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+
+
 {% block content %}
 
 <div class="container">
+<div role="tabpanel">
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="engagement-tab" data-toggle="tab" href="#engagement" role="tab" aria-controls="engagement" aria-expanded="true"><i class="fa fa-industry"></i> &nbsp ENGAGEMENTS</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/payment" role="tab" aria-expanded="true"><i class="fa fa-credit-card"></i> &nbsp Payment</a>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div role="tabpanel" class="tab-pane fade active in" id="engagement" aria-labelledby="engagement-tab" aria-expanded="true">
 
-<hr>
 
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ENGAGEMENTS ASSIGNED</strong></h4>
+      <h6 class="page-header"><strong>ENGAGEMENTS ASSIGNED</strong></h6>
+
+      <div class="row">
+        {% if project_list %}
+          {% for project in project_list %}
+            {% if project.state == 'EA' %}
+              <div class="col-md-4 m-b-lg">
+                <div class="card">
+                  <div class="card-block text-center" style="word-wrap:break-word">
+                    <ul>
+                      <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+                    </ul>
+                    <hr>
+                    <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+                    <a href="/project/expertchoice?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        {% else %}
+        {% endif %}
+      </div>
+
+      <hr>
+
+      <h6 class="page-header"><strong>ENGAGEMENTS CONFIRMED</strong></h6>
+
+      <div class="row">
+        {% if project_list %}
+          {% for project in project_list %}
+            {% if project.state == 'ET'%}
+              <div class="col-md-4 m-b-lg">
+                <div class="card">
+                  <div class="card-block text-center" style="word-wrap:break-word">
+                    <ul>
+                      <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+                    </ul>
+                    <hr>
+                    <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+                    <a href="/project/waitclientconfirm?project_id={{ project.pk }}" class="btn btn-primary" >View</a>
+                  </div>
+                </div>
+              </div>  
+            {% endif %}
+            {% if project.state == 'CA'%}
+              <div class="col-md-4 m-b-lg">
+                <div class="card">
+                  <div class="card-block text-center" style="word-wrap:break-word">
+                    <ul>
+                      <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+                    </ul>
+                    <hr>
+                    <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+                    <a href="/project/expertstart?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+                  </div>
+                </div>
+              </div>  
+            {% endif %}
+          {% endfor %}
+        {% else %}
+        {% endif %}
+      </div>
+
+      <hr>
+
+      <h6 class="page-header"><strong>ENGAGEMENTS IN PROGRESS</strong></h6>
+
+      <div class="row">
+        {% if project_list %}
+          {% for project in project_list %}
+            {% if project.state == 'IP' %}
+              <div class="col-md-4 m-b-lg">
+                <div class="card">
+                  <div class="card-block text-center" style="word-wrap:break-word">
+                    <ul>
+                      <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+                    </ul>
+                    <hr>
+                    <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+                    <a href="/project/expertworking?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+                  </div>
+                </div>
+              </div>  
+            {% endif %}
+          {% endfor %}
+        {% else %}
+        {% endif %}
+      </div>
+
+      <hr>
+
+      <h6 class="page-header"><strong>ENGAGEMENTS COMPLETED</strong></h6>
+
+      <div class="row">
+        {% if project_list %}
+          {% for project in project_list %}
+            {% if project.state == 'PF' or project.state == 'CC' or project.state == 'AD'%}
+              <div class="col-md-4 m-b-lg">
+                <div class="card">
+                  <div class="card-block text-center" style="word-wrap:break-word">
+                    <ul>
+                      <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+                    </ul>
+                    <hr>
+                    <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+                    <a href="/project/waitpayment?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+                  </div>
+                </div>
+              </div>  
+            {% endif %}
+          {% endfor %}
+        {% else %}
+        {% endif %}
+      </div>
+
+      <h6 class="page-header"><strong>PAST ENGAGEMENTS</strong></h6>
+
+      <div class="row">
+        {% if project_list %}
+          {% for project in project_list %}
+            {% if project.state == 'PR' %}
+              <div class="col-md-4 m-b-lg">
+                <div class="card">
+                  <div class="card-block text-center" style="word-wrap:break-word">
+                    <ul>
+                      <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
+                    </ul>
+                    <hr>
+                    <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
+                    <a href="/project/close?project_id={{ project.pk }}" class="btn btn-primary">View</a>
+                  </div>
+                </div>
+              </div>  
+            {% endif %}
+          {% endfor %}
+        {% else %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
 </div>
 
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'EA' %}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/expertchoice?project_id={{ project.pk }}" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-  {% endif %}
-</div>
 
-<hr>
-
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ENGAGEMENTS CONFIRMED</strong></h4>
-</div>
-
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'ET'%}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/waitclientconfirm?project_id={{ project.pk }}" class="btn btn-primary" >View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-      {% if project.state == 'CA'%}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/expertstart?project_id={{ project.pk }}" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-  {% endif %}
-</div>
-
-<hr>
-
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ENGAGEMENTS IN PROGRESS</strong></h4>
-</div>
-
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'IP' %}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/expertworking?project_id={{ project.pk }}" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-  {% endif %}
-</div>
-
-<hr>
-
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>ENGAGEMENTS COMPLETED</strong></h4>
-</div>
-
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'PF' or project.state == 'CC' or project.state == 'AD'%}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/waitpayment?project_id={{ project.pk }}" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-  {% endif %}
-</div>
-
-
-<hr>
-
-<div class="col-sm-8 col-sm-offset-2 text-center">
-  <h4><strong>PAST ENGAGEMENTS</strong></h4>
-</div>
-
-<div class="row">
-  {% if project_list %}
-    {% for project in project_list %}
-      {% if project.state == 'PR' %}
-        <div class="col-md-6 m-b-lg">
-          <div class="card">
-            <div class="card-block text-center" style="word-wrap:break-word">
-              <ul>
-                <h5 class="card-title"><strong>{{ project.title_text|truncatechars:20 }}</strong></h5>
-              </ul>
-              <hr>
-              <p class="card-text">{{ project.info_text|truncatechars:200 }}</p>
-              <a href="/project/close?project_id={{ project.pk }}" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>  
-      {% endif %}
-    {% endfor %}
-  {% else %}
-  {% endif %}
-</div>
 </div> <!-- for Container -->
+
 
 
 {% endblock %}
