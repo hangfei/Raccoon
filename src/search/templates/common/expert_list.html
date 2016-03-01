@@ -1,15 +1,11 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+
+
 {% block content %}
 
 <style>
-
-
- ul {
-  list-style-type: none;
-  width: 700px;
-}
 
  h3 {
   font: bold 20px/1.5 Helvetica, Verdana, sans-serif;
@@ -29,26 +25,29 @@
   overflow: auto;
 }
 
- li:hover {
+ .expert-list:hover {
   background: #eee;
   cursor: pointer;
 }
 </style>
 
 <div class="container">
-  <h2>Invite Experts to a Project</h2>
-  <form action="{% url 'expert-list' %}" method="GET">{% csrf_token %}
   <div class="row">
-  <table>
-      <tr>
-        <td>Industry</td>
-        <td>Expertise</td>
-        <td>Experience</td>
-        <td>Country</td>
-      </tr>
-      <tr>
-        <td>
-          <select name="industry">
+    <div class="col-sm-2">
+    </div>
+    <div class="col-sm-8">
+
+
+
+
+      <h2>Invite Experts to a Project</h2>
+      <form action="{% url 'expert-list' %}" method="GET">{% csrf_token %}
+      <div class="row">
+        <div class="col-sm-2">
+          <h5>Industry</h5>
+        </div>
+        <div class="col-sm-10">
+          <select name="industry" class="form-control">
             <option id="industryALL" value="ALL">All</option>
             <option id="industryMC" value="MC">Management Consulting</option>
             <option id="industryEN" value="EN">Energy</option>
@@ -68,9 +67,14 @@
             <option id="industryCG" value="CG">Consumer Goods</option>
             <option id="industryOT" value="OT">Others</option>
           </select>
-        </td>
-        <td>
-          <select name="expertise">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <h5>Expertise</h5>
+        </div>
+        <div class="col-sm-10">
+          <select name="expertise" class="form-control">
             <option id="expertiseALL" value="ALL">All</option>
             <option id="expertiseST" value="ST">Strategy</option>
             <option id="expertiseBD" value="BD">Business Development and Sales</option>
@@ -93,18 +97,28 @@
             <option id="expertiseAT" value="AT">Accounting and Taxation</option>
             <option id="expertiseOT" value="OT">Others</option>
           </select>
-        </td>
-        <td>
-          <select name="experience">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <h5>Experience</h5>
+        </div>
+        <div class="col-sm-10">
+          <select name="experience" class="form-control">
             <option id="experienceALL" value="ALL">All</option>
             <option id="experienceA" value="A">1-5 years</option>
             <option id="experienceB" value="B">5-10 years</option>
             <option id="experienceC" value="C">10-15 years</option>
             <option id="experienceC" value="D"> >15 years</option>
           </select>
-        </td>
-        <td>
-          <select name="area">
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-2">
+          <h5>Area</h5>
+        </div>
+        <div class="col-sm-10">
+          <select name="area" class="form-control">
             <option id="areaALL" value="ALL">All</option>
             <option id="areaUS" value="US">United States</option>
             <option id="areaCN" value="CN">China</option>
@@ -112,124 +126,136 @@
             <option id="areaJP" value="JP">Japan</option>
             <option id="areaOT" value="OT">Other</option>
           </select>
-        </td>
-<!--       </tr>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-sm-12">
+          <br>
+          <button class="pure-button pure-button-primary" type="submit" value="Submit" > Search </button>
+        </div>
+      </div>
+      <script>
+      function getQueryVariable(variable)
+      {
+             var query = window.location.search.substring(1);
+             var vars = query.split("&");
+             for (var i=0;i<vars.length;i++) {
+                     var pair = vars[i].split("=");
+                     if(pair[0] == variable){return pair[1];}
+             }
+             return(false);
+      }
 
-    <tr> -->
-      <td><button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>
-      </td>
-    </tr>
-  <table>
+      function setSelectedIndex(s)
+      {
+        s.selected = true;
+        return;
+      }
+      var strIndustryName = "industry";
+      var strIndustryVal = getQueryVariable("industry");
+      var strIndustryConcat = strIndustryName.concat(strIndustryVal);
 
-  <script>
-  function getQueryVariable(variable)
-  {
-         var query = window.location.search.substring(1);
-         var vars = query.split("&");
-         for (var i=0;i<vars.length;i++) {
-                 var pair = vars[i].split("=");
-                 if(pair[0] == variable){return pair[1];}
-         }
-         return(false);
-  }
+      var strExpertiseName = "expertise";
+      var strExpertiseVal = getQueryVariable("expertise");
+      var strExpertiseConcat = strExpertiseName.concat(strExpertiseVal);
 
-  function setSelectedIndex(s)
-  {
-    s.selected = true;
-    return;
-  }
-  var strIndustryName = "industry";
-  var strIndustryVal = getQueryVariable("industry");
-  var strIndustryConcat = strIndustryName.concat(strIndustryVal);
+      var strExperienceName = "experience";
+      var strExperienceVal = getQueryVariable("experience");
+      var strExperienceConcat = strExperienceName.concat(strExperienceVal);
 
-  var strExpertiseName = "expertise";
-  var strExpertiseVal = getQueryVariable("expertise");
-  var strExpertiseConcat = strExpertiseName.concat(strExpertiseVal);
+      var strAreaName = "area";
+      var strAreaVal = getQueryVariable("area");
+      var strAreaConcat = strAreaName.concat(strAreaVal);
 
-  var strExperienceName = "experience";
-  var strExperienceVal = getQueryVariable("experience");
-  var strExperienceConcat = strExperienceName.concat(strExperienceVal);
+      setSelectedIndex(document.getElementById(strIndustryConcat));
+      setSelectedIndex(document.getElementById(strExpertiseConcat));
+      setSelectedIndex(document.getElementById(strExperienceConcat));
+      setSelectedIndex(document.getElementById(strAreaConcat));
+      </script>
 
-  var strAreaName = "area";
-  var strAreaVal = getQueryVariable("area");
-  var strAreaConcat = strAreaName.concat(strAreaVal);
-
-  setSelectedIndex(document.getElementById(strIndustryConcat));
-  setSelectedIndex(document.getElementById(strExpertiseConcat));
-  setSelectedIndex(document.getElementById(strExperienceConcat));
-  setSelectedIndex(document.getElementById(strAreaConcat));
-  </script>
-
-  <br>
-  <br>
-  {% if expert_list %}
-    <div>
-      <ul>
-        {% for expert in expert_list %}
-          <li>
-            {% if expert.id in can_views %}
-            <img src="/media/{{ expert.user.username }}.jpg" style="width:135px; height:144px" onerror="this.src='/static/images/empty_headshot.bmp';" />
-            {% else %}
-            <img src="/static/images/empty_headshot.bmp" style="width:135px; height:144px" onerror="this.src='/static/images/empty_headshot.bmp';" />
-            {% endif %}
-
-            <h3> <a href="/profile/{{ expert.user.username }}">{{ expert.user }}</a>
-            </h3>
-            <p>{{ expert.description_text}}</p>
-            <p>{{ expert.email}}</p>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-      {% if is_paginated %}
-          <div class="pagination" >
-              <span class="page-links">
-                  {% if page_obj.has_previous %}
-                      <ul class="pager">
-                      <a id="prePage" href="?page={{ page_obj.previous_page_number }}">previous</a>
-                      </ul>
-                      <script>
-                       var prePage = document.getElementById("prePage");
-                       var originalString = prePage.getAttribute("href");
-                       if(getQueryVariable("industry") != false)
-                       {
-                         var concatStr = originalString.concat(
-                           "&industry=",getQueryVariable("industry"),
-                           "&expertise=",getQueryVariable("expertise"),
-                           "&experience=",getQueryVariable("experience"),
-                           "&area=",getQueryVariable("area"));
-                         prePage.setAttribute("href", concatStr);
-                       }
-                      </script>
-                  {% endif %}
-                  <span class="page-current">
-                      Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                  </span>
-                  {% if page_obj.has_next %}
-                      <ul class="pager">
-                      <a id="nextPage" href="?page={{ page_obj.next_page_number }}">next</a>
-                      </ul>
-                      <script>
-                       var prePage = document.getElementById("nextPage");
-                       var originalString = prePage.getAttribute("href");
-                       if(getQueryVariable("industry") != false)
-                       {
-                         var concatStr = originalString.concat(
-                           "&industry=",getQueryVariable("industry"),
-                           "&expertise=",getQueryVariable("expertise"),
-                           "&experience=",getQueryVariable("experience"),
-                           "&area=",getQueryVariable("area"));
-                         prePage.setAttribute("href", concatStr);
-                       }
-                      </script>
-                  {% endif %}
-              </span>
+      <br>
+      <br>
+      <div class="col-sm-12">
+      <br>
+      <br>
+      {% if expert_list %}
+        <div class="row">
+          <div class="col-sm-12">
+            {% for expert in expert_list %}
+            <div class="row expert-list">
+              <a href="/profile/{{ expert.user.username }}">
+              <div class="col-sm-3 col-xs-4">
+                {% if expert.id in can_views %}
+                <img src="/media/{{ expert.user.username }}.jpg" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';" />
+                {% else %}
+                <img src="/static/images/empty_headshot.bmp" style="width:100%" onerror="this.src='/static/images/empty_headshot.bmp';" />
+                {% endif %}
+              </div>
+              </a>
+              <div class="col-sm-9 col-sm-8">
+                <h3>
+                  <a href="/profile/{{ expert.user.username }}">{{ expert.user }}</a>
+                </h3>
+                <p>{{ expert.description_text}}</p>
+                <p>{{ expert.email}}</p>
+              </div>
+            </div>
+            {% endfor %}
           </div>
+        </div>
+          {% if is_paginated %}
+              <div class="pagination" >
+                  <span class="page-links">
+                      {% if page_obj.has_previous %}
+                          <ul class="pager">
+                          <a id="prePage" href="?page={{ page_obj.previous_page_number }}">previous</a>
+                          </ul>
+                          <script>
+                           var prePage = document.getElementById("prePage");
+                           var originalString = prePage.getAttribute("href");
+                           if(getQueryVariable("industry") != false)
+                           {
+                             var concatStr = originalString.concat(
+                               "&industry=",getQueryVariable("industry"),
+                               "&expertise=",getQueryVariable("expertise"),
+                               "&experience=",getQueryVariable("experience"),
+                               "&area=",getQueryVariable("area"));
+                             prePage.setAttribute("href", concatStr);
+                           }
+                          </script>
+                      {% endif %}
+                      <span class="page-current">
+                          Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                      </span>
+                      {% if page_obj.has_next %}
+                          <ul class="pager">
+                          <a id="nextPage" href="?page={{ page_obj.next_page_number }}">next</a>
+                          </ul>
+                          <script>
+                           var prePage = document.getElementById("nextPage");
+                           var originalString = prePage.getAttribute("href");
+                           if(getQueryVariable("industry") != false)
+                           {
+                             var concatStr = originalString.concat(
+                               "&industry=",getQueryVariable("industry"),
+                               "&expertise=",getQueryVariable("expertise"),
+                               "&experience=",getQueryVariable("experience"),
+                               "&area=",getQueryVariable("area"));
+                             prePage.setAttribute("href", concatStr);
+                           }
+                          </script>
+                      {% endif %}
+                  </span>
+              </div>
+          {% endif %}
+      {% else %}
+          <h3>Experts</h3>
+          <p>No experts found in this area, please change search condition</p>
       {% endif %}
-  {% else %}
-      <h3>Experts</h3>
-      <p>No experts found in this area, please change search condition</p>
-  {% endif %}
+      </div>
 
+
+    </div>
+  </div>
 </div> <!-- for Container -->
 {% endblock %}
