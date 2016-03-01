@@ -122,6 +122,8 @@ def getProjectFromPost(request, expectStatus, require_expert):
       project = Project.objects.get(pk=project_id_val)
     except ObjectDoesNotExist:
       return None
+    print(project.state)
+    print(expectStatus)
     if(project.state not in expectStatus):
       return None
     if hasPermission(request, project, require_expert) == False:
@@ -238,7 +240,8 @@ def clientconfirm(request):
       confirm_val = request.POST['accept_finish']
       if confirm_val == 'Y': #Accept finish
         project.state = 'CC'
-        return HttpResponseRedirect('rate?project_id={{ project.pk }}')
+        project.save()
+        return HttpResponseRedirect('rate?project_id='+str(project.pk))
       elif confirm_val == 'N': #Need more work
         project.state = 'IP'
         redirectStr = 'clt_n'
@@ -265,9 +268,9 @@ def waitpayment(request):
 
 def rate(request):
   if request.method == 'GET':
-    return generalGetPage(request, 'rate',set(['CC']), None)
+    return generalGetPage(request, 'rate',set(['CC','PF']), None)
   else:
-    cur_project = getProjectFromPost(request, set(['CC']), None)
+    cur_project = getProjectFromPost(request, set(['CC','PF']), None)
     if cur_project == None:
         return HttpResponseRedirect('unavailable')
     if 'comment' not in request.POST or 'rating' not in request.POST:
