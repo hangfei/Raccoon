@@ -99,18 +99,18 @@ def userprofile_edit(request):
 
 
     if request.method == "POST":
-        if request.FILES:
-            handle_uploaded_file(request, profile_user.username)
-
         pform = None
         if is_expert:
-            pform = ConsultantSignupForm(request.POST, instance=person)
+            pform = ConsultantSignupForm(request.POST, request.FILES, instance=person)
         else:
-            pform = ClientSignupForm(request.POST, instance=person)
+            pform = ClientSignupForm(request.POST, request.FILES, instance=person)
         if pform.is_valid():
             pform.save()
             profile_user.first_name = pform.cleaned_data['first_name']
             profile_user.last_name = pform.cleaned_data['last_name']
+            if pform.cleaned_data['profile_image']:
+                user_profile.avatar = pform.cleaned_data['profile_image']
+                user_profile.save()
             profile_user.save()
             return HttpResponseRedirect('/profile/' + str(profile_user.username))
     else:
@@ -120,8 +120,7 @@ def userprofile_edit(request):
                             "last_name": profile_user.last_name,
                             "email": profile_user.email,
                             }
-            print(person.industries)
-            print(initial_data)
+
             pform = ConsultantSignupForm(instance=person, initial=initial_data)
             context = {'form': pform,
                        'industries':json.dumps(person.industries),

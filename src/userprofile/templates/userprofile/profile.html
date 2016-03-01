@@ -9,7 +9,7 @@
 
 <div class="row m-b-lg">
   {% if profile_user == user %}
-  <a class="btn btn-primary" href="/profile/edit">Edit User Profile</a>
+  <a class="btn btn-primary" href="/profile/edit"><i class="fa fa-pencil"></i> Edit User Profile</a>
   {% endif %}
   <div class="col-sm-8 col-sm-offset-2 text-center">
     <br>
@@ -45,20 +45,19 @@
     {% if is_expert %}
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">Summary</h4>
+        <h4 class="card-title"><i class="fa fa-file-text"></i> Summary</h4>
         <p>{{ person.description_text }}</p>
       </div>
     </div>
     {% endif %}
   </div>
 
-  <div class="col-sm-4 col-sm-offset-2 text-center">
+  <div class="col-sm-8 col-sm-offset-2">
     <div class="card">
-      <div class="card-block text-center">
-        <h4 class="card-title">User Information</h4>
+      <div class="card-block">
+        <h4 class="card-title"><i class="fa fa-user"></i> User Information</h4>
         {% if can_view_personal_info %}
-        <p>First name: {{ profile_user.first_name }}</p>
-        <p>Last name: {{ profile_user.last_name }}</p>
+        <p>Name: {{ profile_user.first_name }} {{ profile_user.last_name }}</p>
           {% if user_profile.work_phone_number %}
           <p>Work Phone number: {{user_profile.work_phone_number}}
           {% endif %}
@@ -74,8 +73,7 @@
         <p>Email: {{ profile_user.email }}</p>
         {% else %}
           {% if is_expert %}
-          <i class="fa fa-lock fa-lg"></i>
-          <p>You havn't worked with this expert before. Personal information of this expert is hidden.</p>
+          <p><i class="fa fa-lock fa-lg"></i> You havn't worked with this expert before. Personal information of this expert is hidden.</p>
           {% else %}
           <p>Personal information is hidden.</p>
           {% endif %}
@@ -83,14 +81,14 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-4 text-center">
+  <div class="col-sm-8 col-sm-offset-2">
     <div class="card">
-      <div class="card-block text-center">
+      <div class="card-block">
 
         {% if is_expert %}
-        <h4 class="card-title">Expert Profile</h4>
+        <h4 class="card-title"><i class="fa fa-list"></i> Expert Profile</h4>
         {% else %}
-        <h4 class="card-title">Client Profile</h4>
+        <h4 class="card-title"><i class="fa fa-list"></i> Client Profile</h4>
         {% endif %}
         {% if person %}
           {% if is_expert %}
