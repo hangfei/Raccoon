@@ -163,7 +163,8 @@ def create(request):
 
     # if a GET (or any other method) we'll create a blank form
     else:
-        if isClient(request) == False:
+        result = isClient(request)
+        if result == False or result ==None:
           return HttpResponseRedirect('clientonly')
         form = ProjectForm(label_suffix=' ')
 
