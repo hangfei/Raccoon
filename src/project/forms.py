@@ -38,7 +38,6 @@ EXPERTISE_CHOICES = (
     ("PD","Product Design and Development"),
     ("PM","Product Management"),
     ("EN","Entrepreneurship"),
-    ("CS","Corporate Strategy"),
     ("CC","Cloud Computing"),
     ("AD","Advertisement"),
     ("CL","Corporate Law"),
