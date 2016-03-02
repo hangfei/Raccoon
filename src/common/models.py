@@ -139,7 +139,7 @@ class Client(models.Model):
         return client
 
     def __str__(self):
-        return self.user.first_name + " " + self.user.last_name
+        return self.user.first_name + " " + self.user.last_name + "(username:" + self.user.username + ")"
 
     rating = models.DecimalField(max_digits=3, decimal_places=1, default=0)
     comments_num = models.PositiveIntegerField(default=0)
@@ -291,7 +291,7 @@ class Expert(models.Model):
         return self.EXPERT_STATUS_MAPPING.get(self.status)
 
     def __str__(self):
-        return self.user.first_name + " " + self.user.last_name
+        return self.user.first_name + " " + self.user.last_name + "(username:" + self.user.username + ")"
 
 class Project(models.Model):
 

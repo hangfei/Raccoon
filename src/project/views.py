@@ -255,7 +255,7 @@ def waitassignexpert(request):
     return generalGetPage(request, 'waitassignexpert', set(['PS','EA']), False)
 
 def waitclientconfirm(request):
-    return generalGetPage(request, 'waitclientconfirm', set(['PF']), True)
+    return generalGetPage(request, 'waitclientconfirm', set(['ET']), True)
 
 def waitexpertstart(request):
     return generalGetPage(request, 'waitexpertstart', set(['CA']), False)
