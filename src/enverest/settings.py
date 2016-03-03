@@ -112,6 +112,10 @@ WSGI_APPLICATION = 'enverest.wsgi.application'
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 STATIC_ROOT = "/home/ec2-user/myproject/Raccoon/static_files"
 
+#If the request URL does not match any of the pattern in the URLconf,
+#HTTPredirect is issued to the same URL appended.
+APPEND_SLASH = True
+
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
