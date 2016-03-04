@@ -56,7 +56,6 @@ INSTALLED_APPS = [
     'bootstrapform',
     'postman',
     'payment',
-    'upload',
     'storages',
     'django.contrib.admin',
     'django.contrib.auth',
