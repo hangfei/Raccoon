@@ -161,6 +161,8 @@ AWS_STORAGE_BUCKET_NAME = 'hnlin-godjango-episode-46'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
+AWS_PRELOAD_METADATA = True
+
 #                        AWS SECTION END
 ##################################################################
 
