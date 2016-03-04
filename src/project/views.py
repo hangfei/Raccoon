@@ -142,7 +142,7 @@ def create(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             new_project = Project(client=getCurrentRole(request),
-                                  expert=(Expert.objects.all())[0],
+                                  #expert=(Expert.objects.all())[0],
                                   title_text=form.cleaned_data['project_name'],
                                   info_text=form.cleaned_data['project_description'],
                                   expert_pref_text=form.cleaned_data['project_expert_preference'],
@@ -256,7 +256,7 @@ def waitassignexpert(request):
     return generalGetPage(request, 'waitassignexpert', set(['PS','EA']), False)
 
 def waitclientconfirm(request):
-    return generalGetPage(request, 'waitclientconfirm', set(['ET']), True)
+    return generalGetPage(request, 'waitclientconfirm', set(['PF','ET']), True)
 
 def waitexpertstart(request):
     return generalGetPage(request, 'waitexpertstart', set(['CA']), False)

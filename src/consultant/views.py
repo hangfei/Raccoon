@@ -36,6 +36,7 @@ def getUser(request):
 
 def dashboard(request):
     person = getUser(request)
+    print("type(user)")
     if type(person) == Expert:
         project_list = Project.objects.filter(expert=person)
         context = { 'project_list': project_list }
