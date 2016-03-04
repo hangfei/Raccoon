@@ -344,7 +344,6 @@ class LoginForm(forms.Form):
     user = None
 
     def clean(self):
-        print('clean')
         if self._errors:
             return
         user = auth.authenticate(**self.user_credentials())
