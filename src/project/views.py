@@ -142,7 +142,7 @@ def create(request):
         if form.is_valid():
             # process the data in form.cleaned_data as required
             new_project = Project(client=getCurrentRole(request),
-                                  #expert=(Expert.objects.all())[0],
+                                  expert=(Expert.objects.all())[0],
                                   title_text=form.cleaned_data['project_name'],
                                   info_text=form.cleaned_data['project_description'],
                                   expert_pref_text=form.cleaned_data['project_expert_preference'],
