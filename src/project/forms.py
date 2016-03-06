@@ -64,18 +64,18 @@ RATING_CHOICES = (
 class ProjectForm(forms.Form):
     project_name = forms.CharField(label='Name', max_length=200,
                                    widget=forms.TextInput(
-                                   	    attrs={'placeholder':'Give your project a name',
+                                   	    attrs={'placeholder':'Give your engagement request a name',
                                    	           'size':'60'}))
     project_description = forms.CharField(label='Description', max_length=10000,
                                            widget=forms.Textarea(
-                                   	         attrs={'placeholder':'Describe what needs to be done for the project',
+                                   	         attrs={'placeholder':'Describe what needs to be done for the engagement',
                                                     'rows':10,
                                                     'cols':59}))
     project_expert_industry = forms.ChoiceField(label='Expert Industry', choices=INDUSTRY_CHOICES, required=True)
     project_expert_expertise = forms.ChoiceField(label='Expert Expertise', choices=EXPERTISE_CHOICES, required=True)
     project_expert_preference = forms.CharField(label='Expert Preference', max_length=1000,
                                            widget=forms.Textarea(
-                                   	         attrs={'placeholder':'Tell us what kind of expert do you want to work with',
+                                   	         attrs={'placeholder':'Describe what kind of expert do you want to work with',
                                                     'rows':4,
                                                     'cols':59}))
     project_pub_date = forms.DateTimeField(label='Start Date', input_formats=['%Y-%m-%d'],

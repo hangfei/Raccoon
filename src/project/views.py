@@ -14,11 +14,11 @@ logger = logging.getLogger(__name__)
 state_message_option = {
     'ept_a':'The client will review it and get back to you',
     'ept_f':'The client will review your work and get back to you',
-    'ept_s':'Thank you for working on this project and the client will be notified soon',
-    'clt_s':'We will review your project and an expert will be assigned to you soon',
+    'ept_s':'Thank you for working on this engagement and the client will be notified soon',
+    'clt_s':'We will review your engagement and an expert will be assigned to you soon',
     'clt_c':'You will receive the contract and payment information soon',
-    'clt_n':'The expert will keep working on the project',
-    'clt_y':'The project is now finished',
+    'clt_n':'The expert will keep working on the engagement',
+    'clt_y':'The engagement is now finished',
     'clt_a':'An administrator will contact you soon',
     'rating':'Your rating will help us improve',
 }

@@ -13,7 +13,7 @@
 <p></p>
 <br>
 <a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a>
-<p>The expert has finished this project. Do you confirm the work?</p>
+<p>The expert has finished this engagement. Do you confirm the work?</p>
 <form id="choiceForm" action="{% url 'project:clientconfirm' %}" method="POST">{% csrf_token %}
 <div class="dropdown">
 <select name="accept_finish">
