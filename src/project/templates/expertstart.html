@@ -13,7 +13,7 @@
 <p></p>
 <a href="/messages/write?id_recipients={{ project.client.user }}&id_subject={{ project.title_text }}" >Write messages to the client</a>
 <p><b>After you received the contract from the client, click "start" button to start working on this project. You can also download <a href="{% static 'docs/EXPERT_ADVISORY_AGREEMENT_TEMPLATE.docx' %}">Expert Advisory Agreement Template</a> and <a href="{% static 'docs/TWO_WAY_NDA_TEMPLATE.docx' %}">NDA Template</a> here.<b></p>
-<form id="choiceForm" action="{% url 'expertstart' %}" method="POST">{% csrf_token %}
+<form id="choiceForm" action="{% url 'project:expertstart' %}" method="POST">{% csrf_token %}
 <button class="pure-button pure-button-primary" type="submit" value="Submit" > Start </button>
 </form>
 

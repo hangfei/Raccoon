@@ -41,12 +41,10 @@ def getCurrentRole(request):
         is_expert = False
         clients = profile_user.client_set.all()
         person = clients[0]
-        print(person)
     elif user_profile.user_type == 'EXPERT':
         is_expert = True
         experts = profile_user.expert_set.all()
         person = experts[0]
-        print(person)
     return person
 
 def hasPermission(request, project, require_expert):
@@ -71,8 +69,6 @@ def hasPermission(request, project, require_expert):
           return False
         clients = profile_user.client_set.all()
         person = clients[0]
-        print(person)
-        print(project.client)
         if person != project.client:
             return False
     elif user_profile.user_type == 'EXPERT':
@@ -80,8 +76,6 @@ def hasPermission(request, project, require_expert):
           return False
         experts = profile_user.expert_set.all()
         person = experts[0]
-        print(person)
-        print(project.client)
         if person != project.expert:
             return False
     else:
@@ -122,8 +116,6 @@ def getProjectFromPost(request, expectStatus, require_expert):
       project = Project.objects.get(pk=project_id_val)
     except ObjectDoesNotExist:
       return None
-    print(project.state)
-    print(expectStatus)
     if(project.state not in expectStatus):
       return None
     if hasPermission(request, project, require_expert) == False:

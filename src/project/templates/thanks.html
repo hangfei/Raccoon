@@ -4,7 +4,7 @@
 {% block content %}
 
 <div class="container">
-<img src="/static/images/thankyou.jpg" style="width:304px;height:228px;" align="middle">
+<img src="{% static 'images/thankyou.jpg' %}" style="width:304px;height:228px;" align="middle">
 <h5>We have received your request</h5>
 <h5>{{message_display}}</h5>
 <a href="/consultant/dashboard">Back to dash board</a>

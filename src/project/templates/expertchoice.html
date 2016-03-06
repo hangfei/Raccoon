@@ -12,7 +12,7 @@
 {% block choice_content %}
 <p></p>
 <p>Are you taking this project?</p>
-<form id="choiceForm" action="{% url 'expertchoice' %}" method="POST">{% csrf_token %}
+<form id="choiceForm" action="{% url 'project:expertchoice' %}" method="POST">{% csrf_token %}
 <div class="dropdown">
 <select name="accept_project">
     <option id="Accept" value="A">Accept</option>
