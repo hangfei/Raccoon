@@ -29,7 +29,7 @@ STATICFILES_DIRS = [join(BASE_DIR, 'static')]
 SECRET_KEY = '(^lbak@7d!0m-vqbll15t%xk29*9_un*k+rkvdq)t05+m&px-('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = []
 

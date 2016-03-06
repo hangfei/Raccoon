@@ -12,15 +12,22 @@
 
     <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
     <link rel="stylesheet" type="text/css" href="{% static 'rating.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.css' %}" />
     <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
 
-
-    <script src="{% static 'jquery-2.1.4.min.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'jquery-ui-1.11.4/jquery-ui.min.css' %}">
-    <script src="{% static 'jquery-ui-1.11.4/jquery-ui.min.js' %}"></script>
-
-    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>if (!window.jQuery) { document.write('<script src="{% static 'jquery-2.1.4.min.js' %}"><\/script>'); }
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+    <script>if (!window.jQuery.ui) { document.write('<script src="{% static 'jquery-ui-1.11.4/jquery-ui.min.css' %}"><\/script>'); }
+    </script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <!-- not very sure about css fallback -->
+    <script>if (!window.jQuery.ui) { document.write('<link rel="stylesheet" href="{% static 'jquery-ui-1.11.4/jquery-ui.min.css' %}">'); }
+    </script>
+    <!-- <link rel="stylesheet" href="{% static 'jquery-ui-1.11.4/jquery-ui.min.css' %}"> -->
+    <!-- <script src="{% static 'jquery-ui-1.11.4/jquery-ui.min.js' %}"></script> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap/css/bootstrap.min.css' %}" />
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
   </head>
 
