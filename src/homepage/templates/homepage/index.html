@@ -157,7 +157,7 @@ blockquote:after {
     <div class="col-sm-1">
     </div>
     <div class="col-sm-3 start-step">
-      <a href="project/create">
+      <a href="{% url 'project:create'}">
       <span class="fa-stack fa-3x">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-inverse fa-stack-1x">1</i>
@@ -166,7 +166,7 @@ blockquote:after {
       </a>
     </div>
     <div class="col-sm-4 start-step">
-      <a href="project/create">
+      <a href="{% url 'project:create'}">
       <span class="fa-stack fa-3x">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-inverse fa-stack-1x">2</i>
@@ -176,7 +176,7 @@ blockquote:after {
     </div>
 
     <div class="col-sm-3 start-step">
-      <a href="project/create">
+      <a href="{% url 'project:create'}">
       <span class="fa-stack fa-3x">
         <i class="fa fa-circle fa-stack-2x"></i>
         <i class="fa fa-inverse fa-stack-1x">3</i>
@@ -192,12 +192,12 @@ blockquote:after {
 
   <div class="row">
     <div class="col-sm-4 col-sm-offset-2 text-center">
-      <a href="search" class="btn btn-primary btn-lg">Search for Experts</a>
+      <a href="{% url 'search:expert-list' %}" class="btn btn-primary btn-lg">Search for Experts</a>
       <br>
       <br>
     </div>
     <div class="col-sm-4 text-center">
-      <a href="project/create" class="btn btn-primary btn-lg">Post your Engagement</a>
+      <a href="{% url 'project:create' %}" class="btn btn-primary btn-lg">Post your Engagement</a>
       <br>
       <br>
     </div>
@@ -429,7 +429,7 @@ blockquote:after {
   <div class="col-sm-12 text-center">
     <br>
     <br>
-    <a class="btn btn-primary" href="/project/create">Submit Your Engagement Request</a>
+    <a class="btn btn-primary" href="{% url 'project:create' %}">Submit Your Engagement Request</a>
   </div>
 </div>
 

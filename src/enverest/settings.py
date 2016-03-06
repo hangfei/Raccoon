@@ -29,7 +29,7 @@ STATICFILES_DIRS = [join(BASE_DIR, 'static')]
 SECRET_KEY = '(^lbak@7d!0m-vqbll15t%xk29*9_un*k+rkvdq)t05+m&px-('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -80,6 +80,7 @@ MIDDLEWARE_CLASSES = [
     "account.middleware.TimezoneMiddleware",
 ]
 
+APPEND_SLASH = True
 ROOT_URLCONF = 'enverest.urls'
 
 TEMPLATES = [
@@ -161,8 +162,6 @@ AWS_STORAGE_BUCKET_NAME = 'hnlin-godjango-episode-46'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
-AWS_PRELOAD_METADATA = True
-
 #                        AWS SECTION END
 ##################################################################
 
@@ -170,7 +169,7 @@ AWS_PRELOAD_METADATA = True
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 LANGUAGES = (
     ('en', _('English')),
-    ('zh-hans', _('Chinese')),
+    # ('zh-hans', _('Chinese')zh),
 )
 
 # A list of directories where Django looks for translation files.

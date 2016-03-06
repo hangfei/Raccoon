@@ -32,21 +32,22 @@
           <button class="navbar-toggler pull-xs-right hidden-sm-up" type="button" data-toggle="collapse" data-target="#bd-main-nav">
             ☰
           </button>
-          <a class="navbar-brand hidden-sm-up" href="/">
+          <a class="navbar-brand hidden-sm-up" href="{% url 'homepage:index' %}">
             {% trans "Enverest" %}
           </a>
         </div>
         <div class="navbar-toggleable-xs collapse" id="bd-main-nav">
           <nav class="nav navbar-nav">
             <a class="nav-item nav-link active" href="/"><img src="{% static 'images/company_elements/white_logo.png' %}" alt="Card image cap" style="height: 36px; width: 70px;"></a>
-            <a class="nav-item nav-link" id="about_us" href="/about_us">{% trans "About Us" %}</a>
-            <a class="nav-item nav-link" id="service" href="/service">{% trans "Services" %}</a>
-            <a class="nav-item nav-link" id="how_it_works" href="/how_it_works">{% trans "How It Works" %}</a>
-            <a class="nav-item nav-link" id="contact_us" href="/contact_us">{% trans "Contact Us" %}</a>
+            <a class="nav-item nav-link" id="about_us" href="{% url 'homepage:about_us' %}">{% trans "About Us" %}</a>
+            <a class="nav-item nav-link" id="service" href="{% url 'homepage:service' %}">{% trans "Services" %}</a>
+            <a class="nav-item nav-link" id="how_it_works" href="{% url 'homepage:how_it_works' %}">{% trans "How It Works" %}</a>
+            <a class="nav-item nav-link" id="contact_us" href="{% url 'homepage:contact_us' %}">{% trans "Contact Us" %}</a>
           </nav>
 
 
           <nav class="nav navbar-nav pull-xs-right">
+          <!-- Don't support Chinese language now. -->
 <!--             <a class="nav-item nav-link" href="javascript:set_language('{% url 'set_language' %}', 'zh-hans')">
               <img src="{% static 'images/internalization/china_chinese_flag_circle-512.png' %}" alt="Card image cap" style="height: 18px; width: 18px;">
             </a>
@@ -56,13 +57,13 @@
             <a class="nav-item nav-link" href="https://www.linkedin.com/company/enverest-inc-"><i class="fa fa-linkedin-square fa-2x"></i></a>
             <a class="nav-item nav-link" href="mailto:contact@enverest.com" target="_top"><i class="fa fa-envelope fa-2x"></i></a>
             {% if user.is_authenticated %}
-            <a class="nav-item nav-link" id="login" href="/account/logout">{% trans "Sign Out" %}</a>
+            <a class="nav-item nav-link" id="logout" href="{% url 'account_logout' %}">{% trans "Sign Out" %}</a>
             <a class="nav-item nav-link" id="signup" href="/messages">{% trans "Message" %}</a>
-            <a class="nav-item nav-link" id="dashboard" href="/consultant/dashboard">{% trans "Dashboard" %}</a>
+            <a class="nav-item nav-link" id="dashboard" href="{% url 'consultant:dashboard' %}">{% trans "Dashboard" %}</a>
             <a class="nav-item nav-link" id="signup" href="/profile/{{user.get_username}}">{% trans "Profile" %}</a>
             {% else %}
-            <a class="nav-item nav-link" id="login" href="/account/login">{% trans "Sign In" %}</a>
-            <a class="nav-item nav-link" id="signup" href="/account/signup">{% trans "Sign Up" %}</a>
+            <a class="nav-item nav-link" id="login" href="{% url 'account_login' %}">{% trans "Sign In" %}</a>
+            <a class="nav-item nav-link" id="signup" href="{% url 'account_sign_up' %}">{% trans "Sign Up" %}</a>
             {% endif %}
           </nav>
         </div>
@@ -95,18 +96,18 @@
       <footer class="footer clearfix">
         <ul class="footer-list">
             <li class="footer-list-item">
-              <a class="footer-list-link" href="/about_us">© 2015 Enverest, Inc.</a>
+              <a class="footer-list-link" href="{% url 'homepage:about_us' %}">© 2015 Enverest, Inc.</a>
             </li>
             <li class="footer-list-item">
-              <a class="footer-list-link" href="/about_us">About</a>
-            </li>
-
-            <li class="footer-list-item">
-              <a class="footer-list-link" href="/terms_of_service">Terms</a>
+              <a class="footer-list-link" href="{% url 'homepage:about_us' %}">About</a>
             </li>
 
             <li class="footer-list-item">
-              <a class="footer-list-link" href="/how_it_works/#faq">FAQ</a>
+              <a class="footer-list-link" href="{% url 'homepage:terms_of_service' %}">Terms</a>
+            </li>
+
+            <li class="footer-list-item">
+              <a class="footer-list-link" href="{% url 'homepage:terms_of_service' %}#faq">FAQ</a>
             </li>
         </ul>
       </footer>

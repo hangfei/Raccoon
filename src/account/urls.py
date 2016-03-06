@@ -11,7 +11,7 @@ from . import views
 
 urlpatterns = [
     url(r'^set_language/$', views.set_account_language, name='set_account_language'),
-    url(r'^signup/$', views.sign_up, name='sign_up'),
+    url(r'^signup/$', views.sign_up, name='account_sign_up'),
     url(r"^signup/client/$", ClientSignupView.as_view(), name="client_account_signup"),
     url(r"^signup/consultant/$", ConsultantSignupView.as_view(), name="consultant_account_signup"),
     url(r"^login/$", LoginView.as_view(), name="account_login"),

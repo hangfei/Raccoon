@@ -3,6 +3,7 @@ from django.conf.urls import url
 #from . import views
 from search.views import ExpertDetailView, ExpertListView
 
+app_name = 'search'
 urlpatterns = [
     #url(r'^$', views.index, name='index'),
     #url(r'^$', ExpertListView.as_view(), name='expert-list'),
