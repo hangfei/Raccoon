@@ -247,7 +247,7 @@
 
           <div>
             <ul>
-              <p><b>You can download <a href="{% static 'docs/Engagement_Invoice_v1.xlsx' %}">Engagement Invoice </a> from here, fill it out and send to us<b>.</p>
+              <p><b>You can download <a href="{% static 'docs/Engagement_Invoice_v1.xlsx' %}">Engagement Invoice </a> from here, fill it out and send to us at <a href="mailto:contact@enverest.com">contact@enverest.com</a><b>.</p>
             </ul>
           </div>
         </div>
@@ -259,6 +259,27 @@
 
 </div> <!-- for Container -->
 
+<script>
+  $(document).ready(function(){
+    $(".nav-item.nav-link").removeClass("active");
+    $('#dashboard').addClass('active')
+
+
+    // http://stackoverflow.com/questions/7862233/twitter-bootstrap-tabs-go-to-specific-tab-on-page-reload-or-hyperlink
+    // Javascript to enable link to tab
+    var url = document.location.toString();
+    if (url.match('#')) {
+        $('.nav-tabs a[href=#'+url.split('#')[1]+']').tab('show') ;
+    }
+
+    // Change hash for page-reload
+    $('.nav-tabs a').on('shown.bs.tab', function (e) {
+        window.location.hash = e.target.hash;
+        window.scrollTo(0, 0);
+    })
+  });
+
+</script>
 
 
 {% endblock %}

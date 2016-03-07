@@ -10,9 +10,10 @@
 
 
 {% block choice_content %}
-<p></p>
 
 <p></p>
+<p><b>Please rate the client or expert you work with</b></p>
+
 <form class="rating" id="choiceForm" action="{% url 'project:rate' %}" method="POST">{% csrf_token %}
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
     <input type="radio" id="star4half" name="rating" value="4.5" /><label class="half" for="star4half" title="Pretty good - 4.5 stars"></label>

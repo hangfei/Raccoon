@@ -31,59 +31,44 @@ from django.core.validators import RegexValidator
 class ConsultantSignupForm(ModelForm):
 
     class Meta:
-        INDUSTRY_CHOICES = (
-          ("MC","Management Consulting"),
-          ("EN","Energy"),
-          ("HI","Health care and Life Sciences"),
-          ("BI","BioPharma"),
-          ("ED","Education"),
-          ("SE","Semiconductor"),
-          ("SW","Software"),
-          ("MB","Mobile Internet and Computing"),
-          ("DS","Data and Storage"),
-          ("VR","VR/AI/Robotics"),
-          ("IT","Internet of Things"),
-          ("GB","Gaming and Media"),
-          ("ET","Entertainment"),
-          ("TL","Transport and Logistics"),
-          ("AU","Automotive"),
-          ("CG","Consumer Goods"),
-          ("OT","Others"),
-        )
         model = Expert
         fields = ['description_text', 'area', 'industries', 'expertise', 'experience', 'education']
         widgets = {
+          'description_text':forms.Textarea(
+                                        attrs={'placeholder':'Introduce yourself to the potential clients',
+                                                'rows':10,
+                                                'cols':39}),
            'industries':forms.CheckboxSelectMultiple
         }
 
     username = forms.CharField(
-        label=_("Username"),
+        label=_("Username *"),
         max_length=30,
         widget=forms.TextInput(),
         required=True
     )
     first_name = forms.CharField(
-        label=_("Firstname"),
+        label=_("Firstname *"),
         max_length=30,
         widget=forms.TextInput(),
         required=True
     )
     last_name = forms.CharField(
-        label=_("Lastname"),
+        label=_("Lastname *"),
         max_length=30,
         widget=forms.TextInput(),
         required=True
     )
     password = forms.CharField(
-        label=_("Password"),
+        label=_("Password *"),
         widget=forms.PasswordInput(render_value=False)
     )
     password_confirm = forms.CharField(
-        label=_("Password (again)"),
+        label=_("Password (again) *"),
         widget=forms.PasswordInput(render_value=False)
     )
     email = forms.EmailField(
-        label=_("Email"),
+        label=_("Email *"),
         widget=forms.TextInput(), required=True)
 
     profile_image = forms.FileField(
@@ -166,7 +151,10 @@ class ConsultantSignupForm(ModelForm):
         required=False,
         widget=forms.HiddenInput()
     )
-
+    
+    def __init__(self, *args, **kwargs):
+        super(ConsultantSignupForm, self).__init__(*args, **kwargs)
+        self.fields['description_text'].label = "Description *"
     def clean_username(self):
         if not alnum_re.search(self.cleaned_data["username"]):
             raise forms.ValidationError(_("Usernames can only contain letters, numbers and underscores."))
@@ -196,33 +184,33 @@ class ConsultantSignupForm(ModelForm):
 class ClientSignupForm(forms.Form):
 
     username = forms.CharField(
-        label=_("Username"),
+        label=_("Username *"),
         max_length=30,
         widget=forms.TextInput(),
         required=True
     )
     first_name = forms.CharField(
-        label=_("Firstname"),
+        label=_("Firstname *"),
         max_length=30,
         widget=forms.TextInput(),
         required=True
     )
     last_name = forms.CharField(
-        label=_("Lastname"),
+        label=_("Lastname *"),
         max_length=30,
         widget=forms.TextInput(),
         required=True
     )
     password = forms.CharField(
-        label=_("Password"),
+        label=_("Password *"),
         widget=forms.PasswordInput(render_value=False)
     )
     password_confirm = forms.CharField(
-        label=_("Password (again)"),
+        label=_("Password (again) *"),
         widget=forms.PasswordInput(render_value=False)
     )
     email = forms.EmailField(
-        label=_("Email"),
+        label=_("Email *"),
         widget=forms.TextInput(), required=True)
 
     profile_image = forms.FileField(

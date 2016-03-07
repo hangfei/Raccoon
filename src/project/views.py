@@ -20,7 +20,8 @@ state_message_option = {
     'clt_n':'The expert will keep working on the engagement',
     'clt_y':'The engagement is now finished',
     'clt_a':'An administrator will contact you soon',
-    'rating':'Your rating will help us improve',
+    'ept_rating':'Your rating will help us improve',
+    'clt_rating':'Your rating will help us improve',
 }
 
 def getCurrentRole(request):
@@ -283,6 +284,7 @@ def rate(request):
         cur_expert.rating = (float((cur_expert.rating)*(cur_expert.comments_num))+float(rating))/(cur_expert.comments_num+1)
         cur_expert.comments_num += 1
         cur_expert.save()
+        return HttpResponseRedirect('thanks?last_action=clt_rating')
     else:
         new_comment = CommentForClient(project=cur_project,
                                        client=cur_project.client,
@@ -296,7 +298,7 @@ def rate(request):
         cur_client.rating = (float((cur_client.rating)*(cur_client.comments_num))+float(rating))/(cur_client.comments_num+1)
         cur_client.comments_num += 1
         cur_client.save()
-    return HttpResponseRedirect('thanks?last_action=rating')
+        return HttpResponseRedirect('thanks?last_action=ept_rating')
 
 def close(request):
     return generalGetPage(request, 'close',set(['PR','CC']), None)
@@ -324,6 +326,7 @@ def thanks(request):
     if 'last_action' in request.GET:
       message_val = request.GET['last_action']
       context = RequestContext(request, {
+           'last_action': message_val,
            'message_display': state_message_option[message_val],
       })
     return render(request, 'thanks.html', context)
