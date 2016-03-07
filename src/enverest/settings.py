@@ -153,6 +153,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ##################################################################
 #                        AWS SECTION
 ##################################################################
+# http://djangotricks.blogspot.com/2013/12/how-to-store-your-media-files-in-amazon.html
 DEFAULT_FILE_STORAGES = 'storages.backends.s3boto.S3BotoStorage'
 # AWS keys
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
@@ -162,6 +163,8 @@ AWS_STORAGE_BUCKET_NAME = 'hnlin-godjango-episode-46'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 
+AWS_S3_SECURE_URLS = False       # use http instead of https
+AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related query parameters for requests
 #                        AWS SECTION END
 ##################################################################
 
