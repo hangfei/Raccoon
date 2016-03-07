@@ -29,9 +29,9 @@
         </div>
         <div class="col-sm-4">
           {% if can_view_personal_info %}
-          <img src="{% static user_profile.avatar.name %}" style="width:100%" onerror="this.src='/static/images/empty_headshot.jpg';"/>
+          <img src="{% static user_profile.avatar.name %}" style="width:100%" onerror="this.src='{% static '/images/empty_headshot.jpg' %}';"/>
           {% else %}
-          <img src="/static/images/empty_headshot.jpg" style="width:100%" onerror="this.src='/static/images/empty_headshot.jpg';"/>
+          <img src="/static/images/empty_headshot.jpg" style="width:100%" onerror="this.src='{% static '/images/empty_headshot.jpg' %}';"/>
           {% endif %}
         </div>
         <div class="col-sm-4">
