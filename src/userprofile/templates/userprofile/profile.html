@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
+{% load expert_tags %}
 
 {% block content %}
 <div class="container">
@@ -38,6 +39,13 @@
         </div>
       </div>
       <p>Username: {{ profile_user.username }}</p>
+      {% if is_expert %}
+        {% if person.rating != 0 %}
+        <div style="margin-top:-1em">
+          <p class='text-muted'><img src="{% static '/images/rating/star_' %}{{ person.rating | half_round_rating}}.gif" />&nbsp {{ person.comments_num}} reviews</p>
+        </div>
+        {% endif %}
+      {% endif %}
     {% endif %}
   </div>
 

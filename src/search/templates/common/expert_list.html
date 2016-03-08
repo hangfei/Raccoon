@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% load staticfiles %}
 {% load i18n %}
-
+{% load expert_tags %}
 
 {% block content %}
 
@@ -195,6 +195,11 @@
                 <h3>
                   <a href="/profile/{{ expert.user.username }}">{{ expert.user }}</a>
                 </h3>
+                {% if expert.rating != 0 %}
+                <div style="margin-top:-0.8em">
+                  <p class='text-muted'><img src="{% static '/images/rating/star_' %}{{ expert.rating | half_round_rating}}.gif"/>&nbsp {{ expert.comments_num}} reviews</p>
+                </div>
+                {% endif %}
                 <p>{{ expert.description_text}}</p>
                 <p>{{ expert.email}}</p>
               </div>
