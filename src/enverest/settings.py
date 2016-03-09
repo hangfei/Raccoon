@@ -154,7 +154,6 @@ AUTH_PASSWORD_VALIDATORS = [
 #                        AWS SECTION
 ##################################################################
 # http://djangotricks.blogspot.com/2013/12/how-to-store-your-media-files-in-amazon.html
-DEFAULT_FILE_STORAGES = 'storages.backends.s3boto.S3BotoStorage'
 # AWS keys
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_ACCESS_KEY_ID = 'AKIAJOJ4LB2LY4U7KR4Q'

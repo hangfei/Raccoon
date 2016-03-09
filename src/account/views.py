@@ -4,6 +4,7 @@ from django.http import Http404, HttpResponseForbidden
 from django.shortcuts import redirect, get_object_or_404
 from django.utils.http import base36_to_int, int_to_base36
 from django.core.urlresolvers import reverse
+from django.core.files import File
 from django.utils.translation import ugettext_lazy as _
 from django.views.generic.base import TemplateResponseMixin, View
 from django.views.generic.edit import FormView
@@ -30,6 +31,7 @@ from django.shortcuts import render
 from django.contrib import messages
 import requests
 import urllib.request
+import os
 
 def sign_up(request):
     context = RequestContext(request, {
@@ -54,18 +56,18 @@ def set_account_language(request):
         return HttpResponse(status=204)
     return HttpResponse(status=400)
 
-def handle_uploaded_file(request, username):
+def handle_uploaded_file(form, request, username, created_profile):
     file_type_suffix = 'jpg'
     image_name = str(username)
     file_name = image_name + "." + file_type_suffix
     file_path = 'media/' + file_name
-    if 'linkedin_profile_image' in request.session:
-        urllib.request.urlretrieve(request.session['linkedin_profile_image'], file_path)
-    if request.FILES:
-        file = request.FILES['profile_image']
-        with open(file_path, 'wb+') as destination:
-            for chunk in file.chunks():
-                destination.write(chunk)
+    if not form.cleaned_data['profile_image'] and 'linkedin_profile_image' in request.session:
+        result = urllib.request.urlretrieve(request.session['linkedin_profile_image'], file_path)
+        created_profile.avatar.save(
+            os.path.basename(username),
+            File(open(result[0], 'rb'))
+        )
+        created_profile.save()
 
 class ClientSignupView(FormView):
 
@@ -181,9 +183,6 @@ class ClientSignupView(FormView):
         self.create_account(form)
         self.create_client(form)
         self.create_profile(form)
-
-        if self.request.method == 'POST':
-            handle_uploaded_file(self.request, self.created_user.username)
 
 
         self.after_signup(form)
@@ -420,7 +419,10 @@ class ConsultantSignupView(FormView):
             if 'pictureUrls' in get_result.json():
                 if 'values' in get_result.json()['pictureUrls']:
                     if get_result.json()['pictureUrls']['values']:
+                        print("ssssssss333ss")
                         self.request.session['linkedin_profile_image'] = get_result.json()['pictureUrls']['values'][0]
+                        print(type(self.request.session['linkedin_profile_image']))
+
             return super(ConsultantSignupView, self).get(*args, **kwargs)
         else:
             base_authorization_url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri='
@@ -493,10 +495,10 @@ class ConsultantSignupView(FormView):
             self.created_user.save()
         self.create_account(form)
         self.create_consultant(form)
-        self.create_profile(form)
+        created_profile = self.create_profile(form)
 
         if self.request.method == 'POST':
-            handle_uploaded_file(self.request, self.created_user.username)
+            handle_uploaded_file(form, self.request, self.created_user.username, created_profile)
 
         self.after_signup(form)
         if settings.ACCOUNT_EMAIL_CONFIRMATION_EMAIL and not email_address.verified:
