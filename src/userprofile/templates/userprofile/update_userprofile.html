@@ -11,6 +11,9 @@
   ul {
     list-style-type: none;
   }
+  span.help-block {
+    color: red;
+  }
 </style>
 
 <div class="row">
@@ -26,17 +29,15 @@
     <input type = "hidden" name="industriesString" value={{ industries }}>
     <input type = "hidden" name="expertiseString" value={{ expertise }}>
 <script>
-  preSelected("industries");
-  preSelected("expertise");
+
   function preSelected(s){
   var tempString = s.concat("String");
   var tokens = (document.getElementsByName(tempString)[0].value).split(",");
-  var i;
-  for(i = 0; i < tokens.length; ++i)
+  var i,j;
+  var inputs = document.getElementsByName(s);
+  for(i = 0; i < tokens.length; i++)
   {
-    var inputs = document.getElementsByName(s);
-    var j;
-    for(j = 0; j < inputs.length; ++j)
+    for(j = 0; j < inputs.length; j++)
     {
       if(inputs[j].value == tokens[i])
       {
@@ -45,8 +46,8 @@
     }
   }
 }
-  preSelected(industries);
-  preSelected(expertise);
+  preSelected("industries");
+  preSelected("expertise");
 </script>
 </div>
   <div class="col-md-4">

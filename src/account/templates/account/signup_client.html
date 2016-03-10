@@ -7,6 +7,12 @@
 {% block head_title %}{% trans "Sign up" %}{% endblock %}
 
 {% block content %}
+<style>
+
+ span.help-block {
+  color: red;
+}
+</style>
     <div class="row">
         <div class="col-md-4">
         </div>
@@ -31,6 +37,7 @@
             {% include "account/_signup_sidebar.html" %}
         </div>
     </div>
+    
 {% endblock %}
 
 {% block scripts %}

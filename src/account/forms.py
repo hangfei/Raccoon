@@ -41,6 +41,7 @@ class ConsultantSignupForm(ModelForm):
            'industries':forms.CheckboxSelectMultiple
         }
 
+
     username = forms.CharField(
         label=_("Username *"),
         max_length=30,

@@ -1,7 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,render_to_response
 from common.models import Client, Expert, UserProfile
 from account.views import handle_uploaded_file
-from django.http import HttpResponse
+from django.http import HttpResponse, Http404
 from django.contrib.auth import get_user_model
 from django.template import RequestContext, loader
 from django.core.exceptions import ObjectDoesNotExist
@@ -113,6 +113,8 @@ def userprofile_edit(request):
                 user_profile.save()
             profile_user.save()
             return HttpResponseRedirect('/profile/' + str(profile_user.username))
+        else:
+            return render_to_response("userprofile/update_userprofile.html", RequestContext(request,{'form':pform}))
     else:
         pform = None
         if is_expert:
