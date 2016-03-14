@@ -42,7 +42,7 @@ class AccountAppConf(AppConf):
     USER_DISPLAY = lambda user: user.username  # flake8: noqa
     CREATE_ON_SAVE = True
     EMAIL_UNIQUE = True
-    EMAIL_CONFIRMATION_REQUIRED = False
+    EMAIL_CONFIRMATION_REQUIRED = True
     EMAIL_CONFIRMATION_EMAIL = True
     EMAIL_CONFIRMATION_EXPIRE_DAYS = 3
     EMAIL_CONFIRMATION_ANONYMOUS_REDIRECT_URL = "account_login"
