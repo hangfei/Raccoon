@@ -31,7 +31,7 @@ SECRET_KEY = '(^lbak@7d!0m-vqbll15t%xk29*9_un*k+rkvdq)t05+m&px-('
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['127.0.0.1','www.enverest.com','www.enverest.net', 'enverest.com', 'enverest.net']
+ALLOWED_HOSTS = ['127.0.0.1','www.enverest.com','www.enverest.net', 'enverest.com', 'enverest.net', '52.77.242.207']
 
 SITE_ID = 1
 # EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
