@@ -191,6 +191,9 @@ def user_profile(request, username):
             can_view_personal_info = True
         elif not current_is_expert:
             can_view_personal_info = current_person.has_worked_before(person)
+        
+        if profile_user.username in ['SimonCen', 'AlexZhang', 'galvinfan', 'mangotree']:
+            can_view_personal_info = True
 
 
     context = RequestContext(request, {
