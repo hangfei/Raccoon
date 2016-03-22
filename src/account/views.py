@@ -395,7 +395,7 @@ class ConsultantSignupView(FormView):
         if request.GET.get('code'):
             post_data = {'grant_type':'authorization_code',
                          'code':request.GET.get('code'),
-                         'redirect_uri': redirect_domain + '/account/signup/consultant/',
+                         'redirect_uri': redirect_domain + '/account/signup/expert/',
                          'client_id': '75y73411x5u1zu',
                          'client_secret': '57dIUusbTq2I5G2E',
                         }    # a sequence of two element tuples
@@ -426,7 +426,7 @@ class ConsultantSignupView(FormView):
             return super(ConsultantSignupView, self).get(*args, **kwargs)
         else:
             base_authorization_url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri='
-            redirect_url  = redirect_domain + '/account/signup/consultant/'
+            redirect_url  = redirect_domain + '/account/signup/expert/'
             state = '&state=987654321'
             permissions = '&scope=r_basicprofile'
             linkedin_api_link = base_authorization_url + redirect_url + state + permissions
