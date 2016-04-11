@@ -1,4 +1,19 @@
 
+@media (max-width: 33.9em) {
+  .navbar-nav .nav-item {
+      float: none;
+  }
+  #nav-logo {
+    display: none;
+  }
+}
+
+@media (max-width: 33.9em) {
+  .bd-navbar .nav-link+.nav-link {
+      margin-left: 0;
+  }
+}
+
 img {
     vertical-align: middle;
 }
@@ -18,14 +33,7 @@ header {
     padding-top: .425rem;
     padding-bottom: .425rem;
 }
-@media (max-width: 33.9em)
-.bd-navbar .nav-link {
-    float: none;
-}
-@media (max-width: 33.9em)
-.bd-navbar .nav-link+.nav-link {
-    margin-left: 0;
-}
+
 .nav {
     padding-left: 0;
     margin-bottom: 0;
@@ -97,7 +105,7 @@ header {
     padding: 0;
     margin: 0 0 10px;
 }
-ul, menu, dir {
+/*ul, menu, dir {
     display: block;
     list-style-type: disc;
     -webkit-margin-before: 1em;
@@ -105,7 +113,7 @@ ul, menu, dir {
     -webkit-margin-start: 0px;
     -webkit-margin-end: 0px;
     -webkit-padding-start: 40px;
-}
+}*/
 
 .footer-list-item, .footer-social-buttons li {
     display: inline-block;

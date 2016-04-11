@@ -171,7 +171,7 @@ AWS_QUERYSTRING_AUTH = False     # don't add complex authentication-related quer
 # https://docs.djangoproject.com/en/1.9/topics/i18n/
 LANGUAGES = (
     ('en', _('English')),
-    # ('zh-hans', _('Chinese')zh),
+    ('zh-hans', _('Chinese')),
 )
 
 # A list of directories where Django looks for translation files.

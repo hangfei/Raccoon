@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-01-04 00:39-0800\n"
+"POT-Creation-Date: 2016-04-10 22:06-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,42 +18,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: homepage/templates/homepage/about_enverest.html:17
+#: homepage/forms.py:10
+msgid "Firstname"
+msgstr ""
+
+#: homepage/forms.py:16
+msgid "Lastname"
+msgstr ""
+
+#: homepage/forms.py:22
+msgid "Email"
+msgstr ""
+
+#: homepage/forms.py:33
+msgid "Tell Us More"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:25
 msgid "What's Enverest"
 msgstr "恩睿概况"
 
-#: homepage/templates/homepage/about_enverest.html:20
+#: homepage/templates/homepage/about_us.html:28
+#: homepage/templates/homepage/index.html:287
 msgid ""
-"Enverest is consisted of dedicated consultants (Partners) and a diversified "
-"expert network (Experts) that share the passion and mission to  promote "
-"innovation & entrepreneurship. We provide expertise to help clients achieve "
-"accelerated growth and sustained global success."
+"Enverest is an online business expertise sharing platform that enables "
+"enterprises to engage experts for on-demand business advisory services. "
+"Headquartered in Silicon Valley, Enverest primarily serves startups and SMBs "
+"across the Pacific Rim to achieve accelerated growth and sustained global "
+"success."
 msgstr ""
-"恩睿咨询由专业的管理咨询团队(合伙人)和多样化的专家网络(专家团)组成。我们拥有"
-"共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和全球"
-"资源，为创新企业制定快速增长策略，规划全球发展布局。"
 
-#: homepage/templates/homepage/about_enverest.html:30
+#: homepage/templates/homepage/about_us.html:38
 msgid "Who We Are"
 msgstr "使命"
 
-#: homepage/templates/homepage/about_enverest.html:31
+#: homepage/templates/homepage/about_us.html:39
 msgid ""
 "Everest team is committed to help fast-growing companies to achieve "
 "accelerated growth and sustained global success."
 msgstr "我们专注于为创新企业制定快速增长策略，规划全球发展布局。"
 
-#: homepage/templates/homepage/about_enverest.html:32
-#: homepage/templates/homepage/about_enverest.html:43
-#: homepage/templates/homepage/about_enverest.html:54
-msgid "Learn More"
-msgstr "了解更多"
-
-#: homepage/templates/homepage/about_enverest.html:41
+#: homepage/templates/homepage/about_us.html:48
 msgid "What We Do"
 msgstr "特色"
 
-#: homepage/templates/homepage/about_enverest.html:42
+#: homepage/templates/homepage/about_us.html:49
 msgid ""
 "Our partners and experts share knowledge, expertise and network to provide "
 "on-demand advisory services for our clients to thrive."
@@ -61,112 +70,450 @@ msgstr ""
 "恩睿咨询合伙人和专家团一起与客户共享专业知识和商业网络资源，为创新企业的发展"
 "成长提供量身定制的咨询服务。"
 
-#: homepage/templates/homepage/about_enverest.html:52
+#: homepage/templates/homepage/about_us.html:58
 msgid "Services"
 msgstr "服务"
 
-#: homepage/templates/homepage/about_enverest.html:53
+#: homepage/templates/homepage/about_us.html:59
 msgid ""
-"We provide fast-growing companies affordable, high-quality, and widely "
-"accessible advisory services. Together, we offer customized solutions to "
-"meet our clients' needs, particularly in developing and executing strategic "
-"initiatives for fast growth and global market expansion."
+"We provide affordable, high-quality, accessible, and customized solutions to "
+"meet the needs of fast-growing companies"
 msgstr ""
-"我们致力于为快速成长型科技创新企业和中小企业提供价格合理，质量上乘，量身定制"
-"的咨询服务。我们为满足您的需求，提供包括商业模式的设计，增长和并购战略，市场"
-"营销，公司运营，业务扩展和融资策略等一系列咨询服务。"
 
-#: homepage/templates/homepage/index.html:28
-msgid "Meet Professionals and Industry Leaders"
-msgstr "寻找专家和业界领袖"
-
-#: homepage/templates/homepage/index.html:31
+#: homepage/templates/homepage/about_us.html:73
 msgid ""
-"Get a sense of the 2,000+ Professionals in our network. We provide expertise "
-"to help clients achieve accelerated growth and sustained global success."
+"On-Demand Business Expertise Sharing Platform for Fast-growing Companies"
 msgstr ""
-"了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和全"
-"球化的成功。"
 
-#: homepage/templates/homepage/index.html:42
+#: homepage/templates/homepage/about_us.html:96
+#: homepage/templates/homepage/team.html:79
+msgid "Meet the experts"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:107
+#: homepage/templates/homepage/index.html:231
+#: homepage/templates/homepage/team.html:42
 msgid "Simon Cen"
 msgstr "陈水明"
 
-#: homepage/templates/homepage/index.html:43
+#: homepage/templates/homepage/about_us.html:109
+#: homepage/templates/homepage/about_us.html:125
+#: homepage/templates/homepage/about_us.html:206
+#: homepage/templates/homepage/team.html:43
+#: homepage/templates/homepage/team.html:58
+#: homepage/templates/homepage/team.html:123
+msgid "Managing Partner, Enverest"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:110
+#: homepage/templates/homepage/team.html:44
+#, fuzzy
+#| msgid ""
+#| "Built strong expertise in Business Development, Operations and Supply "
+#| "Chain Management."
 msgid ""
-"Built strong expertise in Business Development, Operations and Supply Chain "
-"Management."
+"Expertise: Strategy, Business Development, Operations, Supply Chain, M&A, "
+"Entrepreneurship"
 msgstr "建立强大的技能和供应。"
 
-#: homepage/templates/homepage/index.html:54
-msgid "Jeff Weiner"
+#: homepage/templates/homepage/about_us.html:111
+#: homepage/templates/homepage/team.html:45
+msgid "Industry: Hi-tech, Management Consulting, Transportation / Logistics"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:55
+#: homepage/templates/homepage/about_us.html:112
+#: homepage/templates/homepage/team.html:46
+msgid "Previous: Mckinsey, Apple, UPS; Cornell, Georgia Tech, ZJU"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:123
+#: homepage/templates/homepage/team.html:57
+msgid "Alex Zhang"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:126
+#: homepage/templates/homepage/team.html:59
+msgid "Expertise: Marketing, Business Development, M&A, Entrepreneurship"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:127
+#: homepage/templates/homepage/team.html:60
+msgid "Industry: Life Sciences, Bio-tech, Management Consulting"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:128
+#: homepage/templates/homepage/team.html:61
+msgid "Previous: Amgen, Thermo Fisher Scientific; Texas A&M, Cornell, SDU"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:140
+#: homepage/templates/homepage/index.html:257
+msgid "Galvin Fan"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:142
+#: homepage/templates/homepage/about_us.html:158
+msgid "Venture Partner, Enverest"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:143
 msgid ""
-"Some quick example text to build on the card title and make up the bulk of "
-"the card's content."
-msgstr "一些例子"
-
-#: homepage/templates/homepage/index.html:66
-msgid "Alex J. Zhang"
+"Expertise: Strategy, Business Development, Entrepreneurship, Incubation and "
+"Investment"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:67
+#: homepage/templates/homepage/about_us.html:144
 msgid ""
-"Business development and marketing leader with extensive experience and "
-"network in life sciences"
-msgstr "商业和市场领导经验。"
+"Industry: Hi-Tech, Virtual Reality, Smartphone, Mobile Internet, IoT, Smart "
+"Home, SNS"
+msgstr ""
 
-#: homepage/templates/homepage/index.html:78
-msgid "Why choose Enverest?"
-msgstr "为什么选择恩睿"
-
-#: homepage/templates/homepage/index.html:79
+#: homepage/templates/homepage/about_us.html:145
 msgid ""
-"Enverest provides fast-growing companies affordable, high-quality, and "
-"widely accessible advisory services. Together, we offer customized solutions "
-"to meet our clients' needs, particularly in developing and executing fast-"
-"growth initiatives, and expanding market globally."
+"Previous: Huawei, Intel, Startups, University of Mississippi; UA, RUC, SDU"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:87
-msgid "Project Management"
-msgstr "项目管理"
+#: homepage/templates/homepage/about_us.html:156
+#: homepage/templates/homepage/index.html:270
+msgid "Feng Gao"
+msgstr ""
 
-#: homepage/templates/homepage/index.html:88
+#: homepage/templates/homepage/about_us.html:159
 msgid ""
-"Leading fast-growing companies to apply world-class solutions and practices "
-"for global business success. Leading fast-growing companies to apply world-"
-"class solutions and practices for global business success."
+"Expertise: Big Data Analytics, Renewable Energy, Smart Grid, Electricity "
+"Markets, Power System Analysis"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:93
-msgid "Close partnership"
-msgstr "紧密的合作关系"
+#: homepage/templates/homepage/about_us.html:160
+msgid "Industry: Power and Utility, CleanTech, IoT"
+msgstr ""
 
-#: homepage/templates/homepage/index.html:94
+#: homepage/templates/homepage/about_us.html:161
+msgid "Previous: National Grid, ABB; Iowa State, Tsinghua"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:172
+#: homepage/templates/homepage/team.html:92
+msgid "Ya-Ru Chen"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:174
+#: homepage/templates/homepage/team.html:93
 msgid ""
-"All our themes have a simple multiple use license. Helping clients develop "
-"and execute management initiatives to\\u200b achieve accelerated growth."
+"Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
+"Management, \\u200bProfessor of Global Business, Johnson Graduate School of "
+"Management, Cornell University (Enverest Advisor)"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:99
-msgid "Technical support"
-msgstr "技术支持"
-
-#: homepage/templates/homepage/index.html:100
+#: homepage/templates/homepage/about_us.html:175
+#: homepage/templates/homepage/team.html:94
 msgid ""
-"The Enverest team and Expert Network are filled with experienced "
-"entrepreneurs and seasoned professionals from a variety of industries and "
-"functions. and we'll get back to you ASAP."
+"Expertise: Strategy and Management, Management Consulting, Data Analysis"
 msgstr ""
 
-#: homepage/templates/homepage/service.html:17
-msgid "Company services and capabilities"
+#: homepage/templates/homepage/about_us.html:176
+#: homepage/templates/homepage/team.html:95
+msgid "Industry: Business School Education and Research"
 msgstr ""
 
-#: homepage/templates/homepage/service.html:20
+#: homepage/templates/homepage/about_us.html:177
+#: homepage/templates/homepage/team.html:96
+msgid ""
+"Previous: Cornell-Tsinghua FMBA Program, Stern School of Business, NYU; "
+"Columbia University"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:188
+#: homepage/templates/homepage/team.html:107
+msgid "Huazhang Shen"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:190
+#: homepage/templates/homepage/team.html:108
+msgid "Co-founder and CTO, Kalading (Enverest Advisor)"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:191
+#: homepage/templates/homepage/team.html:109
+msgid ""
+"Expertise: Entrepreneurship, Product Design and Management, Social "
+"Marketing, Project Management"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:192
+#: homepage/templates/homepage/team.html:110
+msgid "Industry: Mobile Internet, Bio-tech"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:193
+#: homepage/templates/homepage/team.html:111
+msgid ""
+"Previous: Kalading, Golfii, GeoWok, Innovation Game International; Cal-tech, "
+"USTC"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:204
+#: homepage/templates/homepage/team.html:122
+msgid "Shawn Lee"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:207
+#: homepage/templates/homepage/team.html:124
+msgid "Expertise: Entrepreneurship, FDA Regulatory, M&A, Strategic Partnership"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:208
+#: homepage/templates/homepage/team.html:125
+msgid "Industry: Life Sciences, Bio-tech"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:209
+#: homepage/templates/homepage/team.html:126
+msgid "Previous: American Peptide Company; UC-Berkeley, Wuhan University"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:220
+#: homepage/templates/homepage/about_us.html:367
+#: homepage/templates/homepage/team.html:142
+msgid "Brandon Wang"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:222
+#: homepage/templates/homepage/about_us.html:368
+#: homepage/templates/homepage/team.html:143
+msgid "Group Director and Chief Strategy Officer, Cadence (Enverest Advisor)"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:223
+#: homepage/templates/homepage/about_us.html:369
+#: homepage/templates/homepage/team.html:144
+msgid ""
+"Expertise: Entrepreneurship, Strategy, Management Consulting, Engineering "
+"Management, Strategic Partnership"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:224
+#: homepage/templates/homepage/about_us.html:370
+#: homepage/templates/homepage/team.html:145
+msgid "Industry: Semiconductor, Hi-tech"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:225
+#: homepage/templates/homepage/about_us.html:371
+#: homepage/templates/homepage/team.html:146
+msgid "Previous: Cadence, ARM, CASPA; Wharton, Stanford, Zhejiang University"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:236
+#: homepage/templates/homepage/about_us.html:382
+#: homepage/templates/homepage/team.html:157
+msgid "Jeff Wu"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:238
+#: homepage/templates/homepage/about_us.html:383
+#: homepage/templates/homepage/team.html:158
+msgid "COO, ScaleFlux"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:239
+#: homepage/templates/homepage/about_us.html:384
+#: homepage/templates/homepage/team.html:159
+msgid ""
+"Expertise: Entrepreneurship, Cloud Computing, Project Management, Product "
+"Development, Strategic Partnership"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:240
+#: homepage/templates/homepage/about_us.html:385
+#: homepage/templates/homepage/team.html:160
+msgid "Industry: Storage, Software"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:241
+#: homepage/templates/homepage/about_us.html:386
+#: homepage/templates/homepage/team.html:161
+msgid "Previous: ScaleFlux, Pactera, Wenditel; USC, Tongji University"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:252
+#: homepage/templates/homepage/about_us.html:397
+#: homepage/templates/homepage/team.html:172
+msgid "Cheni Kwok"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:254
+#: homepage/templates/homepage/about_us.html:398
+#: homepage/templates/homepage/team.html:173
+msgid "Managing Partner, Linear Dreams"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:255
+#: homepage/templates/homepage/about_us.html:399
+#: homepage/templates/homepage/team.html:174
+msgid "Expertise: Business Development, Corporate Development"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:256
+#: homepage/templates/homepage/about_us.html:400
+#: homepage/templates/homepage/team.html:175
+msgid ""
+"Industry: Life Sciences, Bio-tech, Pharmaceuticals, Management Consulting"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:257
+#: homepage/templates/homepage/about_us.html:401
+#: homepage/templates/homepage/team.html:176
+msgid ""
+"Previous: Poniard Pharmaceuticals, Celera, Exelixis, GSK; Cambridge, "
+"Imperial College"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:268
+msgid "Tao Chen"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:270
+msgid "CEO, ParagonGenomics"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:271
+msgid ""
+"Expertise: Product Development & Management, Marketing, Sales, Corporate "
+"Development, Entrepreneurship"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:272
+msgid "Industry: Life Sciences"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:273
+msgid ""
+"Previous: Thermo Fisher Scientific, Life Technologies, Pfizer; Harvard, PKU"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:284
+msgid "Elanie Lu"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:286
+msgid "CEO, Visbit"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:287
+msgid ""
+"Expertise: Product Marketing, Mobile User Acquisition, Online Marketing and "
+"Promotion"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:288
+msgid "Industry: Mobile Internet and Gaming"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:289
+msgid "Previous: Tango, Changyou, Microsoft, Starwood; Cornell, Fudan"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:300
+msgid "Phoebe Chen"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:302
+msgid "Copywriter and Content Strategist, Magnus Communications"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:303
+msgid ""
+"EExpertise: Marketing Communications, Advertising/App Content Design & "
+"Localization, Copy-writing, Copy-editing"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:304
+msgid "Industry: Marketing and Advertising, Management Consulting"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:305
+msgid ""
+"Previous: Uber, McKinsey, Roland Berger, United Nations; U Michigan, Bath, "
+"HUST"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:316
+msgid "Ruming Liu"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:318
+msgid "Founding Partner, MagStone Law LLP "
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:319
+msgid ""
+"Expertise: Corporate Law, M&A, Joint Ventures, Corporate Governance, Cross-"
+"boarder Transactions"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:320
+msgid "Industry: Legal Advice"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:321
+msgid "Previous: Morrison & Foerster LLP, Jun He Law; U Penn, HKU, PKU"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:332
+msgid "Michael Wu"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:334
+msgid "Tax Partner (CPA, CGMA), SingerLewak LLP "
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:335
+msgid "Expertise: Corporate Tax, International Tax, M&A, Accounting, Auditing"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:336
+msgid "Industry: Tax Advisory, Corporate Accounting"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:337
+msgid "Previous: Ernst & Young, PwC; MBA in Taxation, BS in Accounting"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:348
+msgid "Huan Liu"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:350
+msgid "CEO, Vimo Labs"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:351
+msgid ""
+"Expertise: Product Management, Software Engineering, Cloud Computing, Data "
+"Analytics, Entrepreneurship"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:352
+msgid "Industry: Mobile Computing, Software, Management Consulting"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:353
+msgid ""
+"Previous: Accenture, Pacific Broadband Communications, HP, Intel; Stanford, "
+"UCLA, HIT"
+msgstr ""
+
+#: homepage/templates/homepage/about_us.html:418
+msgid "Alliance"
+msgstr ""
+
+#: homepage/templates/homepage/client_see_this.html:17
+msgid "Client will be able to see this page."
+msgstr ""
+
+#: homepage/templates/homepage/client_see_this.html:20
+#: homepage/templates/homepage/expert_see_this.html:20
 #, fuzzy
 #| msgid ""
 #| "Enverest is consisted of dedicated consultants (Partners) and a "
@@ -183,7 +530,63 @@ msgstr ""
 "共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和全球"
 "资源，为创新企业制定快速增长策略，规划全球发展布局。"
 
-#: homepage/templates/homepage/service.html:23
+#: homepage/templates/homepage/contact_us.html:28
+msgid "Headquarter and Silicon Valley Office"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:33
+msgid "Enverest, Inc."
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:35
+msgid "4500 Great America Parkway"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:36
+msgid "Suite 100"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:37
+msgid "Santa Clara, CA 95054"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:38
+msgid "USA"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:39
+msgid "Phone: +1 650 455-6732"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:40
+msgid "Email: contact@enverest.com"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:58
+msgid "Other Offices"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:71
+msgid "Beijing, China"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:80
+msgid "Singapore"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:93
+msgid "New York, USA"
+msgstr ""
+
+#: homepage/templates/homepage/contact_us.html:102
+msgid "Hangzhou, China"
+msgstr ""
+
+#: homepage/templates/homepage/expert_see_this.html:17
+msgid "Expert will be able to see this page."
+msgstr ""
+
+#: homepage/templates/homepage/expert_see_this.html:23
 #, fuzzy
 #| msgid ""
 #| "We provide fast-growing companies affordable, high-quality, and widely "
@@ -199,3 +602,399 @@ msgstr ""
 "我们致力于为快速成长型科技创新企业和中小企业提供价格合理，质量上乘，量身定制"
 "的咨询服务。我们为满足您的需求，提供包括商业模式的设计，增长和并购战略，市场"
 "营销，公司运营，业务扩展和融资策略等一系列咨询服务。"
+
+#: homepage/templates/homepage/how_it_works.html:76
+msgid "As a client"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:121
+#: homepage/templates/homepage/how_it_works.html:214
+msgid "How the expert network platform works"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:125
+msgid ""
+"1) Signup to the Enverest Network Service, and submit an engagement request "
+"describing the project objectives and preference of the expert profiles"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:128
+msgid ""
+"2) Accept the expert that Enverest would recommend to match the requirements "
+"of the engagement"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:131
+msgid ""
+"3) Interact with the Experts to work on the engagement via conference calls, "
+"video conferences, IMs, or face-to-face meetings"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:134
+msgid ""
+"4) After the engagement is complete, rate the Expert’s service, and make "
+"payment"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:145
+msgid "Client Benefits"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:148
+#: homepage/templates/homepage/member_benefits.html:42
+msgid "On-demand access to global expertise"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:149
+#: homepage/templates/homepage/member_benefits.html:43
+msgid "Explore wide range of perspectives"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:150
+#: homepage/templates/homepage/member_benefits.html:44
+msgid "Connect to the right people instantly"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:151
+#: homepage/templates/homepage/member_benefits.html:45
+msgid "Save time and cost"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:170
+#: homepage/templates/homepage/member_benefits.html:55
+msgid "As an expert"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:218
+msgid ""
+"1) Review the engagement recommended by Enverest, and accept the "
+"recommendation if he/she agrees to take on the engagement"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:221
+msgid ""
+"2) Interact with the client to work on the engagement via conference calls, "
+"video conferences, IMs, or face-to-face meetings"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:224
+msgid ""
+"3) After the engagement is completed, rate the client and accept the payment "
+"from Enverest"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:236
+msgid "Expert Benefits"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:239
+#: homepage/templates/homepage/member_benefits.html:56
+msgid "Have the pulse of the latest industry trends"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:240
+#: homepage/templates/homepage/member_benefits.html:57
+msgid "Interact with corporate officers, investors, and entrepreneurs"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:241
+#: homepage/templates/homepage/member_benefits.html:58
+msgid "Work on strategic, thought-provoking projects"
+msgstr ""
+
+#: homepage/templates/homepage/how_it_works.html:242
+#: homepage/templates/homepage/member_benefits.html:59
+msgid "Competitive compensation from consulting fees and referral fees"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:151
+msgid "Business Expertise, On-Demand"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:216
+msgid "Meet Professionals and Industry Leaders"
+msgstr "寻找专家和业界领袖"
+
+#: homepage/templates/homepage/index.html:219
+#, fuzzy
+#| msgid ""
+#| "Get a sense of the 2,000+ Professionals in our network. We provide "
+#| "expertise to help clients achieve accelerated growth and sustained global "
+#| "success."
+msgid ""
+"Get a sense of the 100+ advisors in our network. We provide expertise to "
+"help clients achieve accelerated growth and sustained global success."
+msgstr ""
+"了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和全"
+"球化的成功。"
+
+#: homepage/templates/homepage/index.html:232
+msgid ""
+"Over 10 years of experience in management consulting, strategy, operations, "
+"and supply chain management at McKinsey, Apple, and UPS"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:244
+msgid "Alex J. Zhang"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:245
+msgid ""
+"15 years in life science business development, M&A, product management, and "
+"R&D with Amgen, Thermo Fisher Scientific, etc."
+msgstr ""
+
+#: homepage/templates/homepage/index.html:258
+msgid ""
+"Renowned expert in wireless technology, IoT, mobile internet, virtual "
+"reality, etc. 10 years of business experience at Huawei and Intel"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:271
+msgid ""
+"Award-winning expert in renewable energy, power system analysis, electricity "
+"markets, smart grid, and Big Data in energy systems"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:286
+msgid "Why choose Enverest?"
+msgstr "为什么选择恩睿"
+
+#: homepage/templates/homepage/index.html:324
+msgid "Using the Enverest Connections, our experts can help you with"
+msgstr ""
+
+#: homepage/templates/homepage/index.html:384
+msgid "Testimonials"
+msgstr ""
+
+#: homepage/templates/homepage/join_us.html:25
+msgid "Join Us"
+msgstr ""
+
+#: homepage/templates/homepage/join_us.html:28
+msgid ""
+"Our team is consisted of talents with diversified backgrounds, cultures, "
+"education, interests, and skills. We welcome you to be part of our family. "
+"Please fill out the form below to apply or send your resume to hr@enverest."
+"com."
+msgstr ""
+
+#: homepage/templates/homepage/join_us.html:39
+msgid "Sign up"
+msgstr ""
+
+#: homepage/templates/homepage/member_benefits.html:24
+msgid "Member and Expert Benefits"
+msgstr ""
+
+#: homepage/templates/homepage/member_benefits.html:27
+msgid "For member and expert, you will have these benefits."
+msgstr ""
+
+#: homepage/templates/homepage/member_benefits.html:41
+msgid "As a member"
+msgstr ""
+
+#: homepage/templates/homepage/member_benefits.html:46
+#: homepage/templates/homepage/member_benefits.html:60
+msgid "Learn More"
+msgstr "了解更多"
+
+#: homepage/templates/homepage/news_blog.html:24
+msgid "News Blog"
+msgstr ""
+
+#: homepage/templates/homepage/partners.html:24
+msgid "Partners"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:22
+msgid "Fast-Growth Strategy and Execution"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:25
+msgid ""
+"The Enverest team and Expert Network are filled with "
+"experiencedentrepreneurs and seasoned professionals from a variety of "
+"industriesand functions. We know what it takes for startups and Small-and-"
+"Mid size business (SMB) to achieve accelerated growth."
+msgstr ""
+
+#: homepage/templates/homepage/service.html:34
+msgid "Business development and partnership"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:37
+msgid "Operations improvement"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:40
+msgid "Technical advice and guidance"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:43
+msgid "Organizational structure planning"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:46
+#, fuzzy
+#| msgid "Project Management"
+msgid "Performance management"
+msgstr "项目管理"
+
+#: homepage/templates/homepage/service.html:49
+msgid "Product launch readiness"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:52
+msgid "Marketing and branding strategies"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:66
+msgid "Global Market Expansion"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:69
+msgid ""
+"Once have achieved success in the home market, manyentrepreneurs and "
+"business leaders feel they're ready to take on the next step: global market "
+"expand. We have the deep knowledge and expertise to help your business "
+"expand in most major international markets including North America, China,"
+"Southeast Asia, etc."
+msgstr ""
+
+#: homepage/templates/homepage/service.html:78
+msgid "Cross-border operations"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:81
+msgid "Market and industry research"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:84
+msgid "Business model localization"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:87
+msgid "Market entry and competition"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:90
+#, fuzzy
+#| msgid "Close partnership"
+msgid "International partnership"
+msgstr "紧密的合作关系"
+
+#: homepage/templates/homepage/service.html:93
+msgid "Global marketing and branding"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:96
+msgid "Merger and acquisition\\u200b"
+msgstr ""
+
+#: homepage/templates/homepage/service.html:109
+msgid "Sign Up Now"
+msgstr ""
+
+#: homepage/templates/homepage/success_story.html:24
+msgid "Success Story"
+msgstr ""
+
+#: homepage/templates/homepage/team.html:24
+msgid "Meet the Team"
+msgstr ""
+
+#: homepage/templates/homepage/team.html:27
+#, fuzzy
+#| msgid ""
+#| "Enverest is consisted of dedicated consultants (Partners) and a "
+#| "diversified expert network (Experts) that share the passion and mission "
+#| "to  promote innovation & entrepreneurship. We provide expertise to help "
+#| "clients achieve accelerated growth and sustained global success."
+msgid ""
+"Enverest is consisted of dedicated consultants (Partners) and a diversified "
+"expert network (Experts) that share the passion and mission to  promote "
+"innovation & entrepreneurship. Together, we provide business expertise and "
+"network to help clients achieve accelerated growth and sustained global "
+"success."
+msgstr ""
+"恩睿咨询由专业的管理咨询团队(合伙人)和多样化的专家网络(专家团)组成。我们拥有"
+"共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和全球"
+"资源，为创新企业制定快速增长策略，规划全球发展布局。"
+
+#: homepage/templates/homepage/terms_of_service.html:23
+msgid "Terms of Service"
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:26
+msgid ""
+"If you used Enverest service, that means you agreed to the terms of use."
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:35
+#: homepage/templates/homepage/terms_of_service.html:44
+msgid "1. Ownership and Property Rights"
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:38
+#: homepage/templates/homepage/terms_of_service.html:47
+msgid ""
+"Using this website does not grant you any ownership or interest in any "
+"content, visual interfaces, graphics, design, compilation, information, "
+"computer code, products, software, services and all other elements you may "
+"access from the website. You are authorized to download a single copy of "
+"purchased content contained on the website for your personal, non-commercial "
+"uses, provided that you maintain the copyright and other notices contained "
+"in that content. This excludes products available with premium licenses. "
+"Please consult our licenses page for more information."
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:54
+msgid "2. User Information"
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:57
+msgid ""
+"In the course of your use of the website, you may be asked for personally "
+"identifiable information. We uphold rigorous standards to uphold the "
+"integrity of this information as outlined in our Privacy Policy. You are "
+"solely responsible for the accuracy and content of this user information."
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:64
+msgid "3. Third Party websites"
+msgstr ""
+
+#: homepage/templates/homepage/terms_of_service.html:67
+msgid ""
+"In the course of your use of the website, you may be re-directed to third "
+"party websites. We have no responsibility for the content or information "
+"provided by or through third party websites even if they are affiliates of "
+"ours.Linking to third party websites does not imply our endorsement of that "
+"web website. We disclaim any liability for links to another website."
+msgstr ""
+
+#~ msgid ""
+#~ "We provide fast-growing companies affordable, high-quality, and widely "
+#~ "accessible advisory services. Together, we offer customized solutions to "
+#~ "meet our clients' needs, particularly in developing and executing "
+#~ "strategic initiatives for fast growth and global market expansion."
+#~ msgstr ""
+#~ "我们致力于为快速成长型科技创新企业和中小企业提供价格合理，质量上乘，量身定"
+#~ "制的咨询服务。我们为满足您的需求，提供包括商业模式的设计，增长和并购战略，"
+#~ "市场营销，公司运营，业务扩展和融资策略等一系列咨询服务。"
+
+#~ msgid ""
+#~ "Some quick example text to build on the card title and make up the bulk "
+#~ "of the card's content."
+#~ msgstr "一些例子"
+
+#~ msgid ""
+#~ "Business development and marketing leader with extensive experience and "
+#~ "network in life sciences"
+#~ msgstr "商业和市场领导经验。"
+
+#~ msgid "Technical support"
+#~ msgstr "技术支持"
