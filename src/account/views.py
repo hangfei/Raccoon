@@ -419,21 +419,25 @@ class ConsultantSignupView(FormView):
             if 'pictureUrls' in get_result.json():
                 if 'values' in get_result.json()['pictureUrls']:
                     if get_result.json()['pictureUrls']['values']:
-                        print("ssssssss333ss")
                         self.request.session['linkedin_profile_image'] = get_result.json()['pictureUrls']['values'][0]
-                        print(type(self.request.session['linkedin_profile_image']))
 
-            return super(ConsultantSignupView, self).get(*args, **kwargs)
+            # return super(ConsultantSignupView, self).get(*args, **kwargs)
+            ctx = super(ConsultantSignupView, self).get_context_data(**kwargs)
+            ctx.update({
+                'linkedin_signup': True,
+            })
+            return self.render_to_response(ctx)
         else:
             base_authorization_url = 'https://www.linkedin.com/uas/oauth2/authorization?response_type=code&client_id=75y73411x5u1zu&redirect_uri='
             redirect_url  = redirect_domain + '/account/signup/expert/'
             state = '&state=987654321'
             permissions = '&scope=r_basicprofile'
             linkedin_api_link = base_authorization_url + redirect_url + state + permissions
-            context = RequestContext(request, {
+            ctx = super(ConsultantSignupView, self).get_context_data(**kwargs)
+            ctx.update({
                 'linkedin_api_link': linkedin_api_link,
             })
-            return render(request, 'account/signup_consultant_linkedin.html', context)
+            return self.render_to_response(ctx)
 
 
     def post(self, *args, **kwargs):

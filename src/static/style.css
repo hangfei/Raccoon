@@ -1,6 +1,15 @@
 
+
+.sep {
+    border: 1px solid #72B372;
+    position: relative;
+    margin: 35px 20px;
+}
+
+
 @media (max-width: 33.9em) {
   .navbar-nav .nav-item {
+      margin-left: 0 !important; 
       float: none;
   }
   #nav-logo {

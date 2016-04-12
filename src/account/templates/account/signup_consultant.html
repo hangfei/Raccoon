@@ -3,6 +3,7 @@
 {% load account_tags %}
 {% load i18n %}
 {% load bootstrap %}
+{% load staticfiles %}
 
 {% block head_title %}{% trans "Sign up" %}{% endblock %}
 
@@ -18,13 +19,39 @@
         color: red;
     }
     </style>
+
+    <div class="row">
+        {% if not linkedin_signup %}
+        <div class="col-md-12">
+            <h3 style="text-align: center;">Signup with LinkedIn to become an expert</h3>
+            <p style="text-align: center;">We will help you fill in name, email and profile image.</p>
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 text-center">
+            <a href="{{ linkedin_api_link }}"><img src="{% static 'images/signin_with_linkedin-buttons/Non-Retina/Sign-in-Large---Default.png' %}" alt="LinkedIn Signin"></a>
+            <br>
+            <br>
+            <h3 style="text-align: center;">OR</h3>
+            <br>
+            <h3 style="text-align: center;">Signup Now!</h3>
+        </div>
+        {% else %}
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+            <h3 style="text-align: center;">Signup with LinkedIn</h3>
+            <p style="text-align: center;">We have filled some fields for you with LinkedIn.</p>
+        </div>
+        {% endif %}
+
+    </div>
+
     <div class="row">
         <div class="col-md-4">
         </div>
         <div class="col-md-4">
             <form id="signup_form" method="post" action="{% url "consultant_account_signup" %}" autocapitalize="off" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>
-                <h3 style="text-align: center;">Signup with LinkedIn to become an expert</h3>
-                <legend>{% trans "Sign up" %}</legend>
                 {% csrf_token %}
                 {{ form|bootstrap }}
                 {% if redirect_field_value %}
