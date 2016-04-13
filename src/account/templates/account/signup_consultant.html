@@ -8,9 +8,6 @@
 {% block head_title %}{% trans "Sign up" %}{% endblock %}
 
 {% block content %}
-    <br>
-    <br>
-    <br>
     <style>
     ul {
       list-style-type: none;
@@ -18,13 +15,42 @@
     span.help-block {
         color: red;
     }
+
+    /* http://stackoverflow.com/questions/23584120/line-before-and-after-title-over-image */
+    h3.divider {
+      width: 70%;
+      margin: .7em auto;
+      overflow: hidden;
+      text-align: center;
+      font-weight:300;
+      color: #848484;
+    }
+    h3.divider:before, h3.divider:after {
+      content: "";
+      display: inline-block;
+      width: 50%;
+      margin: 0 .5em 0 -55%;
+      vertical-align: middle;
+      border-bottom: 1px solid;
+    }
+    h3.divider:after {
+      margin: 0 -55% 0 .5em;
+    }
     </style>
+
+    <br>
+    <br>
+    <br>
 
     <div class="row">
         {% if not linkedin_signup %}
         <div class="col-md-12">
-            <h3 style="text-align: center;">Signup with LinkedIn to become an expert</h3>
-            <p style="text-align: center;">We will help you fill in name, email and profile image.</p>
+            <h3 style="text-align: center;">{% trans "Signup with LinkedIn" %}</h3>
+            <div class="col-md-4">
+            </div>
+            <div class="col-md-4">
+                <p style="text-align: center;">{% trans "We will only get name, email and profile image from LinkedIn and help you fill in those fields." %}</p>
+            </div>
         </div>
         <div class="col-md-4">
         </div>
@@ -32,16 +58,16 @@
             <a href="{{ linkedin_api_link }}"><img src="{% static 'images/signin_with_linkedin-buttons/Non-Retina/Sign-in-Large---Default.png' %}" alt="LinkedIn Signin"></a>
             <br>
             <br>
-            <h3 style="text-align: center;">OR</h3>
+            <h3 class="divider" style="text-align: center;">{% trans "or" %}</h3>
             <br>
-            <h3 style="text-align: center;">Signup Now!</h3>
+            <h3 style="text-align: center;">{% trans "Signup Now!" %}</h3>
         </div>
         {% else %}
         <div class="col-md-4">
         </div>
         <div class="col-md-4">
-            <h3 style="text-align: center;">Signup with LinkedIn</h3>
-            <p style="text-align: center;">We have filled some fields for you with LinkedIn.</p>
+            <h3 style="text-align: center;">{% trans "Signup with LinkedIn" %}</h3>
+            <p style="text-align: center;">{% trans "We have filled name, email and profile image for you with LinkedIn." %}</p>
         </div>
         {% endif %}
 
@@ -58,7 +84,7 @@
                     <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                 {% endif %}
                 {% if request.session.linkedin_profile_image %}
-                <p>You have LinkedIn profile image. If you don't want to use another one, this will be your profile image on our website.</p>
+                <p>{% trans "You have LinkedIn profile image. If you don't want to use another one, this will be your profile image on our website." %}</p>
                 <img src="{{ request.session.linkedin_profile_image }}">
                 {% endif %}
                 <br>
