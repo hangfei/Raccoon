@@ -50,43 +50,42 @@
 }
 
 
+.apb {
+    display: table;
+    width: 100%;
+    height: 70vh;
+}
 
+.k {
+    position: relative;
+    width: 100%;
+    padding: 60px 30px;
+    color: inherit;
+    background-color: #ffffff;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.aph {
+    display: table-cell;
+    vertical-align: middle;
+}
 </style>
 <div class="row" id="banner-container">
-  <div class="col-lg-12">
-    <img src="{% static 'images/home.jpg' %}" alt="Generic placeholder image" style="width:100%;">
-
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12">
-
-          <div id="bannerright" class="landing-banner-outer" style="background: rgba(0,49,108,0.8);">
-            <div class="landing-banner-mid">
-              <div class="landing-banner-inner">
-                <h2>
-                  <span class="wsite-text wsite-headline">
-                    Helping enterprises achieve accelerated growth and sustained global success.
-                  </span>
-                </h2>
-                <!-- <p>
-                  <span class="wsite-text wsite-headline-paragraph">
-                    <font size="3">Click below to get a free information session.</font>
-                    </span>
-                </p>
-                <div style="text-align:left;"><div style="height: 0px; overflow: hidden;"></div>
-                <a class="wsite-button wsite-button-small wsite-button-highlight" href="/get-started.html">
-                <span class="wsite-button-inner">Get Started</span>
-                </a> -->
-                <div style="height: 0px; overflow: hidden;"></div></div>
-              </div><!-- end banner inner -->
-            </div><!-- end banner mid -->
+  <div class="col-lg-12 apb k" style="background-image: url('{% static 'images/home.jpg' %}');">
+    <div class="aph">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-7" style="">
+            <h1 style="color: #ec971f;">Business Expertise, On-Demand</h1>
+            <p style="color: #000000;">Expertise sharing platform that enables enterprises to engage experts for on-demand business advisory services.</p>
+            <a href="{% url 'account_sign_up' %}" class="btn btn-primary btn-lg">Try it now</a>
           </div>
-
         </div>
-
       </div>
-
     </div>
+  </div>
 
 
 
