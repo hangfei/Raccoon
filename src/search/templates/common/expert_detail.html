@@ -1,8 +1,8 @@
 <h1>{{ object.user.first_name }} {{ object.user.last_name }}</h1>
 <!--<h1>{{ object.last_name_text }}</h1> -->
-<p>Description: {{ object.description_text }}</p>
-<p>Industry: {{ object.industry }}</p>
-<p>Expertise: {{ object.expertise }}</p>
-<p>Experience: {{ object.experience }}</p>
-<p>Status: {{ object.status }}</p>
-<p>Area: {{ object.area }}</p>
+<p>{% trans "Description"% }: {{ object.description_text }}</p>
+<p>{% trans "Industry" %}: {{ object.industry }}</p>
+<p>{% trans "Expertise" %}: {{ object.expertise }}</p>
+<p>{% trans "Experience" %}: {{ object.experience }}</p>
+<p>{% trans "Status" %}: {{ object.status }}</p>
+<p>{% trans "Area" %}: {{ object.area }}</p>

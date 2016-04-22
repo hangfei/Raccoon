@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-10 22:06-0700\n"
+"POT-Creation-Date: 2016-04-21 21:03-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,7 +39,7 @@ msgid "What's Enverest"
 msgstr "恩睿概况"
 
 #: homepage/templates/homepage/about_us.html:28
-#: homepage/templates/homepage/index.html:287
+#: homepage/templates/homepage/index.html:344
 msgid ""
 "Enverest is an online business expertise sharing platform that enables "
 "enterprises to engage experts for on-demand business advisory services. "
@@ -91,7 +91,7 @@ msgid "Meet the experts"
 msgstr ""
 
 #: homepage/templates/homepage/about_us.html:107
-#: homepage/templates/homepage/index.html:231
+#: homepage/templates/homepage/index.html:288
 #: homepage/templates/homepage/team.html:42
 msgid "Simon Cen"
 msgstr "陈水明"
@@ -147,7 +147,7 @@ msgid "Previous: Amgen, Thermo Fisher Scientific; Texas A&M, Cornell, SDU"
 msgstr ""
 
 #: homepage/templates/homepage/about_us.html:140
-#: homepage/templates/homepage/index.html:257
+#: homepage/templates/homepage/index.html:314
 msgid "Galvin Fan"
 msgstr ""
 
@@ -174,7 +174,7 @@ msgid ""
 msgstr ""
 
 #: homepage/templates/homepage/about_us.html:156
-#: homepage/templates/homepage/index.html:270
+#: homepage/templates/homepage/index.html:327
 msgid "Feng Gao"
 msgstr ""
 
@@ -707,15 +707,15 @@ msgstr ""
 msgid "Competitive compensation from consulting fees and referral fees"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:151
+#: homepage/templates/homepage/index.html:203
 msgid "Business Expertise, On-Demand"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:216
+#: homepage/templates/homepage/index.html:272
 msgid "Meet Professionals and Industry Leaders"
 msgstr "寻找专家和业界领袖"
 
-#: homepage/templates/homepage/index.html:219
+#: homepage/templates/homepage/index.html:275
 #, fuzzy
 #| msgid ""
 #| "Get a sense of the 2,000+ Professionals in our network. We provide "
@@ -728,43 +728,43 @@ msgstr ""
 "了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和全"
 "球化的成功。"
 
-#: homepage/templates/homepage/index.html:232
+#: homepage/templates/homepage/index.html:289
 msgid ""
 "Over 10 years of experience in management consulting, strategy, operations, "
 "and supply chain management at McKinsey, Apple, and UPS"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:244
+#: homepage/templates/homepage/index.html:301
 msgid "Alex J. Zhang"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:245
+#: homepage/templates/homepage/index.html:302
 msgid ""
 "15 years in life science business development, M&A, product management, and "
 "R&D with Amgen, Thermo Fisher Scientific, etc."
 msgstr ""
 
-#: homepage/templates/homepage/index.html:258
+#: homepage/templates/homepage/index.html:315
 msgid ""
 "Renowned expert in wireless technology, IoT, mobile internet, virtual "
 "reality, etc. 10 years of business experience at Huawei and Intel"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:271
+#: homepage/templates/homepage/index.html:328
 msgid ""
 "Award-winning expert in renewable energy, power system analysis, electricity "
 "markets, smart grid, and Big Data in energy systems"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:286
+#: homepage/templates/homepage/index.html:343
 msgid "Why choose Enverest?"
 msgstr "为什么选择恩睿"
 
-#: homepage/templates/homepage/index.html:324
+#: homepage/templates/homepage/index.html:398
 msgid "Using the Enverest Connections, our experts can help you with"
 msgstr ""
 
-#: homepage/templates/homepage/index.html:384
+#: homepage/templates/homepage/index.html:458
 msgid "Testimonials"
 msgstr ""
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-10 22:06-0700\n"
+"POT-Creation-Date: 2016-04-21 21:03-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,345 +20,298 @@ msgstr ""
 
 #: common/models.py:36
 msgid "Avatar"
-msgstr ""
+msgstr "头像"
 
 #: common/models.py:443
 msgid "user"
-msgstr ""
+msgstr "用户"
 
 #: common/models.py:444
 msgid "timezone"
-msgstr ""
+msgstr "时区"
 
 #: common/models.py:446
 msgid "language"
-msgstr ""
+msgstr "语言"
 
 #: common/models.py:543
 msgid "code"
-msgstr ""
+msgstr "代码"
 
 #: common/models.py:544
 msgid "max uses"
-msgstr ""
+msgstr "最大用途"
 
 #: common/models.py:545
 msgid "expiry"
-msgstr ""
+msgstr "到期"
 
 #: common/models.py:548
 msgid "notes"
-msgstr ""
+msgstr "记录"
 
 #: common/models.py:549
 msgid "sent"
-msgstr ""
+msgstr "发送"
 
 #: common/models.py:550
 msgid "created"
-msgstr ""
+msgstr "创建"
 
 #: common/models.py:551
 msgid "use count"
-msgstr ""
+msgstr "使用计数"
 
 #: common/models.py:554
 msgid "signup code"
-msgstr ""
+msgstr "注册代码"
 
 #: common/models.py:555
 msgid "signup codes"
-msgstr ""
+msgstr "注册代码"
 
 #: common/models.py:662
 msgid "verified"
-msgstr ""
+msgstr "验证"
 
 #: common/models.py:663
 msgid "primary"
-msgstr ""
+msgstr "初期"
 
 #: common/models.py:668
 msgid "email address"
-msgstr ""
+msgstr "邮箱地址"
 
 #: common/models.py:669
 msgid "email addresses"
-msgstr ""
+msgstr "邮箱地址"
 
 #: common/models.py:719
 msgid "email confirmation"
-msgstr ""
+msgstr "邮件确认"
 
 #: common/models.py:720
 msgid "email confirmations"
-msgstr ""
+msgstr "邮件确认"
 
 #: common/models.py:769
 msgid "date requested"
-msgstr ""
+msgstr "申请日前"
 
 #: common/models.py:770
 msgid "date expunged"
-msgstr ""
+msgstr "日期消除"
 
 #: common/models.py:773
 msgid "account deletion"
-msgstr ""
+msgstr "账户删除"
 
 #: common/models.py:774
 msgid "account deletions"
-msgstr ""
-
-#: consultant/templates/consultant/client_dashboard.html:249
-msgid "EXPERTS YOU HAVE WORKED BEFORE"
-msgstr ""
-
-#: consultant/templates/consultant/client_dashboard.html:276
-#: consultant/templates/consultant/expert_dashboard.html:246
-msgid "DOWNLOAD SAMPLE INVOICE"
-msgstr ""
+msgstr "账户删除"
 
 #: enverest/settings.py:173
 msgid "English"
-msgstr ""
+msgstr "英语"
 
 #: enverest/settings.py:174
 msgid "Chinese"
-msgstr ""
+msgstr "中文"
 
-#: payment/templates/payment/alipay.html:23
-#: payment/templates/payment/alipay.html:39
-msgid "Alipay"
-msgstr ""
-
-#: payment/templates/payment/alipay.html:26
-#: payment/templates/payment/index.html:49
-msgid ""
-"Alipay.com is a third-party online payment platform with no transaction "
-"fees. It was launched in China in 2004 by Alibaba Group and its founder Jack "
-"Ma."
-msgstr ""
-
-#: payment/templates/payment/alipay.html:40
-msgid "Alipay Account Name: enveret_inc"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:17
-msgid "Bank Transfer"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:20
-#: payment/templates/payment/bank_transfer_beijing.html:20
-#: payment/templates/payment/index.html:38
-msgid ""
-"Wire transfer, bank transfer or credit transfer is a method of electronic "
-"funds transfer from one person or entity to another. A wire transfer can be "
-"made from one bank account to another bank account or through a transfer of "
-"cash at a cash office."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:30
-#: payment/templates/payment/bank_transfer_beijing.html:33
-msgid "Beijing, China"
-msgstr "中国，北京"
-
-#: payment/templates/payment/bank_transfer.html:31
-msgid "Transfer to our Beijing branch."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:41
-msgid "Singapore"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:42
-msgid "Transfer to our Singapore branch."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:52
-msgid "San Francisco, USA"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer.html:53
-msgid "Transfer to our USA headquarter."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_beijing.html:17
-msgid "Bank Transfer to Beijing, China"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_beijing.html:34
-msgid "Beneficiary Name: Enveret Inc."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_beijing.html:35
-msgid "Beneficiary Bank: Some Testing Bank"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_beijing.html:36
-msgid "Beneficiary Account Number: 123456789"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_beijing.html:37
-msgid "Beneficiary Bank Address: 134th Stree, Beijing, China"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_beijing.html:38
-msgid "Beneficiary Bank Swift Code: CITSTGT"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:17
-msgid "Bank Transfer to USA"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:30
-msgid "Payment by wire"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:31
-msgid "Bank Name: Citibank, N.A."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:32
-#, fuzzy
-#| msgid "About Enverest"
-msgid "Account Name: Enverest, Inc."
-msgstr "关于恩睿"
-
-#: payment/templates/payment/bank_transfer_detail.html:33
-msgid "Account Number: 206377475"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:34
-msgid "Swift Code: CITI US 33"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:35
-msgid "U.S. Domestic Routing Number: 321171184"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:44
-msgid "Payment by check"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:45
-msgid "Payable to: Enverest, Inc."
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:46
-msgid "Mailing Address:"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:47
-msgid "4500 Great America Parkway"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:48
-msgid "Suite 100"
-msgstr ""
-
-#: payment/templates/payment/bank_transfer_detail.html:49
-msgid "Santa Clara, CA, 95054"
-msgstr ""
-
-#: payment/templates/payment/index.html:24
-msgid "Payment"
-msgstr ""
-
-#: payment/templates/payment/index.html:27
-msgid "We provide the following payment methods."
-msgstr ""
-
-#: payment/templates/payment/index.html:37
-msgid "Wire Transfer"
-msgstr ""
-
-#: payment/templates/payment/index.html:48
-msgid "Ali Pay"
-msgstr ""
-
-#: payment/templates/payment/index.html:59
-msgid "PayPal"
-msgstr ""
-
-#: payment/templates/payment/index.html:60
-msgid ""
-"PayPal Holdings, Inc. is an American company operating a worldwide online "
-"payments system. Online money transfers serve as electronic alternatives to "
-"traditional paper methods like checks and money orders."
-msgstr ""
-
-#: templates/base.html:49
+#: templates/base.html:51
 msgid "Enverest"
 msgstr "恩睿咨询"
 
-#: templates/base.html:55
-#, fuzzy
-#| msgid "About Enverest"
+#: templates/base.html:60
 msgid "About Us"
 msgstr "关于恩睿"
 
-#: templates/base.html:56
-#, fuzzy
-#| msgid "Service"
+#: templates/base.html:63
 msgid "Services"
 msgstr "服务"
 
-#: templates/base.html:57
+#: templates/base.html:66
 msgid "How It Works"
-msgstr ""
+msgstr "如何运营"
 
-#: templates/base.html:58
+#: templates/base.html:69
 msgid "Contact Us"
-msgstr ""
+msgstr "联系我们"
 
-#: templates/base.html:73
+#: templates/base.html:94
 msgid "Sign Out"
-msgstr ""
+msgstr "登出"
 
-#: templates/base.html:74
+#: templates/base.html:97
 msgid "Message"
-msgstr ""
+msgstr "信息"
 
-#: templates/base.html:75
+#: templates/base.html:100
 msgid "Dashboard"
-msgstr ""
+msgstr "仪表盘"
 
-#: templates/base.html:76
+#: templates/base.html:103
 msgid "Profile"
-msgstr ""
+msgstr "简介"
 
-#: templates/base.html:78
+#: templates/base.html:107
 msgid "Sign In"
-msgstr ""
+msgstr "登录"
 
-#: templates/base.html:79
+#: templates/base.html:110
 msgid "Sign Up"
-msgstr ""
+msgstr "注册"
 
-#: userprofile/templates/userprofile/profile.html:20
-msgid "Expert Profile"
-msgstr ""
+#~ msgid "EXPERTS YOU HAVE WORKED BEFORE"
+#~ msgstr "曾与您共事过的专家"
 
-#: userprofile/templates/userprofile/profile.html:24
-msgid "Client Profile"
-msgstr ""
+#~ msgid "DOWNLOAD SAMPLE INVOICE"
+#~ msgstr "下载账单范本"
 
-#: userprofile/templates/userprofile/update_userprofile.html:26
-msgid "Update"
-msgstr ""
+#~ msgid "Alipay"
+#~ msgstr "支付宝"
 
-#: userprofile/views.py:22 userprofile/views.py:52
-msgid "Firstname"
-msgstr ""
+#~ msgid ""
+#~ "Alipay.com is a third-party online payment platform with no transaction "
+#~ "fees. It was launched in China in 2004 by Alibaba Group and its founder "
+#~ "Jack Ma."
+#~ msgstr ""
+#~ "支付宝是一个无需支付交易费用的第三方网上支付平台。它是由阿里巴巴集团及其创"
+#~ "始人马云于2014年在中国创立的。"
 
-#: userprofile/views.py:28 userprofile/views.py:58
-msgid "Lastname"
-msgstr ""
+#~ msgid "Alipay Account Name: enveret_inc"
+#~ msgstr "支付宝账户名：恩睿公司"
 
-#: userprofile/views.py:34 userprofile/views.py:64
-msgid "Email(You can not change email.)"
-msgstr ""
+#~ msgid "Bank Transfer"
+#~ msgstr "银行转账"
+
+#~ msgid ""
+#~ "Wire transfer, bank transfer or credit transfer is a method of electronic "
+#~ "funds transfer from one person or entity to another. A wire transfer can "
+#~ "be made from one bank account to another bank account or through a "
+#~ "transfer of cash at a cash office."
+#~ msgstr ""
+#~ "电汇、银行转账或者信用转账是一种从个人或者实体到另一个人或实体的电子资金转"
+#~ "账形式。电汇也可以从一个银行账户转账到另一个银行账户或者通过办公室现金转"
+#~ "账。"
+
+#~ msgid "Beijing, China"
+#~ msgstr "中国，北京"
+
+#~ msgid "Transfer to our Beijing branch."
+#~ msgstr "转账到我们北京分公司"
+
+#~ msgid "Singapore"
+#~ msgstr "新加坡"
+
+#~ msgid "Transfer to our Singapore branch."
+#~ msgstr "转账到我们新加坡分公司"
+
+#~ msgid "San Francisco, USA"
+#~ msgstr "美国旧金山"
+
+#~ msgid "Transfer to our USA headquarter."
+#~ msgstr "转账到我们美国旧金山分公司"
+
+#~ msgid "Bank Transfer to Beijing, China"
+#~ msgstr "银行转账到中国北京"
+
+#~ msgid "Beneficiary Name: Enveret Inc."
+#~ msgstr "收款人名称：恩睿公司"
+
+#~ msgid "Beneficiary Bank: Some Testing Bank"
+#~ msgstr "收款银行：一些通过检验的银行"
+
+#~ msgid "Beneficiary Account Number: 123456789"
+#~ msgstr "收款银行账号：123456789"
+
+#~ msgid "Beneficiary Bank Address: 134th Stree, Beijing, China"
+#~ msgstr "收款银行地址：中国北京123街"
+
+#~ msgid "Beneficiary Bank Swift Code: CITSTGT"
+#~ msgstr "收款银行转换码：CITSTGT"
+
+#~ msgid "Bank Transfer to USA"
+#~ msgstr "银行转账到美国"
+
+#~ msgid "Payment by wire"
+#~ msgstr "电汇付款"
+
+#~ msgid "Bank Name: Citibank, N.A."
+#~ msgstr "银行名称：花旗银行"
+
+#, fuzzy
+#~| msgid "About Enverest"
+#~ msgid "Account Name: Enverest, Inc."
+#~ msgstr "关于恩睿  账户名称：恩睿公司"
+
+#~ msgid "Account Number: 206377475"
+#~ msgstr "账号：206377475"
+
+#~ msgid "Swift Code: CITI US 33"
+#~ msgstr "转换码：CITI US 33"
+
+#~ msgid "U.S. Domestic Routing Number: 321171184"
+#~ msgstr "美国境内入境码：321171184"
+
+#~ msgid "Payment by check"
+#~ msgstr "支票付账"
+
+#~ msgid "Payable to: Enverest, Inc."
+#~ msgstr "支票抬头写给：恩睿公司"
+
+#~ msgid "Mailing Address:"
+#~ msgstr "邮寄地址"
+
+#~ msgid "4500 Great America Parkway"
+#~ msgstr "大美百汇4500号"
+
+#~ msgid "Suite 100"
+#~ msgstr "100室"
+
+#~ msgid "Santa Clara, CA, 95054"
+#~ msgstr "圣克拉拉"
+
+#~ msgid "Payment"
+#~ msgstr "付款"
+
+#~ msgid "We provide the following payment methods."
+#~ msgstr "我们提供以下的付款方式"
+
+#~ msgid "Wire Transfer"
+#~ msgstr "电汇"
+
+#~ msgid "Ali Pay"
+#~ msgstr "支付宝"
+
+#~ msgid "PayPal"
+#~ msgstr "贝宝"
+
+#~ msgid ""
+#~ "PayPal Holdings, Inc. is an American company operating a worldwide online "
+#~ "payments system. Online money transfers serve as electronic alternatives "
+#~ "to traditional paper methods like checks and money orders."
+#~ msgstr ""
+#~ "贝宝控股公司室一家由美国公司运营的全球在线支付系统。用网上银行付款的电子方"
+#~ "式代替了传统纸质的方式如支票和汇票。"
+
+#~ msgid "Expert Profile"
+#~ msgstr "专家简介"
+
+#~ msgid "Client Profile"
+#~ msgstr "客户简介"
+
+#~ msgid "Update"
+#~ msgstr "更新"
+
+#~ msgid "Firstname"
+#~ msgstr "名字"
+
+#~ msgid "Lastname"
+#~ msgstr "姓氏"
+
+#~ msgid "Email(You can not change email.)"
+#~ msgstr "邮箱（你不能更改邮箱）"
 
 #~ msgid "Partners"
 #~ msgstr "合作伙伴"
