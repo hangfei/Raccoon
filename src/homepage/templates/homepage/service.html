@@ -9,7 +9,13 @@
     $('#service').addClass('active')
   });
 </script>
+<style>
+.img-responsive{
+  max-width: 100%;
+  height: auto;
+}
 
+</style>
 <div class="container">
 <br>
 
@@ -19,95 +25,117 @@
     <br>
     <br>
     <h4>
-      <strong>{% trans "Fast-Growth Strategy and Execution" %}</strong>
+      <strong>{% trans "Enverest Platform" %}</strong>
     </h4>
     <p class="m-b-lg">
-      {% trans "The Enverest team and Expert Network are filled with experienced entrepreneurs and seasoned professionals from a variety of industries and functions. We know what it takes for startups and Small-and-Mid size business (SMB) to achieve accelerated growth." %}
+      {% trans "Enverest enables Chinese and Asian enterprises and startups to engage industry experts and advisors to innovate and internationalize. Headquartered in Silicon Valley, Enverest has branches in New York, Singapore and Beijing. With world-class experts in high tech, life sciences, new energy & materials, we offer 3 types of services:" %}
     </p>
   </div>
-  <div class="col-sm-7">
+  <div class="col-sm-4 text-center">
+    <img src="{% static 'images/service/service_1.jpg' %}" style="width:100%">
+    <br>
     <h5>
-      Our services include
+      <strong>{% trans "Enverest Experts" %}</strong>
     </h5>
-    <ul>
-      <li>
-        {% trans "Business development and partnership" %}
-      </li>
-      <li>
-        {% trans "Operations improvement" %}
-      </li>
-      <li>
-        {% trans "Technical advice and guidance" %}
-      </li>
-      <li>
-        {% trans "Organizational structure planning" %}
-      </li>
-      <li>
-        {% trans "Performance management" %}
-      </li>
-      <li>
-        {% trans "Product launch readiness" %}
-      </li>
-      <li>
-        {% trans "Marketing and branding strategies" %}
-      </li>
-    </ul>
+    <p class="m-b-lg">
+      {% trans "Business expertise, on demand" %}
+    </p>
   </div>
-  <div class="col-sm-5">
-    <img src="{% static 'images/service/service_1.png' %}" style="width:100%">
+  <div class="col-sm-4 text-center">
+    <img src="{% static 'images/service/service_2.jpg' %}" style="width:100%">
+    <h5>
+      <strong>{% trans "Enverest Solutions" %}</strong>
+    </h5>
+    <p class="m-b-lg">
+      {% trans "Customized & deep-dive consulting" %}
+    </p>
+  </div>
+  <div class="col-sm-4 text-center">
+    <img src="{% static 'images/service/service_3.jpg' %}" style="width:100%">
+    <h5>
+      <strong>{% trans "Enverest Advisors" %}</strong>
+    </h5>
+    <p class="m-b-lg">
+      {% trans "Entrepreneurship advisory" %}
+    </p>
+  </div>
+</div>
+
+<div class="row m-b-lg">
+  <div class="col-sm-12 text-center">
+    <div class="row">
+      <div class="col-sm-6 text-center">
+
+        <div class="row">
+          <div class="col-sm-3 text-center">
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/performance_improvement.png' %}">
+            <p>Performance Improvement</p>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/market_research.png' %}">
+            <p>Market Research</p>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/cross_border_operations.png' %}">
+            <p>Cross-border Operations</p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-sm-6 text-center">
+
+        <div class="row">
+          <div class="col-sm-3 text-center">
+            <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/international_partnership.png' %}">
+            <p>International Partnership</p>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/merger_acquisition.png' %}">
+            <p>Merger and Acquisition</p>
+          </div>
+
+          <div class="col-sm-3 text-center">
+            <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/venture.png' %}">
+            <p>Entrepreneurship/ Venture Advisory</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="row m-b-lg">
   <div class="col-sm-12">
-    <br>
-    <br>
     <h4>
-      <strong>{% trans "Global Market Expansion" %}</strong>
+      <strong>{% trans "1.  Enverest Experts" %}</strong>
     </h4>
     <p class="m-b-lg">
-      {% trans "Once have achieved success in the home market, many entrepreneurs and business leaders feel they're ready to take on the next step: global market expand. We have the deep knowledge and expertise to help your business expand in most major international markets including North America, China, Southeast Asia, etc." %}
+      {% trans "Applying sharing economy to business advisory services, Enverest Experts is an online marketplace connecting enterprises and startups to experts for deep industrial knowledge and market insights. Our experts are industrial leaders who have at least 10 years of domain expertise. Our client can post engagement need online and get response within 48 hours to engage desired experts.  We also offer user-friendly online tools such as one-click video/audio call, messaging and engagement tracker." %}
     </p>
   </div>
-  <div class="col-sm-7">
-    <h5>
-      Our services include
-    </h5>
-    <ul>
-      <li>
-        {% trans "Cross-border operations" %}
-      </li>
-      <li>
-        {% trans "Market and industry research" %}
-      </li>
-      <li>
-        {% trans "Business model localization" %}
-      </li>
-      <li>
-        {% trans "Market entry and competition" %}
-      </li>
-      <li>
-        {% trans "International partnership" %}
-      </li>
-      <li>
-        {% trans "Global marketing and branding" %}
-      </li>
-      <li>
-        {% trans "Merger and acquisition​" %}
-      </li>
-    </li>
-  </div>
-  <div class="col-sm-5">
-    <img src="{% static 'images/service/service_2.png' %}" style="width:100%">
-  </div>
-</div>
-
-
-<div class="row m-b-lg">
   <div class="col-sm-12">
     <h4>
-      <strong><a href="/account/signup">{% trans "Sign Up Now" %}</a></strong>
+      <strong>{% trans "2. Enverest Solutions" %}</strong>
     </h4>
+    <p class="m-b-lg">
+      {% trans "We offer clients customized and deep-dive consulting services to innovate and internationalize. Our professional consultants have extensive experience from top consulting firms such as McKinsey and BCG, and from leading corporations including Apple and Amgen. Enverest Solutions team helps clients to improve operations, enhance performance, and develop international market, etc." %}
+    </p>
+  </div>
+  <div class="col-sm-12">
+    <h4>
+      <strong>{% trans "3. Enverest Advisors" %}</strong>
+    </h4>
+    <p class="m-b-lg">
+      <strong>{% trans "Enverest Advisors" %}</strong>{% trans " is the advisory service suite designed specifically for startups and venture investors. We provide startups business advice and training and fundraising support, and offer venture investors our experts’ evaluation of promising startups. Our reputable services and connections in entrepreneurship eco-system are great assets for your venture to succeed." %}
+    </p>
   </div>
 </div>
 
