@@ -1,0 +1,178 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-21 21:03-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: payment/templates/payment/alipay.html:23
+#: payment/templates/payment/alipay.html:39
+msgid "Alipay"
+msgstr ""
+
+#: payment/templates/payment/alipay.html:26
+#: payment/templates/payment/index.html:49
+msgid ""
+"Alipay.com is a third-party online payment platform with no transaction "
+"fees. It was launched in China in 2004 by Alibaba Group and its founder Jack "
+"Ma."
+msgstr ""
+
+#: payment/templates/payment/alipay.html:40
+msgid "Alipay Account Name: enveret_inc"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:17
+msgid "Bank Transfer"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:20
+#: payment/templates/payment/bank_transfer_beijing.html:20
+#: payment/templates/payment/index.html:38
+msgid ""
+"Wire transfer, bank transfer or credit transfer is a method of electronic "
+"funds transfer from one person or entity to another. A wire transfer can be "
+"made from one bank account to another bank account or through a transfer of "
+"cash at a cash office."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:30
+#: payment/templates/payment/bank_transfer_beijing.html:33
+msgid "Beijing, China"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:31
+msgid "Transfer to our Beijing branch."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:41
+msgid "Singapore"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:42
+msgid "Transfer to our Singapore branch."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:52
+msgid "San Francisco, USA"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer.html:53
+msgid "Transfer to our USA headquarter."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_beijing.html:17
+msgid "Bank Transfer to Beijing, China"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_beijing.html:34
+msgid "Beneficiary Name: Enveret Inc."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_beijing.html:35
+msgid "Beneficiary Bank: Some Testing Bank"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_beijing.html:36
+msgid "Beneficiary Account Number: 123456789"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_beijing.html:37
+msgid "Beneficiary Bank Address: 134th Stree, Beijing, China"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_beijing.html:38
+msgid "Beneficiary Bank Swift Code: CITSTGT"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:17
+msgid "Bank Transfer to USA"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:30
+msgid "Payment by wire"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:31
+msgid "Bank Name: Citibank, N.A."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:32
+msgid "Account Name: Enverest, Inc."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:33
+msgid "Account Number: 206377475"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:34
+msgid "Swift Code: CITI US 33"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:35
+msgid "U.S. Domestic Routing Number: 321171184"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:44
+msgid "Payment by check"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:45
+msgid "Payable to: Enverest, Inc."
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:46
+msgid "Mailing Address:"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:47
+msgid "4500 Great America Parkway"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:48
+msgid "Suite 100"
+msgstr ""
+
+#: payment/templates/payment/bank_transfer_detail.html:49
+msgid "Santa Clara, CA, 95054"
+msgstr ""
+
+#: payment/templates/payment/index.html:24
+msgid "Payment"
+msgstr ""
+
+#: payment/templates/payment/index.html:27
+msgid "We provide the following payment methods."
+msgstr ""
+
+#: payment/templates/payment/index.html:37
+msgid "Wire Transfer"
+msgstr ""
+
+#: payment/templates/payment/index.html:48
+msgid "Ali Pay"
+msgstr ""
+
+#: payment/templates/payment/index.html:59
+msgid "PayPal"
+msgstr ""
+
+#: payment/templates/payment/index.html:60
+msgid ""
+"PayPal Holdings, Inc. is an American company operating a worldwide online "
+"payments system. Online money transfers serve as electronic alternatives to "
+"traditional paper methods like checks and money orders."
+msgstr ""
