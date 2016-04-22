@@ -392,6 +392,8 @@ class ConsultantSignupView(FormView):
             return self.closed()
         request = args[0]
         redirect_domain = 'http://' + request.META['HTTP_HOST']
+        # reset form for each request
+        self.form_kwargs['initial'] = {}
         if request.GET.get('code'):
             post_data = {'grant_type':'authorization_code',
                          'code':request.GET.get('code'),
