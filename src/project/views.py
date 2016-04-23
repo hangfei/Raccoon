@@ -6,7 +6,7 @@ from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
 from common.models import Project,Client,Expert,CommentForExpert,CommentForClient
 
-from .forms import ProjectForm
+from .forms import ProjectForm, ProjectFileForm
 import logging
 
 logger = logging.getLogger(__name__)
@@ -336,3 +336,46 @@ def unavailable(request):
 
 def clientonly(request):
     return render(request, 'clientonly.html')
+
+def showupload(request):
+    context = RequestContext(request, {
+               'file': 'new_file',
+              })
+    return render(request, 'showupload.html')
+
+def upload(request):
+    # if this is a POST request we need to process the form data
+    if request.method == 'POST':
+        form = ProjectFileForm(request.POST)
+
+        # check whether it's valid:
+        if form.is_valid():
+            new_file = form.cleaned_data['avatar']
+            # process the data in form.cleaned_data as required
+            # new_project = Project(client=getCurrentRole(request),
+            #                       expert=(Expert.objects.all())[0],
+            #                       title_text=form.cleaned_data['project_name'],
+            #                       info_text=form.cleaned_data['project_description'],
+            #                       expert_pref_text=form.cleaned_data['project_expert_preference'],
+            #                       pub_date=form.cleaned_data['project_pub_date'],
+            #                       end_date=form.cleaned_data['project_end_date'],
+            #                       rate=form.cleaned_data['project_rate'],
+            #                       assign_history='',
+            #                       state='PS',
+            #                       assgin_to='ADM',
+            #                       industry=form.cleaned_data['project_expert_industry'],
+            #                       expertise=form.cleaned_data['project_expert_expertise'],
+            #                       rate_type=form.cleaned_data['project_rate_type'],
+            #                       service_type=form.cleaned_data['project_service_type'],
+            #     )
+            # new_project.save()
+            # redirect to a new URL:
+            context = RequestContext(request, {
+               'file': new_file,
+              })
+            return render(request,'showupload.html', context)
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+      form = ProjectFileForm(label_suffix=' ')
+    return render(request, 'upload.html', {'form': form})

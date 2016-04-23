@@ -1,8 +1,9 @@
 from django import forms
+from django.forms import ModelForm
 from django.utils.safestring import mark_safe
 
 from datetime import date
-from common.models import Client, Expert
+from common.models import Client, Expert, ProjectFile
 
 INDUSTRY_CHOICES = (
     ("MC","Management Consulting"),
@@ -103,3 +104,11 @@ class ProjectForm(forms.Form):
     	                                    widget=forms.TextInput(
                                               attrs={'placeholder':'In dollars or hours',
                                                      'size':'60'}))
+class ProjectFileForm(ModelForm):
+
+  class Meta:
+    model = ProjectFile
+    fields = ['avatar']
+    labels = {
+        'avatar':'',
+    }

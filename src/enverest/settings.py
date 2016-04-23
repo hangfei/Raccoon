@@ -156,9 +156,13 @@ AUTH_PASSWORD_VALIDATORS = [
 # http://djangotricks.blogspot.com/2013/12/how-to-store-your-media-files-in-amazon.html
 # AWS keys
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
-AWS_ACCESS_KEY_ID = 'AKIAJOJ4LB2LY4U7KR4Q'
-AWS_SECRET_ACCESS_KEY = 'Z0qKkvdsin/WyyRQ9jLKz7kj2OcLI22W3vJsXVsd'
-AWS_STORAGE_BUCKET_NAME = 'hnlin-godjango-episode-46'
+AWS_ACCESS_KEY_ID = 'AKIAJVZWLLERLPZN42XA'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'enverest-storage'
+
+#AWS_ACCESS_KEY_ID = 'AKIAJOJ4LB2LY4U7KR4Q'
+#AWS_SECRET_ACCESS_KEY = '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'
+#AWS_STORAGE_BUCKET_NAME = 'hnlin-godjango-episode-46'
 
 STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 

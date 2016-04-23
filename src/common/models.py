@@ -417,6 +417,9 @@ class Project(models.Model):
     def __str__(self):
         return self.title_text
 
+class ProjectFile(models.Model):
+    avatar = models.FileField(_("Avatar"), upload_to='avatar/', blank=True)
+
 class CommentForExpert(models.Model):
     project = models.ForeignKey(Project)
     expert = models.ForeignKey(Expert)
