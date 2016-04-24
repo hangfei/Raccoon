@@ -1,0 +1,16 @@
+{% extends "base_project.html" %}
+{% load staticfiles %}
+
+{% block progress_tracker %}
+<div class="progress-container">
+  <ol class="progress-meter">
+    <li class="progress-point todo">Expert Accept</li><li class="progress-point todo">Confirm</li><li class="progress-point todo">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+  </ol>
+</div>
+{% endblock %}
+
+
+{% block choice_content %}
+<a href="{% static file.avatar.name %}">{{ file.file_name }}</a>
+
+{% endblock %}

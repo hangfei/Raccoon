@@ -31,6 +31,8 @@ from account.hooks import hookset
 from account.managers import EmailAddressManager, EmailConfirmationManager
 from account.signals import signup_code_sent, signup_code_used
 
+import uuid
+import os
 class UserProfile(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL)
     avatar = models.ImageField(_("Avatar"), upload_to='avatar/', blank=True)
@@ -414,11 +416,22 @@ class Project(models.Model):
     service_type = models.CharField(max_length=1,
                                     choices=SERVICE_CHOICES,
                                     default=GENERAL_ADVISORY)
+    #files_list = models.TextField(default='')
     def __str__(self):
         return self.title_text
 
 class ProjectFile(models.Model):
-    avatar = models.FileField(_("Avatar"), upload_to='avatar/', blank=True)
+    def get_file_path(instance, filename):
+      ext = filename.split('.')[-1]
+      filename = "%s.%s" % (uuid.uuid4(), ext)
+      return os.path.join('projectfiles/', filename)
+
+    file_name = models.CharField(max_length=255, default='')
+    project_id = models.IntegerField(default=0)
+    avatar = models.FileField(_("Avatar"), upload_to=get_file_path, blank=True)
+
+    def __str__(self):
+        return self.file_name
 
 class CommentForExpert(models.Model):
     project = models.ForeignKey(Project)

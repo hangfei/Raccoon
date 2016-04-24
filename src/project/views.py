@@ -4,9 +4,9 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect, HttpResponseForbidden
 from django.contrib.auth import get_user_model
 from django.core.exceptions import ObjectDoesNotExist
-from common.models import Project,Client,Expert,CommentForExpert,CommentForClient
+from common.models import Project,Client,Expert,CommentForExpert,CommentForClient, ProjectFile
 
-from .forms import ProjectForm, ProjectFileForm
+from .forms import ProjectForm ,ProjectFileForm
 import logging
 
 logger = logging.getLogger(__name__)
@@ -116,10 +116,13 @@ def getProjectFromPost(request, expectStatus, require_expert):
     try:
       project = Project.objects.get(pk=project_id_val)
     except ObjectDoesNotExist:
+      print("no object")
       return None
     if(project.state not in expectStatus):
+      print(project.state)
       return None
     if hasPermission(request, project, require_expert) == False:
+      print("no permission")
       return None
     return project
 
@@ -316,8 +319,13 @@ def generalGetPage(request, pageStatus, expectStatus, require_expert):
                 return HttpResponseRedirect('unavailable')
             if hasPermission(request, project, require_expert) == False:
                 return HttpResponseRedirect('unavailable')
+
+            project_files = ProjectFile.objects.filter(project_id=project_id_val)
+            uploadForm = ProjectFileForm(label_suffix=' ')
             context = RequestContext(request, {
                'project': project,
+               'project_files':project_files,
+               'uploadForm':uploadForm,
               })
             return render(request, pageStatus+'.html', context)
         return HttpResponseRedirect('unavailable')
@@ -346,34 +354,22 @@ def showupload(request):
 def upload(request):
     # if this is a POST request we need to process the form data
     if request.method == 'POST':
-        form = ProjectFileForm(request.POST)
+        form = ProjectFileForm(request.POST, request.FILES)
 
         # check whether it's valid:
         if form.is_valid():
-            new_file = form.cleaned_data['avatar']
-            # process the data in form.cleaned_data as required
-            # new_project = Project(client=getCurrentRole(request),
-            #                       expert=(Expert.objects.all())[0],
-            #                       title_text=form.cleaned_data['project_name'],
-            #                       info_text=form.cleaned_data['project_description'],
-            #                       expert_pref_text=form.cleaned_data['project_expert_preference'],
-            #                       pub_date=form.cleaned_data['project_pub_date'],
-            #                       end_date=form.cleaned_data['project_end_date'],
-            #                       rate=form.cleaned_data['project_rate'],
-            #                       assign_history='',
-            #                       state='PS',
-            #                       assgin_to='ADM',
-            #                       industry=form.cleaned_data['project_expert_industry'],
-            #                       expertise=form.cleaned_data['project_expert_expertise'],
-            #                       rate_type=form.cleaned_data['project_rate_type'],
-            #                       service_type=form.cleaned_data['project_service_type'],
-            #     )
-            # new_project.save()
+            if 'project_id' not in request.POST:
+              return HttpResponseRedirect('unavailable')
+            newProjectFile = ProjectFile(file_name=request.FILES['avatar'],
+                                         avatar=form.cleaned_data['avatar'],
+                                         project_id=request.POST['project_id'])
+            newProjectFile.save()
             # redirect to a new URL:
-            context = RequestContext(request, {
-               'file': new_file,
-              })
-            return render(request,'showupload.html', context)
+            print(request.POST['preUrl'])
+            if 'preUrl' not in request.POST:
+              return HttpResponseRedirect('/consultant/dashboard/')
+            preUrl = request.POST['preUrl']
+            return HttpResponseRedirect(preUrl+'?project_id='+request.POST['project_id'])
 
     # if a GET (or any other method) we'll create a blank form
     else:

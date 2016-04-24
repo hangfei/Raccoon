@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Client, Expert, Project, CommentForExpert, CommentForClient, Image
+from .models import Client, Expert, Project, CommentForExpert, CommentForClient, ProjectFile
 # Register your models here.
 admin.site.register(Client)
 
@@ -10,4 +10,4 @@ admin.site.register(Expert, ExpertAdmin)
 admin.site.register(Project)
 admin.site.register(CommentForExpert)
 admin.site.register(CommentForClient)
-admin.site.register(Image)
+admin.site.register(ProjectFile)
