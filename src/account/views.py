@@ -394,6 +394,7 @@ class ConsultantSignupView(FormView):
         redirect_domain = 'http://' + request.META['HTTP_HOST']
         # reset form for each request
         self.form_kwargs['initial'] = {}
+        self.request.session['linkedin_profile_image'] = None
         if request.GET.get('code'):
             post_data = {'grant_type':'authorization_code',
                          'code':request.GET.get('code'),
