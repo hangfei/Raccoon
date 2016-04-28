@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 21:03-0700\n"
+"POT-Creation-Date: 2016-04-28 00:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,35 +21,35 @@ msgstr ""
 #: search/templates/common/expert_detail.html:4
 #: search/templates/common/expert_list.html:47
 msgid "Industry"
-msgstr ""
+msgstr "行业"
 
 #: search/templates/common/expert_detail.html:5
 #: search/templates/common/expert_list.html:74
 msgid "Expertise"
-msgstr ""
+msgstr "专长"
 
 #: search/templates/common/expert_detail.html:6
 #: search/templates/common/expert_list.html:103
 msgid "Experience"
-msgstr ""
+msgstr "工作经验"
 
 #: search/templates/common/expert_detail.html:7
 msgid "Status"
-msgstr ""
+msgstr "状态"
 
 #: search/templates/common/expert_detail.html:8
 #: search/templates/common/expert_list.html:117
 msgid "Area"
-msgstr ""
+msgstr "地区"
 
 #: search/templates/common/expert_list.html:43
 msgid "Invite Experts to a Project"
-msgstr ""
+msgstr "邀请专家参与项目"
 
 #: search/templates/common/expert_list.html:256
 msgid "Experts"
-msgstr ""
+msgstr "专家"
 
 #: search/templates/common/expert_list.html:257
 msgid "No experts found in this area, please change search condition"
-msgstr ""
+msgstr "在这方面没有发现对应专家，请改变搜索条件"

@@ -78,7 +78,7 @@
       <div class="container">
         <div class="row text-center">
           <div class="col-xs-12 col-sm-12" style="">
-            <h1 style="color: #ec971f;">Business Expertise, On-Demand</h1>
+            <h1 style="color: #ec971f;">{% trans "Business Expertise, On-Demand" %}</h1>
             <br>
             <!-- <p style="color: #000000;">Expertise sharing platform that enables enterprises to engage experts for on-demand business advisory services.</p> -->
             <!-- <a href="{% url 'account_sign_up' %}" class="btn btn-primary btn-lg">Try it now</a> -->
@@ -94,7 +94,7 @@
               <i class="fa fa-circle fa-stack-2x" style="color:rgba(45, 106, 146, 0.69);"></i>
               <i class="fa fa-inverse fa-stack-1x">1</i>
             </span>
-            <h5 style="color:#EC971F"><strong>Post Your Engagement</strong></h5>
+            <h5 style="color:#EC971F"><strong>{% trans "Post Your Engagement" %}</strong></h5>
             </a>
           </div>
           <div class="col-sm-4 start-step">
@@ -103,7 +103,7 @@
               <i class="fa fa-circle fa-stack-2x" style="color:rgba(45, 106, 146, 0.69);"></i>
               <i class="fa fa-inverse fa-stack-1x">2</i>
             </span>
-            <h5 style="color:#EC971F"><strong>Match Applicants For Free</strong></h5>
+            <h5 style="color:#EC971F"><strong>{% trans "Match Applicants For Free" %}</strong></h5>
             </a>
           </div>
 
@@ -113,7 +113,7 @@
               <i class="fa fa-circle fa-stack-2x" style="color:rgba(45, 106, 146, 0.69);"></i>
               <i class="fa fa-inverse fa-stack-1x">3</i>
             </span>
-            <h5 style="color:#EC971F"><strong>Get Work Done</strong></h5>
+            <h5 style="color:#EC971F"><strong>{% trans "Get Work Done" %}</strong></h5>
             </a>
           </div>
           <div class="col-sm-1">
@@ -124,12 +124,12 @@
           <br>
           <br>
           <div class="col-sm-4 col-sm-offset-2 text-center">
-            <a href="{% url 'search:expert-list' %}" class="btn btn-primary btn-lg">Search for Experts</a>
+            <a href="{% url 'search:expert-list' %}" class="btn btn-primary btn-lg">{% trans "Search for Experts" %}</a>
             <br>
             <br>
           </div>
           <div class="col-sm-4 text-center">
-            <a href="{% url 'project:create' %}" class="btn btn-primary btn-lg">Post your Engagement</a>
+            <a href="{% url 'project:create' %}" class="btn btn-primary btn-lg">{%  trans "Post your Engagement" %}</a>
             <br>
             <br>
           </div>
@@ -356,12 +356,12 @@ blockquote:after {
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/accessible.png' %}">
-            <p>Accesible</p>
+            <p>{% trans "Accesible" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/affordable.png' %}">
-            <p>Affordable</p>
+            <p>{% trans "Affordable" %}</p>
           </div>
         </div>
 
@@ -372,12 +372,12 @@ blockquote:after {
         <div class="row">
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/customized.png' %}">
-            <p>Customized</p>
+            <p>{% trans "Customized" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/interactive.png' %}">
-            <p>Interactive</p>
+            <p>{% trans "Interactive" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
@@ -409,17 +409,17 @@ blockquote:after {
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/performance_improvement.png' %}">
-            <p>Performance Improvement</p>
+            <p>{% trans "Performance Improvement" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/market_research.png' %}">
-            <p>Market Research</p>
+            <p>{% trans "Market Research" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/cross_border_operations.png' %}">
-            <p>Cross-border Operations</p>
+            <p>{% trans "Cross-border Operations" %}</p>
           </div>
         </div>
 
@@ -430,17 +430,17 @@ blockquote:after {
         <div class="row">
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/international_partnership.png' %}">
-            <p>International Partnership</p>
+            <p>{% trans "International Partnership" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/merger_acquisition.png' %}">
-            <p>Merger and Acquisition</p>
+            <p>{% trans "Merger and Acquisition" %}</p>
           </div>
 
           <div class="col-sm-3 text-center">
             <img class="img-responsive" alt="Responsive image" src="{% static 'images/index_page/market_entry.png' %}">
-            <p>Market Entry</p>
+            <p>{% trans "Market Entry" %}</p>
           </div>
         </div>
 
@@ -466,11 +466,11 @@ blockquote:after {
   <div class="col-sm-4">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">A Global SaaS company</h4>
-        <h6 class="card-subtitle text-muted">VP of Product Management</h6>
+        <h4 class="card-title">{% trans "A Global SaaS company" %}</h4>
+        <h6 class="card-subtitle text-muted">{% trans "VP of Product Management" %}</h6>
       </div>
       <div class="card-block">
-        <blockquote><p class="card-text">Enverest experts provided outstanding service. What really impressed me is that they went one step further than most other consultants, to ensure successful implementation across the board. Thanks to their service, we are able to achieve product management and service excellency.</p></blockquote>
+        <blockquote><p class="card-text">{% trans "Enverest experts provided outstanding service. What really impressed me is that they went one step further than most other consultants, to ensure successful implementation across the board. Thanks to their service, we are able to achieve product management and service excellency." %}</p></blockquote>
       </div>
     </div>
   </div>
@@ -479,11 +479,11 @@ blockquote:after {
   <div class="col-sm-4">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">A US-based technology startup</h4>
-        <h6 class="card-subtitle text-muted">Head of Operations</h6>
+        <h4 class="card-title">{% trans "A US-based technology startup" %}</h4>
+        <h6 class="card-subtitle text-muted">{% trans "Head of Operations" %}</h6>
       </div>
       <div class="card-block">
-        <blockquote><p class="card-text">The new processes and communication protocols, effective cross-functional/geo performance metrics as well as operational knowledge base established by Enverest experts have significantly improved our operational performance while growing our business globally.</p></blockquote>
+        <blockquote><p class="card-text">{% trans "The new processes and communication protocols, effective cross-functional/geo performance metrics as well as operational knowledge base established by Enverest experts have significantly improved our operational performance while growing our business globally." %}</p></blockquote>
       </div>
     </div>
   </div>
@@ -491,11 +491,11 @@ blockquote:after {
   <div class="col-sm-4 text-center">
     <div class="card">
       <div class="card-block">
-        <h4 class="card-title">A Chinese advanced manufacturer</h4>
+        <h4 class="card-title">{% trans "A Chinese advanced manufacturer" %}</h4>
         <h6 class="card-subtitle text-muted">CEO</h6>
       </div>
       <div class="card-block">
-        <blockquote><p class="card-text">I strongly recommend Enverest experts to companies seeking international growth, as their deep industry expertise and extensive global network successfully helped us establish partnerships in the US for business expansion. Their on-demand services are extremely customer-oriented.</p></blockquote>
+        <blockquote><p class="card-text">{% trans "I strongly recommend Enverest experts to companies seeking international growth, as their deep industry expertise and extensive global network successfully helped us establish partnerships in the US for business expansion. Their on-demand services are extremely customer-oriented." %}</p></blockquote>
       </div>
     </div>
   </div>
@@ -503,7 +503,7 @@ blockquote:after {
   <div class="col-sm-12 text-center">
     <br>
     <br>
-    <a class="btn btn-primary" href="{% url 'project:create' %}">Submit Your Engagement Request</a>
+    <a class="btn btn-primary" href="{% url 'project:create' %}">{% trans "Submit Your Engagement Request" %}</a>
   </div>
 </div>
 
@@ -516,8 +516,8 @@ blockquote:after {
   <div class="col-xs-12 col-md-4">
     <div class="row row-padded row-bordered row-centered">
       <div class="col-xs-12 col-md-12">
-        <h5 style="text-align: center; vertical-align: middle;">Global Insights, Sustained Impact</h5>
-        <p style="text-align: center; vertical-align: middle;">Silicon Valley | New York | Singapore | Beijing</p>
+        <h5 style="text-align: center; vertical-align: middle;">{% trans "Global Insights, Sustained Impact" %}</h5>
+        <p style="text-align: center; vertical-align: middle;">{% trans "Silicon Valley | New York | Singapore | Beijing " %}</p>
       </div>
     </div>
   </div>

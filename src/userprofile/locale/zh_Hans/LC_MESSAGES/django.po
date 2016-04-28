@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 21:03-0700\n"
+"POT-Creation-Date: 2016-04-28 00:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,24 +20,24 @@ msgstr ""
 
 #: userprofile/templates/userprofile/profile.html:20
 msgid "Expert Profile"
-msgstr ""
+msgstr "专家简介"
 
 #: userprofile/templates/userprofile/profile.html:24
 msgid "Client Profile"
-msgstr ""
+msgstr "客户简介"
 
 #: userprofile/templates/userprofile/update_userprofile.html:26
 msgid "Update"
-msgstr ""
+msgstr "更新"
 
 #: userprofile/views.py:22 userprofile/views.py:52
 msgid "Firstname"
-msgstr ""
+msgstr "名字"
 
 #: userprofile/views.py:28 userprofile/views.py:58
 msgid "Lastname"
-msgstr ""
+msgstr "姓氏"
 
 #: userprofile/views.py:34 userprofile/views.py:64
 msgid "Email(You can not change email.)"
-msgstr ""
+msgstr "电子邮箱（您不可以更改邮箱）"

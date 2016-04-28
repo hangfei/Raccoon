@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 21:03-0700\n"
+"POT-Creation-Date: 2016-04-28 00:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,9 +20,9 @@ msgstr ""
 
 #: consultant/templates/consultant/client_dashboard.html:249
 msgid "EXPERTS YOU HAVE WORKED BEFORE"
-msgstr ""
+msgstr "曾与您合作过的专家"
 
 #: consultant/templates/consultant/client_dashboard.html:276
 #: consultant/templates/consultant/expert_dashboard.html:246
 msgid "DOWNLOAD SAMPLE INVOICE"
-msgstr ""
+msgstr "下载账单样本"

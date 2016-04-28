@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-21 21:03-0700\n"
+"POT-Creation-Date: 2016-04-28 00:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,103 +18,103 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: common/models.py:36
+#: common/models.py:38 common/models.py:431
 msgid "Avatar"
 msgstr "头像"
 
-#: common/models.py:443
+#: common/models.py:459
 msgid "user"
 msgstr "用户"
 
-#: common/models.py:444
+#: common/models.py:460
 msgid "timezone"
 msgstr "时区"
 
-#: common/models.py:446
+#: common/models.py:462
 msgid "language"
 msgstr "语言"
 
-#: common/models.py:543
+#: common/models.py:559
 msgid "code"
 msgstr "代码"
 
-#: common/models.py:544
+#: common/models.py:560
 msgid "max uses"
 msgstr "最大用途"
 
-#: common/models.py:545
+#: common/models.py:561
 msgid "expiry"
 msgstr "到期"
 
-#: common/models.py:548
+#: common/models.py:564
 msgid "notes"
 msgstr "记录"
 
-#: common/models.py:549
+#: common/models.py:565
 msgid "sent"
 msgstr "发送"
 
-#: common/models.py:550
+#: common/models.py:566
 msgid "created"
 msgstr "创建"
 
-#: common/models.py:551
+#: common/models.py:567
 msgid "use count"
 msgstr "使用计数"
 
-#: common/models.py:554
+#: common/models.py:570
 msgid "signup code"
 msgstr "注册代码"
 
-#: common/models.py:555
+#: common/models.py:571
 msgid "signup codes"
 msgstr "注册代码"
 
-#: common/models.py:662
+#: common/models.py:678
 msgid "verified"
 msgstr "验证"
 
-#: common/models.py:663
+#: common/models.py:679
 msgid "primary"
 msgstr "初期"
 
-#: common/models.py:668
+#: common/models.py:684
 msgid "email address"
 msgstr "邮箱地址"
 
-#: common/models.py:669
+#: common/models.py:685
 msgid "email addresses"
 msgstr "邮箱地址"
 
-#: common/models.py:719
+#: common/models.py:735
 msgid "email confirmation"
 msgstr "邮件确认"
 
-#: common/models.py:720
+#: common/models.py:736
 msgid "email confirmations"
 msgstr "邮件确认"
 
-#: common/models.py:769
+#: common/models.py:785
 msgid "date requested"
 msgstr "申请日前"
 
-#: common/models.py:770
+#: common/models.py:786
 msgid "date expunged"
 msgstr "日期消除"
 
-#: common/models.py:773
+#: common/models.py:789
 msgid "account deletion"
 msgstr "账户删除"
 
-#: common/models.py:774
+#: common/models.py:790
 msgid "account deletions"
 msgstr "账户删除"
 
-#: enverest/settings.py:173
+#: enverest/settings.py:177
 msgid "English"
 msgstr "英语"
 
-#: enverest/settings.py:174
+#: enverest/settings.py:178
 msgid "Chinese"
 msgstr "中文"
 

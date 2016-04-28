@@ -27,12 +27,6 @@ def how_it_works(request):
     })
     return render(request, 'homepage/how_it_works.html', context)
 
-def member_benefits(request):
-    context = RequestContext(request, {
-        'latest_question_list': 'sss',
-    })
-    return render(request, 'homepage/member_benefits.html', context)
-
 def team(request):
     context = RequestContext(request, {
         'latest_question_list': 'sss',
