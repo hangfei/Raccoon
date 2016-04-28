@@ -1129,32 +1129,22 @@ msgid "Using the Enverest Connections, our experts can help you with"
 msgstr "欢迎使用恩睿专家平台为您提供："
 
 #: homepage/templates/homepage/index.html:412
-#, fuzzy
-#| msgid "Project Management"
 msgid "Performance Improvement"
 msgstr "项目管理"
 
 #: homepage/templates/homepage/index.html:417
-#, fuzzy
-#| msgid "Market and industry research"
 msgid "Market Research"
 msgstr "市场调研"
 
 #: homepage/templates/homepage/index.html:422
-#, fuzzy
-#| msgid "Cross-border operations"
 msgid "Cross-border Operations"
 msgstr "跨境运营"
 
 #: homepage/templates/homepage/index.html:433
-#, fuzzy
-#| msgid "Close partnership"
 msgid "International Partnership"
 msgstr "国际合作"
 
 #: homepage/templates/homepage/index.html:438
-#, fuzzy
-#| msgid "Merger and acquisition\\u200b"
 msgid "Merger and Acquisition"
 msgstr "整合并购"
 
