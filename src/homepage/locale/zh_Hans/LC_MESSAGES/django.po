@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-28 13:15-0700\n"
+"POT-Creation-Date: 2016-04-28 13:20-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1183,8 +1183,9 @@ msgid "Merger and Acquisition"
 msgstr "整合并购"
 
 #: homepage/templates/homepage/index.html:443
-msgid "Market Entry"
-msgstr "市场进入"
+#: homepage/templates/homepage/service.html:106
+msgid "Entrepreneurship/ Venture Advisory"
+msgstr "创业咨询"
 
 #: homepage/templates/homepage/index.html:458
 msgid "Testimonials"
@@ -1324,10 +1325,6 @@ msgstr "恩睿创投顾问"
 msgid "Entrepreneurship advisory"
 msgstr "创业咨询"
 
-#: homepage/templates/homepage/service.html:106
-msgid "Entrepreneurship/ Venture Advisory"
-msgstr "创业咨询"
-
 #: homepage/templates/homepage/service.html:121
 msgid ""
 "Applying sharing economy to business advisory services, Enverest Experts is "
@@ -1458,6 +1455,9 @@ msgstr ""
 "您在使用网站的过程中，您可能会被重新导向第三方网站。我们不承担任何通过第三方"
 "网站提供的内容和信息。即使通过我们的链接连到第三方网站，并不意味着我们网站对"
 "此信息的认可。我们不承担任何关于另一网站链接的责任"
+
+#~ msgid "Market Entry"
+#~ msgstr "市场进入"
 
 #~ msgid "1.  Enverest Experts"
 #~ msgstr "恩睿专家平台"
