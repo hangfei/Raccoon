@@ -1,6 +1,7 @@
 from django import forms
 from django.forms import ModelForm
 from django.utils.safestring import mark_safe
+from django.utils.translation import ugettext_lazy as _
 
 from datetime import date
 from common.models import Client, Expert, ProjectFile
@@ -63,29 +64,29 @@ RATING_CHOICES = (
     (HOURLY, 'Hourly rate'),
 )
 class ProjectForm(forms.Form):
-    project_name = forms.CharField(label='Name', max_length=200,
+    project_name = forms.CharField(label=_('Name'), max_length=200,
                                    widget=forms.TextInput(
-                                   	    attrs={'placeholder':'Give your engagement request a name',
+                                   	    attrs={'placeholder':_('Give your engagement request a name'),
                                    	           'size':'60'}))
-    project_description = forms.CharField(label='Description', max_length=10000,
+    project_description = forms.CharField(label=_('Description'), max_length=10000,
                                            widget=forms.Textarea(
-                                   	         attrs={'placeholder':'Describe what needs to be done for the engagement',
+                                   	         attrs={'placeholder':_('Describe what needs to be done for the engagement'),
                                                     'rows':10,
                                                     'cols':59}))
-    project_expert_industry = forms.ChoiceField(label='Expert Industry', choices=INDUSTRY_CHOICES, required=True)
-    project_expert_expertise = forms.ChoiceField(label='Expert Expertise', choices=EXPERTISE_CHOICES, required=True)
-    project_expert_preference = forms.CharField(label='Expert Preference', max_length=1000,
+    project_expert_industry = forms.ChoiceField(label=_('Expert Industry'), choices=INDUSTRY_CHOICES, required=True)
+    project_expert_expertise = forms.ChoiceField(label=_('Expert Expertise'), choices=EXPERTISE_CHOICES, required=True)
+    project_expert_preference = forms.CharField(label=_('Expert Preference'), max_length=1000,
                                            widget=forms.Textarea(
-                                   	         attrs={'placeholder':'Describe what kind of expert do you want to work with',
+                                   	         attrs={'placeholder':_('Describe what kind of expert do you want to work with'),
                                                     'rows':4,
                                                     'cols':59}))
-    project_pub_date = forms.DateTimeField(label='Start Date', input_formats=['%Y-%m-%d'],
+    project_pub_date = forms.DateTimeField(label=_('Start Date'), input_formats=['%Y-%m-%d'],
                                            widget=forms.TextInput(
                                               attrs={'placeholder':'YYYY-mm-dd',
                                                       'size':'60',
                                                       'class': 'datepicker'
                                                       }))
-    project_end_date = forms.DateTimeField(label='Due Date', input_formats=['%Y-%m-%d'],
+    project_end_date = forms.DateTimeField(label=_('Due Date'), input_formats=['%Y-%m-%d'],
                                             widget=forms.TextInput(
                                               attrs={'placeholder':'YYYY-mm-dd',
                                                       'size':'60',
@@ -100,9 +101,9 @@ class ProjectForm(forms.Form):
       label=mark_safe('Rate Type (<a href="/how_it_works/#faq" target="_blank">FAQ</a>)'),
       choices=RATING_CHOICES,
       required=True)
-    project_rate = forms.DecimalField(label='Budget', max_digits=8, decimal_places=2,
+    project_rate = forms.DecimalField(label=_('Budget'), max_digits=8, decimal_places=2,
     	                                    widget=forms.TextInput(
-                                              attrs={'placeholder':'In dollars or hours',
+                                              attrs={'placeholder':_('In dollars or hours'),
                                                      'size':'60'}))
 class ProjectFileForm(ModelForm):
 

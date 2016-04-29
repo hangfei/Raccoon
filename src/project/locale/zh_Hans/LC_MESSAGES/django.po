@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-29 00:27-0700\n"
+"POT-Creation-Date: 2016-04-29 00:42-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,54 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#: project/forms.py:67
+msgid "Name"
+msgstr ""
+
+#: project/forms.py:69
+msgid "Give your engagement request a name"
+msgstr ""
+
+#: project/forms.py:71
+msgid "Description"
+msgstr ""
+
+#: project/forms.py:73
+msgid "Describe what needs to be done for the engagement"
+msgstr ""
+
+#: project/forms.py:76
+msgid "Expert Industry"
+msgstr ""
+
+#: project/forms.py:77
+msgid "Expert Expertise"
+msgstr ""
+
+#: project/forms.py:78
+msgid "Expert Preference"
+msgstr ""
+
+#: project/forms.py:80
+msgid "Describe what kind of expert do you want to work with"
+msgstr ""
+
+#: project/forms.py:83
+msgid "Start Date"
+msgstr "开始日期"
+
+#: project/forms.py:89
+msgid "Due Date"
+msgstr "结束日期"
+
+#: project/forms.py:104
+msgid "Budget"
+msgstr "预算"
+
+#: project/forms.py:106
+msgid "In dollars or hours"
+msgstr ""
 
 #: project/templates/clientchoice.html:6 project/templates/clientconfirm.html:6
 #: project/templates/showupload.html:7
@@ -251,3 +299,6 @@ msgstr ""
 #: project/templates/waitpayment.html:19
 msgid "Write a review of the client"
 msgstr ""
+
+#~ msgid "Service Type"
+#~ msgstr "服务类型"
