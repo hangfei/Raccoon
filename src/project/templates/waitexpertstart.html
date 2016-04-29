@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Accept</li><li class="progress-point done">Client Confirm</li><li class="progress-point done">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point done">{% trans "Accept" %}</li><li class="progress-point done">{% trans "Client Confirm" %}</li><li class="progress-point done">{% trans "Sign Contract" %}</li><li class="progress-point todo">{% trans "Work on" %}</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -11,7 +11,7 @@
 
 {% block choice_content %}
 <p></p>
-<p><b>Expert will start working on this after receiving the contract, you can download <a href="{% static 'docs/EXPERT_ADVISORY_AGREEMENT_TEMPLATE.docx' %}">Expert Advisory Agreement Template</a> and <a href="{% static 'docs/TWO_WAY_NDA_TEMPLATE.docx' %}">NDA Template</a> here.<b></p>
+<p><b>{% trans "Expert will start working on this after receiving the contract, you can download" %} <a href="{% static 'docs/EXPERT_ADVISORY_AGREEMENT_TEMPLATE.docx' %}">{% trans "Expert Advisory Agreement Template" %}</a> {% trans "and" %} <a href="{% static 'docs/TWO_WAY_NDA_TEMPLATE.docx' %}">{% trans "NDA Template" %}</a> {% trans "here" %}.<b></p>
 <br>
-<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a>
+<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >{% trans "Write messages to the expert" %}</a>
 {% endblock %}

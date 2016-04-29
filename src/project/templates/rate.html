@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Accept</li><li class="progress-point done">Client Confirm</li><li class="progress-point done">Sign Contract</li><li class="progress-point done">Work on</li><li class="progress-point done">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point done">{% trans "Accept" %}</li><li class="progress-point done">{% trans "Client Confirm" %}</li><li class="progress-point done">{% trans "Sign Contract" %}</li><li class="progress-point done">{% trans "Work on" %}</li><li class="progress-point done">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -12,7 +12,7 @@
 {% block choice_content %}
 
 <p></p>
-<p><b>Please rate the client or expert you work with</b></p>
+<p><b>{% trans "Please rate the client or expert you work with" %}</b></p>
 
 <form class="rating" id="choiceForm" action="{% url 'project:rate' %}" method="POST">{% csrf_token %}
     <input type="radio" id="star5" name="rating" value="5" /><label class = "full" for="star5" title="Awesome - 5 stars"></label>
@@ -28,7 +28,7 @@
     <br>
     <textarea name="comment" cols="59" rows="2" placeholder="Write your review here"></textarea>
     <br>
-    <button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>
+    <button class="pure-button pure-button-primary" type="submit" value="Submit" > {% trans "Submit" %} </button>
 </form>
 
 <script>

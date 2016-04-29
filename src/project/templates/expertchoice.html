@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point todo">Accept</li><li class="progress-point todo">Client Confirm</li><li class="progress-point todo">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point todo">{% trans "Accept" %}</li><li class="progress-point todo">Client Confirm</li><li class="progress-point todo">{% trans "Sign Contract" %}</li><li class="progress-point todo">Work on</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -11,15 +11,15 @@
 
 {% block choice_content %}
 <p></p>
-<p>Are you taking this project?</p>
+<p>{% trans "Are you taking this project?" %}</p>
 <form id="choiceForm" action="{% url 'project:expertchoice' %}" method="POST">{% csrf_token %}
 <div class="dropdown">
 <select name="accept_project">
-    <option id="Accept" value="A">Accept</option>
-    <option id="Decline" value="D">Decline</option>
-    <option id="NeedInfo" value="N">Need More Info</option>
+    <option id="Accept" value="A">{% trans "Accept" %}</option>
+    <option id="Decline" value="D">{% trans "Decline" %}</option>
+    <option id="NeedInfo" value="N">{% trans "Need More Info" %}</option>
 </select>
-<button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>
+<button class="pure-button pure-button-primary" type="submit" value="Submit" > {% trans "Submit" %} </button>
 </form>
 
 <script>

@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Expert Accept</li><li class="progress-point todo">Confirm</li><li class="progress-point todo">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point done">{% trans "Expert Accept" %}</li><li class="progress-point todo">Confirm</li><li class="progress-point todo">{% trans "Sign Contract" %}</li><li class="progress-point todo">{% trans "Work on" %}</li><li class="progress-point todo">Finish</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -11,17 +11,17 @@
 
 {% block choice_content %}
 <br>
-<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a>
+<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >{% trans "Write messages to the expert" %}</a>
 <p></p>
-<p>An expert want to work with you on this engagement. Do you accept this expert?</p>
+<p>{% trans "An expert want to work with you on this engagement. Do you accept this expert?" %}</p>
 <form id="choiceForm" action="{% url 'project:clientchoice' %}" method="POST">{% csrf_token %}
 <div class="dropdown">
 <select name="accept_expert">
-    <option id="Accept" value="A">Accept</option>
-    <option id="Decline" value="D">Decline</option>
-    <option id="NeedInfo" value="N">Need More Info</option>
+    <option id="Accept" value="A">{% trans "Accept" %}</option>
+    <option id="Decline" value="D">{% trans "Decline" %}</option>
+    <option id="NeedInfo" value="N">{% trans "Need More Info" %}</option>
 </select>
-<button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>
+<button class="pure-button pure-button-primary" type="submit" value="Submit" > {% trans "Submit" %} </button>
 </form>
 
 <script>

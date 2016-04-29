@@ -3,20 +3,20 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Expert Accept</li><li class="progress-point done">Confirm</li><li class="progress-point done">Sign Contract</li><li class="progress-point done">Work on</li><li class="progress-point done">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point done">{% trans "Expert Accept" %}</li><li class="progress-point done">{% trans "Confirm" %}</li><li class="progress-point done">{% trans "Sign Contract" %}</li><li class="progress-point done">{% trans "Work on" %}</li><li class="progress-point done">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
 
 
 {% block choice_content %}
-<p><b>Waiting for the payment from the client<b>.</p>
+<p><b>{% trans "Waiting for the payment from the client" %}<b>.</p>
 <p>
-<a href="/consultant/dashboard/#invoice" >Submit an invoice for billing</a>
+<a href="/consultant/dashboard/#invoice" >{% trans "Submit an invoice for billing" %}</a>
 <br>
-<a href="/messages/write?id_recipients={{ project.client.user }}&id_subject={{ project.title_text }}" >Write messages to the client</a>
+<a href="/messages/write?id_recipients={{ project.client.user }}&id_subject={{ project.title_text }}" >{% trans "Write messages to the client" %}</a>
 <br>
-<a href="rate?project_id={{ project.pk }}" >Write a review of the client</a>
+<a href="rate?project_id={{ project.pk }}" >{% trans "Write a review of the client" %}</a>
 </p>
 
 {% endblock %}

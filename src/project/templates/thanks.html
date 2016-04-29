@@ -5,13 +5,13 @@
 
 <div class="container">
 <img src="{% static 'images/thankyou.jpg' %}" style="width:304px;height:228px;" align="middle">
-<h5>We have received your request</h5>
+<h5>{% trans "We have received your request" %}</h5>
 <h5>{{message_display}}</h5>
 {% if last_action == "clt_rating" %}
-<a href="/payment">Proceed to payment</a>
+<a href="/payment">{% trans "Proceed to payment" %}</a>
 <br>
 {% endif %}
-<a href="/consultant/dashboard">Back to dash board</a>
+<a href="/consultant/dashboard">{% trans "Back to dash board" %}</a>
 </div> <!-- for Container -->
 
 {% endblock %}

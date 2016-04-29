@@ -3,10 +3,10 @@
 {% load i18n %}
 {% block content %}
 
-    <p>Upload files</p>
+    <p>{% trans "Upload files" %}</p>
     <form id="uploadForm" action="" method="post" {% if form.is_multipart %} enctype="multipart/form-data"{% endif %}>{% csrf_token %}
         {{ form }}
-        <button class="pure-button pure-button-primary" type="submit" value="Submit" > Upload </button>
+        <button class="pure-button pure-button-primary" type="submit" value="Submit" > {% trans "Upload" %} </button>
     </form>
 
 <script>

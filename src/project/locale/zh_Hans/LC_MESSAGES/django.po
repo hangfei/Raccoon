@@ -1,0 +1,253 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-04-29 00:27-0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: project/templates/clientchoice.html:6 project/templates/clientconfirm.html:6
+#: project/templates/showupload.html:7
+#: project/templates/waitclientconfirm.html:6
+#: project/templates/waitpayment.html:6
+msgid "Expert Accept"
+msgstr ""
+
+#: project/templates/clientchoice.html:6 project/templates/clientconfirm.html:6
+#: project/templates/close.html.py:6 project/templates/expertchoice.html:6
+#: project/templates/expertstart.html:6 project/templates/expertworking.html:6
+#: project/templates/rate.html.py:6 project/templates/showupload.html:7
+#: project/templates/waitassignexpert.html:6
+#: project/templates/waitclientconfirm.html:6
+#: project/templates/waitexpertstart.html:6
+#: project/templates/waitexpertworking.html:6
+#: project/templates/waitpayment.html:6
+msgid "Sign Contract"
+msgstr ""
+
+#: project/templates/clientchoice.html:6 project/templates/expertworking.html:6
+#: project/templates/rate.html.py:6 project/templates/showupload.html:7
+#: project/templates/waitassignexpert.html:6
+#: project/templates/waitclientconfirm.html:6
+#: project/templates/waitexpertstart.html:6
+#: project/templates/waitexpertworking.html:6
+#: project/templates/waitpayment.html:6
+msgid "Work on"
+msgstr ""
+
+#: project/templates/clientchoice.html:6 project/templates/clientconfirm.html:6
+#: project/templates/close.html.py:6 project/templates/expertchoice.html:6
+#: project/templates/expertstart.html:6 project/templates/expertworking.html:6
+#: project/templates/rate.html.py:6 project/templates/showupload.html:7
+#: project/templates/waitassignexpert.html:6
+#: project/templates/waitclientconfirm.html:6
+#: project/templates/waitexpertstart.html:6
+#: project/templates/waitexpertworking.html:6
+#: project/templates/waitpayment.html:6
+msgid "Payment"
+msgstr ""
+
+#: project/templates/clientchoice.html:14
+#: project/templates/clientconfirm.html:15
+#: project/templates/waitexpertstart.html:16
+#: project/templates/waitexpertworking.html:16
+msgid "Write messages to the expert"
+msgstr ""
+
+#: project/templates/clientchoice.html:16
+msgid ""
+"An expert want to work with you on this engagement. Do you accept this "
+"expert?"
+msgstr ""
+
+#: project/templates/clientchoice.html:20 project/templates/expertchoice.html:6
+#: project/templates/expertchoice.html:18 project/templates/expertstart.html:6
+#: project/templates/expertworking.html:6 project/templates/rate.html.py:6
+#: project/templates/waitassignexpert.html:6
+#: project/templates/waitexpertstart.html:6
+#: project/templates/waitexpertworking.html:6
+msgid "Accept"
+msgstr ""
+
+#: project/templates/clientchoice.html:21
+#: project/templates/expertchoice.html:19
+msgid "Decline"
+msgstr ""
+
+#: project/templates/clientchoice.html:22
+#: project/templates/expertchoice.html:20
+msgid "Need More Info"
+msgstr ""
+
+#: project/templates/clientchoice.html:24
+#: project/templates/clientconfirm.html:24 project/templates/create.html:29
+#: project/templates/expertchoice.html:22
+#: project/templates/expertworking.html:17 project/templates/rate.html.py:31
+msgid "Submit"
+msgstr ""
+
+#: project/templates/clientconfirm.html:6 project/templates/close.html.py:6
+#: project/templates/expertchoice.html:6 project/templates/expertstart.html:6
+#: project/templates/expertworking.html:6 project/templates/rate.html.py:6
+#: project/templates/showupload.html:7
+#: project/templates/waitassignexpert.html:6
+#: project/templates/waitclientconfirm.html:6
+#: project/templates/waitexpertstart.html:6
+#: project/templates/waitpayment.html:6
+msgid "Finish"
+msgstr ""
+
+#: project/templates/clientconfirm.html:16
+msgid "The expert has finished this engagement. Do you confirm the work?"
+msgstr ""
+
+#: project/templates/clientconfirm.html:20 project/templates/showupload.html:7
+#: project/templates/waitclientconfirm.html:6
+#: project/templates/waitpayment.html:6
+msgid "Confirm"
+msgstr ""
+
+#: project/templates/clientconfirm.html:21
+msgid "The expert needs do more work"
+msgstr ""
+
+#: project/templates/clientconfirm.html:22
+msgid "I want to appeal the dispute"
+msgstr ""
+
+#: project/templates/clientonly.html:8
+msgid "Please sign in as a client to create a new engagement"
+msgstr ""
+
+#: project/templates/clientonly.html:9
+msgid "click here to sign in"
+msgstr ""
+
+#: project/templates/close.html:14
+msgid "This project is closed"
+msgstr ""
+
+#: project/templates/create.html:26
+msgid "Create a new engagement in just a few minutes"
+msgstr ""
+
+#: project/templates/expertchoice.html:14
+msgid "Are you taking this project?"
+msgstr ""
+
+#: project/templates/expertstart.html:14
+#: project/templates/expertworking.html:14
+#: project/templates/waitclientconfirm.html:14
+#: project/templates/waitpayment.html:17
+msgid "Write messages to the client"
+msgstr ""
+
+#: project/templates/expertstart.html:15
+msgid ""
+"After you received the contract from the client, click \"start\" button to "
+"start working on this project. You can also download"
+msgstr ""
+
+#: project/templates/expertstart.html:15
+#: project/templates/waitexpertstart.html:14
+msgid "Expert Advisory Agreement Template"
+msgstr ""
+
+#: project/templates/expertstart.html:15
+#: project/templates/waitexpertstart.html:14
+msgid "and"
+msgstr ""
+
+#: project/templates/expertstart.html:15
+#: project/templates/waitexpertstart.html:14
+msgid "NDA Template"
+msgstr ""
+
+#: project/templates/expertstart.html:15
+#: project/templates/waitexpertstart.html:14
+msgid "here"
+msgstr ""
+
+#: project/templates/expertstart.html:17
+msgid "Start"
+msgstr ""
+
+#: project/templates/expertworking.html:15
+msgid "Finish this project?"
+msgstr ""
+
+#: project/templates/rate.html:6 project/templates/waitassignexpert.html:6
+#: project/templates/waitexpertstart.html:6
+#: project/templates/waitexpertworking.html:6
+msgid "Client Confirm"
+msgstr ""
+
+#: project/templates/rate.html:15
+msgid "Please rate the client or expert you work with"
+msgstr ""
+
+#: project/templates/thanks.html:8
+msgid "We have received your request"
+msgstr ""
+
+#: project/templates/thanks.html:11
+msgid "Proceed to payment"
+msgstr ""
+
+#: project/templates/thanks.html:14
+msgid "Back to dash board"
+msgstr ""
+
+#: project/templates/unavailable.html:8
+msgid "Sorry, please make sure you entered the correct address"
+msgstr ""
+
+#: project/templates/upload.html:6
+msgid "Upload files"
+msgstr ""
+
+#: project/templates/upload.html:9
+msgid "Upload"
+msgstr ""
+
+#: project/templates/waitassignexpert.html:14
+msgid "An expert will take this engagement soon"
+msgstr ""
+
+#: project/templates/waitclientconfirm.html:15
+msgid "Waiting for the client to confirm"
+msgstr ""
+
+#: project/templates/waitexpertstart.html:14
+msgid ""
+"Expert will start working on this after receiving the contract, you can "
+"download"
+msgstr ""
+
+#: project/templates/waitexpertworking.html:14
+msgid "Expert is working on this engagement"
+msgstr ""
+
+#: project/templates/waitpayment.html:13
+msgid "Waiting for the payment from the client"
+msgstr ""
+
+#: project/templates/waitpayment.html:15
+msgid "Submit an invoice for billing"
+msgstr ""
+
+#: project/templates/waitpayment.html:19
+msgid "Write a review of the client"
+msgstr ""

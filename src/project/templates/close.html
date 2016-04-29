@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Accept</li><li class="progress-point done">Client Confirm</li><li class="progress-point done">Sign Contract</li><li class="progress-point done">Work on</li><li class="progress-point done">Finish</li><li class="progress-point done">Payment</li>
+    <li class="progress-point done">{" trans "Accept" %}</li><li class="progress-point done">Client Confirm</li><li class="progress-point done">{% trans "Sign Contract" %}</li><li class="progress-point done">Work on</li><li class="progress-point done">{% trans "Finish" %}</li><li class="progress-point done">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -11,6 +11,6 @@
 
 {% block choice_content %}
 <p></p>
-<p><b>This project is closed<b>.</p>
+<p><b>{% trans "This project is closed" %}<b>.</p>
 
 {% endblock %}

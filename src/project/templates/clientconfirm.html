@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Expert Accept</li><li class="progress-point done">Confirm</li><li class="progress-point done">Sign Contract</li><li class="progress-point done">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point done">{% trans "Expert Accept" %}</li><li class="progress-point done">Confirm</li><li class="progress-point done">{% trans "Sign Contract" %}</li><li class="progress-point done">Work on</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -12,16 +12,16 @@
 {% block choice_content %}
 <p></p>
 <br>
-<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >Write messages to the expert</a>
-<p>The expert has finished this engagement. Do you confirm the work?</p>
+<a href="/messages/write?id_recipients={{ project.expert.user }}&id_subject={{ project.title_text }}" >{% trans "Write messages to the expert" %}</a>
+<p>{% trans "The expert has finished this engagement. Do you confirm the work?" %}</p>
 <form id="choiceForm" action="{% url 'project:clientconfirm' %}" method="POST">{% csrf_token %}
 <div class="dropdown">
 <select name="accept_finish">
-    <option id="Yes" value="Y">Confirm</option>
-    <option id="No" value="N">The expert needs do more work</option>
-    <option id="Appeal" value="A">I want to appeal the dispute</option>
+    <option id="Yes" value="Y">{% trans "Confirm" %}</option>
+    <option id="No" value="N">{% trans "The expert needs do more work" %}</option>
+    <option id="Appeal" value="A">{% trans "I want to appeal the dispute" %}</option>
 </select>
-<button class="pure-button pure-button-primary" type="submit" value="Submit" > Submit </button>
+<button class="pure-button pure-button-primary" type="submit" value="Submit" > {% trans "Submit" %} </button>
 </form>
 
 <script>

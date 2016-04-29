@@ -3,7 +3,7 @@
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point done">Expert Accept</li><li class="progress-point todo">Confirm</li><li class="progress-point todo">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point done">{% trans "Expert Accept" %}</li><li class="progress-point todo">{% trans "Confirm" %}</li><li class="progress-point todo">{% trans "Sign Contract" %}</li><li class="progress-point todo">{% trans "Work on" %}</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
@@ -11,7 +11,7 @@
 
 {% block choice_content %}
 <p></p>
-<a href="/messages/write?id_recipients={{ project.client.user }}&id_subject={{ project.title_text }}" >Write messages to the client</a>
-<p><b>Waiting for the client to confirm<b>.</p>
+<a href="/messages/write?id_recipients={{ project.client.user }}&id_subject={{ project.title_text }}" >{% trans "Write messages to the client" %}</a>
+<p><b>{% trans "Waiting for the client to confirm" %}<b>.</p>
 
 {% endblock %}

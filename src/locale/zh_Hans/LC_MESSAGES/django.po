@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-28 13:20-0700\n"
+"POT-Creation-Date: 2016-04-29 00:27-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,6 +162,19 @@ msgstr "登录"
 msgid "Sign Up"
 msgstr "注册"
 
+#, fuzzy
+#~| msgid "Contact Us"
+#~ msgid "Sign Contract"
+#~ msgstr "联系我们"
+
+#~ msgid "Payment"
+#~ msgstr "付款"
+
+#, fuzzy
+#~| msgid "Client Profile"
+#~ msgid "Client Confirm"
+#~ msgstr "客户简介"
+
 #~ msgid "EXPERTS YOU HAVE WORKED BEFORE"
 #~ msgstr "曾与您共事过的专家"
 
@@ -272,9 +285,6 @@ msgstr "注册"
 #~ msgid "Santa Clara, CA, 95054"
 #~ msgstr "圣克拉拉"
 
-#~ msgid "Payment"
-#~ msgstr "付款"
-
 #~ msgid "We provide the following payment methods."
 #~ msgstr "我们提供以下的付款方式"
 
@@ -297,9 +307,6 @@ msgstr "注册"
 
 #~ msgid "Expert Profile"
 #~ msgstr "专家简介"
-
-#~ msgid "Client Profile"
-#~ msgstr "客户简介"
 
 #~ msgid "Update"
 #~ msgstr "更新"
