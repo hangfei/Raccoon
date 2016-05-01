@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-30 17:52-0700\n"
+"POT-Creation-Date: 2016-04-30 21:10-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,6 +18,70 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
+#: consultant/templates/consultant/client_dashboard.html:74
+msgid "Your Dashboard"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:77
+msgid "Submit Your Engagement Request"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:90
+msgid "Engagements"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:93
+msgid "Experts"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:96
+#: consultant/templates/consultant/expert_dashboard.html:92
+msgid "Payment"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:99
+#: consultant/templates/consultant/expert_dashboard.html:95
+msgid "Invoice"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:104
+msgid "ENGAGEMENTS SUBMITTED"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:118
+#: consultant/templates/consultant/client_dashboard.html:143
+#: consultant/templates/consultant/client_dashboard.html:182
+#: consultant/templates/consultant/client_dashboard.html:208
+#: consultant/templates/consultant/client_dashboard.html:234
+#: consultant/templates/consultant/expert_dashboard.html:116
+#: consultant/templates/consultant/expert_dashboard.html:142
+#: consultant/templates/consultant/expert_dashboard.html:156
+#: consultant/templates/consultant/expert_dashboard.html:182
+#: consultant/templates/consultant/expert_dashboard.html:208
+#: consultant/templates/consultant/expert_dashboard.html:232
+msgid "View"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:129
+#: consultant/templates/consultant/expert_dashboard.html:128
+msgid "ENGAGEMENTS CONFIRMED"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:168
+#: consultant/templates/consultant/expert_dashboard.html:168
+msgid "ENGAGEMENTS IN PROGRESS"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:194
+#: consultant/templates/consultant/expert_dashboard.html:194
+msgid "ENGAGEMENTS COMPLETED"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:220
+#: consultant/templates/consultant/expert_dashboard.html:218
+msgid "PAST ENGAGEMENTS"
+msgstr ""
+
 #: consultant/templates/consultant/client_dashboard.html:249
 msgid "EXPERTS YOU HAVE WORKED BEFORE"
 msgstr "曾与您合作过的专家"
@@ -26,3 +90,29 @@ msgstr "曾与您合作过的专家"
 #: consultant/templates/consultant/expert_dashboard.html:246
 msgid "DOWNLOAD SAMPLE INVOICE"
 msgstr "下载账单样本"
+
+#: consultant/templates/consultant/client_dashboard.html:280
+#: consultant/templates/consultant/expert_dashboard.html:250
+msgid "You can download"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:280
+#: consultant/templates/consultant/expert_dashboard.html:250
+msgid "Engagement Invoice"
+msgstr ""
+
+#: consultant/templates/consultant/client_dashboard.html:280
+msgid "from here, fill it out and send to us at"
+msgstr ""
+
+#: consultant/templates/consultant/expert_dashboard.html:89
+msgid "ENGAGEMENTS"
+msgstr ""
+
+#: consultant/templates/consultant/expert_dashboard.html:102
+msgid "ENGAGEMENTS ASSIGNED"
+msgstr ""
+
+#: consultant/templates/consultant/expert_dashboard.html:250
+msgid "from here"
+msgstr ""

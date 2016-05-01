@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-29 00:42-0700\n"
+"POT-Creation-Date: 2016-04-30 21:10-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -162,18 +162,109 @@ msgstr "登录"
 msgid "Sign Up"
 msgstr "注册"
 
-#, fuzzy
-#~| msgid "Contact Us"
-#~ msgid "Sign Contract"
-#~ msgstr "联系我们"
+#: templates/base_project.html:131
+msgid "Accept"
+msgstr ""
 
-#~ msgid "Payment"
-#~ msgstr "付款"
-
+#: templates/base_project.html:131
 #, fuzzy
-#~| msgid "Client Profile"
-#~ msgid "Client Confirm"
-#~ msgstr "客户简介"
+#| msgid "Client Profile"
+msgid "Client Confirm"
+msgstr "客户简介"
+
+#: templates/base_project.html:131
+#, fuzzy
+#| msgid "Contact Us"
+msgid "Sign Contract"
+msgstr "联系我们"
+
+#: templates/base_project.html:131
+msgid "Work on"
+msgstr ""
+
+#: templates/base_project.html:131
+msgid "Finish"
+msgstr ""
+
+#: templates/base_project.html:131
+msgid "Payment"
+msgstr "付款"
+
+#: templates/base_project.html:138
+msgid "Project"
+msgstr ""
+
+#: templates/base_project.html:142
+msgid "Description"
+msgstr ""
+
+#: templates/base_project.html:146
+#, fuzzy
+#| msgid "Client Profile"
+msgid "Client"
+msgstr "客户简介"
+
+#: templates/base_project.html:150
+#, fuzzy
+#| msgid "Expert Profile"
+msgid "Expert"
+msgstr "专家简介"
+
+#: templates/base_project.html:152
+msgid "To be assigned"
+msgstr ""
+
+#: templates/base_project.html:158
+#, fuzzy
+#| msgid "Expert Profile"
+msgid "Expert preference"
+msgstr "专家简介"
+
+#: templates/base_project.html:162
+msgid "Start Date"
+msgstr ""
+
+#: templates/base_project.html:166
+msgid "End Date"
+msgstr ""
+
+#: templates/base_project.html:170
+msgid "Rate"
+msgstr ""
+
+#: templates/base_project.html:174
+msgid "hours"
+msgstr ""
+
+#: templates/base_project.html:178
+#, fuzzy
+#| msgid "Services"
+msgid "Service Type"
+msgstr "服务"
+
+#: templates/base_project.html:180
+msgid "Deep Dive"
+msgstr ""
+
+#: templates/base_project.html:182
+msgid "General Advisory"
+msgstr ""
+
+#: templates/base_project.html:186
+msgid "Conference Call"
+msgstr ""
+
+#: templates/base_project.html:187
+msgid "Start a video or audio conference"
+msgstr ""
+
+#: templates/base_project.html:187
+msgid "FAQ"
+msgstr ""
+
+#: templates/base_project.html:190
+msgid "Upload files"
+msgstr ""
 
 #~ msgid "EXPERTS YOU HAVE WORKED BEFORE"
 #~ msgstr "曾与您共事过的专家"
@@ -304,9 +395,6 @@ msgstr "注册"
 #~ msgstr ""
 #~ "贝宝控股公司室一家由美国公司运营的全球在线支付系统。用网上银行付款的电子方"
 #~ "式代替了传统纸质的方式如支票和汇票。"
-
-#~ msgid "Expert Profile"
-#~ msgstr "专家简介"
 
 #~ msgid "Update"
 #~ msgstr "更新"

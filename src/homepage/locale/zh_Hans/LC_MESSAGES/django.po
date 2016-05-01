@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-30 17:52-0700\n"
+"POT-Creation-Date: 2016-04-30 21:10-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,18 +39,25 @@ msgid "What's Enverest"
 msgstr "恩睿概况"
 
 #: homepage/templates/homepage/about_us.html:28
-#: homepage/templates/homepage/index.html:344
+#, fuzzy
+#| msgid ""
+#| "Enverest enables Chinese and Asian enterprises and startups to engage "
+#| "industry experts and advisors to innovate and internationalize. "
+#| "Headquartered in Silicon Valley, Enverest has branches in New York, "
+#| "Singapore and Beijing. With world-class experts in high tech, life "
+#| "sciences, new energy & materials, we offer 3 types of services:"
 msgid ""
-"Enverest is an online business expertise sharing platform that enables "
-"enterprises to engage experts for on-demand business advisory services. "
-"Headquartered in Silicon Valley, Enverest primarily serves startups and SMBs "
-"across the Pacific Rim to achieve accelerated growth and sustained global "
-"success."
+"Enverest enables Chinese and Asian enterprises and startups to engage "
+"industry experts and advisors to innovate and internationalize. "
+"Headquartered in Silicon Valley, Enverest has branches in New York, "
+"Singapore and Beijing. With world-class experts in high tech, life sciences, "
+"new energy & materials, we offer 3 types of services: Enverest Experts - "
+"Business expertise, on-demand, Enverest Solutions - Customized and deep-dive "
+"consulting, Enverest Advisors - Entrepreneurship advisory."
 msgstr ""
-"恩睿公司为企业客户提供一站式咨询服务。客户可以通过“恩睿专家平台”快速有效地对"
-"接行业资深专家为企业发展出谋划策，也可以和“恩睿解决方案”顾问们合作解决企业遇"
-"到的具体问题以取得科技和管理升级以及国际化拓展。总部位于美国硅谷，我们在纽"
-"约，新加坡，北京等地有专家和团队来为中国和亚太区的中小企业和创业企业服务。"
+"恩睿公司致力于帮助中国和亚洲企业对接国际专家和顾问。公司总部设在硅谷，并在纽"
+"约，新加坡和北京建立分部。我们为高科技，生命科学，新能源和新材料等行业的客户"
+"提供三类服务："
 
 #: homepage/templates/homepage/about_us.html:38
 msgid "Who We Are"
@@ -1103,11 +1110,9 @@ msgstr "对接专家和业界领袖"
 
 #: homepage/templates/homepage/index.html:275
 msgid ""
-"Get a sense of the 100+ advisors in our network. We provide expertise to "
-"help clients achieve accelerated growth and sustained global success."
+"Get access to 100+ experts and partners in our network, on demand, to help "
+"your company to innovate and internationalize "
 msgstr ""
-"了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和全"
-"球化的成功。"
 
 #: homepage/templates/homepage/index.html:289
 msgid ""
@@ -1150,6 +1155,19 @@ msgstr ""
 #: homepage/templates/homepage/index.html:343
 msgid "Why choose Enverest?"
 msgstr "为什么选择恩睿"
+
+#: homepage/templates/homepage/index.html:344
+msgid ""
+"Enverest is an online business expertise sharing platform that enables "
+"enterprises to engage experts for on-demand business advisory services. "
+"Headquartered in Silicon Valley, Enverest primarily serves startups and SMBs "
+"across the Pacific Rim to achieve accelerated growth and sustained global "
+"success."
+msgstr ""
+"恩睿公司为企业客户提供一站式咨询服务。客户可以通过“恩睿专家平台”快速有效地对"
+"接行业资深专家为企业发展出谋划策，也可以和“恩睿解决方案”顾问们合作解决企业遇"
+"到的具体问题以取得科技和管理升级以及国际化拓展。总部位于美国硅谷，我们在纽"
+"约，新加坡，北京等地有专家和团队来为中国和亚太区的中小企业和创业企业服务。"
 
 #: homepage/templates/homepage/index.html:359
 msgid "Accesible"
@@ -1296,8 +1314,10 @@ msgid "Partners"
 msgstr "合作伙伴"
 
 #: homepage/templates/homepage/service.html:28
-msgid "Enverest Platform"
-msgstr "恩睿专家平台"
+#, fuzzy
+#| msgid "Enverest, Inc."
+msgid "Enverest"
+msgstr "恩睿公司"
 
 #: homepage/templates/homepage/service.html:31
 msgid ""
@@ -1469,6 +1489,16 @@ msgstr ""
 "您在使用网站的过程中，您可能会被重新导向第三方网站。我们不承担任何通过第三方"
 "网站提供的内容和信息。即使通过我们的链接连到第三方网站，并不意味着我们网站对"
 "此信息的认可。我们不承担任何关于另一网站链接的责任"
+
+#~ msgid ""
+#~ "Get a sense of the 100+ advisors in our network. We provide expertise to "
+#~ "help clients achieve accelerated growth and sustained global success."
+#~ msgstr ""
+#~ "了解在我们网络中得2000多位专家。恩睿提供专业知识帮助顾客获得更快速的成长和"
+#~ "全球化的成功。"
+
+#~ msgid "Enverest Platform"
+#~ msgstr "恩睿专家平台"
 
 #~ msgid "Market Entry"
 #~ msgstr "市场进入"
