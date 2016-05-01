@@ -1,9 +1,10 @@
 {% extends "base_project.html" %}
+{% load i18n %}
 
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point todo">{% trans "Accept"% %}</li><li class="progress-point todo">{% trans "Client Confirm" %}</li><li class="progress-point todo">{% trans "Sign Contract" %}</li><li class="progress-point todo">{% trans "Work on" %}</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
+    <li class="progress-point todo">{% trans "Accept" %}</li><li class="progress-point todo">{% trans "Client Confirm" %}</li><li class="progress-point todo">{% trans "Sign Contract" %}</li><li class="progress-point todo">{% trans "Work on" %}</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}

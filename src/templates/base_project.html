@@ -128,66 +128,66 @@ ol.progress-meter li.todo:before {
 {% block progress_tracker %}
 <div class="progress-container">
   <ol class="progress-meter">
-    <li class="progress-point todo">Accept</li><li class="progress-point todo">Client Confirm</li><li class="progress-point todo">Sign Contract</li><li class="progress-point todo">Work on</li><li class="progress-point todo">Finish</li><li class="progress-point todo">Payment</li>
+    <li class="progress-point todo">{% trans "Accept" %}</li><li class="progress-point todo">{% trans "Client Confirm" %}</li><li class="progress-point todo">{% trans "Sign Contract" %}</li><li class="progress-point todo">{% trans "Work on" %}</li><li class="progress-point todo">{% trans "Finish" %}</li><li class="progress-point todo">{% trans "Payment" %}</li>
   </ol>
 </div>
 {% endblock %}
 
 <table id="project_table" class="pure-table pure-table-horizontal">
   <tr>
-    <th width="25%">Project</th>
+    <th width="25%">{% trans "Project" %}</th>
     <th width="75%">{{project.title_text}}</th>
   </tr>
   <tr>
-    <td>Description</td>
+    <td>{% trans "Description" %}</td>
     <td>{{project.info_text}}</td>
   </tr>
   <tr>
-    <td>Client</td>
+    <td>{% trans "Client" %}</td>
     <td><a href="/profile/{{project.client.user}}">{{project.client.user}}</a></td>
   </tr>
   <tr>
-    <td>Expert</td>
+    <td>{% trans "Expert" %}</td>
     {% if project.state == 'PS' or project.state == 'PC'%}
-    <td>To be assigned</td>
+    <td>{% trans "To be assigned" %}</td>
     {% else %}
     <td><a href="/profile/{{project.expert.user}}">{{project.expert.user}}</a></td>
     {% endif %}
   </tr>
   <tr>
-    <td>Expert preference</td>
+    <td>{% trans "Expert preference" %}</td>
     <td>{{project.expert_pref_text}}</td>
   </tr>
   <tr>
-    <td>Start Date</td>
+    <td>{% trans "Start Date" %}</td>
     <td>{{project.pub_date}}</td>
   </tr>
   <tr>
-    <td>End Date</td>
+    <td>{% trans "End Date" %}</td>
     <td>{{project.end_date}}</td>
   </tr>
   <tr>
-    <td>Rate</td>
+    <td>{% trans "Rate" %}</td>
     {% if project.rate_type == 'F'%}
       <td>${{project.rate}}</td>
     {% else %}
-      <td>{{project.rate}} hours</td>
+      <td>{{project.rate}} {% trans "hours" %}</td>
     {% endif %}
   </tr>
   <tr>
-    <td>Service Type</td>
+    <td>{% trans "Service Type" %}</td>
     {% if project.service_type == 'D'%}
-      <td>Deep Dive</td>
+      <td>{% trans "Deep Dive" %}</td>
     {% else %}
-      <td>General Advisory</td>
+      <td>{% trans "General Advisory" %}</td>
     {% endif %}
   </tr>
   <tr>
-    <td>Conference Call</td>
-    <td><a href="https://appear.in/enverest_project_{{ project.pk }}" >Start a video or audio conference</a> (<a href="/how_it_works/#conference">FAQ</a>)</td>
+    <td>{% trans "Conference Call" %}</td>
+    <td><a href="https://appear.in/enverest_project_{{ project.pk }}" >{% trans "Start a video or audio conference" %}</a> (<a href="/how_it_works/#conference">{% trans "FAQ" %}</a>)</td>
   </tr>
   <tr>
-    <td><a href="/project/upload?project_id={{ project.pk}}&preUrl={{request.path}}">Upload files</a>&nbsp</td>
+    <td><a href="/project/upload?project_id={{ project.pk}}&preUrl={{request.path}}">{% trans "Upload files" %}</a>&nbsp</td>
     <td>
     {% if project_files %}
       {% for file in project_files %}

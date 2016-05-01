@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-29 00:42-0700\n"
+"POT-Creation-Date: 2016-04-30 17:52-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -617,6 +617,24 @@ msgstr ""
 "的咨询服务。我们为满足您的需求，提供包括商业模式的设计，增长和并购战略，市场"
 "营销，公司运营，业务扩展和融资策略等一系列咨询服务。"
 
+#: homepage/templates/homepage/how_it_works.html:57
+msgid "Clients"
+msgstr "客户"
+
+#: homepage/templates/homepage/how_it_works.html:60
+#, fuzzy
+#| msgid "Expert Benefits"
+msgid "Experts"
+msgstr "专家受益"
+
+#: homepage/templates/homepage/how_it_works.html:63
+msgid "FAQ"
+msgstr "常见问题"
+
+#: homepage/templates/homepage/how_it_works.html:66
+msgid "Conference Call"
+msgstr "电话会议"
+
 #: homepage/templates/homepage/how_it_works.html:76
 msgid "As a client"
 msgstr "客户操作步骤"
@@ -728,19 +746,10 @@ msgid "Competitive compensation from consulting fees and referral fees"
 msgstr "获得相应的咨询报酬"
 
 #: homepage/templates/homepage/how_it_works.html:255
-#, fuzzy
-#| msgid "What's Enverest"
 msgid "What is Enverest?"
 msgstr "恩睿概况"
 
 #: homepage/templates/homepage/how_it_works.html:256
-#, fuzzy
-#| msgid ""
-#| "Enverest is an online business expertise sharing platform that enables "
-#| "enterprises to engage experts for on-demand business advisory services. "
-#| "Headquartered in Silicon Valley, Enverest primarily serves startups and "
-#| "SMBs across the Pacific Rim to achieve accelerated growth and sustained "
-#| "global success."
 msgid ""
 "Enverest is an online business expertise sharing platform that enables "
 "clients to engage experts for on-demand business advisory services. "
@@ -814,6 +823,11 @@ msgid ""
 msgstr ""
 "目前还不行。本网站只显示部分专家的个人信息。我们非常重视专家的隐私权。客户只"
 "有在提交项目申请，并接受我们推荐的专家后，才能浏览该专家的有关资料"
+
+#: homepage/templates/homepage/how_it_works.html:276
+msgid ""
+"Once I submit an engagement request, how long will it take to get matched?"
+msgstr ""
 
 #: homepage/templates/homepage/how_it_works.html:277
 msgid ""

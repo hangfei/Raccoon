@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-29 00:42-0700\n"
+"POT-Creation-Date: 2016-04-30 17:52-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,60 +67,60 @@ msgstr "医疗健康和生命科学"
 
 #: search/templates/common/expert_list.html:55
 msgid "BioPharma"
-msgstr ""
+msgstr "生物制药"
 
 #: search/templates/common/expert_list.html:56
 msgid "Education"
-msgstr ""
+msgstr "教育"
 
 #: search/templates/common/expert_list.html:57
 msgid "Semiconductor"
-msgstr ""
+msgstr "半导体"
 
 #: search/templates/common/expert_list.html:58
 msgid "Software"
-msgstr ""
+msgstr "软件"
 
 #: search/templates/common/expert_list.html:59
 msgid "Mobile Internet and Computing"
-msgstr ""
+msgstr "移动互联网"
 
 #: search/templates/common/expert_list.html:60
 msgid "Data and Storage"
-msgstr ""
+msgstr "数据及存储"
 
 #: search/templates/common/expert_list.html:61
 msgid "VR/AI/Robotics"
-msgstr ""
+msgstr "虚拟现实/人工智能/机器人"
 
 #: search/templates/common/expert_list.html:62
 msgid "Internet of Things"
-msgstr ""
+msgstr "物联网"
 
 #: search/templates/common/expert_list.html:63
 msgid "Gaming and Media"
-msgstr ""
+msgstr "游戏和媒体"
 
 #: search/templates/common/expert_list.html:64
 msgid "Entertainment"
-msgstr ""
+msgstr "娱乐"
 
 #: search/templates/common/expert_list.html:65
 msgid "Transport and Logistics"
-msgstr ""
+msgstr "交通及物流"
 
 #: search/templates/common/expert_list.html:66
 msgid "Automotive"
-msgstr ""
+msgstr "汽车"
 
 #: search/templates/common/expert_list.html:67
 msgid "Consumer Goods"
-msgstr ""
+msgstr "消费品"
 
 #: search/templates/common/expert_list.html:68
 #: search/templates/common/expert_list.html:97
 msgid "Others"
-msgstr ""
+msgstr "其他"
 
 #: search/templates/common/expert_list.html:79
 msgid "Strategy"
@@ -179,8 +179,10 @@ msgid "Cloud Computing"
 msgstr ""
 
 #: search/templates/common/expert_list.html:93
+#, fuzzy
+#| msgid "Entertainment"
 msgid "Advertisement"
-msgstr ""
+msgstr "娱乐"
 
 #: search/templates/common/expert_list.html:94
 msgid "Corporate Law"
@@ -227,8 +229,10 @@ msgid "Japan"
 msgstr ""
 
 #: search/templates/common/expert_list.html:126
+#, fuzzy
+#| msgid "Others"
 msgid "Other"
-msgstr ""
+msgstr "其他"
 
 #: search/templates/common/expert_list.html:256
 msgid "Experts"
