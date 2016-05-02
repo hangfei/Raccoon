@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-30 21:10-0700\n"
+"POT-Creation-Date: 2016-04-30 17:44-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -76,7 +76,7 @@ msgstr "验证"
 
 #: common/models.py:679
 msgid "primary"
-msgstr "初期"
+msgstr "主要"
 
 #: common/models.py:684
 msgid "email address"
@@ -100,7 +100,7 @@ msgstr "申请日前"
 
 #: common/models.py:786
 msgid "date expunged"
-msgstr "日期消除"
+msgstr "消除日期"
 
 #: common/models.py:789
 msgid "account deletion"
@@ -120,7 +120,7 @@ msgstr "中文"
 
 #: templates/base.html:51
 msgid "Enverest"
-msgstr "恩睿咨询"
+msgstr "恩睿公司"
 
 #: templates/base.html:60
 msgid "About Us"
@@ -132,7 +132,7 @@ msgstr "服务"
 
 #: templates/base.html:66
 msgid "How It Works"
-msgstr "如何运营"
+msgstr "如何操作"
 
 #: templates/base.html:69
 msgid "Contact Us"
@@ -140,7 +140,7 @@ msgstr "联系我们"
 
 #: templates/base.html:94
 msgid "Sign Out"
-msgstr "登出"
+msgstr "退出"
 
 #: templates/base.html:97
 msgid "Message"
@@ -152,7 +152,7 @@ msgstr "仪表盘"
 
 #: templates/base.html:103
 msgid "Profile"
-msgstr "简介"
+msgstr "个人信息"
 
 #: templates/base.html:107
 msgid "Sign In"
@@ -164,27 +164,27 @@ msgstr "注册"
 
 #: templates/base_project.html:131
 msgid "Accept"
-msgstr ""
+msgstr "接受"
 
 #: templates/base_project.html:131
 #, fuzzy
 #| msgid "Client Profile"
 msgid "Client Confirm"
-msgstr "客户简介"
+msgstr "客户确认"
 
 #: templates/base_project.html:131
 #, fuzzy
 #| msgid "Contact Us"
 msgid "Sign Contract"
-msgstr "联系我们"
+msgstr "签订合同"
 
 #: templates/base_project.html:131
 msgid "Work on"
-msgstr ""
+msgstr "进行中"
 
 #: templates/base_project.html:131
 msgid "Finish"
-msgstr ""
+msgstr "完成"
 
 #: templates/base_project.html:131
 msgid "Payment"
@@ -192,79 +192,71 @@ msgstr "付款"
 
 #: templates/base_project.html:138
 msgid "Project"
-msgstr ""
+msgstr "项目"
 
 #: templates/base_project.html:142
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 #: templates/base_project.html:146
-#, fuzzy
-#| msgid "Client Profile"
 msgid "Client"
-msgstr "客户简介"
+msgstr "客户"
 
 #: templates/base_project.html:150
-#, fuzzy
-#| msgid "Expert Profile"
 msgid "Expert"
-msgstr "专家简介"
+msgstr "专家"
 
 #: templates/base_project.html:152
 msgid "To be assigned"
-msgstr ""
+msgstr "待安排"
 
 #: templates/base_project.html:158
-#, fuzzy
-#| msgid "Expert Profile"
 msgid "Expert preference"
 msgstr "专家简介"
 
 #: templates/base_project.html:162
 msgid "Start Date"
-msgstr ""
+msgstr "开始日期"
 
 #: templates/base_project.html:166
 msgid "End Date"
-msgstr ""
+msgstr "结束日期"
 
 #: templates/base_project.html:170
 msgid "Rate"
-msgstr ""
+msgstr "收费标准"
 
 #: templates/base_project.html:174
 msgid "hours"
-msgstr ""
+msgstr "小时"
 
 #: templates/base_project.html:178
-#, fuzzy
-#| msgid "Services"
 msgid "Service Type"
-msgstr "服务"
+msgstr "服务类型"
 
 #: templates/base_project.html:180
 msgid "Deep Dive"
-msgstr ""
+msgstr "深度咨询"
 
 #: templates/base_project.html:182
 msgid "General Advisory"
-msgstr ""
+msgstr "行业顾问"
 
 #: templates/base_project.html:186
 msgid "Conference Call"
-msgstr ""
+msgstr "电话会议"
 
 #: templates/base_project.html:187
 msgid "Start a video or audio conference"
-msgstr ""
+msgstr "开始电话或视频会议"
 
 #: templates/base_project.html:187
 msgid "FAQ"
-msgstr ""
+msgstr "常问问题"
 
 #: templates/base_project.html:190
 msgid "Upload files"
-msgstr ""
+msgstr "上传文件"
 
 #~ msgid "EXPERTS YOU HAVE WORKED BEFORE"
 #~ msgstr "曾与您共事过的专家"
@@ -368,13 +360,13 @@ msgstr ""
 #~ msgstr "邮寄地址"
 
 #~ msgid "4500 Great America Parkway"
-#~ msgstr "大美百汇4500号"
+#~ msgstr "4500 Great America Parkway"
 
 #~ msgid "Suite 100"
-#~ msgstr "100室"
+#~ msgstr "Suite 100"
 
 #~ msgid "Santa Clara, CA, 95054"
-#~ msgstr "圣克拉拉"
+#~ msgstr "Santa Clara, CA, 95054"
 
 #~ msgid "We provide the following payment methods."
 #~ msgstr "我们提供以下的付款方式"

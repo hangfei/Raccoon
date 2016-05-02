@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-30 21:10-0700\n"
+"POT-Creation-Date: 2016-04-30 17:44-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -59,7 +59,7 @@ msgstr "管理咨询"
 
 #: search/templates/common/expert_list.html:53
 msgid "Energy"
-msgstr ""
+msgstr "能源"
 
 #: search/templates/common/expert_list.html:54
 msgid "Health care and Life Sciences"
@@ -124,59 +124,59 @@ msgstr "其他"
 
 #: search/templates/common/expert_list.html:79
 msgid "Strategy"
-msgstr ""
+msgstr "策略"
 
 #: search/templates/common/expert_list.html:80
 msgid "Business Development and Sales"
-msgstr ""
+msgstr "商务开发及销售"
 
 #: search/templates/common/expert_list.html:81
 msgid "Strategic Partnership"
-msgstr ""
+msgstr "战略合作"
 
 #: search/templates/common/expert_list.html:82
 msgid "Marketing"
-msgstr ""
+msgstr "市场营销"
 
 #: search/templates/common/expert_list.html:83
 msgid "Market Research"
-msgstr ""
+msgstr "市场研究"
 
 #: search/templates/common/expert_list.html:84
 msgid "Operations and Supply Chain"
-msgstr ""
+msgstr "运营及供应链管理"
 
 #: search/templates/common/expert_list.html:85
 msgid "Merger and Acquisition"
-msgstr ""
+msgstr "整合并购"
 
 #: search/templates/common/expert_list.html:86
 msgid "Data Analytics"
-msgstr ""
+msgstr "数据分析"
 
 #: search/templates/common/expert_list.html:87
 msgid "Software Engineering"
-msgstr ""
+msgstr "软件工程"
 
 #: search/templates/common/expert_list.html:88
 msgid "Project Management"
-msgstr ""
+msgstr "项目管理"
 
 #: search/templates/common/expert_list.html:89
 msgid "Product Design and Development"
-msgstr ""
+msgstr "产品设计及研发"
 
 #: search/templates/common/expert_list.html:90
 msgid "Product Management"
-msgstr ""
+msgstr "产品管理"
 
 #: search/templates/common/expert_list.html:91
 msgid "Entrepreneurship"
-msgstr ""
+msgstr "创业"
 
 #: search/templates/common/expert_list.html:92
 msgid "Cloud Computing"
-msgstr ""
+msgstr "云计算"
 
 #: search/templates/common/expert_list.html:93
 #, fuzzy
@@ -186,47 +186,47 @@ msgstr "娱乐"
 
 #: search/templates/common/expert_list.html:94
 msgid "Corporate Law"
-msgstr ""
+msgstr "公司法"
 
 #: search/templates/common/expert_list.html:95
 msgid "Corporate Finance"
-msgstr ""
+msgstr "公司财务"
 
 #: search/templates/common/expert_list.html:96
 msgid "Accounting and Taxation"
-msgstr ""
+msgstr "会计及商务"
 
 #: search/templates/common/expert_list.html:108
 msgid "1-5 years"
-msgstr ""
+msgstr "一到五年"
 
 #: search/templates/common/expert_list.html:109
 msgid "5-10 years"
-msgstr ""
+msgstr "五到十年"
 
 #: search/templates/common/expert_list.html:110
 msgid "10-15 years"
-msgstr ""
+msgstr "十到十五年"
 
 #: search/templates/common/expert_list.html:111
 msgid " >15 years"
-msgstr ""
+msgstr "十五年以上"
 
 #: search/templates/common/expert_list.html:122
 msgid "United States"
-msgstr ""
+msgstr "美国"
 
 #: search/templates/common/expert_list.html:123
 msgid "China"
-msgstr ""
+msgstr "中国"
 
 #: search/templates/common/expert_list.html:124
 msgid "Singapore"
-msgstr ""
+msgstr "新加坡"
 
 #: search/templates/common/expert_list.html:125
 msgid "Japan"
-msgstr ""
+msgstr "日本"
 
 #: search/templates/common/expert_list.html:126
 #, fuzzy
