@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-30 21:10-0700\n"
+"POT-Creation-Date: 2016-05-01 19:11-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -67,7 +67,7 @@ msgstr "我们的使命"
 msgid ""
 "Everest team is committed to help fast-growing companies to achieve "
 "accelerated growth and sustained global success."
-msgstr "我们专注于为创新企业制定快速增长策略，规划全球发展布局。"
+msgstr "我们专注于为企业客户制定快速增长策略，规划全球发展布局。"
 
 #: homepage/templates/homepage/about_us.html:48
 msgid "What We Do"
@@ -78,7 +78,7 @@ msgid ""
 "Our partners and experts share knowledge, expertise and network to provide "
 "on-demand advisory services for our clients to thrive."
 msgstr ""
-"恩睿咨询合伙人和专家团一起与客户共享专业知识和商业网络资源，为创新企业的发展"
+"恩睿咨询合伙人和专家团一起与客户共享专业知识和商业网络资源，为企业客户的发展"
 "成长提供量身定制的咨询服务。"
 
 #: homepage/templates/homepage/about_us.html:58
@@ -1113,6 +1113,8 @@ msgid ""
 "Get access to 100+ experts and partners in our network, on demand, to help "
 "your company to innovate and internationalize "
 msgstr ""
+"恩睿国际公司专注于为中国和亚太区企业在技术和管理提升、国际化发展等方面对接一"
+"百余位各行业资深国际专家"
 
 #: homepage/templates/homepage/index.html:289
 msgid ""
@@ -1164,10 +1166,10 @@ msgid ""
 "across the Pacific Rim to achieve accelerated growth and sustained global "
 "success."
 msgstr ""
-"恩睿公司为企业客户提供一站式咨询服务。客户可以通过“恩睿专家平台”快速有效地对"
-"接行业资深专家为企业发展出谋划策，也可以和“恩睿解决方案”顾问们合作解决企业遇"
-"到的具体问题以取得科技和管理升级以及国际化拓展。总部位于美国硅谷，我们在纽"
-"约，新加坡，北京等地有专家和团队来为中国和亚太区的中小企业和创业企业服务。"
+"恩睿公司的客户可以通过“恩睿专家平台”快速有效地对接行业资深专家为企业发展出谋"
+"划策，也可以和“恩睿解决方案”顾问们合作解决企业遇到的具体问题以取得科技和管理"
+"升级以及国际化拓展。总部位于美国硅谷，我们在新加坡，北京等地设有专家和团队来"
+"为中国和亚太地区的企业提供高效率多维度的服务。"
 
 #: homepage/templates/homepage/index.html:359
 msgid "Accesible"
@@ -1262,7 +1264,11 @@ msgstr ""
 
 #: homepage/templates/homepage/index.html:494
 msgid "A Chinese advanced manufacturer"
-msgstr "中国先进制造企业总裁"
+msgstr "中国先进制造企业"
+
+#: homepage/templates/homepage/index.html:495
+msgid "CEO"
+msgstr "总经理"
 
 #: homepage/templates/homepage/index.html:498
 msgid ""
