@@ -84,25 +84,25 @@ font-size: 0.8em;
             <div class="col-sm-2 text-center">
               <img class="img-responsive" alt="Responsive image" src="{% static 'images/how_it_works/submit_request.png' %}">
               <p class="sequence"><strong>1</strong></p>
-              <p class="procedure"><strong>Submit Request</strong></p>
+              <p class="procedure"><strong>{% trans "Submit Request" %}</strong></p>
             </div>
 
             <div class="col-sm-2 text-center">
               <img class="img-responsive" alt="Responsive image" src="{% static 'images/how_it_works/accept_recommended_expert.png' %}">
               <p class="sequence"><strong>2</strong></p>
-              <p class="procedure"><strong>Accept Recommended Expert</strong></p>
+              <p class="procedure"><strong>{% trans "Accept Recommended Expert" %}</strong></p>
             </div>
 
             <div class="col-sm-2 text-center">
               <img class="img-responsive" alt="Responsive image" src="{% static 'images/how_it_works/engage_expert.png' %}">
               <p class="sequence"><strong>3</strong></p>
-              <p class="procedure"><strong>Engage Expert</strong></p>
+              <p class="procedure"><strong>{% trans "Engage Expert" %}</strong></p>
             </div>
 
             <div class="col-sm-2 text-center">
               <img class="img-responsive" alt="Responsive image" src="{% static 'images/how_it_works/rate.png' %}">
               <p class="sequence"><strong>4</strong></p>
-              <p class="procedure"><strong>Rate and Pay</strong></p>
+              <p class="procedure"><strong>{% trans "Rate and Pay" %}</strong></p>
             </div>
 
             <div class="col-sm-1 text-center">
@@ -252,8 +252,6 @@ font-size: 0.8em;
     </div>
     <div class="tab-pane fade" id="faq" role="tabpanel" aria-labelledby="faq">
       <br>
-      <h5>{% trans "What is Enverest?" %}</h5>
-      <p>{% trans "Enverest is an online business expertise sharing platform that enables clients to engage experts for on-demand business advisory services. Headquartered in Silicon Valley, Enverest primarily serves startups and SMBs across the Pacific Rim to achieve accelerated growth and sustained global success." %}</p>
 
       <h5>{% trans "What types of business are searching for Experts on Enverest?" %}</h5>
       <ul>

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-01 19:11-0700\n"
+"POT-Creation-Date: 2016-05-02 21:42-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -39,13 +39,6 @@ msgid "What's Enverest"
 msgstr "恩睿概况"
 
 #: homepage/templates/homepage/about_us.html:28
-#, fuzzy
-#| msgid ""
-#| "Enverest enables Chinese and Asian enterprises and startups to engage "
-#| "industry experts and advisors to innovate and internationalize. "
-#| "Headquartered in Silicon Valley, Enverest has branches in New York, "
-#| "Singapore and Beijing. With world-class experts in high tech, life "
-#| "sciences, new energy & materials, we offer 3 types of services:"
 msgid ""
 "Enverest enables Chinese and Asian enterprises and startups to engage "
 "industry experts and advisors to innovate and internationalize. "
@@ -91,32 +84,27 @@ msgid ""
 "meet the needs of fast-growing companies"
 msgstr "我们为快速发展的公司提供价格合理、质量上乘、专家资源、量身定制的服务"
 
-#: homepage/templates/homepage/about_us.html:73
-msgid ""
-"On-Demand Business Expertise Sharing Platform for Fast-growing Companies"
-msgstr "新一代平台式咨询服务"
-
-#: homepage/templates/homepage/about_us.html:96
+#: homepage/templates/homepage/about_us.html:74
 #: homepage/templates/homepage/team.html:79
 msgid "Meet the experts"
 msgstr "专家代表"
 
-#: homepage/templates/homepage/about_us.html:107
+#: homepage/templates/homepage/about_us.html:85
 #: homepage/templates/homepage/index.html:288
 #: homepage/templates/homepage/team.html:42
 msgid "Simon Cen"
 msgstr "岑水明"
 
-#: homepage/templates/homepage/about_us.html:109
-#: homepage/templates/homepage/about_us.html:125
-#: homepage/templates/homepage/about_us.html:206
+#: homepage/templates/homepage/about_us.html:87
+#: homepage/templates/homepage/about_us.html:103
+#: homepage/templates/homepage/about_us.html:184
 #: homepage/templates/homepage/team.html:43
 #: homepage/templates/homepage/team.html:58
 #: homepage/templates/homepage/team.html:123
 msgid "Managing Partner, Enverest"
 msgstr "管理合伙人， 恩睿公司"
 
-#: homepage/templates/homepage/about_us.html:110
+#: homepage/templates/homepage/about_us.html:88
 #: homepage/templates/homepage/team.html:44
 #, fuzzy
 #| msgid ""
@@ -127,91 +115,91 @@ msgid ""
 "Entrepreneurship"
 msgstr "专长：公司策略、业务开发、统筹运营、供应链管理、并购整合"
 
-#: homepage/templates/homepage/about_us.html:111
+#: homepage/templates/homepage/about_us.html:89
 #: homepage/templates/homepage/team.html:45
 msgid "Industry: Hi-tech, Management Consulting, Transportation / Logistics"
 msgstr "行业：高科技、管理咨询、交通运输／物流"
 
-#: homepage/templates/homepage/about_us.html:112
+#: homepage/templates/homepage/about_us.html:90
 #: homepage/templates/homepage/team.html:46
 msgid "Previous: Mckinsey, Apple, UPS; Cornell, Georgia Tech, ZJU"
 msgstr "经历：麦肯锡、苹果、UPS ; 康奈尔大学，乔治亚理工大学，浙江大学"
 
-#: homepage/templates/homepage/about_us.html:123
+#: homepage/templates/homepage/about_us.html:101
 #: homepage/templates/homepage/team.html:57
 msgid "Alex Zhang"
 msgstr "张键 博士"
 
-#: homepage/templates/homepage/about_us.html:126
+#: homepage/templates/homepage/about_us.html:104
 #: homepage/templates/homepage/team.html:59
 msgid "Expertise: Marketing, Business Development, M&A, Entrepreneurship"
 msgstr "专长：市场营销、业务拓展、并购整合、创业"
 
-#: homepage/templates/homepage/about_us.html:127
+#: homepage/templates/homepage/about_us.html:105
 #: homepage/templates/homepage/team.html:60
 msgid "Industry: Life Sciences, Bio-tech, Management Consulting"
 msgstr "行业：生命科学、生物技术、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:128
+#: homepage/templates/homepage/about_us.html:106
 #: homepage/templates/homepage/team.html:61
 msgid "Previous: Amgen, Thermo Fisher Scientific; Texas A&M, Cornell, SDU"
 msgstr "经历：安进，赛默菲舍尔、康奈尔大学、德州A&M大学、 山东大学"
 
-#: homepage/templates/homepage/about_us.html:140
+#: homepage/templates/homepage/about_us.html:118
 #: homepage/templates/homepage/index.html:314
 msgid "Galvin Fan"
 msgstr "范广斌 博士"
 
-#: homepage/templates/homepage/about_us.html:142
-#: homepage/templates/homepage/about_us.html:158
+#: homepage/templates/homepage/about_us.html:120
+#: homepage/templates/homepage/about_us.html:136
 msgid "Venture Partner, Enverest"
 msgstr "合伙人，恩睿公司"
 
-#: homepage/templates/homepage/about_us.html:143
+#: homepage/templates/homepage/about_us.html:121
 msgid ""
 "Expertise: Strategy, Business Development, Entrepreneurship, Incubation and "
 "Investment"
 msgstr "专长；公司策略、业务开发、创业、孵化投资"
 
-#: homepage/templates/homepage/about_us.html:144
+#: homepage/templates/homepage/about_us.html:122
 msgid ""
 "Industry: Hi-Tech, Virtual Reality, Smartphone, Mobile Internet, IoT, Smart "
 "Home, SNS"
 msgstr ""
 "行业：高科技、虚拟现实、智能手机、物联网、移动互联网、智能家居、 社交网络"
 
-#: homepage/templates/homepage/about_us.html:145
+#: homepage/templates/homepage/about_us.html:123
 msgid ""
 "Previous: Huawei, Intel, Startups, University of Mississippi; UA, RUC, SDU"
 msgstr "经历：华为、英特尔、加大伯克利，密西西比大学、山东大学"
 
-#: homepage/templates/homepage/about_us.html:156
+#: homepage/templates/homepage/about_us.html:134
 #: homepage/templates/homepage/index.html:327
 msgid "Feng Gao"
 msgstr "高峰 博士"
 
-#: homepage/templates/homepage/about_us.html:159
+#: homepage/templates/homepage/about_us.html:137
 msgid ""
 "Expertise: Big Data Analytics, Renewable Energy, Smart Grid, Electricity "
 "Markets, Power System Analysis"
 msgstr "专长：大数据分析、可再生能源、智能电网、电力市场、电力系统分析"
 
-#: homepage/templates/homepage/about_us.html:160
+#: homepage/templates/homepage/about_us.html:138
 msgid "Industry: Power and Utility, CleanTech, IoT"
 msgstr "行业：电力和公共事业、清洁能源、物联网"
 
-#: homepage/templates/homepage/about_us.html:161
+#: homepage/templates/homepage/about_us.html:139
 #, fuzzy
 #| msgid "Previous: State Grid, ABB; Iowa State, Tsinghua"
 msgid "Previous: National Grid, ABB; Iowa State, Tsinghua"
 msgstr "经历：国家电网、ABB；爱荷华州大学、清华大学"
 
-#: homepage/templates/homepage/about_us.html:172
+#: homepage/templates/homepage/about_us.html:150
 #: homepage/templates/homepage/team.html:92
 msgid "Ya-Ru Chen"
 msgstr "陈雅茹 教授"
 
-#: homepage/templates/homepage/about_us.html:174
+#: homepage/templates/homepage/about_us.html:152
 #: homepage/templates/homepage/team.html:93
 msgid ""
 "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
@@ -219,224 +207,224 @@ msgid ""
 "Management, Cornell University (Enverest Advisor)"
 msgstr "美国康奈尔大学商学院教授，恩睿公司顾问"
 
-#: homepage/templates/homepage/about_us.html:175
+#: homepage/templates/homepage/about_us.html:153
 #: homepage/templates/homepage/team.html:94
 msgid ""
 "Expertise: Strategy and Management, Management Consulting, Data Analysis"
 msgstr "专长：企业战略、管理咨询、数据分析"
 
-#: homepage/templates/homepage/about_us.html:176
+#: homepage/templates/homepage/about_us.html:154
 #: homepage/templates/homepage/team.html:95
 msgid "Industry: Business School Education and Research"
 msgstr "行业：商学院教育与研究"
 
-#: homepage/templates/homepage/about_us.html:177
+#: homepage/templates/homepage/about_us.html:155
 #: homepage/templates/homepage/team.html:96
 msgid ""
 "Previous: Cornell-Tsinghua FMBA Program, Stern School of Business, NYU; "
 "Columbia University"
 msgstr "经历：哥伦比亚大学，康奈尔大学－清华大学，纽约大学，长江商学院"
 
-#: homepage/templates/homepage/about_us.html:188
+#: homepage/templates/homepage/about_us.html:166
 #: homepage/templates/homepage/team.html:107
 msgid "Huazhang Shen"
 msgstr "沈华章 博士"
 
-#: homepage/templates/homepage/about_us.html:190
+#: homepage/templates/homepage/about_us.html:168
 #: homepage/templates/homepage/team.html:108
 msgid "Co-founder and CTO, Kalading (Enverest Advisor)"
 msgstr "卡拉丁联合创始人兼首席技术官，恩睿公司顾问"
 
-#: homepage/templates/homepage/about_us.html:191
+#: homepage/templates/homepage/about_us.html:169
 #: homepage/templates/homepage/team.html:109
 msgid ""
 "Expertise: Entrepreneurship, Product Design and Management, Social "
 "Marketing, Project Management"
 msgstr "专长：创业、产品设计与管理、社交运营、项目管理"
 
-#: homepage/templates/homepage/about_us.html:192
+#: homepage/templates/homepage/about_us.html:170
 #: homepage/templates/homepage/team.html:110
 msgid "Industry: Mobile Internet, Bio-tech"
 msgstr "行业：移动互联网、生物技术"
 
-#: homepage/templates/homepage/about_us.html:193
+#: homepage/templates/homepage/about_us.html:171
 #: homepage/templates/homepage/team.html:111
 msgid ""
 "Previous: Kalading, Golfii, GeoWok, Innovation Game International; Cal-tech, "
 "USTC"
 msgstr "经历：卡拉丁，Golfii, Geowok, 创新国际游戏公司，加州理工学院， 中科大"
 
-#: homepage/templates/homepage/about_us.html:204
+#: homepage/templates/homepage/about_us.html:182
 #: homepage/templates/homepage/team.html:122
 msgid "Shawn Lee"
 msgstr "李湘 博士"
 
-#: homepage/templates/homepage/about_us.html:207
+#: homepage/templates/homepage/about_us.html:185
 #: homepage/templates/homepage/team.html:124
 msgid "Expertise: Entrepreneurship, FDA Regulatory, M&A, Strategic Partnership"
 msgstr "专长： FDA监管、并购整合、战略合作，创业"
 
-#: homepage/templates/homepage/about_us.html:208
+#: homepage/templates/homepage/about_us.html:186
 #: homepage/templates/homepage/team.html:125
 msgid "Industry: Life Sciences, Bio-tech"
 msgstr "行业：生命科学、生物技术"
 
-#: homepage/templates/homepage/about_us.html:209
+#: homepage/templates/homepage/about_us.html:187
 #: homepage/templates/homepage/team.html:126
 msgid "Previous: American Peptide Company; UC-Berkeley, Wuhan University"
 msgstr "经历：美国多肽公司、加大伯克利、武汉大学"
 
-#: homepage/templates/homepage/about_us.html:220
-#: homepage/templates/homepage/about_us.html:367
+#: homepage/templates/homepage/about_us.html:198
+#: homepage/templates/homepage/about_us.html:345
 #: homepage/templates/homepage/team.html:142
 msgid "Brandon Wang"
 msgstr "王秉达"
 
-#: homepage/templates/homepage/about_us.html:222
-#: homepage/templates/homepage/about_us.html:368
+#: homepage/templates/homepage/about_us.html:200
+#: homepage/templates/homepage/about_us.html:346
 #: homepage/templates/homepage/team.html:143
 msgid "Group Director and Chief Strategy Officer, Cadence (Enverest Advisor)"
 msgstr "Cadence公司董事兼首席策略官，恩睿公司顾问"
 
-#: homepage/templates/homepage/about_us.html:223
-#: homepage/templates/homepage/about_us.html:369
+#: homepage/templates/homepage/about_us.html:201
+#: homepage/templates/homepage/about_us.html:347
 #: homepage/templates/homepage/team.html:144
 msgid ""
 "Expertise: Entrepreneurship, Strategy, Management Consulting, Engineering "
 "Management, Strategic Partnership"
 msgstr "专长： 战略管理、管理咨询、工程管理、战略合作"
 
-#: homepage/templates/homepage/about_us.html:224
-#: homepage/templates/homepage/about_us.html:370
+#: homepage/templates/homepage/about_us.html:202
+#: homepage/templates/homepage/about_us.html:348
 #: homepage/templates/homepage/team.html:145
 msgid "Industry: Semiconductor, Hi-tech"
 msgstr "行业： 半导体、高科技"
 
-#: homepage/templates/homepage/about_us.html:225
-#: homepage/templates/homepage/about_us.html:371
+#: homepage/templates/homepage/about_us.html:203
+#: homepage/templates/homepage/about_us.html:349
 #: homepage/templates/homepage/team.html:146
 msgid "Previous: Cadence, ARM, CASPA; Wharton, Stanford, Zhejiang University"
 msgstr "经历： Cadence 公司、ARM、CASPA、沃顿商学院、斯坦福大学、浙江大学"
 
-#: homepage/templates/homepage/about_us.html:236
-#: homepage/templates/homepage/about_us.html:382
+#: homepage/templates/homepage/about_us.html:214
+#: homepage/templates/homepage/about_us.html:360
 #: homepage/templates/homepage/team.html:157
 msgid "Jeff Wu"
 msgstr "吴建"
 
-#: homepage/templates/homepage/about_us.html:238
-#: homepage/templates/homepage/about_us.html:383
+#: homepage/templates/homepage/about_us.html:216
+#: homepage/templates/homepage/about_us.html:361
 #: homepage/templates/homepage/team.html:158
 msgid "COO, ScaleFlux"
 msgstr "ScaleFlux首席运营官"
 
-#: homepage/templates/homepage/about_us.html:239
-#: homepage/templates/homepage/about_us.html:384
+#: homepage/templates/homepage/about_us.html:217
+#: homepage/templates/homepage/about_us.html:362
 #: homepage/templates/homepage/team.html:159
 msgid ""
 "Expertise: Entrepreneurship, Cloud Computing, Project Management, Product "
 "Development, Strategic Partnership"
 msgstr "专长：云计算、项目管理、产品开发、战略合作，创业"
 
-#: homepage/templates/homepage/about_us.html:240
-#: homepage/templates/homepage/about_us.html:385
+#: homepage/templates/homepage/about_us.html:218
+#: homepage/templates/homepage/about_us.html:363
 #: homepage/templates/homepage/team.html:160
 msgid "Industry: Storage, Software"
 msgstr "行业：云存储、企业软件"
 
-#: homepage/templates/homepage/about_us.html:241
-#: homepage/templates/homepage/about_us.html:386
+#: homepage/templates/homepage/about_us.html:219
+#: homepage/templates/homepage/about_us.html:364
 #: homepage/templates/homepage/team.html:161
 msgid "Previous: ScaleFlux, Pactera, Wenditel; USC, Tongji University"
 msgstr "经历：ScaleFlux、 文思海辉、Wenditel、南加州大学、同济大学"
 
-#: homepage/templates/homepage/about_us.html:252
-#: homepage/templates/homepage/about_us.html:397
+#: homepage/templates/homepage/about_us.html:230
+#: homepage/templates/homepage/about_us.html:375
 #: homepage/templates/homepage/team.html:172
 msgid "Cheni Kwok"
 msgstr "郭珍仪 博士"
 
-#: homepage/templates/homepage/about_us.html:254
-#: homepage/templates/homepage/about_us.html:398
+#: homepage/templates/homepage/about_us.html:232
+#: homepage/templates/homepage/about_us.html:376
 #: homepage/templates/homepage/team.html:173
 msgid "Managing Partner, Linear Dreams"
 msgstr "管理合伙人，直梦咨询公司"
 
-#: homepage/templates/homepage/about_us.html:255
-#: homepage/templates/homepage/about_us.html:399
+#: homepage/templates/homepage/about_us.html:233
+#: homepage/templates/homepage/about_us.html:377
 #: homepage/templates/homepage/team.html:174
 msgid "Expertise: Business Development, Corporate Development"
 msgstr "专长：业务拓展、企业发展战略"
 
-#: homepage/templates/homepage/about_us.html:256
-#: homepage/templates/homepage/about_us.html:400
+#: homepage/templates/homepage/about_us.html:234
+#: homepage/templates/homepage/about_us.html:378
 #: homepage/templates/homepage/team.html:175
 msgid ""
 "Industry: Life Sciences, Bio-tech, Pharmaceuticals, Management Consulting"
 msgstr "行业：生命科学、生物科技、制药、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:257
-#: homepage/templates/homepage/about_us.html:401
+#: homepage/templates/homepage/about_us.html:235
+#: homepage/templates/homepage/about_us.html:379
 #: homepage/templates/homepage/team.html:176
 msgid ""
 "Previous: Poniard Pharmaceuticals, Celera, Exelixis, GSK; Cambridge, "
 "Imperial College"
 msgstr "经历：Poniard制药、Celera、Exelixis、葛兰素史克、剑桥大学，帝国学院"
 
-#: homepage/templates/homepage/about_us.html:268
+#: homepage/templates/homepage/about_us.html:246
 msgid "Tao Chen"
 msgstr "谌涛"
 
-#: homepage/templates/homepage/about_us.html:270
+#: homepage/templates/homepage/about_us.html:248
 msgid "CEO, ParagonGenomics"
 msgstr "ParagonGenomics公司首席执行官"
 
-#: homepage/templates/homepage/about_us.html:271
+#: homepage/templates/homepage/about_us.html:249
 msgid ""
 "Expertise: Product Development & Management, Marketing, Sales, Corporate "
 "Development, Entrepreneurship"
 msgstr "专长：产品开发与管理、市场营销、销售、企业发展、创业"
 
-#: homepage/templates/homepage/about_us.html:272
+#: homepage/templates/homepage/about_us.html:250
 msgid "Industry: Life Sciences"
 msgstr "行业：生命科学"
 
-#: homepage/templates/homepage/about_us.html:273
+#: homepage/templates/homepage/about_us.html:251
 msgid ""
 "Previous: Thermo Fisher Scientific, Life Technologies, Pfizer; Harvard, PKU"
 msgstr "经历：赛默菲舍尔科技公司、辉瑞公司、哈佛大学、北京大学"
 
-#: homepage/templates/homepage/about_us.html:284
+#: homepage/templates/homepage/about_us.html:262
 msgid "Elanie Lu"
 msgstr "陆毅"
 
-#: homepage/templates/homepage/about_us.html:286
+#: homepage/templates/homepage/about_us.html:264
 msgid "CEO, Visbit"
 msgstr "首席执行官，Visbit科技公司"
 
-#: homepage/templates/homepage/about_us.html:287
+#: homepage/templates/homepage/about_us.html:265
 msgid ""
 "Expertise: Product Marketing, Mobile User Acquisition, Online Marketing and "
 "Promotion"
 msgstr "专长：产品营销、移动用户开发、在线营销与推广"
 
-#: homepage/templates/homepage/about_us.html:288
+#: homepage/templates/homepage/about_us.html:266
 msgid "Industry: Mobile Internet and Gaming"
 msgstr "行业：移动互联网和游戏"
 
-#: homepage/templates/homepage/about_us.html:289
+#: homepage/templates/homepage/about_us.html:267
 msgid "Previous: Tango, Changyou, Microsoft, Starwood; Cornell, Fudan"
 msgstr "经历：Tango、畅游、微软、喜达屋、康奈尔大学、复旦大学"
 
-#: homepage/templates/homepage/about_us.html:300
+#: homepage/templates/homepage/about_us.html:278
 msgid "Phoebe Chen"
 msgstr "陈黎"
 
-#: homepage/templates/homepage/about_us.html:302
+#: homepage/templates/homepage/about_us.html:280
 msgid "Copywriter and Content Strategist, Magnus Communications"
 msgstr "总裁，Magnus文案和内容策划 "
 
-#: homepage/templates/homepage/about_us.html:303
+#: homepage/templates/homepage/about_us.html:281
 #, fuzzy
 #| msgid ""
 #| "Expertise: Marketing Communications, Advertising/App Content Design & "
@@ -446,86 +434,86 @@ msgid ""
 "Localization, Copy-writing, Copy-editing"
 msgstr "专长：营销传播、APP设计与本地化、广告翻译与写作"
 
-#: homepage/templates/homepage/about_us.html:304
+#: homepage/templates/homepage/about_us.html:282
 msgid "Industry: Marketing and Advertising, Management Consulting"
 msgstr "行业：营销和广告、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:305
+#: homepage/templates/homepage/about_us.html:283
 msgid ""
 "Previous: Uber, McKinsey, Roland Berger, United Nations; U Michigan, Bath, "
 "HUST"
 msgstr ""
 "经历：Uber、麦肯锡、罗兰贝格、联合国、密西根大学、Bath大学、华中科技大学"
 
-#: homepage/templates/homepage/about_us.html:316
+#: homepage/templates/homepage/about_us.html:294
 msgid "Ruming Liu"
 msgstr "刘入铭"
 
-#: homepage/templates/homepage/about_us.html:318
+#: homepage/templates/homepage/about_us.html:296
 msgid "Founding Partner, MagStone Law LLP "
 msgstr "创始合伙人，牧诚律师事务所"
 
-#: homepage/templates/homepage/about_us.html:319
+#: homepage/templates/homepage/about_us.html:297
 msgid ""
 "Expertise: Corporate Law, M&A, Joint Ventures, Corporate Governance, Cross-"
 "boarder Transactions"
 msgstr "专长：美国公司法、并购整合、合资公司组建、公司架构设立、跨境交易"
 
-#: homepage/templates/homepage/about_us.html:320
+#: homepage/templates/homepage/about_us.html:298
 msgid "Industry: Legal Advice"
 msgstr "行业：法律服务"
 
-#: homepage/templates/homepage/about_us.html:321
+#: homepage/templates/homepage/about_us.html:299
 msgid "Previous: Morrison & Foerster LLP, Jun He Law; U Penn, HKU, PKU"
 msgstr ""
 "经历：美富律师事务所、君合律师事务所、宾夕法尼亚大学、香港大学、北京大学"
 
-#: homepage/templates/homepage/about_us.html:332
+#: homepage/templates/homepage/about_us.html:310
 msgid "Michael Wu"
 msgstr "吴迈克"
 
-#: homepage/templates/homepage/about_us.html:334
+#: homepage/templates/homepage/about_us.html:312
 msgid "Tax Partner (CPA, CGMA), SingerLewak LLP "
 msgstr "税务合伙人，SingerLewak LLP"
 
-#: homepage/templates/homepage/about_us.html:335
+#: homepage/templates/homepage/about_us.html:313
 msgid "Expertise: Corporate Tax, International Tax, M&A, Accounting, Auditing"
 msgstr "专长：企业税务、国际税务、并购整合、会计、审计"
 
-#: homepage/templates/homepage/about_us.html:336
+#: homepage/templates/homepage/about_us.html:314
 msgid "Industry: Tax Advisory, Corporate Accounting"
 msgstr "行业：税务咨询、公司会计"
 
-#: homepage/templates/homepage/about_us.html:337
+#: homepage/templates/homepage/about_us.html:315
 msgid "Previous: Ernst & Young, PwC; MBA in Taxation, BS in Accounting"
 msgstr "经历：安永、普华永道、工商管理硕士、注册会计师、全球特许管理会计师"
 
-#: homepage/templates/homepage/about_us.html:348
+#: homepage/templates/homepage/about_us.html:326
 msgid "Huan Liu"
 msgstr "刘桓 博士"
 
-#: homepage/templates/homepage/about_us.html:350
+#: homepage/templates/homepage/about_us.html:328
 msgid "CEO, Vimo Labs"
 msgstr "首席执行官, Vimo Labs 科技公司"
 
-#: homepage/templates/homepage/about_us.html:351
+#: homepage/templates/homepage/about_us.html:329
 msgid ""
 "Expertise: Product Management, Software Engineering, Cloud Computing, Data "
 "Analytics, Entrepreneurship"
 msgstr "专长：产品管理、软件工程、云计算、数据分析、创业"
 
-#: homepage/templates/homepage/about_us.html:352
+#: homepage/templates/homepage/about_us.html:330
 msgid "Industry: Mobile Computing, Software, Management Consulting"
 msgstr "行业：移动计算、软件开发、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:353
+#: homepage/templates/homepage/about_us.html:331
 msgid ""
 "Previous: Accenture, Pacific Broadband Communications, HP, Intel; Stanford, "
 "UCLA, HIT"
 msgstr ""
 "经历：埃森哲、太平洋宽频通讯、惠普、英特尔、斯坦福大学、洛杉矶加大、哈工大"
 
-#: homepage/templates/homepage/about_us.html:418
+#: homepage/templates/homepage/about_us.html:396
 msgid "Alliance"
 msgstr "合作伙伴"
 
@@ -646,6 +634,22 @@ msgstr "电话会议"
 msgid "As a client"
 msgstr "客户操作步骤"
 
+#: homepage/templates/homepage/how_it_works.html:87
+msgid "Submit Request"
+msgstr "提交项目服务要求"
+
+#: homepage/templates/homepage/how_it_works.html:93
+msgid "Accept Recommended Expert"
+msgstr "接受推荐的项目"
+
+#: homepage/templates/homepage/how_it_works.html:99
+msgid "Engage Expert"
+msgstr "与客户联系"
+
+#: homepage/templates/homepage/how_it_works.html:105
+msgid "Rate and Pay"
+msgstr "给客户打分，收取报酬"
+
 #: homepage/templates/homepage/how_it_works.html:121
 #: homepage/templates/homepage/how_it_works.html:214
 msgid "How the expert network platform works"
@@ -656,26 +660,26 @@ msgid ""
 "1) Signup to the Enverest Network Service, and submit an engagement request "
 "describing the project objectives and preference of the expert profiles"
 msgstr ""
-"客户在恩睿专家平台上注册，并提交申请，在申请中标明项目目标以及需要哪方面的专"
+"第一步，客户在恩睿专家平台上注册，并提交申请，在申请中标明项目目标以及需要哪方面的专"
 "家"
 
 #: homepage/templates/homepage/how_it_works.html:128
 msgid ""
 "2) Accept the expert that Enverest would recommend to match the requirements "
 "of the engagement"
-msgstr "客户接受恩睿公司根据客户需求推荐的相关专家"
+msgstr "第二步，客户接受恩睿公司根据客户需求推荐的相关专家"
 
 #: homepage/templates/homepage/how_it_works.html:131
 msgid ""
 "3) Interact with the Experts to work on the engagement via conference calls, "
 "video conferences, IMs, or face-to-face meetings"
-msgstr "客户和专家通过电话会议、视频会议、站内信及面对面的方式进行项目有关工作"
+msgstr "第三步，客户和专家通过电话会议、视频会议、站内信及面对面的方式进行项目有关工作"
 
 #: homepage/templates/homepage/how_it_works.html:134
 msgid ""
 "4) After the engagement is complete, rate the Expert’s service, and make "
 "payment"
-msgstr "项目完成后，给专家打分，然后付费。"
+msgstr "第四步，项目完成后，给专家打分，然后付费。"
 
 #: homepage/templates/homepage/how_it_works.html:145
 msgid "Client Benefits"
@@ -717,20 +721,20 @@ msgstr "给客户打分，收取报酬"
 msgid ""
 "1) Review the engagement recommended by Enverest, and accept the "
 "recommendation if he/she agrees to take on the engagement"
-msgstr "查看恩睿国际有限公司推荐的客户咨询需求，接受有意参与的咨询项目"
+msgstr "第一步，查看恩睿国际有限公司推荐的客户咨询需求，接受有意参与的咨询项目"
 
 #: homepage/templates/homepage/how_it_works.html:221
 msgid ""
 "2) Interact with the client to work on the engagement via conference calls, "
 "video conferences, IMs, or face-to-face meetings"
 msgstr ""
-"专家与客户通过电话会议、视频会议、即时信息及面对面的方式进行项目有关工作"
+"第二部，专家与客户通过电话会议、视频会议、即时信息及面对面的方式进行项目有关工作"
 
 #: homepage/templates/homepage/how_it_works.html:224
 msgid ""
 "3) After the engagement is completed, rate the client and accept the payment "
 "from Enverest"
-msgstr "项目完成后，给客户打分，然后收取恩睿公司支付的报酬"
+msgstr "第三部，项目完成后，给客户打分，然后收取恩睿公司支付的报酬"
 
 #: homepage/templates/homepage/how_it_works.html:236
 msgid "Expert Benefits"
@@ -834,7 +838,7 @@ msgstr ""
 #: homepage/templates/homepage/how_it_works.html:276
 msgid ""
 "Once I submit an engagement request, how long will it take to get matched?"
-msgstr ""
+msgstr "提交项目申请后，需要多久才能收到专家推荐？"
 
 #: homepage/templates/homepage/how_it_works.html:277
 msgid ""
@@ -1340,7 +1344,7 @@ msgstr ""
 #: homepage/templates/homepage/service.html:38
 #: homepage/templates/homepage/service.html:118
 msgid "Enverest Experts"
-msgstr "专家代表"
+msgstr "恩睿专家平台"
 
 #: homepage/templates/homepage/service.html:41
 msgid "Business expertise, on demand"
@@ -1353,7 +1357,7 @@ msgstr "恩睿解决方案"
 
 #: homepage/templates/homepage/service.html:50
 msgid "Customized & deep-dive consulting"
-msgstr "量身定制的深度咨询"
+msgstr "一对一的深度企业咨询"
 
 #: homepage/templates/homepage/service.html:56
 #: homepage/templates/homepage/service.html:134
@@ -1363,7 +1367,7 @@ msgstr "恩睿创投顾问"
 
 #: homepage/templates/homepage/service.html:59
 msgid "Entrepreneurship advisory"
-msgstr "创业咨询"
+msgstr "创业项目评估和专业指导"
 
 #: homepage/templates/homepage/service.html:121
 msgid ""
@@ -1495,6 +1499,10 @@ msgstr ""
 "您在使用网站的过程中，您可能会被重新导向第三方网站。我们不承担任何通过第三方"
 "网站提供的内容和信息。即使通过我们的链接连到第三方网站，并不意味着我们网站对"
 "此信息的认可。我们不承担任何关于另一网站链接的责任"
+
+#~ msgid ""
+#~ "On-Demand Business Expertise Sharing Platform for Fast-growing Companies"
+#~ msgstr "新一代平台式咨询服务"
 
 #~ msgid ""
 #~ "Get a sense of the 100+ advisors in our network. We provide expertise to "
