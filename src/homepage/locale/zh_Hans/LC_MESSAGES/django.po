@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-02 21:42-0700\n"
+"POT-Creation-Date: 2016-05-02 21:54-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -660,8 +660,8 @@ msgid ""
 "1) Signup to the Enverest Network Service, and submit an engagement request "
 "describing the project objectives and preference of the expert profiles"
 msgstr ""
-"第一步，客户在恩睿专家平台上注册，并提交申请，在申请中标明项目目标以及需要哪方面的专"
-"家"
+"第一步，客户在恩睿专家平台上注册，并提交申请，在申请中标明项目目标以及需要哪"
+"方面的专家"
 
 #: homepage/templates/homepage/how_it_works.html:128
 msgid ""
@@ -673,7 +673,9 @@ msgstr "第二步，客户接受恩睿公司根据客户需求推荐的相关专
 msgid ""
 "3) Interact with the Experts to work on the engagement via conference calls, "
 "video conferences, IMs, or face-to-face meetings"
-msgstr "第三步，客户和专家通过电话会议、视频会议、站内信及面对面的方式进行项目有关工作"
+msgstr ""
+"第三步，客户和专家通过电话会议、视频会议、站内信及面对面的方式进行项目有关工"
+"作"
 
 #: homepage/templates/homepage/how_it_works.html:134
 msgid ""
@@ -728,7 +730,8 @@ msgid ""
 "2) Interact with the client to work on the engagement via conference calls, "
 "video conferences, IMs, or face-to-face meetings"
 msgstr ""
-"第二部，专家与客户通过电话会议、视频会议、即时信息及面对面的方式进行项目有关工作"
+"第二部，专家与客户通过电话会议、视频会议、即时信息及面对面的方式进行项目有关"
+"工作"
 
 #: homepage/templates/homepage/how_it_works.html:224
 msgid ""
@@ -756,62 +759,45 @@ msgstr "参与战略管理等有意义的工作"
 msgid "Competitive compensation from consulting fees and referral fees"
 msgstr "获得相应的咨询报酬"
 
-#: homepage/templates/homepage/how_it_works.html:255
-msgid "What is Enverest?"
-msgstr "恩睿概况"
-
 #: homepage/templates/homepage/how_it_works.html:256
-msgid ""
-"Enverest is an online business expertise sharing platform that enables "
-"clients to engage experts for on-demand business advisory services. "
-"Headquartered in Silicon Valley, Enverest primarily serves startups and SMBs "
-"across the Pacific Rim to achieve accelerated growth and sustained global "
-"success."
-msgstr ""
-"恩睿公司为企业客户提供一站式咨询服务。客户可以通过“恩睿专家平台”快速有效地对"
-"接行业资深专家为企业发展出谋划策，也可以和“恩睿解决方案”顾问们合作解决企业遇"
-"到的具体问题以取得科技和管理升级以及国际化拓展。总部位于美国硅谷，我们在纽"
-"约，新加坡，北京等地有专家和团队来为中国和亚太区的中小企业和创业企业服务。"
-
-#: homepage/templates/homepage/how_it_works.html:258
 msgid "What types of business are searching for Experts on Enverest?"
 msgstr "都有什么样的公司在恩睿专家平台上找专家？"
 
-#: homepage/templates/homepage/how_it_works.html:260
+#: homepage/templates/homepage/how_it_works.html:258
 msgid "Growth stage startups"
 msgstr "快速增长期的创业公司"
 
-#: homepage/templates/homepage/how_it_works.html:261
+#: homepage/templates/homepage/how_it_works.html:259
 msgid "Small-to-medium sized businesses"
 msgstr "中小型企业"
 
-#: homepage/templates/homepage/how_it_works.html:262
+#: homepage/templates/homepage/how_it_works.html:260
 msgid "Private equity and venture capital firms"
 msgstr "私募基金和风投基金"
 
-#: homepage/templates/homepage/how_it_works.html:263
+#: homepage/templates/homepage/how_it_works.html:261
 msgid "Asian businesses expanding into the US market"
 msgstr "计划到美国市场发展的中国公司"
 
-#: homepage/templates/homepage/how_it_works.html:264
+#: homepage/templates/homepage/how_it_works.html:262
 msgid "US-based companies seeking entry into Asian markets"
 msgstr "计划进入亚洲市场的美国公司"
 
-#: homepage/templates/homepage/how_it_works.html:267
+#: homepage/templates/homepage/how_it_works.html:265
 msgid "Where do the Enverest Experts come from?"
 msgstr "恩睿专家都是从哪里来的？"
 
-#: homepage/templates/homepage/how_it_works.html:268
+#: homepage/templates/homepage/how_it_works.html:266
 msgid ""
 "Most of our experts have more than 10 years of successful experience in "
 "their own fields, and hold the title of VP and above."
 msgstr "大多数恩睿自己具有本行业十年以上成功经验，行动曾是公司副总以上高管"
 
-#: homepage/templates/homepage/how_it_works.html:270
+#: homepage/templates/homepage/how_it_works.html:268
 msgid "Is the client or expert profile publicly accessible?"
 msgstr "客户或专家个人信息是公开的吗？"
 
-#: homepage/templates/homepage/how_it_works.html:271
+#: homepage/templates/homepage/how_it_works.html:269
 msgid ""
 "No. We take your privacy very seriously. Your profile will not be available "
 "to anyone unless you start engagement with the Expert/client, while but no "
@@ -821,11 +807,11 @@ msgstr ""
 "不是！我们尤其重视个人隐私。专家与客户开始合作项目前，任何一方的信息都是保密"
 "的，其他人看不到此类信息。根据我们的使用条款，恩睿用户必须负责对有关信息保密"
 
-#: homepage/templates/homepage/how_it_works.html:273
+#: homepage/templates/homepage/how_it_works.html:271
 msgid "Can I browse the profiles of all Experts on the platform?"
 msgstr "我能在专家平台上浏览所有专家的个人信息吗?"
 
-#: homepage/templates/homepage/how_it_works.html:274
+#: homepage/templates/homepage/how_it_works.html:272
 msgid ""
 "Not at this time. Only a number of selected Experts are shown on this "
 "website. The privacy of our Experts is very important, and we only allow the "
@@ -835,12 +821,12 @@ msgstr ""
 "目前还不行。本网站只显示部分专家的个人信息。我们非常重视专家的隐私权。客户只"
 "有在提交项目申请，并接受我们推荐的专家后，才能浏览该专家的有关资料"
 
-#: homepage/templates/homepage/how_it_works.html:276
+#: homepage/templates/homepage/how_it_works.html:274
 msgid ""
 "Once I submit an engagement request, how long will it take to get matched?"
 msgstr "提交项目申请后，需要多久才能收到专家推荐？"
 
-#: homepage/templates/homepage/how_it_works.html:277
+#: homepage/templates/homepage/how_it_works.html:275
 msgid ""
 "Enverest is committed to respond to any engagement request within 48 hour. "
 "We typically make a recommendation of an Expert within 1-5 days. If your "
@@ -849,11 +835,11 @@ msgstr ""
 "恩睿承诺在收到客户项目申请48小时内给您回复。我们通常会在1-5天内为您推荐合适的"
 "专家。如果的项目紧急，请在申请表上注明。"
 
-#: homepage/templates/homepage/how_it_works.html:279
+#: homepage/templates/homepage/how_it_works.html:277
 msgid "Should I price my project using an hourly rate or fixed price?"
 msgstr "我应该按小时计费，还是按项目计费？"
 
-#: homepage/templates/homepage/how_it_works.html:280
+#: homepage/templates/homepage/how_it_works.html:278
 msgid ""
 "This is entirely up to you. If you have a budget in mind that you cannot "
 "exceed and very specific deliverables, we suggest you used a fixed price. If "
@@ -864,11 +850,11 @@ msgstr ""
 "项目计费。如果您的需求比较宽泛，而且您需要随时的服务，我们建议您按每小时$400"
 "计费。"
 
-#: homepage/templates/homepage/how_it_works.html:282
+#: homepage/templates/homepage/how_it_works.html:280
 msgid "How does the rating work?"
 msgstr "怎么给对方打分？"
 
-#: homepage/templates/homepage/how_it_works.html:283
+#: homepage/templates/homepage/how_it_works.html:281
 msgid ""
 "We require the clients and the Experts to rate each other upon completion of "
 "an engagement. The aggregated ratings are made visible on Enverest platform "
@@ -879,11 +865,11 @@ msgstr ""
 "我们要求客户和专家在项目完成后尽快给对方打分。用户登录后，可以看到对方的积"
 "分。如果专家或客户的积分达不到恩睿标准，我们会考虑在恩睿平台上删除该用户。"
 
-#: homepage/templates/homepage/how_it_works.html:285
+#: homepage/templates/homepage/how_it_works.html:283
 msgid "What happens if there is a dispute over engagement outcome or payment?"
 msgstr "如果双方对收费或项目结果有争议怎么办？"
 
-#: homepage/templates/homepage/how_it_works.html:286
+#: homepage/templates/homepage/how_it_works.html:284
 msgid ""
 "In the event of a dispute between clients and experts, Enverest will do our "
 "best to resolve the dispute. Both the clients and the expert should send a "
@@ -892,11 +878,11 @@ msgstr ""
 "如果客户和专家有争议，我们会本着公平合理的原则尽力解决纠纷。客户和专家可以发"
 "邮件给contact@enverest.com申诉。"
 
-#: homepage/templates/homepage/how_it_works.html:288
+#: homepage/templates/homepage/how_it_works.html:286
 msgid "Can I pay my Experts outside of the Enverest platform?"
 msgstr "我能在线下给专家付款吗？"
 
-#: homepage/templates/homepage/how_it_works.html:289
+#: homepage/templates/homepage/how_it_works.html:287
 msgid ""
 "No. Bypassing the Enverest platform is a serious violation of our Terms of "
 "Use and would result in legal action and both parties’ removal from our "
@@ -905,80 +891,80 @@ msgstr ""
 "不能！绕过恩睿平台进行私下交易严重违反本网站使用条款。我们会将双方帐号清除，"
 "并保留法律诉讼的权利"
 
-#: homepage/templates/homepage/how_it_works.html:291
+#: homepage/templates/homepage/how_it_works.html:289
 msgid "I want to bring an Expert on board full-time. What should I do?"
 msgstr "我想正式全职雇用恩睿专家怎么办？"
 
-#: homepage/templates/homepage/how_it_works.html:292
+#: homepage/templates/homepage/how_it_works.html:290
 msgid ""
 "There is a buyout clause laid out in our Terms of Use. Please feel free to "
 "contact Enverest at contact@enverest.com directly for help with this process."
 msgstr "我们网站使用条款里有买断条款。请发邮件到contact@enverest.com申请"
 
-#: homepage/templates/homepage/how_it_works.html:297
+#: homepage/templates/homepage/how_it_works.html:295
 msgid "What software do I need to install for the audio/video call?"
 msgstr "我想要安装什么音频/视频电话软件吗？"
 
-#: homepage/templates/homepage/how_it_works.html:298
+#: homepage/templates/homepage/how_it_works.html:296
 msgid "Currently, Enverest partnered with"
 msgstr "目前恩睿与appear.in合作"
 
-#: homepage/templates/homepage/how_it_works.html:298
+#: homepage/templates/homepage/how_it_works.html:296
 msgid ""
 "to provide video/audio conference call service for the engagement. No need "
 "to install any software, however this is"
 msgstr "向客户和专家提供音频/视频电话会议服务。您不必安装任何软件"
 
-#: homepage/templates/homepage/how_it_works.html:298
+#: homepage/templates/homepage/how_it_works.html:296
 msgid "only"
 msgstr "但目前"
 
-#: homepage/templates/homepage/how_it_works.html:298
+#: homepage/templates/homepage/how_it_works.html:296
 msgid "supported in newer versions of the following browsers:"
 msgstr "appear.in只能在较新版本的浏览器使用，包括："
 
-#: homepage/templates/homepage/how_it_works.html:300
+#: homepage/templates/homepage/how_it_works.html:298
 msgid "Chrome"
 msgstr "Chrome"
 
-#: homepage/templates/homepage/how_it_works.html:301
+#: homepage/templates/homepage/how_it_works.html:299
 msgid "Firefox"
 msgstr "Firefox"
 
-#: homepage/templates/homepage/how_it_works.html:302
+#: homepage/templates/homepage/how_it_works.html:300
 msgid "Opera"
 msgstr "Opera"
 
-#: homepage/templates/homepage/how_it_works.html:304
+#: homepage/templates/homepage/how_it_works.html:302
 msgid "How can I use the conference call?"
 msgstr "我怎么开始电话会议？"
 
-#: homepage/templates/homepage/how_it_works.html:305
+#: homepage/templates/homepage/how_it_works.html:303
 msgid ""
 "Simply click on the link on the engagement page at the same time with client/"
 "expert. You will both appear in the meeting room."
 msgstr "非常简单！点一下项目页面的链接，客户和专家就进入虚拟会议室了。"
 
-#: homepage/templates/homepage/how_it_works.html:307
+#: homepage/templates/homepage/how_it_works.html:305
 msgid "How do I mute the sound from other people in the room?"
 msgstr "我怎么能让虚拟会议室里的其他人静音？"
 
-#: homepage/templates/homepage/how_it_works.html:308
+#: homepage/templates/homepage/how_it_works.html:306
 msgid ""
 "Muting sound from another person mutes that person only for you, not other "
 "people in the room."
 msgstr ""
 "点一下该成员的静音键，您就听不见那一方的声音了，但会议室其他人还是能听到。"
 
-#: homepage/templates/homepage/how_it_works.html:309
+#: homepage/templates/homepage/how_it_works.html:307
 msgid "For the web, to mute other participants:"
 msgstr "网络版静音方法："
 
-#: homepage/templates/homepage/how_it_works.html:311
+#: homepage/templates/homepage/how_it_works.html:309
 msgid "Hover over the video and you will see a speaker icon."
 msgstr "鼠标移到该成员头像，您会看到一个话筒图标，"
 
-#: homepage/templates/homepage/how_it_works.html:312
+#: homepage/templates/homepage/how_it_works.html:310
 msgid ""
 "Click the speaker icon and this will mute their sound. If you would like to "
 "turn it back on, hover over the video again and click the button to restore "
@@ -987,15 +973,15 @@ msgstr ""
 "点击一下话筒图标，对方就静音了。如果您想解除静音，就再点击一下刚才那个话筒图"
 "标。"
 
-#: homepage/templates/homepage/how_it_works.html:314
+#: homepage/templates/homepage/how_it_works.html:312
 msgid "For iOS and Android, to mute another participant:"
 msgstr "iOS和安卓版静音方法："
 
-#: homepage/templates/homepage/how_it_works.html:316
+#: homepage/templates/homepage/how_it_works.html:314
 msgid "Long press on the person's video and a menu will pop up."
 msgstr "长按该成员头像，就会出现一个菜单"
 
-#: homepage/templates/homepage/how_it_works.html:317
+#: homepage/templates/homepage/how_it_works.html:315
 msgid ""
 "Select mute and the participant's audio will be muted. To unmute the "
 "participant, long press and select unmute from the menu."
@@ -1003,11 +989,11 @@ msgstr ""
 "选择静音，对方音频就静音了。如果您想解除静音，就再长按头像，在菜单上选择静音"
 "解除就行了。"
 
-#: homepage/templates/homepage/how_it_works.html:320
+#: homepage/templates/homepage/how_it_works.html:318
 msgid "How can I lock my room?"
 msgstr "我怎么能锁定会议室"
 
-#: homepage/templates/homepage/how_it_works.html:321
+#: homepage/templates/homepage/how_it_works.html:319
 msgid ""
 "In the top bar, to the right, you will see a button saying \"Lock room\". "
 "When you click this, it turns red and says \"Room locked\". When the room is "
@@ -1017,7 +1003,7 @@ msgstr ""
 "在顶端工具条右边有一个Lock room键，您点击一下后，此键变红色，并显示会议室锁"
 "定。如果会议室已锁定，除非现有参会者邀请，其他人就进不了会议室了。"
 
-#: homepage/templates/homepage/how_it_works.html:323
+#: homepage/templates/homepage/how_it_works.html:321
 msgid ""
 "When someone tries to enter a locked room, they will see a screen saying the "
 "room is locked, asking them to take a photo of themselves and knock on the "
@@ -1028,7 +1014,7 @@ msgstr ""
 "如果有人想进入，他们就会看到会议室已锁的提示，并要求他们拍照，然后敲门。有人"
 "敲门时，参会人会看到提示，并可以选择是否让新人加入。"
 
-#: homepage/templates/homepage/how_it_works.html:325
+#: homepage/templates/homepage/how_it_works.html:323
 msgid ""
 "If there are followers to a room, followers will still receive notifications "
 "about chat messages while the room is locked and be able to read this the "
@@ -1037,11 +1023,11 @@ msgstr ""
 "新人加入会议室后，仍然会看到会议室已锁的提示。下次再加入同一锁定会议室时，还"
 "是需要敲门进入。"
 
-#: homepage/templates/homepage/how_it_works.html:327
+#: homepage/templates/homepage/how_it_works.html:325
 msgid "How do I share my screen?"
 msgstr "我怎么能分享屏幕？"
 
-#: homepage/templates/homepage/how_it_works.html:328
+#: homepage/templates/homepage/how_it_works.html:326
 msgid ""
 "Screen sharing is currently only supported in Chrome 34 and up, and shared "
 "screens can be viewed in Chrome and Opera. Appear.in does not yet support "
@@ -1050,14 +1036,14 @@ msgstr ""
 "只有Chrome34及更新的版本才有屏幕分享功能。Chrome和Opera浏览器里可以看到分享的"
 "屏幕。Firefox目前尚不支持屏幕分享功能。"
 
-#: homepage/templates/homepage/how_it_works.html:330
+#: homepage/templates/homepage/how_it_works.html:328
 msgid ""
 "To start screen sharing, mouse over your video and click the “Share screen” "
 "icon that appears at the bottom right of your video."
 msgstr ""
 "启动屏幕分享时，把鼠标移到自己头像上，然后点击头像右下角Share screen键。"
 
-#: homepage/templates/homepage/how_it_works.html:332
+#: homepage/templates/homepage/how_it_works.html:330
 msgid ""
 "The first time you use the new screen sharing, you will be asked to add a "
 "Chrome extension.  Add this extension. When you press “Share screen” you "
@@ -1068,7 +1054,7 @@ msgstr ""
 "第一次使用屏幕分享时，需要安装一个Chrome插件。有了插件后，在弹出的对话框里选"
 "择您想分享的视窗或应用。您可以分享整个屏幕。"
 
-#: homepage/templates/homepage/how_it_works.html:334
+#: homepage/templates/homepage/how_it_works.html:332
 msgid ""
 "As long as you are sharing your screen, you will see a message displayed at "
 "the bottom of your screen, and you can press it to stop sharing at any time. "
@@ -1077,7 +1063,7 @@ msgstr ""
 "分享屏幕时，屏幕下方有一个提示条。您可以随时点击一下来暂停分享。您也可以点击"
 "Hide来去掉提示条。"
 
-#: homepage/templates/homepage/how_it_works.html:336
+#: homepage/templates/homepage/how_it_works.html:334
 msgid ""
 "To view a shared screen in full size, just double-click it or press the "
 "supersize icon."
@@ -1198,7 +1184,7 @@ msgstr "欢迎使用恩睿专家平台为您提供："
 #: homepage/templates/homepage/index.html:412
 #: homepage/templates/homepage/service.html:75
 msgid "Performance Improvement"
-msgstr "项目管理"
+msgstr "运营提升"
 
 #: homepage/templates/homepage/index.html:417
 #: homepage/templates/homepage/service.html:80
@@ -1499,6 +1485,22 @@ msgstr ""
 "您在使用网站的过程中，您可能会被重新导向第三方网站。我们不承担任何通过第三方"
 "网站提供的内容和信息。即使通过我们的链接连到第三方网站，并不意味着我们网站对"
 "此信息的认可。我们不承担任何关于另一网站链接的责任"
+
+#~ msgid "What is Enverest?"
+#~ msgstr "恩睿概况"
+
+#~ msgid ""
+#~ "Enverest is an online business expertise sharing platform that enables "
+#~ "clients to engage experts for on-demand business advisory services. "
+#~ "Headquartered in Silicon Valley, Enverest primarily serves startups and "
+#~ "SMBs across the Pacific Rim to achieve accelerated growth and sustained "
+#~ "global success."
+#~ msgstr ""
+#~ "恩睿公司为企业客户提供一站式咨询服务。客户可以通过“恩睿专家平台”快速有效地"
+#~ "对接行业资深专家为企业发展出谋划策，也可以和“恩睿解决方案”顾问们合作解决企"
+#~ "业遇到的具体问题以取得科技和管理升级以及国际化拓展。总部位于美国硅谷，我们"
+#~ "在纽约，新加坡，北京等地有专家和团队来为中国和亚太区的中小企业和创业企业服"
+#~ "务。"
 
 #~ msgid ""
 #~ "On-Demand Business Expertise Sharing Platform for Fast-growing Companies"
