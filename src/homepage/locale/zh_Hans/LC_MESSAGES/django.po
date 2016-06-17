@@ -176,15 +176,7 @@ msgid "Ya-Ru Chen"
 msgstr "陈雅茹 教授"
 
 #: templates/homepage/about_us.html:152
-#, fuzzy
-#| msgid ""
-#| "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
-#| "Management, ​Professor of Global Business, Johnson Graduate School of "
-#| "Management, Cornell University (Enverest Advisor)"
-msgid ""
-"Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
-"Management, \\u200bProfessor of Global Business, Johnson Graduate School of "
-"Management, Cornell University (Enverest Advisor)"
+msgid "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of Management, Professor of Global Business, Johnson Graduate School of Management, Cornell University (Enverest Advisor)"
 msgstr "美国康奈尔大学商学院教授，恩睿公司顾问"
 
 #: templates/homepage/about_us.html:153
