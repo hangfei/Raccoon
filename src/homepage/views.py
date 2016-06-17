@@ -27,12 +27,6 @@ def how_it_works(request):
     })
     return render(request, 'homepage/how_it_works.html', context)
 
-def team(request):
-    context = RequestContext(request, {
-        'latest_question_list': 'sss',
-    })
-    return render(request, 'homepage/team.html', context)
-
 def news_blog(request):
     context = RequestContext(request, {
         'latest_question_list': 'sss',

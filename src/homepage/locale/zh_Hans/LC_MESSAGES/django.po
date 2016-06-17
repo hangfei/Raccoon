@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-16 00:08-0700\n"
+"POT-Creation-Date: 2016-06-16 22:50-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
-#: homepage/forms.py:10
+#: forms.py:10
 msgid "Firstname"
 msgstr "名字"
 
-#: homepage/forms.py:16
+#: forms.py:16
 msgid "Lastname"
 msgstr "姓氏"
 
-#: homepage/forms.py:22
+#: forms.py:22
 msgid "Email"
 msgstr "电子信箱"
 
-#: homepage/forms.py:33
+#: forms.py:33
 msgid "Tell Us More"
 msgstr "告诉我们更多信息"
 
-#: homepage/templates/homepage/about_us.html:25
+#: templates/homepage/about_us.html:25
 msgid "What's Enverest"
 msgstr "恩睿概况"
 
-#: homepage/templates/homepage/about_us.html:28
+#: templates/homepage/about_us.html:28
 msgid ""
 "Enverest enables Chinese and Asian enterprises and startups to engage "
 "industry experts and advisors to innovate and internationalize. "
@@ -53,21 +53,21 @@ msgstr ""
 "和北京等地设有业务分部。 服务行业涉及信息科技、生命科学、新能源和材料等。公司"
 "业务主要包含三大板块: 恩睿专家平台，恩睿解决方案，恩睿创投顾问。"
 
-#: homepage/templates/homepage/about_us.html:38
+#: templates/homepage/about_us.html:38
 msgid "Who We Are"
 msgstr "我们的使命"
 
-#: homepage/templates/homepage/about_us.html:39
+#: templates/homepage/about_us.html:39
 msgid ""
 "Everest team is committed to help fast-growing companies to achieve "
 "accelerated growth and sustained global success."
 msgstr "我们专注于为企业客户制定快速增长策略，规划全球发展布局。"
 
-#: homepage/templates/homepage/about_us.html:48
+#: templates/homepage/about_us.html:48
 msgid "What We Do"
 msgstr "我们的特色"
 
-#: homepage/templates/homepage/about_us.html:49
+#: templates/homepage/about_us.html:49
 msgid ""
 "Our partners and experts share knowledge, expertise and network to provide "
 "on-demand advisory services for our clients to thrive."
@@ -75,455 +75,377 @@ msgstr ""
 "恩睿咨询合伙人和专家团一起与客户共享专业知识和商业网络资源，为企业客户的发展"
 "成长提供量身定制的咨询服务。"
 
-#: homepage/templates/homepage/about_us.html:58
+#: templates/homepage/about_us.html:58
 msgid "Services"
 msgstr "我们的服务"
 
-#: homepage/templates/homepage/about_us.html:59
+#: templates/homepage/about_us.html:59
 msgid ""
 "We provide affordable, high-quality, accessible, and customized solutions to "
 "meet the needs of fast-growing companies"
 msgstr "我们为快速发展的公司提供价格合理、质量上乘、专家资源、量身定制的服务"
 
-#: homepage/templates/homepage/about_us.html:74
-#: homepage/templates/homepage/team.html:79
+#: templates/homepage/about_us.html:74
 msgid "Meet the experts"
 msgstr "专家代表"
 
-#: homepage/templates/homepage/about_us.html:85
-#: homepage/templates/homepage/index.html:288
-#: homepage/templates/homepage/team.html:42
+#: templates/homepage/about_us.html:85 templates/homepage/index.html.py:288
 msgid "Simon Cen"
 msgstr "岑水明"
 
-#: homepage/templates/homepage/about_us.html:87
-#: homepage/templates/homepage/about_us.html:103
-#: homepage/templates/homepage/about_us.html:184
-#: homepage/templates/homepage/team.html:43
-#: homepage/templates/homepage/team.html:58
-#: homepage/templates/homepage/team.html:123
+#: templates/homepage/about_us.html:87 templates/homepage/about_us.html:103
+#: templates/homepage/about_us.html:184
 msgid "Managing Partner, Enverest"
 msgstr "管理合伙人， 恩睿公司"
 
-#: homepage/templates/homepage/about_us.html:88
-#: homepage/templates/homepage/team.html:44
-#, fuzzy
-#| msgid ""
-#| "Built strong expertise in Business Development, Operations and Supply "
-#| "Chain Management."
-msgid ""
-"Expertise: Strategy, Business Development, Operations, Supply Chain, M&A, "
-"Entrepreneurship"
+#: templates/homepage/about_us.html:88
+msgid "Expertise: Strategy, Business Development, Operations, Supply Chain, M&A, Entrepreneurship"
 msgstr "专长：公司策略、业务开发、统筹运营、供应链管理、并购整合"
 
-#: homepage/templates/homepage/about_us.html:89
-#: homepage/templates/homepage/team.html:45
+#: templates/homepage/about_us.html:89
 msgid "Industry: Hi-tech, Management Consulting, Transportation / Logistics"
 msgstr "行业：高科技、管理咨询、交通运输／物流"
 
-#: homepage/templates/homepage/about_us.html:90
-#: homepage/templates/homepage/team.html:46
+#: templates/homepage/about_us.html:90
 msgid "Previous: Mckinsey, Apple, UPS; Cornell, Georgia Tech, ZJU"
 msgstr "经历：麦肯锡、苹果、UPS ; 康奈尔大学，乔治亚理工大学，浙江大学"
 
-#: homepage/templates/homepage/about_us.html:101
-#: homepage/templates/homepage/team.html:57
+#: templates/homepage/about_us.html:101
 msgid "Alex Zhang"
 msgstr "张键 博士"
 
-#: homepage/templates/homepage/about_us.html:104
-#: homepage/templates/homepage/team.html:59
+#: templates/homepage/about_us.html:104
 msgid "Expertise: Marketing, Business Development, M&A, Entrepreneurship"
 msgstr "专长：市场营销、业务拓展、并购整合、创业"
 
-#: homepage/templates/homepage/about_us.html:105
-#: homepage/templates/homepage/team.html:60
+#: templates/homepage/about_us.html:105
 msgid "Industry: Life Sciences, Bio-tech, Management Consulting"
 msgstr "行业：生命科学、生物技术、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:106
-#: homepage/templates/homepage/team.html:61
+#: templates/homepage/about_us.html:106
 msgid "Previous: Amgen, Thermo Fisher Scientific; Texas A&M, Cornell, SDU"
 msgstr "经历：安进，赛默菲舍尔、康奈尔大学、德州A&M大学、 山东大学"
 
-#: homepage/templates/homepage/about_us.html:118
-#: homepage/templates/homepage/index.html:314
+#: templates/homepage/about_us.html:118 templates/homepage/index.html.py:314
 msgid "Galvin Fan"
 msgstr "范广斌 博士"
 
-#: homepage/templates/homepage/about_us.html:120
-#: homepage/templates/homepage/about_us.html:136
+#: templates/homepage/about_us.html:120 templates/homepage/about_us.html:136
 msgid "Venture Partner, Enverest"
 msgstr "合伙人，恩睿公司"
 
-#: homepage/templates/homepage/about_us.html:121
+#: templates/homepage/about_us.html:121
 msgid ""
 "Expertise: Strategy, Business Development, Entrepreneurship, Incubation and "
 "Investment"
 msgstr "专长；公司策略、业务开发、创业、孵化投资"
 
-#: homepage/templates/homepage/about_us.html:122
+#: templates/homepage/about_us.html:122
 msgid ""
 "Industry: Hi-Tech, Virtual Reality, Smartphone, Mobile Internet, IoT, Smart "
 "Home, SNS"
 msgstr ""
 "行业：高科技、虚拟现实、智能手机、物联网、移动互联网、智能家居、 社交网络"
 
-#: homepage/templates/homepage/about_us.html:123
+#: templates/homepage/about_us.html:123
 msgid ""
 "Previous: Huawei, Intel, Startups, University of Mississippi; UA, RUC, SDU"
 msgstr "经历：华为、英特尔、加大伯克利，密西西比大学、山东大学"
 
-#: homepage/templates/homepage/about_us.html:134
-#: homepage/templates/homepage/index.html:327
+#: templates/homepage/about_us.html:134 templates/homepage/index.html.py:327
 msgid "Feng Gao"
 msgstr "高峰 博士"
 
-#: homepage/templates/homepage/about_us.html:137
+#: templates/homepage/about_us.html:137
 msgid ""
 "Expertise: Big Data Analytics, Renewable Energy, Smart Grid, Electricity "
 "Markets, Power System Analysis"
 msgstr "专长：大数据分析、可再生能源、智能电网、电力市场、电力系统分析"
 
-#: homepage/templates/homepage/about_us.html:138
+#: templates/homepage/about_us.html:138
 msgid "Industry: Power and Utility, CleanTech, IoT"
 msgstr "行业：电力和公共事业、清洁能源、物联网"
 
-#: homepage/templates/homepage/about_us.html:139
-#, fuzzy
-#| msgid "Previous: State Grid, ABB; Iowa State, Tsinghua"
+#: templates/homepage/about_us.html:139
 msgid "Previous: National Grid, ABB; Iowa State, Tsinghua"
 msgstr "经历：国家电网、ABB；爱荷华州大学、清华大学"
 
-#: homepage/templates/homepage/about_us.html:150
-#: homepage/templates/homepage/team.html:92
+#: templates/homepage/about_us.html:150
 msgid "Ya-Ru Chen"
 msgstr "陈雅茹 教授"
 
-#: homepage/templates/homepage/about_us.html:152
-#: homepage/templates/homepage/team.html:93
-msgid ""
-"Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
-"Management, \\u200bProfessor of Global Business, Johnson Graduate School of "
-"Management, Cornell University (Enverest Advisor)"
+#: templates/homepage/about_us.html:152
+msgid "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of Management, ​Professor of Global Business, Johnson Graduate School of Management, Cornell University (Enverest Advisor)"
 msgstr "美国康奈尔大学商学院教授，恩睿公司顾问"
 
-#: homepage/templates/homepage/about_us.html:153
-#: homepage/templates/homepage/team.html:94
+#: templates/homepage/about_us.html:153
 msgid ""
 "Expertise: Strategy and Management, Management Consulting, Data Analysis"
 msgstr "专长：企业战略、管理咨询、数据分析"
 
-#: homepage/templates/homepage/about_us.html:154
-#: homepage/templates/homepage/team.html:95
+#: templates/homepage/about_us.html:154
 msgid "Industry: Business School Education and Research"
 msgstr "行业：商学院教育与研究"
 
-#: homepage/templates/homepage/about_us.html:155
-#: homepage/templates/homepage/team.html:96
+#: templates/homepage/about_us.html:155
 msgid ""
 "Previous: Cornell-Tsinghua FMBA Program, Stern School of Business, NYU; "
 "Columbia University"
 msgstr "经历：哥伦比亚大学，康奈尔大学－清华大学，纽约大学，长江商学院"
 
-#: homepage/templates/homepage/about_us.html:166
-#: homepage/templates/homepage/team.html:107
+#: templates/homepage/about_us.html:166
 msgid "Huazhang Shen"
 msgstr "沈华章 博士"
 
-#: homepage/templates/homepage/about_us.html:168
-#: homepage/templates/homepage/team.html:108
+#: templates/homepage/about_us.html:168
 msgid "Co-founder and CTO, Kalading (Enverest Advisor)"
 msgstr "卡拉丁联合创始人兼首席技术官，恩睿公司顾问"
 
-#: homepage/templates/homepage/about_us.html:169
-#: homepage/templates/homepage/team.html:109
+#: templates/homepage/about_us.html:169
 msgid ""
 "Expertise: Entrepreneurship, Product Design and Management, Social "
 "Marketing, Project Management"
 msgstr "专长：创业、产品设计与管理、社交运营、项目管理"
 
-#: homepage/templates/homepage/about_us.html:170
-#: homepage/templates/homepage/team.html:110
+#: templates/homepage/about_us.html:170
 msgid "Industry: Mobile Internet, Bio-tech"
 msgstr "行业：移动互联网、生物技术"
 
-#: homepage/templates/homepage/about_us.html:171
-#: homepage/templates/homepage/team.html:111
+#: templates/homepage/about_us.html:171
 msgid ""
 "Previous: Kalading, Golfii, GeoWok, Innovation Game International; Cal-tech, "
 "USTC"
 msgstr "经历：卡拉丁，Golfii, Geowok, 创新国际游戏公司，加州理工学院， 中科大"
 
-#: homepage/templates/homepage/about_us.html:182
-#: homepage/templates/homepage/team.html:122
+#: templates/homepage/about_us.html:182
 msgid "Shawn Lee"
 msgstr "李湘 博士"
 
-#: homepage/templates/homepage/about_us.html:185
-#: homepage/templates/homepage/team.html:124
+#: templates/homepage/about_us.html:185
 msgid "Expertise: Entrepreneurship, FDA Regulatory, M&A, Strategic Partnership"
 msgstr "专长： FDA监管、并购整合、战略合作，创业"
 
-#: homepage/templates/homepage/about_us.html:186
-#: homepage/templates/homepage/team.html:125
+#: templates/homepage/about_us.html:186
 msgid "Industry: Life Sciences, Bio-tech"
 msgstr "行业：生命科学、生物技术"
 
-#: homepage/templates/homepage/about_us.html:187
-#: homepage/templates/homepage/team.html:126
+#: templates/homepage/about_us.html:187
 msgid "Previous: American Peptide Company; UC-Berkeley, Wuhan University"
 msgstr "经历：美国多肽公司、加大伯克利、武汉大学"
 
-#: homepage/templates/homepage/about_us.html:198
-#: homepage/templates/homepage/about_us.html:345
-#: homepage/templates/homepage/team.html:142
+#: templates/homepage/about_us.html:198 templates/homepage/about_us.html:345
 msgid "Brandon Wang"
 msgstr "王秉达"
 
-#: homepage/templates/homepage/about_us.html:200
-#: homepage/templates/homepage/about_us.html:346
-#: homepage/templates/homepage/team.html:143
+#: templates/homepage/about_us.html:200 templates/homepage/about_us.html:346
 msgid "Group Director and Chief Strategy Officer, Cadence (Enverest Advisor)"
 msgstr "Cadence公司董事兼首席策略官，恩睿公司顾问"
 
-#: homepage/templates/homepage/about_us.html:201
-#: homepage/templates/homepage/about_us.html:347
-#: homepage/templates/homepage/team.html:144
+#: templates/homepage/about_us.html:201 templates/homepage/about_us.html:347
 msgid ""
 "Expertise: Entrepreneurship, Strategy, Management Consulting, Engineering "
 "Management, Strategic Partnership"
 msgstr "专长： 战略管理、管理咨询、工程管理、战略合作"
 
-#: homepage/templates/homepage/about_us.html:202
-#: homepage/templates/homepage/about_us.html:348
-#: homepage/templates/homepage/team.html:145
+#: templates/homepage/about_us.html:202 templates/homepage/about_us.html:348
 msgid "Industry: Semiconductor, Hi-tech"
 msgstr "行业： 半导体、高科技"
 
-#: homepage/templates/homepage/about_us.html:203
-#: homepage/templates/homepage/about_us.html:349
-#: homepage/templates/homepage/team.html:146
+#: templates/homepage/about_us.html:203 templates/homepage/about_us.html:349
 msgid "Previous: Cadence, ARM, CASPA; Wharton, Stanford, Zhejiang University"
 msgstr "经历： Cadence 公司、ARM、CASPA、沃顿商学院、斯坦福大学、浙江大学"
 
-#: homepage/templates/homepage/about_us.html:214
-#: homepage/templates/homepage/about_us.html:360
-#: homepage/templates/homepage/team.html:157
+#: templates/homepage/about_us.html:214 templates/homepage/about_us.html:360
 msgid "Jeff Wu"
 msgstr "吴建"
 
-#: homepage/templates/homepage/about_us.html:216
-#: homepage/templates/homepage/about_us.html:361
-#: homepage/templates/homepage/team.html:158
+#: templates/homepage/about_us.html:216 templates/homepage/about_us.html:361
 msgid "COO, ScaleFlux"
 msgstr "ScaleFlux首席运营官"
 
-#: homepage/templates/homepage/about_us.html:217
-#: homepage/templates/homepage/about_us.html:362
-#: homepage/templates/homepage/team.html:159
+#: templates/homepage/about_us.html:217 templates/homepage/about_us.html:362
 msgid ""
 "Expertise: Entrepreneurship, Cloud Computing, Project Management, Product "
 "Development, Strategic Partnership"
 msgstr "专长：云计算、项目管理、产品开发、战略合作，创业"
 
-#: homepage/templates/homepage/about_us.html:218
-#: homepage/templates/homepage/about_us.html:363
-#: homepage/templates/homepage/team.html:160
+#: templates/homepage/about_us.html:218 templates/homepage/about_us.html:363
 msgid "Industry: Storage, Software"
 msgstr "行业：云存储、企业软件"
 
-#: homepage/templates/homepage/about_us.html:219
-#: homepage/templates/homepage/about_us.html:364
-#: homepage/templates/homepage/team.html:161
+#: templates/homepage/about_us.html:219 templates/homepage/about_us.html:364
 msgid "Previous: ScaleFlux, Pactera, Wenditel; USC, Tongji University"
 msgstr "经历：ScaleFlux、 文思海辉、Wenditel、南加州大学、同济大学"
 
-#: homepage/templates/homepage/about_us.html:230
-#: homepage/templates/homepage/about_us.html:375
-#: homepage/templates/homepage/team.html:172
+#: templates/homepage/about_us.html:230 templates/homepage/about_us.html:375
 msgid "Cheni Kwok"
 msgstr "郭珍仪 博士"
 
-#: homepage/templates/homepage/about_us.html:232
-#: homepage/templates/homepage/about_us.html:376
-#: homepage/templates/homepage/team.html:173
+#: templates/homepage/about_us.html:232 templates/homepage/about_us.html:376
 msgid "Managing Partner, Linear Dreams"
 msgstr "管理合伙人，直梦咨询公司"
 
-#: homepage/templates/homepage/about_us.html:233
-#: homepage/templates/homepage/about_us.html:377
-#: homepage/templates/homepage/team.html:174
+#: templates/homepage/about_us.html:233 templates/homepage/about_us.html:377
 msgid "Expertise: Business Development, Corporate Development"
 msgstr "专长：业务拓展、企业发展战略"
 
-#: homepage/templates/homepage/about_us.html:234
-#: homepage/templates/homepage/about_us.html:378
-#: homepage/templates/homepage/team.html:175
+#: templates/homepage/about_us.html:234 templates/homepage/about_us.html:378
 msgid ""
 "Industry: Life Sciences, Bio-tech, Pharmaceuticals, Management Consulting"
 msgstr "行业：生命科学、生物科技、制药、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:235
-#: homepage/templates/homepage/about_us.html:379
-#: homepage/templates/homepage/team.html:176
+#: templates/homepage/about_us.html:235 templates/homepage/about_us.html:379
 msgid ""
 "Previous: Poniard Pharmaceuticals, Celera, Exelixis, GSK; Cambridge, "
 "Imperial College"
 msgstr "经历：Poniard制药、Celera、Exelixis、葛兰素史克、剑桥大学，帝国学院"
 
-#: homepage/templates/homepage/about_us.html:246
+#: templates/homepage/about_us.html:246
 msgid "Tao Chen"
 msgstr "谌涛"
 
-#: homepage/templates/homepage/about_us.html:248
+#: templates/homepage/about_us.html:248
 msgid "CEO, ParagonGenomics"
 msgstr "ParagonGenomics公司首席执行官"
 
-#: homepage/templates/homepage/about_us.html:249
+#: templates/homepage/about_us.html:249
 msgid ""
 "Expertise: Product Development & Management, Marketing, Sales, Corporate "
 "Development, Entrepreneurship"
 msgstr "专长：产品开发与管理、市场营销、销售、企业发展、创业"
 
-#: homepage/templates/homepage/about_us.html:250
+#: templates/homepage/about_us.html:250
 msgid "Industry: Life Sciences"
 msgstr "行业：生命科学"
 
-#: homepage/templates/homepage/about_us.html:251
+#: templates/homepage/about_us.html:251
 msgid ""
 "Previous: Thermo Fisher Scientific, Life Technologies, Pfizer; Harvard, PKU"
 msgstr "经历：赛默菲舍尔科技公司、辉瑞公司、哈佛大学、北京大学"
 
-#: homepage/templates/homepage/about_us.html:262
+#: templates/homepage/about_us.html:262
 msgid "Elanie Lu"
 msgstr "陆毅"
 
-#: homepage/templates/homepage/about_us.html:264
+#: templates/homepage/about_us.html:264
 msgid "CEO, Visbit"
 msgstr "首席执行官，Visbit科技公司"
 
-#: homepage/templates/homepage/about_us.html:265
+#: templates/homepage/about_us.html:265
 msgid ""
 "Expertise: Product Marketing, Mobile User Acquisition, Online Marketing and "
 "Promotion"
 msgstr "专长：产品营销、移动用户开发、在线营销与推广"
 
-#: homepage/templates/homepage/about_us.html:266
+#: templates/homepage/about_us.html:266
 msgid "Industry: Mobile Internet and Gaming"
 msgstr "行业：移动互联网和游戏"
 
-#: homepage/templates/homepage/about_us.html:267
+#: templates/homepage/about_us.html:267
 msgid "Previous: Tango, Changyou, Microsoft, Starwood; Cornell, Fudan"
 msgstr "经历：Tango、畅游、微软、喜达屋、康奈尔大学、复旦大学"
 
-#: homepage/templates/homepage/about_us.html:278
+#: templates/homepage/about_us.html:278
 msgid "Phoebe Chen"
 msgstr "陈黎"
 
-#: homepage/templates/homepage/about_us.html:280
+#: templates/homepage/about_us.html:280
 msgid "Copywriter and Content Strategist, Magnus Communications"
 msgstr "总裁，Magnus文案和内容策划 "
 
-#: homepage/templates/homepage/about_us.html:281
-#, fuzzy
-#| msgid ""
-#| "Expertise: Marketing Communications, Advertising/App Content Design & "
-#| "Localization, Copy-writing, Copy-editing"
-msgid ""
-"EExpertise: Marketing Communications, Advertising/App Content Design & "
-"Localization, Copy-writing, Copy-editing"
+#: templates/homepage/about_us.html:281
+msgid "Expertise: Marketing Communications, Advertising/App Content Design & Localization, Copy-writing, Copy-editing"
 msgstr "专长：营销传播、APP设计与本地化、广告翻译与写作"
 
-#: homepage/templates/homepage/about_us.html:282
+#: templates/homepage/about_us.html:282
 msgid "Industry: Marketing and Advertising, Management Consulting"
 msgstr "行业：营销和广告、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:283
+#: templates/homepage/about_us.html:283
 msgid ""
 "Previous: Uber, McKinsey, Roland Berger, United Nations; U Michigan, Bath, "
 "HUST"
 msgstr ""
 "经历：Uber、麦肯锡、罗兰贝格、联合国、密西根大学、Bath大学、华中科技大学"
 
-#: homepage/templates/homepage/about_us.html:294
+#: templates/homepage/about_us.html:294
 msgid "Ruming Liu"
 msgstr "刘入铭"
 
-#: homepage/templates/homepage/about_us.html:296
+#: templates/homepage/about_us.html:296
 msgid "Founding Partner, MagStone Law LLP "
 msgstr "创始合伙人，牧诚律师事务所"
 
-#: homepage/templates/homepage/about_us.html:297
+#: templates/homepage/about_us.html:297
 msgid ""
 "Expertise: Corporate Law, M&A, Joint Ventures, Corporate Governance, Cross-"
 "boarder Transactions"
 msgstr "专长：美国公司法、并购整合、合资公司组建、公司架构设立、跨境交易"
 
-#: homepage/templates/homepage/about_us.html:298
+#: templates/homepage/about_us.html:298
 msgid "Industry: Legal Advice"
 msgstr "行业：法律服务"
 
-#: homepage/templates/homepage/about_us.html:299
+#: templates/homepage/about_us.html:299
 msgid "Previous: Morrison & Foerster LLP, Jun He Law; U Penn, HKU, PKU"
 msgstr ""
 "经历：美富律师事务所、君合律师事务所、宾夕法尼亚大学、香港大学、北京大学"
 
-#: homepage/templates/homepage/about_us.html:310
+#: templates/homepage/about_us.html:310
 msgid "Michael Wu"
 msgstr "吴迈克"
 
-#: homepage/templates/homepage/about_us.html:312
+#: templates/homepage/about_us.html:312
 msgid "Tax Partner (CPA, CGMA), SingerLewak LLP "
 msgstr "税务合伙人，SingerLewak LLP"
 
-#: homepage/templates/homepage/about_us.html:313
+#: templates/homepage/about_us.html:313
 msgid "Expertise: Corporate Tax, International Tax, M&A, Accounting, Auditing"
 msgstr "专长：企业税务、国际税务、并购整合、会计、审计"
 
-#: homepage/templates/homepage/about_us.html:314
+#: templates/homepage/about_us.html:314
 msgid "Industry: Tax Advisory, Corporate Accounting"
 msgstr "行业：税务咨询、公司会计"
 
-#: homepage/templates/homepage/about_us.html:315
+#: templates/homepage/about_us.html:315
 msgid "Previous: Ernst & Young, PwC; MBA in Taxation, BS in Accounting"
 msgstr "经历：安永、普华永道、工商管理硕士、注册会计师、全球特许管理会计师"
 
-#: homepage/templates/homepage/about_us.html:326
+#: templates/homepage/about_us.html:326
 msgid "Huan Liu"
 msgstr "刘桓 博士"
 
-#: homepage/templates/homepage/about_us.html:328
+#: templates/homepage/about_us.html:328
 msgid "CEO, Vimo Labs"
 msgstr "首席执行官, Vimo Labs 科技公司"
 
-#: homepage/templates/homepage/about_us.html:329
+#: templates/homepage/about_us.html:329
 msgid ""
 "Expertise: Product Management, Software Engineering, Cloud Computing, Data "
 "Analytics, Entrepreneurship"
 msgstr "专长：产品管理、软件工程、云计算、数据分析、创业"
 
-#: homepage/templates/homepage/about_us.html:330
+#: templates/homepage/about_us.html:330
 msgid "Industry: Mobile Computing, Software, Management Consulting"
 msgstr "行业：移动计算、软件开发、管理咨询"
 
-#: homepage/templates/homepage/about_us.html:331
+#: templates/homepage/about_us.html:331
 msgid ""
 "Previous: Accenture, Pacific Broadband Communications, HP, Intel; Stanford, "
 "UCLA, HIT"
 msgstr ""
 "经历：埃森哲、太平洋宽频通讯、惠普、英特尔、斯坦福大学、洛杉矶加大、哈工大"
 
-#: homepage/templates/homepage/about_us.html:396
+#: templates/homepage/about_us.html:396
 msgid "Alliance"
 msgstr "合作伙伴"
 
-#: homepage/templates/homepage/client_see_this.html:17
+#: templates/homepage/client_see_this.html:17
 msgid "Client will be able to see this page."
 msgstr "客户可以看到该页面"
 
-#: homepage/templates/homepage/client_see_this.html:20
-#: homepage/templates/homepage/expert_see_this.html:20
+#: templates/homepage/client_see_this.html:20
+#: templates/homepage/expert_see_this.html:20
 #, fuzzy
 #| msgid ""
 #| "Enverest is consisted of dedicated consultants (Partners) and a "
@@ -540,63 +462,63 @@ msgstr ""
 "共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和全球"
 "资源，为创新企业制定快速增长策略，规划全球发展布局。"
 
-#: homepage/templates/homepage/contact_us.html:28
+#: templates/homepage/contact_us.html:28
 msgid "Headquarter and Silicon Valley Office"
 msgstr "总部位于美国硅谷"
 
-#: homepage/templates/homepage/contact_us.html:33
+#: templates/homepage/contact_us.html:33
 msgid "Enverest, Inc."
 msgstr "恩睿公司"
 
-#: homepage/templates/homepage/contact_us.html:35
+#: templates/homepage/contact_us.html:35
 msgid "4500 Great America Parkway"
 msgstr "4500 Great America Parkway"
 
-#: homepage/templates/homepage/contact_us.html:36
+#: templates/homepage/contact_us.html:36
 msgid "Suite 100"
 msgstr "Suite 100"
 
-#: homepage/templates/homepage/contact_us.html:37
+#: templates/homepage/contact_us.html:37
 msgid "Santa Clara, CA 95054"
 msgstr "Santa Clara, CA 95054"
 
-#: homepage/templates/homepage/contact_us.html:38
+#: templates/homepage/contact_us.html:38
 msgid "USA"
 msgstr "美国"
 
-#: homepage/templates/homepage/contact_us.html:39
+#: templates/homepage/contact_us.html:39
 msgid "Phone: +1 650 455-6732"
 msgstr "电话：+1 650 455-6732"
 
-#: homepage/templates/homepage/contact_us.html:40
+#: templates/homepage/contact_us.html:40
 msgid "Email: contact@enverest.com"
 msgstr "邮件地址：contact@enverest.com"
 
-#: homepage/templates/homepage/contact_us.html:58
+#: templates/homepage/contact_us.html:58
 msgid "Other Offices"
 msgstr "公司分部"
 
-#: homepage/templates/homepage/contact_us.html:71
+#: templates/homepage/contact_us.html:71
 msgid "Beijing, China"
 msgstr "中国北京"
 
-#: homepage/templates/homepage/contact_us.html:80
+#: templates/homepage/contact_us.html:80
 msgid "Singapore"
 msgstr "新加坡"
 
-#: homepage/templates/homepage/contact_us.html:93
+#: templates/homepage/contact_us.html:93
 msgid "New York, USA"
 msgstr "美国纽约"
 
-#: homepage/templates/homepage/contact_us.html:102
+#: templates/homepage/contact_us.html:102
 msgid "Hangzhou, China"
 msgstr "中国杭州"
 
-#: homepage/templates/homepage/expert_see_this.html:17
+#: templates/homepage/expert_see_this.html:17
 msgid "Expert will be able to see this page."
 msgstr "专家可以看到此页面"
 
-#: homepage/templates/homepage/expert_see_this.html:23
+#: templates/homepage/expert_see_this.html:23
 #, fuzzy
 #| msgid ""
 #| "We provide fast-growing companies affordable, high-quality, and widely "
@@ -613,50 +535,50 @@ msgstr ""
 "的咨询服务。我们为满足您的需求，提供包括商业模式的设计，增长和并购战略，市场"
 "营销，公司运营，业务扩展和融资策略等一系列咨询服务。"
 
-#: homepage/templates/homepage/how_it_works.html:57
+#: templates/homepage/how_it_works.html:57
 msgid "Clients"
 msgstr "客户"
 
-#: homepage/templates/homepage/how_it_works.html:60
+#: templates/homepage/how_it_works.html:60
 #, fuzzy
 #| msgid "Expert Benefits"
 msgid "Experts"
 msgstr "专家受益"
 
-#: homepage/templates/homepage/how_it_works.html:63
+#: templates/homepage/how_it_works.html:63
 msgid "FAQ"
 msgstr "常见问题"
 
-#: homepage/templates/homepage/how_it_works.html:66
+#: templates/homepage/how_it_works.html:66
 msgid "Conference Call"
 msgstr "电话会议"
 
-#: homepage/templates/homepage/how_it_works.html:76
+#: templates/homepage/how_it_works.html:76
 msgid "As a client"
 msgstr "客户操作步骤"
 
-#: homepage/templates/homepage/how_it_works.html:87
+#: templates/homepage/how_it_works.html:87
 msgid "Submit Request"
 msgstr "提交项目服务要求"
 
-#: homepage/templates/homepage/how_it_works.html:93
+#: templates/homepage/how_it_works.html:93
 msgid "Accept Recommended Expert"
 msgstr "接受推荐的项目"
 
-#: homepage/templates/homepage/how_it_works.html:99
+#: templates/homepage/how_it_works.html:99
 msgid "Engage Expert"
 msgstr "与客户联系"
 
-#: homepage/templates/homepage/how_it_works.html:105
+#: templates/homepage/how_it_works.html:105
 msgid "Rate and Pay"
 msgstr "给客户打分，收取报酬"
 
-#: homepage/templates/homepage/how_it_works.html:121
-#: homepage/templates/homepage/how_it_works.html:214
+#: templates/homepage/how_it_works.html:121
+#: templates/homepage/how_it_works.html:214
 msgid "How the expert network platform works"
 msgstr "专家平台网如何运作"
 
-#: homepage/templates/homepage/how_it_works.html:125
+#: templates/homepage/how_it_works.html:125
 msgid ""
 "1) Signup to the Enverest Network Service, and submit an engagement request "
 "describing the project objectives and preference of the expert profiles"
@@ -664,13 +586,13 @@ msgstr ""
 "第一步，客户在恩睿专家平台上注册，并提交申请，在申请中标明项目目标以及需要哪"
 "方面的专家"
 
-#: homepage/templates/homepage/how_it_works.html:128
+#: templates/homepage/how_it_works.html:128
 msgid ""
 "2) Accept the expert that Enverest would recommend to match the requirements "
 "of the engagement"
 msgstr "第二步，客户接受恩睿公司根据客户需求推荐的相关专家"
 
-#: homepage/templates/homepage/how_it_works.html:131
+#: templates/homepage/how_it_works.html:131
 msgid ""
 "3) Interact with the Experts to work on the engagement via conference calls, "
 "video conferences, IMs, or face-to-face meetings"
@@ -678,55 +600,55 @@ msgstr ""
 "第三步，客户和专家通过电话会议、视频会议、站内信及面对面的方式进行项目有关工"
 "作"
 
-#: homepage/templates/homepage/how_it_works.html:134
+#: templates/homepage/how_it_works.html:134
 msgid ""
 "4) After the engagement is complete, rate the Expert’s service, and make "
 "payment"
 msgstr "第四步，项目完成后，给专家打分，然后付费。"
 
-#: homepage/templates/homepage/how_it_works.html:145
+#: templates/homepage/how_it_works.html:145
 msgid "Client Benefits"
 msgstr "客户受益"
 
-#: homepage/templates/homepage/how_it_works.html:148
+#: templates/homepage/how_it_works.html:148
 msgid "On-demand access to global expertise"
 msgstr "全球的专家能随叫随到"
 
-#: homepage/templates/homepage/how_it_works.html:149
+#: templates/homepage/how_it_works.html:149
 msgid "Explore wide range of perspectives"
 msgstr "拓展更广阔的视角"
 
-#: homepage/templates/homepage/how_it_works.html:150
+#: templates/homepage/how_it_works.html:150
 msgid "Connect to the right people instantly"
 msgstr "找到更合适的人脉"
 
-#: homepage/templates/homepage/how_it_works.html:151
+#: templates/homepage/how_it_works.html:151
 msgid "Save time and cost"
 msgstr "节省时间和成本"
 
-#: homepage/templates/homepage/how_it_works.html:170
+#: templates/homepage/how_it_works.html:170
 msgid "As an expert"
 msgstr "专家操作步骤"
 
-#: homepage/templates/homepage/how_it_works.html:180
+#: templates/homepage/how_it_works.html:180
 msgid "Accept Recommended Engagement"
 msgstr "接受推荐的项目"
 
-#: homepage/templates/homepage/how_it_works.html:189
+#: templates/homepage/how_it_works.html:189
 msgid "Engage Client"
 msgstr "与客户联系"
 
-#: homepage/templates/homepage/how_it_works.html:198
+#: templates/homepage/how_it_works.html:198
 msgid "Rate and Get Paid"
 msgstr "给客户打分，收取报酬"
 
-#: homepage/templates/homepage/how_it_works.html:218
+#: templates/homepage/how_it_works.html:218
 msgid ""
 "1) Review the engagement recommended by Enverest, and accept the "
 "recommendation if he/she agrees to take on the engagement"
 msgstr "第一步，查看恩睿国际有限公司推荐的客户咨询需求，接受有意参与的咨询项目"
 
-#: homepage/templates/homepage/how_it_works.html:221
+#: templates/homepage/how_it_works.html:221
 msgid ""
 "2) Interact with the client to work on the engagement via conference calls, "
 "video conferences, IMs, or face-to-face meetings"
@@ -734,71 +656,71 @@ msgstr ""
 "第二部，专家与客户通过电话会议、视频会议、即时信息及面对面的方式进行项目有关"
 "工作"
 
-#: homepage/templates/homepage/how_it_works.html:224
+#: templates/homepage/how_it_works.html:224
 msgid ""
 "3) After the engagement is completed, rate the client and accept the payment "
 "from Enverest"
 msgstr "第三部，项目完成后，给客户打分，然后收取恩睿公司支付的报酬"
 
-#: homepage/templates/homepage/how_it_works.html:236
+#: templates/homepage/how_it_works.html:236
 msgid "Expert Benefits"
 msgstr "专家受益"
 
-#: homepage/templates/homepage/how_it_works.html:239
+#: templates/homepage/how_it_works.html:239
 msgid "Have the pulse of the latest industry trends"
 msgstr "了解行业发展的最新动态"
 
-#: homepage/templates/homepage/how_it_works.html:240
+#: templates/homepage/how_it_works.html:240
 msgid "Interact with corporate officers, investors, and entrepreneurs"
 msgstr "加强与公司管理人员、投资者、企业家的互动"
 
-#: homepage/templates/homepage/how_it_works.html:241
+#: templates/homepage/how_it_works.html:241
 msgid "Work on strategic, thought-provoking projects"
 msgstr "参与战略管理等有意义的工作"
 
-#: homepage/templates/homepage/how_it_works.html:242
+#: templates/homepage/how_it_works.html:242
 msgid "Competitive compensation from consulting fees and referral fees"
 msgstr "获得相应的咨询报酬"
 
-#: homepage/templates/homepage/how_it_works.html:256
+#: templates/homepage/how_it_works.html:256
 msgid "What types of business are searching for Experts on Enverest?"
 msgstr "都有什么样的公司在恩睿专家平台上找专家？"
 
-#: homepage/templates/homepage/how_it_works.html:258
+#: templates/homepage/how_it_works.html:258
 msgid "Growth stage startups"
 msgstr "快速增长期的创业公司"
 
-#: homepage/templates/homepage/how_it_works.html:259
+#: templates/homepage/how_it_works.html:259
 msgid "Small-to-medium sized businesses"
 msgstr "中小型企业"
 
-#: homepage/templates/homepage/how_it_works.html:260
+#: templates/homepage/how_it_works.html:260
 msgid "Private equity and venture capital firms"
 msgstr "私募基金和风投基金"
 
-#: homepage/templates/homepage/how_it_works.html:261
+#: templates/homepage/how_it_works.html:261
 msgid "Asian businesses expanding into the US market"
 msgstr "计划到美国市场发展的中国公司"
 
-#: homepage/templates/homepage/how_it_works.html:262
+#: templates/homepage/how_it_works.html:262
 msgid "US-based companies seeking entry into Asian markets"
 msgstr "计划进入亚洲市场的美国公司"
 
-#: homepage/templates/homepage/how_it_works.html:265
+#: templates/homepage/how_it_works.html:265
 msgid "Where do the Enverest Experts come from?"
 msgstr "恩睿专家都是从哪里来的？"
 
-#: homepage/templates/homepage/how_it_works.html:266
+#: templates/homepage/how_it_works.html:266
 msgid ""
 "Most of our experts have more than 10 years of successful experience in "
 "their own fields, and hold the title of VP and above."
 msgstr "大多数恩睿自己具有本行业十年以上成功经验，行动曾是公司副总以上高管"
 
-#: homepage/templates/homepage/how_it_works.html:268
+#: templates/homepage/how_it_works.html:268
 msgid "Is the client or expert profile publicly accessible?"
 msgstr "客户或专家个人信息是公开的吗？"
 
-#: homepage/templates/homepage/how_it_works.html:269
+#: templates/homepage/how_it_works.html:269
 msgid ""
 "No. We take your privacy very seriously. Your profile will not be available "
 "to anyone unless you start engagement with the Expert/client, while but no "
@@ -808,11 +730,11 @@ msgstr ""
 "不是！我们尤其重视个人隐私。专家与客户开始合作项目前，任何一方的信息都是保密"
 "的，其他人看不到此类信息。根据我们的使用条款，恩睿用户必须负责对有关信息保密"
 
-#: homepage/templates/homepage/how_it_works.html:271
+#: templates/homepage/how_it_works.html:271
 msgid "Can I browse the profiles of all Experts on the platform?"
 msgstr "我能在专家平台上浏览所有专家的个人信息吗?"
 
-#: homepage/templates/homepage/how_it_works.html:272
+#: templates/homepage/how_it_works.html:272
 msgid ""
 "Not at this time. Only a number of selected Experts are shown on this "
 "website. The privacy of our Experts is very important, and we only allow the "
@@ -822,12 +744,12 @@ msgstr ""
 "目前还不行。本网站只显示部分专家的个人信息。我们非常重视专家的隐私权。客户只"
 "有在提交项目申请，并接受我们推荐的专家后，才能浏览该专家的有关资料"
 
-#: homepage/templates/homepage/how_it_works.html:274
+#: templates/homepage/how_it_works.html:274
 msgid ""
 "Once I submit an engagement request, how long will it take to get matched?"
 msgstr "提交项目申请后，需要多久才能收到专家推荐？"
 
-#: homepage/templates/homepage/how_it_works.html:275
+#: templates/homepage/how_it_works.html:275
 msgid ""
 "Enverest is committed to respond to any engagement request within 48 hour. "
 "We typically make a recommendation of an Expert within 1-5 days. If your "
@@ -836,11 +758,11 @@ msgstr ""
 "恩睿承诺在收到客户项目申请48小时内给您回复。我们通常会在1-5天内为您推荐合适的"
 "专家。如果的项目紧急，请在申请表上注明。"
 
-#: homepage/templates/homepage/how_it_works.html:277
+#: templates/homepage/how_it_works.html:277
 msgid "Should I price my project using an hourly rate or fixed price?"
 msgstr "我应该按小时计费，还是按项目计费？"
 
-#: homepage/templates/homepage/how_it_works.html:278
+#: templates/homepage/how_it_works.html:278
 msgid ""
 "This is entirely up to you. If you have a budget in mind that you cannot "
 "exceed and very specific deliverables, we suggest you used a fixed price. If "
@@ -851,11 +773,11 @@ msgstr ""
 "项目计费。如果您的需求比较宽泛，而且您需要随时的服务，我们建议您按每小时$400"
 "计费。"
 
-#: homepage/templates/homepage/how_it_works.html:280
+#: templates/homepage/how_it_works.html:280
 msgid "How does the rating work?"
 msgstr "怎么给对方打分？"
 
-#: homepage/templates/homepage/how_it_works.html:281
+#: templates/homepage/how_it_works.html:281
 msgid ""
 "We require the clients and the Experts to rate each other upon completion of "
 "an engagement. The aggregated ratings are made visible on Enverest platform "
@@ -866,11 +788,11 @@ msgstr ""
 "我们要求客户和专家在项目完成后尽快给对方打分。用户登录后，可以看到对方的积"
 "分。如果专家或客户的积分达不到恩睿标准，我们会考虑在恩睿平台上删除该用户。"
 
-#: homepage/templates/homepage/how_it_works.html:283
+#: templates/homepage/how_it_works.html:283
 msgid "What happens if there is a dispute over engagement outcome or payment?"
 msgstr "如果双方对收费或项目结果有争议怎么办？"
 
-#: homepage/templates/homepage/how_it_works.html:284
+#: templates/homepage/how_it_works.html:284
 msgid ""
 "In the event of a dispute between clients and experts, Enverest will do our "
 "best to resolve the dispute. Both the clients and the expert should send a "
@@ -879,11 +801,11 @@ msgstr ""
 "如果客户和专家有争议，我们会本着公平合理的原则尽力解决纠纷。客户和专家可以发"
 "邮件给contact@enverest.com申诉。"
 
-#: homepage/templates/homepage/how_it_works.html:286
+#: templates/homepage/how_it_works.html:286
 msgid "Can I pay my Experts outside of the Enverest platform?"
 msgstr "我能在线下给专家付款吗？"
 
-#: homepage/templates/homepage/how_it_works.html:287
+#: templates/homepage/how_it_works.html:287
 msgid ""
 "No. Bypassing the Enverest platform is a serious violation of our Terms of "
 "Use and would result in legal action and both parties’ removal from our "
@@ -892,80 +814,80 @@ msgstr ""
 "不能！绕过恩睿平台进行私下交易严重违反本网站使用条款。我们会将双方帐号清除，"
 "并保留法律诉讼的权利"
 
-#: homepage/templates/homepage/how_it_works.html:289
+#: templates/homepage/how_it_works.html:289
 msgid "I want to bring an Expert on board full-time. What should I do?"
 msgstr "我想正式全职雇用恩睿专家怎么办？"
 
-#: homepage/templates/homepage/how_it_works.html:290
+#: templates/homepage/how_it_works.html:290
 msgid ""
 "There is a buyout clause laid out in our Terms of Use. Please feel free to "
 "contact Enverest at contact@enverest.com directly for help with this process."
 msgstr "我们网站使用条款里有买断条款。请发邮件到contact@enverest.com申请"
 
-#: homepage/templates/homepage/how_it_works.html:295
+#: templates/homepage/how_it_works.html:295
 msgid "What software do I need to install for the audio/video call?"
 msgstr "我想要安装什么音频/视频电话软件吗？"
 
-#: homepage/templates/homepage/how_it_works.html:296
+#: templates/homepage/how_it_works.html:296
 msgid "Currently, Enverest partnered with"
 msgstr "目前恩睿与appear.in合作"
 
-#: homepage/templates/homepage/how_it_works.html:296
+#: templates/homepage/how_it_works.html:296
 msgid ""
 "to provide video/audio conference call service for the engagement. No need "
 "to install any software, however this is"
 msgstr "向客户和专家提供音频/视频电话会议服务。您不必安装任何软件"
 
-#: homepage/templates/homepage/how_it_works.html:296
+#: templates/homepage/how_it_works.html:296
 msgid "only"
 msgstr "但目前"
 
-#: homepage/templates/homepage/how_it_works.html:296
+#: templates/homepage/how_it_works.html:296
 msgid "supported in newer versions of the following browsers:"
 msgstr "appear.in只能在较新版本的浏览器使用，包括："
 
-#: homepage/templates/homepage/how_it_works.html:298
+#: templates/homepage/how_it_works.html:298
 msgid "Chrome"
 msgstr "Chrome"
 
-#: homepage/templates/homepage/how_it_works.html:299
+#: templates/homepage/how_it_works.html:299
 msgid "Firefox"
 msgstr "Firefox"
 
-#: homepage/templates/homepage/how_it_works.html:300
+#: templates/homepage/how_it_works.html:300
 msgid "Opera"
 msgstr "Opera"
 
-#: homepage/templates/homepage/how_it_works.html:302
+#: templates/homepage/how_it_works.html:302
 msgid "How can I use the conference call?"
 msgstr "我怎么开始电话会议？"
 
-#: homepage/templates/homepage/how_it_works.html:303
+#: templates/homepage/how_it_works.html:303
 msgid ""
 "Simply click on the link on the engagement page at the same time with client/"
 "expert. You will both appear in the meeting room."
 msgstr "非常简单！点一下项目页面的链接，客户和专家就进入虚拟会议室了。"
 
-#: homepage/templates/homepage/how_it_works.html:305
+#: templates/homepage/how_it_works.html:305
 msgid "How do I mute the sound from other people in the room?"
 msgstr "我怎么能让虚拟会议室里的其他人静音？"
 
-#: homepage/templates/homepage/how_it_works.html:306
+#: templates/homepage/how_it_works.html:306
 msgid ""
 "Muting sound from another person mutes that person only for you, not other "
 "people in the room."
 msgstr ""
 "点一下该成员的静音键，您就听不见那一方的声音了，但会议室其他人还是能听到。"
 
-#: homepage/templates/homepage/how_it_works.html:307
+#: templates/homepage/how_it_works.html:307
 msgid "For the web, to mute other participants:"
 msgstr "网络版静音方法："
 
-#: homepage/templates/homepage/how_it_works.html:309
+#: templates/homepage/how_it_works.html:309
 msgid "Hover over the video and you will see a speaker icon."
 msgstr "鼠标移到该成员头像，您会看到一个话筒图标，"
 
-#: homepage/templates/homepage/how_it_works.html:310
+#: templates/homepage/how_it_works.html:310
 msgid ""
 "Click the speaker icon and this will mute their sound. If you would like to "
 "turn it back on, hover over the video again and click the button to restore "
@@ -974,15 +896,15 @@ msgstr ""
 "点击一下话筒图标，对方就静音了。如果您想解除静音，就再点击一下刚才那个话筒图"
 "标。"
 
-#: homepage/templates/homepage/how_it_works.html:312
+#: templates/homepage/how_it_works.html:312
 msgid "For iOS and Android, to mute another participant:"
 msgstr "iOS和安卓版静音方法："
 
-#: homepage/templates/homepage/how_it_works.html:314
+#: templates/homepage/how_it_works.html:314
 msgid "Long press on the person's video and a menu will pop up."
 msgstr "长按该成员头像，就会出现一个菜单"
 
-#: homepage/templates/homepage/how_it_works.html:315
+#: templates/homepage/how_it_works.html:315
 msgid ""
 "Select mute and the participant's audio will be muted. To unmute the "
 "participant, long press and select unmute from the menu."
@@ -990,11 +912,11 @@ msgstr ""
 "选择静音，对方音频就静音了。如果您想解除静音，就再长按头像，在菜单上选择静音"
 "解除就行了。"
 
-#: homepage/templates/homepage/how_it_works.html:318
+#: templates/homepage/how_it_works.html:318
 msgid "How can I lock my room?"
 msgstr "我怎么能锁定会议室"
 
-#: homepage/templates/homepage/how_it_works.html:319
+#: templates/homepage/how_it_works.html:319
 msgid ""
 "In the top bar, to the right, you will see a button saying \"Lock room\". "
 "When you click this, it turns red and says \"Room locked\". When the room is "
@@ -1004,7 +926,7 @@ msgstr ""
 "在顶端工具条右边有一个Lock room键，您点击一下后，此键变红色，并显示会议室锁"
 "定。如果会议室已锁定，除非现有参会者邀请，其他人就进不了会议室了。"
 
-#: homepage/templates/homepage/how_it_works.html:321
+#: templates/homepage/how_it_works.html:321
 msgid ""
 "When someone tries to enter a locked room, they will see a screen saying the "
 "room is locked, asking them to take a photo of themselves and knock on the "
@@ -1015,7 +937,7 @@ msgstr ""
 "如果有人想进入，他们就会看到会议室已锁的提示，并要求他们拍照，然后敲门。有人"
 "敲门时，参会人会看到提示，并可以选择是否让新人加入。"
 
-#: homepage/templates/homepage/how_it_works.html:323
+#: templates/homepage/how_it_works.html:323
 msgid ""
 "If there are followers to a room, followers will still receive notifications "
 "about chat messages while the room is locked and be able to read this the "
@@ -1024,11 +946,11 @@ msgstr ""
 "新人加入会议室后，仍然会看到会议室已锁的提示。下次再加入同一锁定会议室时，还"
 "是需要敲门进入。"
 
-#: homepage/templates/homepage/how_it_works.html:325
+#: templates/homepage/how_it_works.html:325
 msgid "How do I share my screen?"
 msgstr "我怎么能分享屏幕？"
 
-#: homepage/templates/homepage/how_it_works.html:326
+#: templates/homepage/how_it_works.html:326
 msgid ""
 "Screen sharing is currently only supported in Chrome 34 and up, and shared "
 "screens can be viewed in Chrome and Opera. Appear.in does not yet support "
@@ -1037,14 +959,14 @@ msgstr ""
 "只有Chrome34及更新的版本才有屏幕分享功能。Chrome和Opera浏览器里可以看到分享的"
 "屏幕。Firefox目前尚不支持屏幕分享功能。"
 
-#: homepage/templates/homepage/how_it_works.html:328
+#: templates/homepage/how_it_works.html:328
 msgid ""
 "To start screen sharing, mouse over your video and click the “Share screen” "
 "icon that appears at the bottom right of your video."
 msgstr ""
 "启动屏幕分享时，把鼠标移到自己头像上，然后点击头像右下角Share screen键。"
 
-#: homepage/templates/homepage/how_it_works.html:330
+#: templates/homepage/how_it_works.html:330
 msgid ""
 "The first time you use the new screen sharing, you will be asked to add a "
 "Chrome extension.  Add this extension. When you press “Share screen” you "
@@ -1055,7 +977,7 @@ msgstr ""
 "第一次使用屏幕分享时，需要安装一个Chrome插件。有了插件后，在弹出的对话框里选"
 "择您想分享的视窗或应用。您可以分享整个屏幕。"
 
-#: homepage/templates/homepage/how_it_works.html:332
+#: templates/homepage/how_it_works.html:332
 msgid ""
 "As long as you are sharing your screen, you will see a message displayed at "
 "the bottom of your screen, and you can press it to stop sharing at any time. "
@@ -1064,42 +986,41 @@ msgstr ""
 "分享屏幕时，屏幕下方有一个提示条。您可以随时点击一下来暂停分享。您也可以点击"
 "Hide来去掉提示条。"
 
-#: homepage/templates/homepage/how_it_works.html:334
+#: templates/homepage/how_it_works.html:334
 msgid ""
 "To view a shared screen in full size, just double-click it or press the "
 "supersize icon."
 msgstr "如果您想全屏分享，双击屏幕，或点击supersize键。"
 
-#: homepage/templates/homepage/index.html:81
-#: homepage/templates/homepage/index.html:203
+#: templates/homepage/index.html:81 templates/homepage/index.html.py:203
 msgid "Business Expertise, On-Demand"
 msgstr "新一代平台式咨询服务"
 
-#: homepage/templates/homepage/index.html:97
+#: templates/homepage/index.html:97
 msgid "Post Your Engagement"
 msgstr "填写项目服务要求"
 
-#: homepage/templates/homepage/index.html:106
+#: templates/homepage/index.html:106
 msgid "Match Applicants For Free"
 msgstr "免费推荐专家"
 
-#: homepage/templates/homepage/index.html:116
+#: templates/homepage/index.html:116
 msgid "Get Work Done"
 msgstr "完成工作"
 
-#: homepage/templates/homepage/index.html:127
+#: templates/homepage/index.html:127
 msgid "Search for Experts"
 msgstr "搜索专家"
 
-#: homepage/templates/homepage/index.html:132
+#: templates/homepage/index.html:132
 msgid "Post your Engagement"
 msgstr "填写项目服务要求"
 
-#: homepage/templates/homepage/index.html:272
+#: templates/homepage/index.html:272
 msgid "Meet Professionals and Industry Leaders"
 msgstr "对接专家和业界领袖"
 
-#: homepage/templates/homepage/index.html:275
+#: templates/homepage/index.html:275
 msgid ""
 "Get access to 100+ experts and partners in our network, on demand, to help "
 "your company to innovate and internationalize "
@@ -1107,7 +1028,7 @@ msgstr ""
 "恩睿国际公司专注于为中国和亚太区企业在技术和管理提升、国际化发展等方面对接一"
 "百余位各行业资深国际专家"
 
-#: homepage/templates/homepage/index.html:289
+#: templates/homepage/index.html:289
 msgid ""
 "Over 10 years of experience in management consulting, strategy, operations, "
 "and supply chain management at McKinsey, Apple, and UPS"
@@ -1115,11 +1036,11 @@ msgstr ""
 "曾担任麦肯锡（美国）资深战略管理专家、苹果全球运营高管，具有十多年顶尖国际公"
 "司的管理经验，尤其在公司策略、市场发展和运营管理等方面有突出的才能和影响。"
 
-#: homepage/templates/homepage/index.html:301
+#: templates/homepage/index.html:301
 msgid "Alex J. Zhang"
 msgstr "张键 博士"
 
-#: homepage/templates/homepage/index.html:302
+#: templates/homepage/index.html:302
 msgid ""
 "15 years in life science business development, M&A, product management, and "
 "R&D with Amgen, Thermo Fisher Scientific, etc."
@@ -1128,7 +1049,7 @@ msgstr ""
 "管理等方面的实战经验。曾在美国赛默菲舍尔公司和安进公司负责医疗诊断产品的商务"
 "开发和并购， 及主管研发和重要项目。 "
 
-#: homepage/templates/homepage/index.html:315
+#: templates/homepage/index.html:315
 msgid ""
 "Renowned expert in wireless technology, IoT, mobile internet, virtual "
 "reality, etc. 10 years of business experience at Huawei and Intel"
@@ -1136,7 +1057,7 @@ msgstr ""
 "高科技领域专家，尤其在无线技术、物联网、移动互联网、虚拟现实等方面有丰富的经"
 "验。曾在华为、英特尔等大型公司工作10余年"
 
-#: homepage/templates/homepage/index.html:328
+#: templates/homepage/index.html:328
 msgid ""
 "Award-winning expert in renewable energy, power system analysis, electricity "
 "markets, smart grid, and Big Data in energy systems"
@@ -1145,11 +1066,11 @@ msgstr ""
 "15年以上工作经验并获奖。曾在美国ABB,国家电网，清华大学等机构担任管理和技术要"
 "职。"
 
-#: homepage/templates/homepage/index.html:343
+#: templates/homepage/index.html:343
 msgid "Why choose Enverest?"
 msgstr "为什么选择恩睿"
 
-#: homepage/templates/homepage/index.html:344
+#: templates/homepage/index.html:344
 msgid ""
 "Enverest is an online business expertise sharing platform that enables "
 "enterprises to engage experts for on-demand business advisory services. "
@@ -1162,69 +1083,63 @@ msgstr ""
 "升级以及国际化拓展。总部位于美国硅谷，我们在新加坡，北京等地设有专家和团队来"
 "为中国和亚太地区的企业提供高效率多维度的服务。"
 
-#: homepage/templates/homepage/index.html:359
+#: templates/homepage/index.html:359
 msgid "Accesible"
 msgstr "方便可及"
 
-#: homepage/templates/homepage/index.html:364
+#: templates/homepage/index.html:364
 msgid "Affordable"
 msgstr "定价合理"
 
-#: homepage/templates/homepage/index.html:375
+#: templates/homepage/index.html:375
 msgid "Customized"
 msgstr "量身定制"
 
-#: homepage/templates/homepage/index.html:380
+#: templates/homepage/index.html:380
 msgid "Interactive"
 msgstr "交流互动"
 
-#: homepage/templates/homepage/index.html:398
+#: templates/homepage/index.html:398
 msgid "Using the Enverest Connections, our experts can help you with"
 msgstr "欢迎使用恩睿专家平台为您提供："
 
-#: homepage/templates/homepage/index.html:412
-#: homepage/templates/homepage/service.html:75
+#: templates/homepage/index.html:412 templates/homepage/service.html.py:75
 msgid "Performance Improvement"
 msgstr "运营提升"
 
-#: homepage/templates/homepage/index.html:417
-#: homepage/templates/homepage/service.html:80
+#: templates/homepage/index.html:417 templates/homepage/service.html.py:80
 msgid "Market Research"
 msgstr "市场调研"
 
-#: homepage/templates/homepage/index.html:422
-#: homepage/templates/homepage/service.html:85
+#: templates/homepage/index.html:422 templates/homepage/service.html.py:85
 msgid "Cross-border Operations"
 msgstr "跨境运营"
 
-#: homepage/templates/homepage/index.html:433
-#: homepage/templates/homepage/service.html:96
+#: templates/homepage/index.html:433 templates/homepage/service.html.py:96
 msgid "International Partnership"
 msgstr "国际合作"
 
-#: homepage/templates/homepage/index.html:438
-#: homepage/templates/homepage/service.html:101
+#: templates/homepage/index.html:438 templates/homepage/service.html.py:101
 msgid "Merger and Acquisition"
 msgstr "整合并购"
 
-#: homepage/templates/homepage/index.html:443
-#: homepage/templates/homepage/service.html:106
+#: templates/homepage/index.html:443 templates/homepage/service.html.py:106
 msgid "Entrepreneurship/ Venture Advisory"
 msgstr "创业咨询"
 
-#: homepage/templates/homepage/index.html:458
+#: templates/homepage/index.html:458
 msgid "Testimonials"
 msgstr "客户见证"
 
-#: homepage/templates/homepage/index.html:469
+#: templates/homepage/index.html:469
 msgid "A Global SaaS company"
 msgstr "跨国SaaS公司"
 
-#: homepage/templates/homepage/index.html:470
+#: templates/homepage/index.html:470
 msgid "VP of Product Management"
 msgstr "产品管理副总裁"
 
-#: homepage/templates/homepage/index.html:473
+#: templates/homepage/index.html:473
 msgid ""
 "Enverest experts provided outstanding service. What really impressed me is "
 "that they went one step further than most other consultants, to ensure "
@@ -1235,15 +1150,15 @@ msgstr ""
 "步，确保落实整个解决方案的成功执行。他们的服务使我们能够及时实现产品管理和服"
 "务水平的大幅提高。"
 
-#: homepage/templates/homepage/index.html:482
+#: templates/homepage/index.html:482
 msgid "A US-based technology startup"
 msgstr "美国高科技创业公司"
 
-#: homepage/templates/homepage/index.html:483
+#: templates/homepage/index.html:483
 msgid "Head of Operations"
 msgstr "运营副总裁"
 
-#: homepage/templates/homepage/index.html:486
+#: templates/homepage/index.html:486
 msgid ""
 "The new processes and communication protocols, effective cross-functional/"
 "geo performance metrics as well as operational knowledge base established by "
@@ -1253,15 +1168,15 @@ msgstr ""
 "恩睿专家帮助我们制定了全新的内部流程和跨部门交流方案，建立了绩效考核标准和知"
 "识库。这些都为我们在全球快速增长，提高运营效率打下坚实的基础。"
 
-#: homepage/templates/homepage/index.html:494
+#: templates/homepage/index.html:494
 msgid "A Chinese advanced manufacturer"
 msgstr "中国先进制造企业"
 
-#: homepage/templates/homepage/index.html:495
+#: templates/homepage/index.html:495
 msgid "CEO"
 msgstr "总经理"
 
-#: homepage/templates/homepage/index.html:498
+#: templates/homepage/index.html:498
 msgid ""
 "I strongly recommend Enverest experts to companies seeking international "
 "growth, as their deep industry expertise and extensive global network "
@@ -1271,23 +1186,23 @@ msgstr ""
 "我向面向国际的企业大力推荐恩睿专家！他们的资深行业经验，广泛的国际人脉帮助我"
 "们很快在美国市场打开局面。恩睿专家平台的服务完全为你的需求量身定制。"
 
-#: homepage/templates/homepage/index.html:506
+#: templates/homepage/index.html:506
 msgid "Submit Your Engagement Request"
 msgstr "提交项目服务要求"
 
-#: homepage/templates/homepage/index.html:519
+#: templates/homepage/index.html:519
 msgid "Global Insights, Sustained Impact"
 msgstr "立足创新，着眼全球"
 
-#: homepage/templates/homepage/index.html:520
+#: templates/homepage/index.html:520
 msgid "Silicon Valley | New York | Singapore | Beijing "
 msgstr "硅谷 | 纽约 | 新加坡 | 北京"
 
-#: homepage/templates/homepage/join_us.html:25
+#: templates/homepage/join_us.html:25
 msgid "Join Us"
 msgstr "加入我们"
 
-#: homepage/templates/homepage/join_us.html:28
+#: templates/homepage/join_us.html:28
 msgid ""
 "Our team is consisted of talents with diversified backgrounds, cultures, "
 "education, interests, and skills. We welcome you to be part of our family. "
@@ -1298,25 +1213,25 @@ msgstr ""
 "们非常欢迎您加入我们的大家庭。请填写好以下的表格，或者把你的简历发送到"
 "hr@enverest.com"
 
-#: homepage/templates/homepage/join_us.html:39
+#: templates/homepage/join_us.html:39
 msgid "Sign up"
 msgstr "注册"
 
-#: homepage/templates/homepage/news_blog.html:24
+#: templates/homepage/news_blog.html:24
 msgid "News Blog"
 msgstr "博客"
 
-#: homepage/templates/homepage/partners.html:24
+#: templates/homepage/partners.html:24
 msgid "Partners"
 msgstr "合作伙伴"
 
-#: homepage/templates/homepage/service.html:28
+#: templates/homepage/service.html:28
 #, fuzzy
 #| msgid "Enverest, Inc."
 msgid "Enverest"
 msgstr "恩睿公司"
 
-#: homepage/templates/homepage/service.html:31
+#: templates/homepage/service.html:31
 msgid ""
 "Enverest enables Chinese and Asian enterprises and startups to engage "
 "industry experts and advisors to innovate and internationalize. "
@@ -1329,35 +1244,32 @@ msgstr ""
 "和北京等地设有业务分部。 服务行业涉及信息科技、生命科学、新能源和材料等。公司"
 "业务主要包含三大板块: 恩睿专家平台，恩睿解决方案，恩睿创投顾问。"
 
-#: homepage/templates/homepage/service.html:38
-#: homepage/templates/homepage/service.html:118
+#: templates/homepage/service.html:38 templates/homepage/service.html.py:118
 msgid "Enverest Experts"
 msgstr "恩睿专家平台"
 
-#: homepage/templates/homepage/service.html:41
+#: templates/homepage/service.html:41
 msgid "Business expertise, on demand"
 msgstr "新一代平台式咨询服务"
 
-#: homepage/templates/homepage/service.html:47
-#: homepage/templates/homepage/service.html:126
+#: templates/homepage/service.html:47 templates/homepage/service.html.py:126
 msgid "Enverest Solutions"
 msgstr "恩睿解决方案"
 
-#: homepage/templates/homepage/service.html:50
+#: templates/homepage/service.html:50
 msgid "Customized & deep-dive consulting"
 msgstr "一对一的深度企业咨询"
 
-#: homepage/templates/homepage/service.html:56
-#: homepage/templates/homepage/service.html:134
-#: homepage/templates/homepage/service.html:137
+#: templates/homepage/service.html:56 templates/homepage/service.html.py:134
+#: templates/homepage/service.html:137
 msgid "Enverest Advisors"
 msgstr "恩睿创投顾问"
 
-#: homepage/templates/homepage/service.html:59
+#: templates/homepage/service.html:59
 msgid "Entrepreneurship advisory"
 msgstr "创业项目评估和专业指导"
 
-#: homepage/templates/homepage/service.html:121
+#: templates/homepage/service.html:121
 msgid ""
 "Applying sharing economy to business advisory services, Enverest Experts is "
 "an online marketplace connecting enterprises and startups to experts for "
@@ -1373,7 +1285,7 @@ msgstr ""
 "您并尽快对接相应专家。为了方便客户与专家交流,平台还提供高效方便的一键视频音频"
 "对话、站内信及项目管理等工具。"
 
-#: homepage/templates/homepage/service.html:129
+#: templates/homepage/service.html:129
 msgid ""
 "We offer clients customized and deep-dive consulting services to innovate "
 "and internationalize. Our professional consultants have extensive experience "
@@ -1388,7 +1300,7 @@ msgstr ""
 "进,腾讯等国际著名公司负责战略、运营、产品、并购等具体工作。我们不仅为企业量身"
 "定制问题解决方案,还与客户管理层密切合作,落实方案的切实执行。"
 
-#: homepage/templates/homepage/service.html:137
+#: templates/homepage/service.html:137
 msgid ""
 " is the advisory service suite designed specifically for startups and "
 "venture investors. We provide startups business advice and training and "
@@ -1401,48 +1313,26 @@ msgstr ""
 "策略及对接等服务。针对风险投资机构,我们提供优质项目推荐、项目专业评估等服务。"
 "恩睿充分利用在硅谷和中美创投圈的资源和人脉,为您的事业腾飞助力"
 
-#: homepage/templates/homepage/success_story.html:24
+#: templates/homepage/success_story.html:24
 msgid "Success Story"
 msgstr "成功案例"
 
-#: homepage/templates/homepage/team.html:24
-msgid "Meet the Team"
-msgstr "团队代表"
-
-#: homepage/templates/homepage/team.html:27
-#, fuzzy
-#| msgid ""
-#| "Enverest is consisted of dedicated consultants (Partners) and a "
-#| "diversified expert network (Experts) that share the passion and mission "
-#| "to  promote innovation & entrepreneurship. We provide expertise to help "
-#| "clients achieve accelerated growth and sustained global success."
-msgid ""
-"Enverest is consisted of dedicated consultants (Partners) and a diversified "
-"expert network (Experts) that share the passion and mission to  promote "
-"innovation & entrepreneurship. Together, we provide business expertise and "
-"network to help clients achieve accelerated growth and sustained global "
-"success."
-msgstr ""
-"恩睿咨询由专业的管理咨询团队(合伙人)和多样化的专家网络(专家团)组成。我们拥有"
-"共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和全球"
-"资源，为创新企业制定快速增长策略，规划全球发展布局。"
-
-#: homepage/templates/homepage/terms_of_service.html:23
+#: templates/homepage/terms_of_service.html:23
 msgid "Terms of Service"
 msgstr "服务条款"
 
-#: homepage/templates/homepage/terms_of_service.html:26
+#: templates/homepage/terms_of_service.html:26
 msgid ""
 "If you used Enverest service, that means you agreed to the terms of use."
 msgstr "如果你使用恩睿的服务，那就代表着你同意了恩睿的服务条款"
 
-#: homepage/templates/homepage/terms_of_service.html:35
-#: homepage/templates/homepage/terms_of_service.html:44
+#: templates/homepage/terms_of_service.html:35
+#: templates/homepage/terms_of_service.html:44
 msgid "1. Ownership and Property Rights"
 msgstr "所有权和产权"
 
-#: homepage/templates/homepage/terms_of_service.html:38
-#: homepage/templates/homepage/terms_of_service.html:47
+#: templates/homepage/terms_of_service.html:38
+#: templates/homepage/terms_of_service.html:47
 msgid ""
 "Using this website does not grant you any ownership or interest in any "
 "content, visual interfaces, graphics, design, compilation, information, "
@@ -1458,11 +1348,11 @@ msgstr ""
 "为一个个人的非商业用途的单一副本，提供您在该内容中包含的版权和其他。这不包括"
 "需要付费许可证的产品。具体请查阅我们的许可证页以了解更多的信息"
 
-#: homepage/templates/homepage/terms_of_service.html:54
+#: templates/homepage/terms_of_service.html:54
 msgid "2. User Information"
 msgstr "用户信息"
 
-#: homepage/templates/homepage/terms_of_service.html:57
+#: templates/homepage/terms_of_service.html:57
 msgid ""
 "In the course of your use of the website, you may be asked for personally "
 "identifiable information. We uphold rigorous standards to uphold the "
@@ -1472,11 +1362,11 @@ msgstr ""
 "您在使用网站的过程中，您可能会被要求提供个人信息。我们秉承着严格的标准来维护"
 "我们隐私政策中信息的完整性。您应该对用户信息的内容和准确性负责。"
 
-#: homepage/templates/homepage/terms_of_service.html:64
+#: templates/homepage/terms_of_service.html:64
 msgid "3. Third Party websites"
 msgstr "第三方网站"
 
-#: homepage/templates/homepage/terms_of_service.html:67
+#: templates/homepage/terms_of_service.html:67
 msgid ""
 "In the course of your use of the website, you may be re-directed to third "
 "party websites. We have no responsibility for the content or information "
@@ -1487,6 +1377,26 @@ msgstr ""
 "您在使用网站的过程中，您可能会被重新导向第三方网站。我们不承担任何通过第三方"
 "网站提供的内容和信息。即使通过我们的链接连到第三方网站，并不意味着我们网站对"
 "此信息的认可。我们不承担任何关于另一网站链接的责任"
+
+#~ msgid "Meet the Team"
+#~ msgstr "团队代表"
+
+#, fuzzy
+#~| msgid ""
+#~| "Enverest is consisted of dedicated consultants (Partners) and a "
+#~| "diversified expert network (Experts) that share the passion and mission "
+#~| "to  promote innovation & entrepreneurship. We provide expertise to help "
+#~| "clients achieve accelerated growth and sustained global success."
+#~ msgid ""
+#~ "Enverest is consisted of dedicated consultants (Partners) and a "
+#~ "diversified expert network (Experts) that share the passion and mission "
+#~ "to  promote innovation & entrepreneurship. Together, we provide business "
+#~ "expertise and network to help clients achieve accelerated growth and "
+#~ "sustained global success."
+#~ msgstr ""
+#~ "恩睿咨询由专业的管理咨询团队(合伙人)和多样化的专家网络(专家团)组成。我们拥"
+#~ "有共同的愿景，激情和使命。我们与客户管理团队并肩作战，利用我们的专业知识和"
+#~ "全球资源，为创新企业制定快速增长策略，规划全球发展布局。"
 
 #~ msgid "What is Enverest?"
 #~ msgstr "恩睿概况"
