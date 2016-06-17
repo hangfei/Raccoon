@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-06-16 22:50-0700\n"
+"POT-Creation-Date: 2016-06-16 22:58-0700\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -94,12 +94,13 @@ msgid "Simon Cen"
 msgstr "岑水明"
 
 #: templates/homepage/about_us.html:87 templates/homepage/about_us.html:103
-#: templates/homepage/about_us.html:184
 msgid "Managing Partner, Enverest"
 msgstr "管理合伙人， 恩睿公司"
 
 #: templates/homepage/about_us.html:88
-msgid "Expertise: Strategy, Business Development, Operations, Supply Chain, M&A, Entrepreneurship"
+msgid ""
+"Expertise: Strategy, Business Development, Operations, Supply Chain, M&A, "
+"Entrepreneurship"
 msgstr "专长：公司策略、业务开发、统筹运营、供应链管理、并购整合"
 
 #: templates/homepage/about_us.html:89
@@ -175,7 +176,15 @@ msgid "Ya-Ru Chen"
 msgstr "陈雅茹 教授"
 
 #: templates/homepage/about_us.html:152
-msgid "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of Management, ​Professor of Global Business, Johnson Graduate School of Management, Cornell University (Enverest Advisor)"
+#, fuzzy
+#| msgid ""
+#| "Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
+#| "Management, ​Professor of Global Business, Johnson Graduate School of "
+#| "Management, Cornell University (Enverest Advisor)"
+msgid ""
+"Academic Dean for China Initiatives and Nicholas H. Noyes Professor of "
+"Management, \\u200bProfessor of Global Business, Johnson Graduate School of "
+"Management, Cornell University (Enverest Advisor)"
 msgstr "美国康奈尔大学商学院教授，恩睿公司顾问"
 
 #: templates/homepage/about_us.html:153
@@ -220,6 +229,10 @@ msgstr "经历：卡拉丁，Golfii, Geowok, 创新国际游戏公司，加州�
 #: templates/homepage/about_us.html:182
 msgid "Shawn Lee"
 msgstr "李湘 博士"
+
+#: templates/homepage/about_us.html:184
+msgid "CEO, American Peptide Company (Enverest Advisor)"
+msgstr "美国多肽公司总裁，恩睿公司顾问"
 
 #: templates/homepage/about_us.html:185
 msgid "Expertise: Entrepreneurship, FDA Regulatory, M&A, Strategic Partnership"
@@ -354,7 +367,9 @@ msgid "Copywriter and Content Strategist, Magnus Communications"
 msgstr "总裁，Magnus文案和内容策划 "
 
 #: templates/homepage/about_us.html:281
-msgid "Expertise: Marketing Communications, Advertising/App Content Design & Localization, Copy-writing, Copy-editing"
+msgid ""
+"Expertise: Marketing Communications, Advertising/App Content Design & "
+"Localization, Copy-writing, Copy-editing"
 msgstr "专长：营销传播、APP设计与本地化、广告翻译与写作"
 
 #: templates/homepage/about_us.html:282

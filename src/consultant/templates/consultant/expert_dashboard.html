@@ -142,7 +142,7 @@
                     <a href="/project/waitclientconfirm?project_id={{ project.pk }}" class="btn btn-primary" >{% trans "View" %}</a>
                   </div>
                 </div>
-              </div>  
+              </div>
             {% endif %}
             {% if project.state == 'CA'%}
               <div class="col-md-4 m-b-lg">
@@ -156,7 +156,7 @@
                     <a href="/project/expertstart?project_id={{ project.pk }}" class="btn btn-primary">{% trans "View" %}</a>
                   </div>
                 </div>
-              </div>  
+              </div>
             {% endif %}
           {% endfor %}
         {% else %}
@@ -182,7 +182,7 @@
                     <a href="/project/expertworking?project_id={{ project.pk }}" class="btn btn-primary">{% trans "View" %}</a>
                   </div>
                 </div>
-              </div>  
+              </div>
             {% endif %}
           {% endfor %}
         {% else %}
@@ -208,7 +208,7 @@
                     <a href="/project/waitpayment?project_id={{ project.pk }}" class="btn btn-primary">{% trans "View" %}</a>
                   </div>
                 </div>
-              </div>  
+              </div>
             {% endif %}
           {% endfor %}
         {% else %}
@@ -232,7 +232,7 @@
                     <a href="/project/close?project_id={{ project.pk }}" class="btn btn-primary">{% trans "View" %}</a>
                   </div>
                 </div>
-              </div>  
+              </div>
             {% endif %}
           {% endfor %}
         {% else %}
@@ -247,7 +247,7 @@
 
           <div>
             <ul>
-              <p><b>{% trans "You can download" %} <a href="{% static 'docs/Engagement_Invoice_v1.xlsx' %}">{% trans "Engagement Invoice" %} </a> {% trans "from here" %}, {% "fill it out and send to us at" %} <a href="mailto:contact@enverest.com">contact@enverest.com</a><b>.</p>
+              <p><b>{% trans "You can download" %} <a href="{% static 'docs/Engagement_Invoice_v1.xlsx' %}">{% trans "Engagement Invoice" %} </a> {% trans "from here" %}, {% trans "fill it out and send to us at" %} <a href="mailto:contact@enverest.com">contact@enverest.com</a><b>.</p>
             </ul>
           </div>
         </div>
