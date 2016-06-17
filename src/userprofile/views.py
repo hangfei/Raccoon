@@ -38,7 +38,7 @@ class ConsultantSignupForm(ModelForm):
     )
 
     profile_image = forms.FileField(
-        label='Select a image for your profile.',
+        label=_('Select a image for your profile.'),
         required=False
     )
 
@@ -68,7 +68,7 @@ class ClientSignupForm(ModelForm):
     )
 
     profile_image = forms.FileField(
-        label='Select a image for your profile.',
+        label=_('Select a image for your profile.'),
         required=False
     )
 

@@ -35,7 +35,7 @@ class ConsultantSignupForm(ModelForm):
         fields = ['description_text', 'area', 'industries', 'expertise', 'experience', 'education']
         widgets = {
           'description_text':forms.Textarea(
-                                        attrs={'placeholder':'Introduce yourself to the potential clients',
+                                        attrs={'placeholder':_('Introduce yourself to the potential clients'),
                                                 'rows':10,
                                                 'cols':39}),
            'industries':forms.CheckboxSelectMultiple
@@ -73,11 +73,12 @@ class ConsultantSignupForm(ModelForm):
         widget=forms.TextInput(), required=True)
 
     profile_image = forms.FileField(
-        label='Select a image for your profile.',
+        label=_('Select a image for your profile.'),
         required=False
     )
 
     work_phone_number = forms.RegexField(
+        label=_("Work phone number"),
         regex=r'^\+?1?\d{9,15}$',
         error_messages = {
             'invalid': ("Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."),
@@ -86,6 +87,7 @@ class ConsultantSignupForm(ModelForm):
     )
 
     cell_phone_number = forms.RegexField(
+        label=_("Cell phone number"),
         regex=r'^\+?1?\d{9,15}$',
         error_messages = {
             'invalid': ("Phone number must be entered in the format: '+999999999'. Up to 15 digits allowed."),
@@ -155,7 +157,13 @@ class ConsultantSignupForm(ModelForm):
     
     def __init__(self, *args, **kwargs):
         super(ConsultantSignupForm, self).__init__(*args, **kwargs)
-        self.fields['description_text'].label = "Description *"
+        self.fields['description_text'].label = _("Description *")
+        self.fields['area'].label = _("Area *")
+        self.fields['industries'].label = _("Industries *")
+        self.fields['experience'].label = _("Experience *")
+        self.fields['expertise'].label = _("Expertise *")
+        self.fields['education'].label = _("Education *")
+        
     def clean_username(self):
         if not alnum_re.search(self.cleaned_data["username"]):
             raise forms.ValidationError(_("Usernames can only contain letters, numbers and underscores."))
@@ -215,7 +223,7 @@ class ClientSignupForm(forms.Form):
         widget=forms.TextInput(), required=True)
 
     profile_image = forms.FileField(
-        label='Select a image for your profile.',
+        label=_('Select a image for your profile.'),
         required=False
     )
 

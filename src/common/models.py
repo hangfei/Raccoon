@@ -166,7 +166,7 @@ class Expert(models.Model):
     )
 
     INDUSTRY_CHOICES = (
-      ("MC","Management Consulting"),
+      ("MC",_("Management Consulting")),
       ("EN","Energy"),
       ("HI","Health care and Life Sciences"),
       ("BI","BioPharma"),
@@ -298,7 +298,7 @@ class Expert(models.Model):
 class Project(models.Model):
 
     INDUSTRY_CHOICES = (
-        ("MC","Management Consulting"),
+        ("MC",_("Management Consulting")),
         ("EN","Energy"),
         ("HI","Health care and Life Sciences"),
         ("BI","BioPharma"),
